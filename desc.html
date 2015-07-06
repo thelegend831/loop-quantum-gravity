@@ -11,6 +11,7 @@ using:<br>
 <li type='disc'>Misner, Charles W.; Thorne, Kip S.; Wheeler, John Archibald (1970), <i>Gravitation</i>, New York: W.H. Freeman, ISBN 0-7167-0344-0</li>
 <li type='disc'>Flanders, Harley (1989), <i>Differential Forms With Applications to the Physical Sciences</i>, Mineola, New York: Dover Publications, ISBN 0-486-66169-5</li>
 <li type='disc'><a href='http://arxiv.org/pdf/hep-th/9301028v2.pdf'>http://arxiv.org/pdf/hep-th/9301028v2.pdf</a></li>
+<li type='disc'><a href='http://arxiv.org/pdf/gr-qc/9303032v1.pdf'>http://arxiv.org/pdf/gr-qc/9303032v1.pdf</a></li>
 <li type='disc'><a href='http://en.wikipedia.org/wiki/Tetradic_Palatini_action'>http://en.wikipedia.org/wiki/Tetradic_Palatini_action</a></li>
 </ul>
 <br>
@@ -483,6 +484,8 @@ proof \(\three\nabla_a\) is the covariant derivative of \(q_{ab}\):<br>
 \(={q_a}^e {q_b}^f \cdot 0 \cdot \nabla_e n_f + {q_a}^e {q_c}^g \cdot 0 \cdot \nabla_e n_g\)<br>
 \(\three\nabla_a q_{bc}=0\)<br>
 <br>
+TODO show \( \nabla_i v^j \) = \( \nabla^\perp_i v^j \) for spatial \(v^j\)<br>
+<br>
 spatial connection coefficients:<br>
 \({{\three\Gamma}^a}_{bc} = {1\over2}q^{ad}(\partial_c q_{db} + \partial_b q_{dc} - \partial_d q_{bc})\)<br>
 spatial riemann tensor:<br>
@@ -496,10 +499,10 @@ Extrinsic curvature:<br>
 \(= -\nabla_a n_b - n_a a_b\)<br>
 <br>
 Extrinsic curvature components, in ADM metric:<br>
-\( ||K_{ab}|| = ||-{q_a}^c \nabla_c n_d {q_b}^d|| \)<br>
-\(= -\left[ \matrix{ 0 & N^j \\ 0 & \delta_i^j } \right] \left( \left[ \matrix{ \partial_t n_t & 0 \\ \partial_j n_t & 0 } \right] - \left[ \matrix{ {\Gamma^t}_{tt} & {\Gamma^t}_{kt} \\ {\Gamma^t}_{tj} & {\Gamma^t}_{kj} } \right] n_t \right)\left[ \matrix{ 0 & 0 \\ N^k & \delta_l^k} \right]\)<br>
-\(= \left[ \matrix{ 0 & N^j \\ 0 & \delta_i^j } \right] \left[ \matrix{ {\Gamma^t}_{tt} n_t - \partial_t n_t & {\Gamma^t}_{kt} n_t \\ {\Gamma^t}_{tj} n_t - \partial_j n_t & {\Gamma^t}_{kj} n_t } \right] \left[ \matrix{ 0 & 0 \\ N^k & \delta_l^k} \right]\)<br>
-\(= -N \left[ \matrix{ N^j N^k {\Gamma^t}_{kj} & N^j {\Gamma^t}_{lj} \\ N^k {\Gamma^t}_{ki} & {\Gamma^t}_{li} } \right] \)<br>
+\( K_{ab} = -{q_a}^c \nabla_c n_d {q_b}^d \)<br>
+\( ||K_{ab}|| = -\left[ \matrix{ 0 & N^m \\ 0 & \delta_i^m } \right] \left( \left[ \matrix{ \partial_t n_t & 0 \\ \partial_m n_t & 0 } \right] - \left[ \matrix{ {\Gamma^t}_{tt} & {\Gamma^t}_{nt} \\ {\Gamma^t}_{tm} & {\Gamma^t}_{nm} } \right] n_t \right)\left[ \matrix{ 0 & 0 \\ N^n & \delta_j^n} \right]\)<br>
+\(= \left[ \matrix{ 0 & N^m \\ 0 & \delta_i^m } \right] \left[ \matrix{ {\Gamma^t}_{tt} n_t - \partial_t n_t & {\Gamma^t}_{nt} n_t \\ {\Gamma^t}_{tm} n_t - \partial_m n_t & {\Gamma^t}_{nm} n_t } \right] \left[ \matrix{ 0 & 0 \\ N^n & \delta_j^n} \right]\)<br>
+\(= -N \left[ \matrix{ N^m N^n {\Gamma^t}_{nm} & N^m {\Gamma^t}_{jm} \\ N^n {\Gamma^t}_{ni} & {\Gamma^t}_{ji} } \right] \)<br>
 \(K_{ij} = -N{\Gamma^t}_{ji}\)<br>
 <br>
 Extrinsic curvature is orthogonal to normal:<br>
@@ -649,7 +652,7 @@ Therefore<br>
 Codazzi equation:<br>
 \(\three\nabla_b K_{ac} - \three\nabla_b K_{bc} = {q_a}^p {q_b}^q {q_c}^r n^s R_{pqrs}\)<br>
 <br>
-time derivative of spatial metric:<br>
+Lie derivative along hypersurface normal of spatial metric:<br>
 \( \mathcal{L}_{\vec{n}} q_{ab} = n^c \nabla_c q_{ab} + q_{cb} \nabla_a n^c + q_{ac} \nabla_b n^c \)<br>
 \( = n^c \nabla_c q_{ab} + q_{cb} \nabla_a n^c + q_{ac} \nabla_b n^c \)<br>
 \( = n^c \nabla_c (g_{ab} + n_a n_b) + (g_{cb} + n_c n_b) \nabla_a n^c + (g_{ac} + n_a n_c) \nabla_b n^c \)<br>
@@ -665,10 +668,25 @@ time derivative of spatial metric:<br>
 <br>
 Because \( q_{ab} \) is symmetric, so is \( K_{ab} \)<br>
 <br>
+Lie derivative along shift vector of spatial metric:<br>
+\( \mathcal{L}_\vec{N} q_{ij}\) <br>
+\( =N^k \partial_k q_{ij} + q_{kj} \partial_i N^k + q_{ik} \partial_j N^k\) <br>
+\( =N^k \partial_k q_{ij} + \partial_i (q_{kj} N^k) - N^k \partial_i q_{kj} + \partial_j (q_{ik} N^k) - N^k \partial_j q_{ik}\) <br>
+\( =\partial_i N_j + \partial_j N_i - N^k (\partial_i q_{kj} + \partial_j q_{ik} - \partial_k q_{ij} )\) <br>
+\( =\partial_i N_j + \partial_j N_i - 2 N^k \Gamma_{kji}\) <br>
+\( =\partial_i N_j + \partial_j N_i - 2 N_k {\Gamma^k}_{ji}\) <br>
+\( =\partial_i N_j - N_k {\Gamma^k}_{ji} + \partial_j N_i - N_k {\Gamma^k}_{ij}\) <br>
+\( =\nabla_i N_j + \nabla_j N_i\) <br>
+\( = 2 \nabla_{(i} N_{j)} \) <br>
+...using \(\nabla_i v^j=\nabla^\perp_i v^j\) for spatial \(v^j\)...<br>
+\( \mathcal{L}_\vec{N} q_{ij} = 2 \nabla^\perp_{(i} N_{j)} \) <br>
+<br>
+Time derivative of spatial metric:<br>
 \( \dot{q}_{ab} = \mathcal{L}_{\vec{t}}q_{ab} \)<br>
 \( = \mathcal{L}_{N \vec{n} + \vec{N}} q_{ab} \)<br>
 \( = N \mathcal{L}_{\vec{n}} q_{ab} + \mathcal{L}_{\vec{N}} q_{ab} \)<br>
-\( \dot{q}_{ab} = -2N K_{ab} + \mathcal{L}_{\vec{N}} q_{ab} \)<br>
+\( = -2N K_{ab} + \mathcal{L}_{\vec{N}} q_{ab} \)<br>
+\( \dot{q}_{ab} = -2N K_{ab} + 2 \nabla^\perp_{(i} N_{j)} \)<br>
 <br>
 Einstein tensor contracted with normal:<br>
 \(G_{ab} = R_{ab} - {1\over2} g_{ab} R\)<br>
@@ -710,56 +728,60 @@ contracting Gauss' equation:<br>
 \(R=R^\perp-K_{ab}K^{ab}+K^2-2K^2 + 2K_{ab} K^{ab} - 2\nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
 \(R=R^\perp+K_{ab}K^{ab}-K^2 - 2\nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
 <br>
-Lagrangian:<br>
-\(L=\int \sqrt{-g}R dx^3\)<br>
-\(=\int N\sqrt{q}R dx^3\)<br>
-\(=\int N\sqrt{q}(R^\perp + K_{ab} K^{ab} - K^2 - 2 \nabla_c (n^b \nabla_b n^c - n^c \nabla_b n^b)) dx^3\)<br>
-consider only spatial integral / disregard total integral (TODO explain this one better)<br>
-\(L=\int N\sqrt{q}(R^\perp+K_{ij} K^{ij} - K^2) dx^3\)<br>
-
+Lagrangian is equal to scalar curvature:<br>
+\(L=R\)<br>
+<br>
+Densitized Lagrangian:<br>
+\(\mathcal{L}=\sqrt{-g}L\)<br>
+\(=\sqrt{-g}R\)<br>
+\(=N\sqrt{q}R\)<br>
+...substitute Gauss-Codazzi equations...<br>
+\(=N\sqrt{q}(R^\perp + K_{ab} K^{ab} - K^2 - 2 \nabla_c (n^b \nabla_b n^c - n^c \nabla_b n^b))\)<br>
+...consider only spatial integral / disregard total integral (TODO explain this one better)...<br>
+\(\mathcal{L}=N\sqrt{q}(R^\perp+K_{ij} K^{ij} - K^2)\)<br>
 <br>
 Vacuum Action:<br>
 \( S = \int \sqrt{-g} R dx^4 \)<br>
 \( S = \int \int N \sqrt{q} (R^{\perp} + K_{ij} K^{ij} - K^2) dx^3 dt \)<br>
 <br>
-\( L(q,\dot{q}) = \int N \sqrt{q} (R^{\perp} + K_{ij} K^{ij} - K^2) dx^3 \)<br>
-\( S = \int L(q,\dot{q}) dt \)<br>
+\( \dot{q}_{ij} = -2 N K_{ij} + 2 \nabla^\perp_{(i} N_{j)} \)
+\( K_{ij} = -{1\over{2N}} \dot{q}_{ij} + {1\over N} \nabla^\perp_{(i} N_{j)} \)<br>
+\( {{\partial}\over{\partial \dot{q}_{ij}}} K_{kl} = -{1\over{2N}} \delta^i_k \delta^j_l \)<br>
 <br>
-conjugate momentum:<br>
-\( \tilde\pi_{ij} = {{\delta L}\over{\delta \dot{q}^{ij}}} \)<br>
-\( = {\delta\over{\delta \dot{q}^{ij}}} (\int N \sqrt{q} (R^{\perp} + K_{kl} K^{kl} - K^2) dx^3) \)<br>
-\( = \int {\delta\over{\delta \dot{q}^{ij}}} N \sqrt{q} (R^{\perp} + g_{km} g_{ln} K^{kl} K^{mn} - K^{kl} g_{kl} K^{mn} g_{mn}) dx^3 \)<br>
+Conjugate momentum:<br>
+\( \tilde\pi_{ij} = {{\partial \mathcal{L}}\over{\partial \dot{q}^{ij}}} \)<br>
+\( = {\partial\over{\partial \dot{q}^{ij}}} (N \sqrt{q} (R^{\perp} + K_{kl} K^{kl} - K^2)) \)<br>
+\( = {\partial\over{\partial \dot{q}^{ij}}} N \sqrt{q} (R^{\perp} + g_{km} g_{ln} K^{kl} K^{mn} - K^{kl} g_{kl} K^{mn} g_{mn}) \)<br>
+\( \tilde\pi_{ij} = N \sqrt{q} ({\delta\over{\delta\dot{q}^{ij}}} (q_{km} q_{ln} K^{kl} K^{mn}) - {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} q_{kl} K^{mn} q_{mn})) \)<br>
+\( \tilde\pi_{ij} = N \sqrt{q} (q_{km} q_{ln} {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} K^{mn}) - q_{kl} q_{mn} {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} K^{mn})) \)<br>
+\( \tilde\pi_{ij} = N \sqrt{q} (q_{km} q_{ln} - q_{kl} q_{mn}) {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} K^{mn}) \)<br>
+\( \tilde\pi_{ij} = N \sqrt{q} (q_{km} q_{ln} - q_{kl} q_{mn}) (K^{kl} {\delta\over{\delta\dot{q}^{ij}}} K^{mn} + K^{mn} {\delta\over{\delta\dot{q}^{ij}}} K^{kl}) \)<br>
+\( \tilde\pi_{ij} = -N \sqrt{q} (q_{km} q_{ln} - q_{kl} q_{mn}) ({1\over{2N}} K^{kl} \delta^m_i \delta^n_j + {1\over{2N}} K^{mn} \delta^k_i \delta^l_j) \)<br>
+\( \tilde\pi_{ij} = -N {1\over{2N}} \sqrt{q} ((q_{km} q_{ln} - q_{kl} q_{mn}) K^{kl} \delta^m_i \delta^n_j + (q_{km} q_{ln} - q_{kl} q_{mn}) K^{mn} \delta^k_i \delta^l_j) \)<br>
+\( \tilde\pi_{ij} = -{1\over2} \sqrt{q} ((q_{km} q_{ln} K^{kl} \delta^m_i \delta^n_j - q_{kl} q_{mn} K^{kl} \delta^m_i \delta^n_j) + (q_{km} q_{ln} K^{mn} \delta^k_i \delta^l_j - q_{kl} q_{mn} K^{mn} \delta^k_i \delta^l_j)) \)<br>
+\( \tilde\pi_{ij} = -{1\over2} \sqrt{q} (K_{ij} - q_{ij} K + K_{ij} - q_{ij} K) \)<br>
+\( \tilde\pi_{ij} = -\sqrt{q} (K_{ij} - q_{ij} K) \)<br>
+\( \tilde\pi^{ij} = -\sqrt{q} (K^{ij} - q^{ij} K) \)<br>
 <br>
-TODO: \( {\delta\over{\delta\dot{q}^{ij}}} N = 0 \)<br>
-TODO: \( {\delta\over{\delta\dot{q}^{ij}}} R^{\perp} = 0 \)<br>
-TODO: \( {\delta\over{\delta\dot{q}^{ij}}} q_{kl} = 0 \)<br>
-TODO: \( {\delta\over{\delta\dot{q}^{ij}}} \mathcal{L}_{\vec{N}} q_{kl} = 0 \)<br>
-\( \delta^k_i \delta^l_j = {\delta\over{\delta \dot{q}^{ij}}} \dot{q}^{kl} 
-= {\delta\over{\delta \dot{q}^{ij}}} (2N K^{kl} + q^{km} \mathcal{L}_{\vec{N}} q_{mn} q^{nl}) 
-= {\delta\over{\delta \dot{q}^{ij}}} (2N K^{kl})
-= 2N {\delta\over{\delta\dot{q}^{ij}}} K^{kl} \)<br>
-\( {\delta\over{\delta\dot{q}^{ij}}} K^{kl} = {1\over{2N}} \delta^k_i \delta^l_j \)<br>
-<br>
-\( \tilde\pi_{ij} = \int N \sqrt{q} ({\delta\over{\delta\dot{q}^{ij}}} (q_{km} q_{ln} K^{kl} K^{mn}) - {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} q_{kl} K^{mn} q_{mn})) dx^3 \)<br>
-\( \tilde\pi_{ij} = \int N \sqrt{q} (q_{km} q_{ln} {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} K^{mn}) - q_{kl} q_{mn} {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} K^{mn})) dx^3 \)<br>
-\( \tilde\pi_{ij} = \int N \sqrt{q} (q_{km} q_{ln} - q_{kl} q_{mn}) {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} K^{mn}) dx^3 \)<br>
-\( \tilde\pi_{ij} = \int N \sqrt{q} (q_{km} q_{ln} - q_{kl} q_{mn}) (K^{kl} {\delta\over{\delta\dot{q}^{ij}}} K^{mn} + K^{mn} {\delta\over{\delta\dot{q}^{ij}}} K^{kl}) dx^3 \)<br>
-\( \tilde\pi_{ij} = \int N \sqrt{q} (q_{km} q_{ln} - q_{kl} q_{mn}) ({1\over{2N}} K^{kl} \delta^m_i \delta^n_j + {1\over{2N}} K^{mn} \delta^k_i \delta^l_j) dx^3 \)<br>
-\( \tilde\pi_{ij} = \int N {1\over{2N}} \sqrt{q} ((q_{km} q_{ln} - q_{kl} q_{mn}) K^{kl} \delta^m_i \delta^n_j + (q_{km} q_{ln} - q_{kl} q_{mn}) K^{mn} \delta^k_i \delta^l_j) dx^3 \)<br>
-\( \tilde\pi_{ij} = \int {1\over2} \sqrt{q} ((q_{km} q_{ln} K^{kl} \delta^m_i \delta^n_j - q_{kl} q_{mn} K^{kl} \delta^m_i \delta^n_j) + (q_{km} q_{ln} K^{mn} \delta^k_i \delta^l_j - q_{kl} q_{mn} K^{mn} \delta^k_i \delta^l_j)) dx^3 \)<br>
-\( \tilde\pi_{ij} = \int {1\over2} \sqrt{q} (K_{ij} - q_{ij} K + K_{ij} - q_{ij} K) dx^3 \)<br>
-\( \tilde\pi_{ij} = \int \sqrt{q} (K_{ij} - q_{ij} K) dx^3 \)<br>
-TODO where does \(\tilde\pi_{ij} \)'s integral go?<br>
-\( \tilde\pi_{ij} = \sqrt{q} (K_{ij} - q_{ij} K) \)<br>
-<br>
-TODO Legendre transform<br>
-<br>
-\( H(\pi,q) = \int (\tilde\pi_{ij} \dot{q}^{ij} - L) dx^3 \)<br>
-TODO where does \(L\)'s integral go?<br>
-\( H(\pi,q) = \int (\tilde\pi_{ij} \dot{q}^{ij} - N \sqrt{q} (R^{\perp} + K_{ij} K^{ij} - K^2)) dx^3 \)<br>
-\( H(\pi,q) = \int N (\tilde\pi_{ij} \dot{q}^{ij} {1\over N} - \sqrt{q} R^{\perp} - \sqrt{q} K_{ij} K^{ij} + \sqrt{q} K^2) dx^3 \)<br>
+Hamiltonian:
+\( \mathscr{H} = \tilde\pi^{ij} \dot{q}_{ij} - \mathcal{L} \)<br>
+\( = -N \sqrt{q} (R^{\perp} + K_{ij} K^{ij} - K^2) - \sqrt{q} (K^{ij} - q^{ij} K) (-2 N K_{ij} + 2 \nabla^\perp_{(i} N_{j)}) \)<br>
+\( = -N \sqrt{q} (R^{\perp} + K_{ij} K^{ij} - K^2) + 2 N \sqrt{q} (K^{ij} - q^{ij} K) K_{ij} - 2 \sqrt{q} (K^{ij} - q^{ij} K) \nabla^\perp_{(i} N_{j)} \)<br>
+\( = -\sqrt{q} (N (R^{\perp} + K_{ij} K^{ij} - K^2 - 2 (K^{ij} - q^{ij} K) K_{ij}) + 2 (K^{ij} - q^{ij} K) \nabla^\perp_{(i} N_{j)} ) \)<br>
+\( = -\sqrt{q} (N (R^{\perp} + K_{ij} K^{ij} - K^2 - 2 K^{ij} K_{ij} + 2 K^2) + 2 (K^{ij} - q^{ij} K) \nabla^\perp_{(i} N_{j)} ) \)<br>
+\( = -\sqrt{q} (N (R^{\perp} - K_{ij} K^{ij} + K^2) + 2 (K^{ij} - q^{ij} K) \nabla^\perp_{(i} N_{j)} ) \)<br>
+\( = -\sqrt{q} (N (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 {{\tilde\pi^{ij}}\over\sqrt{q}} \nabla^\perp_{(i} N_{j)} ) \)<br>
+using the symmetry of \( \tilde\pi^{ij} \):<br>
+\( = -\sqrt{q} (N (R^{\perp} - K_{ij} K^{ij} + K^2) - {2\over\sqrt{q}} \tilde\pi^{ij} \nabla^\perp_i N_j ) \)<br>
+using \( \nabla^\perp_i N_j = \partial_i N_j \)<br>
+\( = -\sqrt{q} (N (R^{\perp} - K_{ij} K^{ij} + K^2) - {2\over\sqrt{q}} \tilde\pi^{ij} \partial_i N_j ) \)<br>
+\( = -\sqrt{q} N (R^{\perp} - K_{ij} K^{ij} + K^2) + 2 \tilde\pi^{ij} \partial_i N_j \)<br>
+integration by parts<br>
+\( = -\sqrt{q} N (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 N_j \partial_i \tilde\pi^{ij} \)<br>
+using \( \partial_i \tilde\pi^{ij} = \nabla^\perp_i \tilde\pi^{ij} \) (TODO show this)<br>
+\( = -\sqrt{q} N (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 N_j \nabla^\perp_i \tilde\pi^{ij} \)<br>
 TODO show:<br>
-\( H(\pi,q) = \int (N(-q^{1/2} R^{\perp} + q^{-1/2} (\tilde\pi^{ij} \tilde\pi_{ij} - {1\over2} \tilde{\tilde\pi}^2)) - 2 N^j \nabla^\perp_i {\tilde\pi^i}_j) dx^3 \)<br>
+\( \mathscr{H} = (N(-q^{1/2} R^{\perp} + q^{-1/2} (\tilde\pi^{ij} \tilde\pi_{ij} - {1\over2} \tilde{\tilde\pi}^2)) - 2 N^j \nabla^\perp_i {\tilde\pi^i}_j) \)<br>
 <br>
 Constraints:<br>
 \( S = \int \int ((\tilde\pi_{ij} \dot{q}^{ij} + \tilde{N} (-q R + (\tilde\pi^{ij} \tilde\pi_{ij} - {1\over2} \tilde{\tilde\pi}^2)) - 2 N^j \nabla^\perp_i {\tilde{\pi}^i}_j)) dx^3 dt \)<br>
@@ -780,45 +802,101 @@ orthonormality:<br>
 \( {e^a}_I {e_a}^J = \delta^J_I \)<br>
 in coordinate frame: \( {e_a}^I = {{\partial x^I}\over{\partial x'^a}} \)<br>
 <br>
-Covariant derivative of Lorentz connection:<br>
-\( D_a K_I = \partial_a K_I + {\omega_{aI}}^J K_J \)<br>
+Affine Covariant derivative of Lorentz coordinates:<br>
+\( \nabla_a V^I = \partial_a V^I + {{\omega_a}^I}_J V^J \)<br>
+<br>
+Affine Covariant derivative cancels the tetrad (as well as metric):<br>
+\( \nabla_a {e_b}^I = 0 = \partial_a {e_b}^I - {\Gamma^c}_{ba} {e_c}^I + {{\tilde\omega_a}^I}_J {e_b}^J \)<br>
+\( 0 = \partial_a {e_b}^I - {\Gamma^I}_{ba} + {{\tilde\omega_a}^I}_b \)<br>
+\( {{\tilde\omega_a}^I}_b = {\Gamma^I}_{ba} - \partial_a {e_b}^I \)<br>
+<br>
+Lorentz-only Covariant derivative of Lorentz connection:<br>
+\( D_a K_I = \partial_a K_I - {{\omega_a}^J}_I K_J \)<br>
 <br>
 ...that annhilates the Minkowski metric:<br>
-\( 0 = D_a \eta_{IJ} = \partial_a \eta_{IJ} {\omega_{aI}}^K \eta_{KJ} + {\omega_{aJ}}^K \eta_{IK} \)<br>
-\( 0 = D_a \eta_{IJ} = \omega_{aIJ} + \omega_{aJI} \)<br>
+\( 0 = D_a \eta_{IJ} = \partial_a \eta_{IJ} - {{\omega_a}^K}_I \eta_{KJ} - {{\omega_a}^K}_J \eta_{IK} \)<br>
+\( 0 = 0 - \omega_{aJI} - \omega_{aIJ} \)<br>
 \( \omega_{aIJ} = -\omega_{aJI} \)<br>
 <br>
 Lorentz connection curvature:<br>
-\( {\Omega_{abI}}^J V_J = D_a D_b V_I - D_b D_a V_I \)<br>
-\( = D_a (\partial_b V_I + {\omega_{bI}}^J V_J) - D_b (\partial_a V_I + {\omega_{aI}}^J V_J) \)<br>
-\( = \partial_a (\partial_b V_I + {\omega_{bI}}^J V_J) + {\omega_{aI}}^K (\partial_b V_K + {\omega_{bK}}^J V_J) 
-- \partial_b (\partial_a V_I + {\omega_{aI}}^J V_J) - {\omega_{bI}}^K (\partial_a V_K + {\omega_{aK}}^J V_J) \)<br>
-\( = \partial_a \partial_b V_I + \partial_a ({\omega_{bI}}^J V_J) + {\omega_{aI}}^K \partial_b V_K + {\omega_{aI}}^K {\omega_{bK}}^J V_J
-- \partial_b \partial_a V_I - \partial_b ({\omega_{aI}}^J V_J) - {\omega_{bI}}^K \partial_a V_K - {\omega_{bI}}^K {\omega_{aK}}^J V_J \)<br>
+\( {{\Omega_{ab}}^I}_J V^J = D_a D_b V^I - D_b D_a V^I \)<br>
+\( = D_a (\partial_b V^I + {{\omega_b}^I}_J V^J) - D_b (\partial_a V^I + {{\omega_a}^I}_J V^J) \)<br>
+\( = \partial_a (\partial_b V^I + {{\omega_b}^I}_J V^J) + {{\omega_a}^I}_K (\partial_b V^K + {{\omega_b}^K}_J V^J) 
+	- \partial_b (\partial_a V^I + {{\omega_a}^I}_J V^J) - {{\omega_b}^I}_K (\partial_a V^K + {{\omega_a}^K}_J V^J) \)<br>
+\( = \partial_a \partial_b V^I + \partial_a ({{\omega_b}^I}_J V^J) + {{\omega_a}^I}_K \partial_b V^K + {{\omega_a}^I}_K {{\omega_b}^K}_J V^J
+	- \partial_b \partial_a V^I - \partial_b ({{\omega_a}^I}_J V^J) - {{\omega_b}^I}_K \partial_a V^K - {{\omega_b}^I}_K {{\omega_a}^K}_J V^J \)<br>
 \( = 
-	V_J \partial_a {\omega_{bI}}^J + {\omega_{bI}}^J \partial_a V_J
-	- V_J \partial_b {\omega_{aI}}^J - {\omega_{aI}}^J \partial_b V_J
-	+ {\omega_{aI}}^K \partial_b V_K - {\omega_{bI}}^K \partial_a V_K 
-	+ {\omega_{aI}}^K {\omega_{bK}}^J V_J - {\omega_{aK}}^J {\omega_{bI}}^K V_J \)<br>
-\( = (2 \partial_{[a} {\omega_{b]I}}^J + {\omega_{aI}}^K {\omega_{bK}}^J - {\omega_{bI}}^K {\omega_{aK}}^J) V_J \)<br>
-\( = (2 \partial_{[a} {\omega_{b]I}}^J + {\omega_{aI}}^K {\omega_{bK}}^J - {\omega_{bI}}^K {\omega_{aK}}^J) V_J \)<br>
-\( {\Omega_{abI}}^J = 2 \partial_{[a} {\omega_{b]I}}^J + {\omega_{aI}}^K {\omega_{bK}}^J - {\omega_{bI}}^K {\omega_{aK}}^J \)<br>
-\( {\Omega_{ab}}^{IJ} = 2 \partial_{[a} {\omega_{b]}}^{IJ} + 2 {\omega_{[a}}^{IK} {\omega_{b]K}}^J \)<br>
+	V^J \partial_a {{\omega_b}^I}_J + {{\omega_b}^I}_J \partial_a V^J
+	- V^J \partial_b {{\omega_a}^I}_J - {{\omega_a}^I}_J \partial_b V^J
+	+ {{\omega_a}^I}_K \partial_b V^K - {{\omega_b}^I}_K \partial_a V^K 
+	+ {{\omega_a}^I}_K {{\omega_b}^K}_J V^J - {{\omega_a}^K}_J {{\omega_b}^I}_K V^J \)<br>
+\( {{\Omega_{ab}}^I}_J = 2 \partial_{[a} {{\omega_{b]}}^I}_J + 2 {{\omega_{[a}}^I}_{|K|} {{\omega_{b]}}^K}_J \)<br>
+\( {\Omega_{ab}}^{IJ} = 2 (\partial_{[a} {\omega_{b]}}^{IJ} + {\omega_{[a}}^{IK} {\omega_{b]K}}^J) \)<br>
 <br>
-TODO show \( R = {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} \)<br>
-\( = {\Omega_{ab}}^{ab} \)<br>
-...which is true for \( \Omega_{abcd} = R_{abcd} \) ... plus some term in the nullspace of the Riemann curvature tensor (and that's what the torsion is?)<br>
+Covariant derivatives difference:<br>
+\( {{C_a}^I}_J V^J = (D_a - \nabla_a) V^I \)<br>
+\( = \partial_a V^I + {{\omega_a}^I}_J V^J - \partial_a V^I - {{\tilde\omega_a}^I}_J V^J \)<br>
+\( = ({{\omega_a}^I}_J - {{\tilde\omega_a}^I}_J) V^J \)<br>
+\( {{C_a}^I}_J = {{\omega_a}^I}_J - {{\tilde\omega_a}^I}_J \)<br>
 <br>
+Difference of affine Covariant and Lorentz Covariant derivative of mixed index tensor:<br>
+\( \nabla_a {T_b}^I = \partial_a {T_b}^I - {\Gamma^c}_{ba} {T_c}^I + {{\tilde\omega_a}^I}_J {T_b}^J \)<br>
+\( \partial_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\tilde\omega_a}^I}_J {T_b}^J \)<br>
+\( D_a {T_b}^I = \partial_a {T_b}^I + {{\omega_a}^I}_J V^J \)<br>
+\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\tilde\omega_a}^I}_J {T_b}^J + {{\omega_a}^I}_J V^J \)<br>
+\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{\omega_a}^I}_J V^J - {{\tilde\omega_a}^I}_J {T_b}^J \)<br>
+\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + ({{\omega_a}^I}_J - {{\tilde\omega_a}^I}_J) {T_b}^J \)<br>
+\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{C_a}^I}_J {T_b}^J \)<br>
+<br>
+Difference of Lorentz and Riemann curvature tensors:<br>
+\( ({\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ}) V_J = (D_a D_b - D_b D_a) V^I - (\nabla_a \nabla_b - \nabla_b \nabla_a) V^I \)<br>
+\( = D_a (D_b V^I) - D_b (D_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) \)<br>
+using \( D_a V^I = {{C_a}^I}_J V^J + \nabla_a V^I \)<br>
+\( = D_a ({{C_b}^I}_J V^J + \nabla_b V^I) - D_b ({{C_a}^I}_J V^J + \nabla_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) \)<br>
+\( = \nabla_a ({{C_b}^I}_J V^J + \nabla_b V^I) + {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) + {{C_a}^I}_K ({{C_b}^K}_J V^J + \nabla_b V^K) 
+	- \nabla_b ({{C_a}^I}_J V^J + \nabla_a V^I) - {\Gamma^c}_{ab} ({{C_c}^I}_J V^J + \nabla_c V^I) - {{C_b}^I}_K ({{C_a}^K}_J V^J + \nabla_a V^K)
+	- (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) \)<br>
+\( = \nabla_a {{C_b}^I}_J V^J + {{C_b}^I}_J \nabla_a V^J
+	+ \nabla_a \nabla_b V^I
+	+ {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) 
+	+ {{C_a}^I}_K {{C_b}^K}_J V^J
+	+ {{C_a}^I}_K \nabla_b V^K
+	- \nabla_b {{C_a}^I}_J V^J - {{C_a}^I}_J \nabla_b V^J
+	- \nabla_b \nabla_a V^I
+	- {\Gamma^c}_{ab} ({{C_c}^I}_J V^J + \nabla_c V^I)
+	- {{C_b}^I}_K {{C_a}^K}_J V^J
+	- {{C_b}^I}_K \nabla_a V^K
+	- \nabla_a \nabla_b V^I + \nabla_b \nabla_a V^I \)<br>
+\( = \nabla_a {{C_b}^I}_J V^J
+	- \nabla_b {{C_a}^I}_J V^J
+	+ {{C_a}^I}_K {{C_b}^K}_J V^J
+	- {{C_b}^I}_K {{C_a}^K}_J V^J
+	+ {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) 
+	- {\Gamma^c}_{ab} ({{C_c}^I}_J V^J + \nabla_c V^I)
+\)<br>
+\( = 2 (\nabla_{[a} {{C_{b]}}^I}_J + {{C_{[a}}^I}_{|K|} {{C_{b]}}^K}_J
+	- {\Gamma^c}_{[ab]} ({{C_c}^I}_J + \delta^I_J \nabla_c)) V^J \)<br>
+\( ({\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ}) V_J = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J
+	- {\Gamma^c}_{[ab]} ({C_c}^{IJ} + \eta^{IJ} \nabla_c)) V_J \)<br>
+\( {\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ} = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J
+	- {\Gamma^c}_{[ab]} ({C_c}^{IJ} + \eta^{IJ} \nabla_c)) \)<br>
+for affine connections, \( {\Gamma^c}_{[ab]} = 0 \) and we get:<br>
+\( {\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ} = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J) \)<br>
+<br>
+\( {\Omega_{ab}}^{IJ} = {R_{ab}}^{IJ} + 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J) \)<br>
+<br>
+TODO show \( R = {e^a}_I {e^b}_J {R_{ab}}^{IJ} = {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} \)<br>
+...or is it?  If not, show the difference goes to zero.<br>
+<br>
+Action on curvature of Lorentz covariant derivative, with Riemann curvature substituted:<br>
 \( S = \int \sqrt{-g} R dx^4 \)<br>
 \( = \int e R dx^4 \)<br>
 \( = \int e {\Omega_{ab}}^{ab} dx^4 \)<br>
 \( = \int e {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} dx^4 \)<br>
+\( S = \int e {e^a}_I {e^b}_J ({R_{ab}}^{IJ} + 2 \nabla_{[a} {C_{b]}}^{IJ} + 2 {C_{[a}}^{IK} {C_{b]K}}^J) dx^4 \)<br>
 <br>
-Covariant derivatives difference: \( {C_{aI}}^J V_J = (D_a - \nabla_a) V_I \)<br>
-TODO show: \( {\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ} = \nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J \)<br>
-\( S = \int e {e^a}_I {e^b}_J ({R_{ab}}^{IJ} + \nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J) dx^4 \)<br>
-<br>
-\( \delta S / \delta {C_a}^{IJ} = \delta / \delta {C_a}^{IJ} \int e {e^b}_K {e^c}_L ({R_{bc}}^{KL} + \nabla_{[b} {C_{c]}}^{KL} + {C_{[b}}^{KM} {C_{c]M}}^L) dx^4 \)<br>
+TODO fix this up a bit:<br>
+\( \delta S / \delta {C_a}^{IJ} = \delta / \delta {C_a}^{IJ} \int e {e^b}_K {e^c}_L ({R_{bc}}^{KL} + 2 \nabla_{[b} {C_{c]}}^{KL} + 2 {C_{[b}}^{KM} {C_{c]M}}^L) dx^4 \)<br>
 TODO show \( \delta / \delta {C_a}^{IJ} {e^a}_I = 0 \)<br>
 TODO show \( \delta / \delta {C_a}^{IJ} {R_{cd}}^{KL} = 0 \)<br>
 TODO show \( \delta / \delta {C_a}^{IJ} \nabla_b {C_c}^{KL} = 0 \)<br>
@@ -845,12 +923,7 @@ TODO show \( \delta / \delta {C_a}^{IJ} \nabla_b {C_c}^{KL} = 0 \)<br>
 TODO where does the integral and scalar \(2 e\) go?<br>
 \( \delta S / \delta {C_a}^{IJ} = {e^{[a}}_K {e^{b]}}_L \delta^K_{[I} \delta^M_{J]} {C_{bM}}^L \)<br>
 <br>
-..."prefactor nondegenerate"<br>
-..."basically says \( \nabla \) coincides with \( D \)"<br>
-..."substitute \( {\Omega_{ab}}^{IJ} \) with \( {R_{ab}}^{IJ} \)"<br>
-then Wikipedia shows something about the variation with respect ot the vierbein...<br>
-(paper doesn't have this)<br>
-...and comes up with...<br>
+TODO:<br>
 \( S = \int e ( (\delta {e^a}_I) {e^b}_J {\Omega_{ab}}^{IJ} + {e^a}_I (\delta {e^b}_J) {\Omega_{ab}}^{IJ} - {e_c}^K (\delta {e^c}_K) {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} ) dx^4 \)<br>
 \( = 2 \int e ({e^b}_J {\Omega_{ab}}^{IJ} - {1\over2} {e^c}_M {e^d}_N {e_a}^I {\Omega_{cd}}^{MN}) \delta {e^a}_I dx^4 \)<br>
 ...substite \( {\Omega_{ab}}^{IJ} = {R_{ab}}^{IJ} \), solve for \( \delta S / \delta {e^a}_I = 0 \) to get...<br>
