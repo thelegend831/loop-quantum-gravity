@@ -408,7 +408,7 @@ Einstein Field Equation:<br>
 <br>
 \(\def \three #1{{#1}^\perp}\)<br>
 
-timelike vector: \( t^a = N n^a + N^a \)<br>
+timelike vector: \( t^a = \alpha n^a + \beta^a \)<br>
 unit normal: \(n_a\)<br>
 proprties:<br>
 unit: \(n^a n_a  = -1\)<br>
@@ -416,143 +416,143 @@ therefore orthogonal to rotation:<br>
 \(0 = \nabla_b (-1) = \nabla_b (n^a n_a) = n_a \nabla_b n^a + n^a \nabla_b n_a = 2 n^a \nabla_b n_a\)<br>
 \(n^a \nabla_b n_a = 0\)<br>
 <br>
-spatial metric / projection: \( q_{ab} = g_{ab} + n_a n_b \)<br>
+spatial metric / projection: \( \gamma_{ab} = g_{ab} + n_a n_b \)<br>
 <br>
 
 spatial metric identity:<br>
-\({q_a}^c {q_c}^b\)<br>
+\({\gamma_a}^c {\gamma_c}^b\)<br>
 \(=(g_a^c+n_a n^c)(g_c^b + n_c n^b)\)<br>
 \(=g_a^b+n_a n^b + n_a n^b + n_a n^c n_c n^b\)<br>
 \(=g_a^b + 2 n_a n^b - n_a n^b\)<br>
 \(=g_a^b + n_a n^b\)<br>
-\(={q_a}^b\)<br>
+\(={\gamma_a}^b\)<br>
 <br>
 
 Acceleration:<br>
 \(a_a = n^b \nabla_b n_a\)<br>
 orthogonal to normal:<br>
 \(n^a a_a = n^a n^b \nabla_b n_a = n^b (n^a \nabla_b n_a) = n^b \cdot 0 = 0\)<br>
-\({q_a}^b a_b = g_a^b a_b + n_a n^b a_b = a^b\)<br>
+\({\gamma_a}^b a_b = g_a^b a_b + n_a n^b a_b = a^b\)<br>
 <br>
 
 Projection / spatial metric<br>
-\(q_{ab} = g_{ab} + n_a n_b\)<br>
-\(g_{ab} = q_{ab} - n_a n_b\)<br>
+\(\gamma_{ab} = g_{ab} + n_a n_b\)<br>
+\(g_{ab} = \gamma_{ab} - n_a n_b\)<br>
 <br>
 
 ADM metric:<br>
-\(||g_{ab}|| = \left[ \matrix{-N^2 + N_k N^k & N_j \\ N_i & q_{ij}} \right] \)<br>
-\(||g^{ab}|| = \left[ \matrix{-1/N^2 & N^j / N^2 \\ N^i / N^2 & q^{ij} - N^i N^j / N^2} \right] \)<br>
-ADM metric determinant: \( g = N \sqrt{q} \)<br>
-ADM spatial metric determinant: \( q = det||q_{ab}|| \)<br>
+\(||g_{ab}|| = \left[ \matrix{-\alpha^2 + \beta_k \beta^k & \beta_j \\ \beta_i & \gamma_{ij}} \right] \)<br>
+\(||g^{ab}|| = \left[ \matrix{-1/\alpha^2 & \beta^j / \alpha^2 \\ \beta^i / \alpha^2 & \gamma^{ij} - \beta^i \beta^j / \alpha^2} \right] \)<br>
+ADM metric determinant: \( g = \alpha \sqrt{\gamma} \)<br>
+ADM spatial metric determinant: \( \gamma = det||\gamma_{ab}|| \)<br>
 <br>
 
 Normal in the ADM metric:<br>
-\(n^a = \left[ \matrix{ 1/N \\ -N^i/N } \right] \)<br>
+\(n^a = \left[ \matrix{ 1/\alpha \\ -\beta^i/\alpha } \right] \)<br>
 <br>
 
-\(n_a = \left[ \matrix{ -N & 0 } \right] \)<br>
+\(n_a = \left[ \matrix{ -\alpha & 0 } \right] \)<br>
 <br>
 
 Projection / spatial metric, in ADM metric:<br>
-\(||{q_a}^b|| = \left[ \matrix{ 1 & 0 \\ 0 & \delta_i^j } \right] + \left[ \matrix{ -N \\ 0 } \right] \left[ \matrix{ 1/N & -N^j/N  } \right]  \)<br>
-\(||{q_a}^b|| = \left[ \matrix{ 1 & 0 \\ 0 & \delta_i^j } \right] + \left[ \matrix{ -1 & N^j \\ 0 & 0 } \right] \)<br>
-\(||{q_a}^b|| = \left[ \matrix{ 0 & N^j \\ 0 & \delta_i^j } \right] \)<br>
+\(||{\gamma_a}^b|| = \left[ \matrix{ 1 & 0 \\ 0 & \delta_i^j } \right] + \left[ \matrix{ -\alpha \\ 0 } \right] \left[ \matrix{ 1/\alpha & -\beta^j/\alpha  } \right]  \)<br>
+\(||{\gamma_a}^b|| = \left[ \matrix{ 1 & 0 \\ 0 & \delta_i^j } \right] + \left[ \matrix{ -1 & \beta^j \\ 0 & 0 } \right] \)<br>
+\(||{\gamma_a}^b|| = \left[ \matrix{ 0 & \beta^j \\ 0 & \delta_i^j } \right] \)<br>
 <br>
 
 Metric contracted with normal:<br>
-\(g_{ab} n^a n^b = (-1/N^2)(-N)^2 = -N^2/N^2=-1\)<br>
+\(g_{ab} n^a n^b = (-1/\alpha^2)(-\alpha)^2 = -\alpha^2/\alpha^2=-1\)<br>
 <br>
 
 Projection is orthogonal to normal:<br>
-\(q_{ab} n^b\)<br>
+\(\gamma_{ab} n^b\)<br>
 \(=g_ab n^b + n_a n_b n^b\)<br>
 \(=n_a - n_a\)<br>
-\(q_{ab} n^b=0\)<br>
+\(\gamma_{ab} n^b=0\)<br>
 <br>
 
 spatial covariant derivative:<br>
-scalar: \(\three\nabla_a f = {q_a}^b \nabla_b f\)<br>
-tensor: \(\three\nabla_a {T^b}_c = {q_a}^d {q_e}^b {q_c}^f \nabla_d {T^e}_f\)<br>
+scalar: \(\three\nabla_a f = {\gamma_a}^b \nabla_b f\)<br>
+tensor: \(\three\nabla_a {T^b}_c = {\gamma_a}^d {\gamma_e}^b {\gamma_c}^f \nabla_d {T^e}_f\)<br>
 <br>
-proof \(\three\nabla_a\) is the covariant derivative of \(q_{ab}\):<br>
-\(\three\nabla_a q_{bc}\)<br>
-\(={q_a}^e {q_b}^f {q_c}^g \nabla_e q_{fg}\)<br>
-\(={q_a}^e {q_b}^f {q_c}^g \nabla_e (n_f n_g)\)<br>
-\(={q_a}^e {q_b}^f {q_c}^g (n_g \nabla_e n_f + n_f \nabla_e n_g)\)<br>
-\(={q_a}^e {q_b}^f ({q_c}^g n_g) \nabla_e n_f + {q_a}^e {q_c}^g ({q_b}^f n_f) \nabla_e n_g\)<br>
-\(={q_a}^e {q_b}^f \cdot 0 \cdot \nabla_e n_f + {q_a}^e {q_c}^g \cdot 0 \cdot \nabla_e n_g\)<br>
-\(\three\nabla_a q_{bc}=0\)<br>
+proof \(\three\nabla_a\) is the covariant derivative of \(\gamma_{ab}\):<br>
+\(\three\nabla_a \gamma_{bc}\)<br>
+\(={\gamma_a}^e {\gamma_b}^f {\gamma_c}^g \nabla_e \gamma_{fg}\)<br>
+\(={\gamma_a}^e {\gamma_b}^f {\gamma_c}^g \nabla_e (n_f n_g)\)<br>
+\(={\gamma_a}^e {\gamma_b}^f {\gamma_c}^g (n_g \nabla_e n_f + n_f \nabla_e n_g)\)<br>
+\(={\gamma_a}^e {\gamma_b}^f ({\gamma_c}^g n_g) \nabla_e n_f + {\gamma_a}^e {\gamma_c}^g ({\gamma_b}^f n_f) \nabla_e n_g\)<br>
+\(={\gamma_a}^e {\gamma_b}^f \cdot 0 \cdot \nabla_e n_f + {\gamma_a}^e {\gamma_c}^g \cdot 0 \cdot \nabla_e n_g\)<br>
+\(\three\nabla_a \gamma_{bc}=0\)<br>
 <br>
 TODO show \( \nabla_i v^j \) = \( \nabla^\perp_i v^j \) for spatial \(v^j\)<br>
 <br>
 spatial connection coefficients:<br>
-\({{\three\Gamma}^a}_{bc} = {1\over2}q^{ad}(\partial_c q_{db} + \partial_b q_{dc} - \partial_d q_{bc})\)<br>
+\({{\three\Gamma}^a}_{bc} = {1\over2}\gamma^{ad}(\partial_c \gamma_{db} + \partial_b \gamma_{dc} - \partial_d \gamma_{bc})\)<br>
 spatial riemann tensor:<br>
 Let \({{\three R}^d}_{cba} w_d = 2 \three\nabla_{[a} \three\nabla_{b]} w_c\)<br>
 therefore \({{\three R}_{abc}}^d = \partial_b {{\three\Gamma}^d}_{ac} - \partial_a {{\three\Gamma}^d}_{bc} + {{\three\Gamma}^e}_{ac} {{\three\Gamma}^d}_{eb} - {{\three\Gamma}^e}_{bc} {{\three\Gamma}^d}_{ea}\)<br>
 <br>
 Extrinsic curvature:<br>
-\(K_{ab} = -{q_a}^c {q_b}^d \nabla_c n_d\)<br>
+\(K_{ab} = -{\gamma_a}^c {\gamma_b}^d \nabla_c n_d\)<br>
 \(K_{ab} = -(g_a^c + n_a n^c)(g_b^d + n_b n^d) \nabla_c n_d\)<br>
 \(= -\nabla_a n_b - n_a n^c \nabla_c n_b - n_b n^d \nabla_a n_d - n_a n_b n^c n^d \nabla_c n_d\)<br>
 \(= -\nabla_a n_b - n_a a_b\)<br>
 <br>
 Extrinsic curvature components, in ADM metric:<br>
-\( K_{ab} = -{q_a}^c \nabla_c n_d {q_b}^d \)<br>
-\( ||K_{ab}|| = -\left[ \matrix{ 0 & N^m \\ 0 & \delta_i^m } \right] \left( \left[ \matrix{ \partial_t n_t & 0 \\ \partial_m n_t & 0 } \right] - \left[ \matrix{ {\Gamma^t}_{tt} & {\Gamma^t}_{nt} \\ {\Gamma^t}_{tm} & {\Gamma^t}_{nm} } \right] n_t \right)\left[ \matrix{ 0 & 0 \\ N^n & \delta_j^n} \right]\)<br>
-\(= \left[ \matrix{ 0 & N^m \\ 0 & \delta_i^m } \right] \left[ \matrix{ {\Gamma^t}_{tt} n_t - \partial_t n_t & {\Gamma^t}_{nt} n_t \\ {\Gamma^t}_{tm} n_t - \partial_m n_t & {\Gamma^t}_{nm} n_t } \right] \left[ \matrix{ 0 & 0 \\ N^n & \delta_j^n} \right]\)<br>
-\(= -N \left[ \matrix{ N^m N^n {\Gamma^t}_{nm} & N^m {\Gamma^t}_{jm} \\ N^n {\Gamma^t}_{ni} & {\Gamma^t}_{ji} } \right] \)<br>
-\(K_{ij} = -N{\Gamma^t}_{ji}\)<br>
+\( K_{ab} = -{\gamma_a}^c \nabla_c n_d {\gamma_b}^d \)<br>
+\( ||K_{ab}|| = -\left[ \matrix{ 0 & \beta^m \\ 0 & \delta_i^m } \right] \left( \left[ \matrix{ \partial_t n_t & 0 \\ \partial_m n_t & 0 } \right] - \left[ \matrix{ {\Gamma^t}_{tt} & {\Gamma^t}_{nt} \\ {\Gamma^t}_{tm} & {\Gamma^t}_{nm} } \right] n_t \right)\left[ \matrix{ 0 & 0 \\ \beta^n & \delta_j^n} \right]\)<br>
+\(= \left[ \matrix{ 0 & \beta^m \\ 0 & \delta_i^m } \right] \left[ \matrix{ {\Gamma^t}_{tt} n_t - \partial_t n_t & {\Gamma^t}_{nt} n_t \\ {\Gamma^t}_{tm} n_t - \partial_m n_t & {\Gamma^t}_{nm} n_t } \right] \left[ \matrix{ 0 & 0 \\ \beta^n & \delta_j^n} \right]\)<br>
+\(= -\alpha \left[ \matrix{ \beta^m \beta^n {\Gamma^t}_{nm} & \beta^m {\Gamma^t}_{jm} \\ \beta^n {\Gamma^t}_{ni} & {\Gamma^t}_{ji} } \right] \)<br>
+\(K_{ij} = -\alpha {\Gamma^t}_{ji}\)<br>
 <br>
 Extrinsic curvature is orthogonal to normal:<br>
 \(K_{ab} n^b\)<br>
-\(=n^b {q_a}^c {q_b}^d \nabla_c n_d\)<br>
-\(=(n^b {q_b}^d) {q_a}^c \nabla_c n_d\)<br>
-\(=0 \cdot {q_a}^c \nabla_c n_d\)<br>
+\(=n^b {\gamma_a}^c {\gamma_b}^d \nabla_c n_d\)<br>
+\(=(n^b {\gamma_b}^d) {\gamma_a}^c \nabla_c n_d\)<br>
+\(=0 \cdot {\gamma_a}^c \nabla_c n_d\)<br>
 \(K_{ab} n^b = 0\)<br>
 <br>
-TODO show: \(\three\nabla_a v^b = {q_a}^c \nabla_c v^b + n^b v^c K_{ac}\)<br>
+TODO show: \(\three\nabla_a v^b = {\gamma_a}^c \nabla_c v^b + n^b v^c K_{ac}\)<br>
 <br>
-\(n_e {q_b}^q \nabla_q v^e\)<br>
-\(= n_e {q_b}^q g_p^e \nabla_q v^p\)<br>
-\(= n_e {q_b}^q ({q_p}^e - n_p n^e) \nabla_q v^p\)<br>
-\(= n_e \three\nabla_b v^e + {q_b}^q n_p \nabla_q v^p\)<br>
-\(= n_e ({q_b}^p \nabla_p v^e + n^e v^p K_{bp}) + {q_b}^q n_p \nabla_q v^p\)<br>
-\(= 2 n_e {q_b}^p \nabla_p v^e - K_{bp} v^p\)<br>
-so \(n_e {q_b}^q \nabla_q v^e = 2 n_e {q_b}^p \nabla_p v^e - K_{bp} v^p\)<br>
-aka \(K_{bp} v^p = n_e {q_b}^p \nabla_p v^e\)<br>
+\(n_e {\gamma_b}^q \nabla_q v^e\)<br>
+\(= n_e {\gamma_b}^q g_p^e \nabla_q v^p\)<br>
+\(= n_e {\gamma_b}^q ({\gamma_p}^e - n_p n^e) \nabla_q v^p\)<br>
+\(= n_e \three\nabla_b v^e + {\gamma_b}^q n_p \nabla_q v^p\)<br>
+\(= n_e ({\gamma_b}^p \nabla_p v^e + n^e v^p K_{bp}) + {\gamma_b}^q n_p \nabla_q v^p\)<br>
+\(= 2 n_e {\gamma_b}^p \nabla_p v^e - K_{bp} v^p\)<br>
+so \(n_e {\gamma_b}^q \nabla_q v^e = 2 n_e {\gamma_b}^p \nabla_p v^e - K_{bp} v^p\)<br>
+aka \(K_{bp} v^p = n_e {\gamma_b}^p \nabla_p v^e\)<br>
 <br>
 \(\three\nabla_a \three\nabla_b v^c\)<br>
-\(= \three\nabla_a ({q_b}^d {q_e}^c \nabla_d v^e)\)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c \nabla_p ({q_q}^d {q_e}^r \nabla_d v^e)\)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c ({q_e}^r \nabla_p {q_q}^d \nabla_d v^e <br>
-	+ {q_q}^d \nabla_p {q_e}^r \nabla_d v^e <br>
-	+ {q_q}^d {q_e}^r \nabla_p \nabla_d v^e)\)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c {q_e}^r \nabla_p {q_q}^d \nabla_d v^e <br>
-	+ {q_a}^p {q_b}^q {q_r}^c {q_q}^d \nabla_p {q_e}^r \nabla_d v^e <br>
-	+ {q_a}^p {q_b}^q {q_r}^c {q_q}^d {q_e}^r \nabla_p \nabla_d v^e\)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c (\nabla_p {q_q}^d \nabla_d v^r + \nabla_p {q_e}^r \nabla_q v^e + \nabla_p \nabla_q v^r)\)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c \nabla_p \nabla_q v^r <br>
-	+ {q_a}^p {q_b}^q {q_r}^c \nabla_p (n_q n^d) \nabla_d v^r <br>
-	+ {q_a}^p {q_b}^q {q_r}^c \nabla_p (n_e n^r) \nabla_q v^e\)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c \nabla_p \nabla_q v^r <br>
-	+ {q_a}^p {q_b}^q {q_r}^c (n^d \nabla_p n_q + n_q \nabla_p n^d) \nabla_d v^r <br>
-	+ {q_a}^p {q_b}^q {q_r}^c (n^r \nabla_p n_e + n_e \nabla_p n^r) \nabla_q v^e\)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c \nabla_p \nabla_q v^r <br>
-	+ {q_a}^p {q_b}^q {q_r}^c n^d \nabla_p n_q \nabla_d v^r <br>
-	+ {q_a}^p {q_b}^q {q_r}^c n_e \nabla_p n^r \nabla_q v^e\)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c \nabla_p \nabla_q v^r <br>
-	+ {q_r}^c ({q_a}^p {q_b}^q \nabla_p n_q) n^d \nabla_d v^r <br>
-	+ {q_b}^q ({q_a}^p {q_r}^c \nabla_p n^r) n_e \nabla_q v^e\)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c \nabla_p \nabla_q v^r <br>
-	- K_{ab} {q_r}^c n^p \nabla_p v^r <br>
-	+ {q_b}^q g^{cs} ({q_a}^p {q_s}^r \nabla_p n_r) n_e \nabla_q v^e\)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c \nabla_p \nabla_q v^r <br>
-	- K_{ab} {q_r}^c n^p \nabla_p v^r <br>
-	- {K_a}^c n_e {q_b}^q \nabla_q v^e\)<br>
-\(\three\nabla_a \three\nabla_b v^c = {q_a}^p {q_b}^q {q_r}^c \nabla_p \nabla_q v^r <br>
-	- K_{ab} {q_r}^c n^p \nabla_p v^r <br>
+\(= \three\nabla_a ({\gamma_b}^d {\gamma_e}^c \nabla_d v^e)\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p ({\gamma_q}^d {\gamma_e}^r \nabla_d v^e)\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c ({\gamma_e}^r \nabla_p {\gamma_q}^d \nabla_d v^e <br>
+	+ {\gamma_q}^d \nabla_p {\gamma_e}^r \nabla_d v^e <br>
+	+ {\gamma_q}^d {\gamma_e}^r \nabla_p \nabla_d v^e)\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c {\gamma_e}^r \nabla_p {\gamma_q}^d \nabla_d v^e <br>
+	+ {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c {\gamma_q}^d \nabla_p {\gamma_e}^r \nabla_d v^e <br>
+	+ {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c {\gamma_q}^d {\gamma_e}^r \nabla_p \nabla_d v^e\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c (\nabla_p {\gamma_q}^d \nabla_d v^r + \nabla_p {\gamma_e}^r \nabla_q v^e + \nabla_p \nabla_q v^r)\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
+	+ {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p (n_q n^d) \nabla_d v^r <br>
+	+ {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p (n_e n^r) \nabla_q v^e\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
+	+ {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c (n^d \nabla_p n_q + n_q \nabla_p n^d) \nabla_d v^r <br>
+	+ {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c (n^r \nabla_p n_e + n_e \nabla_p n^r) \nabla_q v^e\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
+	+ {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c n^d \nabla_p n_q \nabla_d v^r <br>
+	+ {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c n_e \nabla_p n^r \nabla_q v^e\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
+	+ {\gamma_r}^c ({\gamma_a}^p {\gamma_b}^q \nabla_p n_q) n^d \nabla_d v^r <br>
+	+ {\gamma_b}^q ({\gamma_a}^p {\gamma_r}^c \nabla_p n^r) n_e \nabla_q v^e\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
+	- K_{ab} {\gamma_r}^c n^p \nabla_p v^r <br>
+	+ {\gamma_b}^q g^{cs} ({\gamma_a}^p {\gamma_s}^r \nabla_p n_r) n_e \nabla_q v^e\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
+	- K_{ab} {\gamma_r}^c n^p \nabla_p v^r <br>
+	- {K_a}^c n_e {\gamma_b}^q \nabla_q v^e\)<br>
+\(\three\nabla_a \three\nabla_b v^c = {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
+	- K_{ab} {\gamma_r}^c n^p \nabla_p v^r <br>
 	- {K_a}^c K_{bp} v^p\)<br>
 <br>
 Riemann metric tensor<br>
@@ -560,133 +560,133 @@ Riemann metric tensor<br>
 add identity to prepare for substitution with projection matrix<br>
 \(=g^p_a g^q_b g^r_c g^s_d R_{pqrs}\)<br>
 ...and substitute...<br>
-\(=({q_a}^p-n^p n_a) ({q_b}^q - n^q n_b) ({q_c}^r - n^r n_c) ({q_d}^s-n^s n_d) R_{pqrs}\)<br>
+\(=({\gamma_a}^p-n^p n_a) ({\gamma_b}^q - n^q n_b) ({\gamma_c}^r - n^r n_c) ({\gamma_d}^s-n^s n_d) R_{pqrs}\)<br>
 \(= (<br>
-{q_a}^p {q_b}^q {q_c}^r {q_d}^s<br>
-- n^p n_a {q_b}^q {q_c}^r {q_d}^s<br>
-- {q_a}^p n^q n_b {q_c}^r {q_d}^s<br>
-- {q_a}^p {q_b}^q n^r n_c {q_d}^s<br>
-- {q_a}^p {q_b}^q {q_c}^r n^s n_d<br>
-+ n^p n_a n^q n_b {q_c}^r {q_d}^s<br>
-+ n^p n_a {q_b}^q n^r n_c {q_d}^s<br>
-+ n^p n_a {q_b}^q {q_c}^r n^s n_d<br>
-+ {q_a}^p n^q n_b n^r n_c {q_d}^s<br>
-+ {q_a}^p n^q n_b {q_c}^r n^s n_d<br>
-+ {q_a}^p {q_b}^q n^r n_c n^s n_d<br>
-- n^p n_a n^q n_b n^r n_c {q_d}^s<br>
-- n^p n_a n^q n_b {q_c}^r n^s n_d<br>
-- n^p n_a {q_b}^q n^r n_c n^s n_d<br>
-- {q_a}^p n^q n_b n^r n_c n^s n_d<br>
+{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s<br>
+- n^p n_a {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s<br>
+- {\gamma_a}^p n^q n_b {\gamma_c}^r {\gamma_d}^s<br>
+- {\gamma_a}^p {\gamma_b}^q n^r n_c {\gamma_d}^s<br>
+- {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r n^s n_d<br>
++ n^p n_a n^q n_b {\gamma_c}^r {\gamma_d}^s<br>
++ n^p n_a {\gamma_b}^q n^r n_c {\gamma_d}^s<br>
++ n^p n_a {\gamma_b}^q {\gamma_c}^r n^s n_d<br>
++ {\gamma_a}^p n^q n_b n^r n_c {\gamma_d}^s<br>
++ {\gamma_a}^p n^q n_b {\gamma_c}^r n^s n_d<br>
++ {\gamma_a}^p {\gamma_b}^q n^r n_c n^s n_d<br>
+- n^p n_a n^q n_b n^r n_c {\gamma_d}^s<br>
+- n^p n_a n^q n_b {\gamma_c}^r n^s n_d<br>
+- n^p n_a {\gamma_b}^q n^r n_c n^s n_d<br>
+- {\gamma_a}^p n^q n_b n^r n_c n^s n_d<br>
 + n^p n_a n^q n_b n^r n_c n^s n_d ) R_{pqrs}\)<br>
 remove contraction of antisymmetric indices...<br>
 \(= (<br>
-{q_a}^p {q_b}^q {q_c}^r {q_d}^s<br>
-- n^p n_a {q_b}^q {q_c}^r {q_d}^s<br>
-- {q_a}^p n^q n_b {q_c}^r {q_d}^s<br>
-- {q_a}^p {q_b}^q n^r n_c {q_d}^s<br>
-- {q_a}^p {q_b}^q {q_c}^r n^s n_d<br>
-+ n^p n_a {q_b}^q n^r n_c {q_d}^s<br>
-+ n^p n_a {q_b}^q {q_c}^r n^s n_d<br>
-+ {q_a}^p n^q n_b n^r n_c {q_d}^s<br>
-+ {q_a}^p n^q n_b {q_c}^r n^s n_d) R_{pqrs}\)<br>
+{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s<br>
+- n^p n_a {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s<br>
+- {\gamma_a}^p n^q n_b {\gamma_c}^r {\gamma_d}^s<br>
+- {\gamma_a}^p {\gamma_b}^q n^r n_c {\gamma_d}^s<br>
+- {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r n^s n_d<br>
++ n^p n_a {\gamma_b}^q n^r n_c {\gamma_d}^s<br>
++ n^p n_a {\gamma_b}^q {\gamma_c}^r n^s n_d<br>
++ {\gamma_a}^p n^q n_b n^r n_c {\gamma_d}^s<br>
++ {\gamma_a}^p n^q n_b {\gamma_c}^r n^s n_d) R_{pqrs}\)<br>
 distribute ...<br>
-\(= ({q_a}^p {q_b}^q {q_c}^r {q_d}^s<br>
-- n^p n_a {q_b}^q {q_c}^r {q_d}^s<br>
-- {q_a}^p n^q n_b {q_c}^r {q_d}^s<br>
-- {q_a}^p {q_b}^q n^r n_c {q_d}^s<br>
-- {q_a}^p {q_b}^q {q_c}^r n^s n_d<br>
-+ n^p n_a {q_b}^q n^r n_c {q_d}^s<br>
-+ n^p n_a {q_b}^q {q_c}^r n^s n_d<br>
-+ {q_a}^p n^q n_b n^r n_c {q_d}^s<br>
-+ {q_a}^p n^q n_b {q_c}^r n^s n_d) R_{pqrs}\)<br>
+\(= ({\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s<br>
+- n^p n_a {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s<br>
+- {\gamma_a}^p n^q n_b {\gamma_c}^r {\gamma_d}^s<br>
+- {\gamma_a}^p {\gamma_b}^q n^r n_c {\gamma_d}^s<br>
+- {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r n^s n_d<br>
++ n^p n_a {\gamma_b}^q n^r n_c {\gamma_d}^s<br>
++ n^p n_a {\gamma_b}^q {\gamma_c}^r n^s n_d<br>
++ {\gamma_a}^p n^q n_b n^r n_c {\gamma_d}^s<br>
++ {\gamma_a}^p n^q n_b {\gamma_c}^r n^s n_d) R_{pqrs}\)<br>
 move \(n\)'s to the end...<br>
-\(= ({q_a}^p {q_b}^q {q_c}^r {q_d}^s<br>
-- {q_b}^q {q_c}^r {q_d}^s n^p n_a<br>
-- {q_a}^p {q_c}^r {q_d}^s n^q n_b<br>
-- {q_a}^p {q_b}^q {q_d}^s n^r n_c<br>
-- {q_a}^p {q_b}^q {q_c}^r n^s n_d<br>
-+ {q_b}^q {q_d}^s n^p n_a n^r n_c<br>
-+ {q_b}^q {q_c}^r n^p n_a n^s n_d<br>
-+ {q_a}^p {q_d}^s n^q n_b n^r n_c<br>
-+ {q_a}^p {q_c}^r n^q n_b n^s n_d) R_{pqrs}\)<br>
+\(= ({\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s<br>
+- {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s n^p n_a<br>
+- {\gamma_a}^p {\gamma_c}^r {\gamma_d}^s n^q n_b<br>
+- {\gamma_a}^p {\gamma_b}^q {\gamma_d}^s n^r n_c<br>
+- {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r n^s n_d<br>
++ {\gamma_b}^q {\gamma_d}^s n^p n_a n^r n_c<br>
++ {\gamma_b}^q {\gamma_c}^r n^p n_a n^s n_d<br>
++ {\gamma_a}^p {\gamma_d}^s n^q n_b n^r n_c<br>
++ {\gamma_a}^p {\gamma_c}^r n^q n_b n^s n_d) R_{pqrs}\)<br>
 use antisymmetry to switch indices, and combine ...<br>
-\(R_{abcd} = ({q_a}^p {q_b}^q {q_c}^r {q_d}^s<br>
-- 2 {q_a}^p {q_b}^q {q_{[c}}^r n_{d]} n^s<br>
-- 2 {q_c}^p {q_d}^q {q_{[a}}^r n_{b]} n^s<br>
-+ 2 {q_a}^p {q_{[c}}^r n_{d]} n_b n^q n^s<br>
-- 2 {q_b}^p {q_{[c}}^r n_{d]} n_a n^q n^s) R_{pqrs}\)<br>
+\(R_{abcd} = ({\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s<br>
+- 2 {\gamma_a}^p {\gamma_b}^q {\gamma_{[c}}^r n_{d]} n^s<br>
+- 2 {\gamma_c}^p {\gamma_d}^q {\gamma_{[a}}^r n_{b]} n^s<br>
++ 2 {\gamma_a}^p {\gamma_{[c}}^r n_{d]} n_b n^q n^s<br>
+- 2 {\gamma_b}^p {\gamma_{[c}}^r n_{d]} n_a n^q n^s) R_{pqrs}\)<br>
 <br>
 \({{\three R}^{dc}}_{ba} v_d\)<br>
 \(= \three\nabla_a \three\nabla_b v^c - \three\nabla_b \three\nabla_a v^c \)<br>
-\(= {q_a}^p {q_b}^q {q_r}^c \nabla_p \nabla_q v^r <br>
-- K_{ab} {q_r}^c n^p \nabla_p v^r <br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
+- K_{ab} {\gamma_r}^c n^p \nabla_p v^r <br>
 - {K_a}^c K_{bp} v^p<br>
-- {q_b}^p {q_a}^q {q_r}^c \nabla_p \nabla_q v^r <br>
-+ K_{ba} {q_r}^c n^p \nabla_p v^r <br>
+- {\gamma_b}^p {\gamma_a}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
++ K_{ba} {\gamma_r}^c n^p \nabla_p v^r <br>
 + {K_b}^c K_{ap} v^p\)<br>
-\(= 2 {q_a}^p {q_b}^q {q_r}^c \nabla_{[p} \nabla_{q]} v^r - 2 {K_{[a}}^c K_{b]p} v^p\)<br>
-\(= {q_a}^p {q_b}^q {q_c}^r R_{drqp} v^d - {K_a}^c K_{bd} v^d + {K_b}^c K_{ad} v^d\)<br>
-\(= {q_a}^p {q_b}^q {q_c}^r {q_d}^s R_{pqrs} v^d - {K_a}^c K_{bd} v^d + {K_b}^c K_{ad} v^d\)<br>
-\({{\three R}^{dc}}_{ba} v_d = {q_a}^p {q_b}^q {q_c}^r R_{drqp} v^d - {K_a}^c K_{bd} v^d + {K_b}^c K_{ad} v^d\)<br>
+\(= 2 {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_{[p} \nabla_{\gamma]} v^r - 2 {K_{[a}}^c K_{b]p} v^p\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r R_{drqp} v^d - {K_a}^c K_{bd} v^d + {K_b}^c K_{ad} v^d\)<br>
+\(= {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs} v^d - {K_a}^c K_{bd} v^d + {K_b}^c K_{ad} v^d\)<br>
+\({{\three R}^{dc}}_{ba} v_d = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r R_{drqp} v^d - {K_a}^c K_{bd} v^d + {K_b}^c K_{ad} v^d\)<br>
 Gauss' equation:<br>
-\(\three{R}_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc} = {q_a}^p {q_b}^q {q_c}^r {q_d}^s R_{pqrs}\)<br>
+\(\three{R}_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc} = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs}\)<br>
 <br>
 spatial Riemann is orthogonal to normal:<br>
 \(\three{R}_{abcd} n^d\)<br>
-\(={q_a}^p {q_b}^q {q_c}^r {q_d}^s R_{pqrs} n^d - K_{ac} K_{bd} n^d + K_{ad} K_{bc} n^d\)<br>
-\(={q_a}^p {q_b}^q {q_c}^r (n^d {q_d}^s) R_{pqrs} - K_{ac} (K_{bd} n^d) + (K_{ad} n^d) K_{bc}\)<br>
-\(={q_a}^p {q_b}^q {q_c}^r \cdot 0 \cdot R_{pqrs} - K_{ac} \cdot 0 + 0 \cdot K_{bc}\)<br>
+\(={\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs} n^d - K_{ac} K_{bd} n^d + K_{ad} K_{bc} n^d\)<br>
+\(={\gamma_a}^p {\gamma_b}^q {\gamma_c}^r (n^d {\gamma_d}^s) R_{pqrs} - K_{ac} (K_{bd} n^d) + (K_{ad} n^d) K_{bc}\)<br>
+\(={\gamma_a}^p {\gamma_b}^q {\gamma_c}^r \cdot 0 \cdot R_{pqrs} - K_{ac} \cdot 0 + 0 \cdot K_{bc}\)<br>
 \(\three{R}_{abcd} n^d = 0\)<br>
 <br>
 \(\three\nabla_a K_{bc}\)<br>
-\(=-{q_a}^p {q_b}^q {q_c}^r \nabla_p K_{qr}\)<br>
-\(=-{q_a}^p {q_b}^q {q_c}^r \nabla_p (\nabla_q n_r + n_q a_r)\)<br>
-\(=-{q_a}^p {q_b}^q {q_c}^r (\nabla_p \nabla_q n_r + \nabla_p n_q a_r + n_q \nabla_p a_r)\)<br>
-\(=-{q_a}^p {q_b}^q {q_c}^r (\nabla_p \nabla_q n_r + \nabla_p n_q a_r)\)<br>
-\(=-{q_a}^p {q_b}^q {q_c}^r (\nabla_p \nabla_q n_r + (\nabla_p n_q + n_p a_q) a_r)\)<br>
-\(=-{q_a}^p {q_b}^q {q_c}^r (\nabla_p \nabla_q n_r + K_{pq} a_r)\)<br>
-\(=-{q_a}^p {q_b}^q {q_c}^r \nabla_p \nabla_q n_r + {q_a}^p {q_b}^q {q_c}^r K_{pq} a_r\)<br>
-\(\three\nabla_a K_{bc}=-{q_a}^p {q_b}^q {q_c}^r \nabla_p \nabla_q n_r + a_c K_{ab}\)<br>
+\(=-{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r \nabla_p K_{qr}\)<br>
+\(=-{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r \nabla_p (\nabla_q n_r + n_q a_r)\)<br>
+\(=-{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r (\nabla_p \nabla_q n_r + \nabla_p n_q a_r + n_q \nabla_p a_r)\)<br>
+\(=-{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r (\nabla_p \nabla_q n_r + \nabla_p n_q a_r)\)<br>
+\(=-{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r (\nabla_p \nabla_q n_r + (\nabla_p n_q + n_p a_q) a_r)\)<br>
+\(=-{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r (\nabla_p \nabla_q n_r + K_{pq} a_r)\)<br>
+\(=-{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r \nabla_p \nabla_q n_r + {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r K_{pq} a_r\)<br>
+\(\three\nabla_a K_{bc}=-{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r \nabla_p \nabla_q n_r + a_c K_{ab}\)<br>
 Therefore<br>
-\(\three\nabla_{[a} K_{b]c} = -{q_a}^p {q_b}^q {q_c}^r \nabla_{[p} \nabla_{q]} n_r\)<br>
+\(\three\nabla_{[a} K_{b]c} = -{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r \nabla_{[p} \nabla_{\gamma]} n_r\)<br>
 Codazzi equation:<br>
-\(\three\nabla_b K_{ac} - \three\nabla_b K_{bc} = {q_a}^p {q_b}^q {q_c}^r n^s R_{pqrs}\)<br>
+\(\three\nabla_b K_{ac} - \three\nabla_b K_{bc} = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r n^s R_{pqrs}\)<br>
 <br>
 Lie derivative along hypersurface normal of spatial metric:<br>
-\( \mathcal{L}_{\vec{n}} q_{ab} = n^c \nabla_c q_{ab} + q_{cb} \nabla_a n^c + q_{ac} \nabla_b n^c \)<br>
-\( = n^c \nabla_c q_{ab} + q_{cb} \nabla_a n^c + q_{ac} \nabla_b n^c \)<br>
+\( \mathcal{L}_{\vec{n}} \gamma_{ab} = n^c \nabla_c \gamma_{ab} + \gamma_{cb} \nabla_a n^c + \gamma_{ac} \nabla_b n^c \)<br>
+\( = n^c \nabla_c \gamma_{ab} + \gamma_{cb} \nabla_a n^c + \gamma_{ac} \nabla_b n^c \)<br>
 \( = n^c \nabla_c (g_{ab} + n_a n_b) + (g_{cb} + n_c n_b) \nabla_a n^c + (g_{ac} + n_a n_c) \nabla_b n^c \)<br>
 \( = n^c \nabla_c (n_a n_b) + \nabla_a n_b + n_c n_b \nabla_a n^c + \nabla_b n_a + n_a n_c \nabla_b n^c \)<br>
 \( = n_a n^c \nabla_c n_b + n_b n^c \nabla_c n_a + \nabla_a n_b + \nabla_b n_a \)<br>
-\( = ({q^c}_a - \delta^c_a) \nabla_c n_b + ({q^c}_b - \delta^c_b) \nabla_c n_a + \nabla_a n_b + \nabla_b n_a \)<br>
-\( = {q^c}_a \nabla_c n_b - \nabla_a n_b + {q^c}_b \nabla_c n_a - \nabla_b n_a + \nabla_a n_b + \nabla_b n_a \)<br>
-\( = {q^c}_a \nabla_c n_b + {q^c}_b \nabla_c n_a \)<br>
-\( = {q^c}_a {q^d}_b \nabla_c n_d + {q^c}_a {q^d}_b \nabla_d n_c \)<br>
-\( = {q^c}_a {q^d}_b (\nabla_c n_d + \nabla_d n_c) \)<br>
-\( = 2 {q^c}_a {q^d}_b \nabla_{(c} n_{d)} \)<br>
-\( \mathcal{L}_{\vec{n}} q_{ab} = -2 K_{ab} \)<br>
+\( = ({\gamma^c}_a - \delta^c_a) \nabla_c n_b + ({\gamma^c}_b - \delta^c_b) \nabla_c n_a + \nabla_a n_b + \nabla_b n_a \)<br>
+\( = {\gamma^c}_a \nabla_c n_b - \nabla_a n_b + {\gamma^c}_b \nabla_c n_a - \nabla_b n_a + \nabla_a n_b + \nabla_b n_a \)<br>
+\( = {\gamma^c}_a \nabla_c n_b + {\gamma^c}_b \nabla_c n_a \)<br>
+\( = {\gamma^c}_a {\gamma^d}_b \nabla_c n_d + {\gamma^c}_a {\gamma^d}_b \nabla_d n_c \)<br>
+\( = {\gamma^c}_a {\gamma^d}_b (\nabla_c n_d + \nabla_d n_c) \)<br>
+\( = 2 {\gamma^c}_a {\gamma^d}_b \nabla_{(c} n_{d)} \)<br>
+\( \mathcal{L}_{\vec{n}} \gamma_{ab} = -2 K_{ab} \)<br>
 <br>
-Because \( q_{ab} \) is symmetric, so is \( K_{ab} \)<br>
+Because \( \gamma_{ab} \) is symmetric, so is \( K_{ab} \)<br>
 <br>
 Lie derivative along shift vector of spatial metric:<br>
-\( \mathcal{L}_\vec{N} q_{ij}\) <br>
-\( =N^k \partial_k q_{ij} + q_{kj} \partial_i N^k + q_{ik} \partial_j N^k\) <br>
-\( =N^k \partial_k q_{ij} + \partial_i (q_{kj} N^k) - N^k \partial_i q_{kj} + \partial_j (q_{ik} N^k) - N^k \partial_j q_{ik}\) <br>
-\( =\partial_i N_j + \partial_j N_i - N^k (\partial_i q_{kj} + \partial_j q_{ik} - \partial_k q_{ij} )\) <br>
-\( =\partial_i N_j + \partial_j N_i - 2 N^k \Gamma_{kji}\) <br>
-\( =\partial_i N_j + \partial_j N_i - 2 N_k {\Gamma^k}_{ji}\) <br>
-\( =\partial_i N_j - N_k {\Gamma^k}_{ji} + \partial_j N_i - N_k {\Gamma^k}_{ij}\) <br>
-\( =\nabla_i N_j + \nabla_j N_i\) <br>
-\( = 2 \nabla_{(i} N_{j)} \) <br>
+\( \mathcal{L}_\vec{\beta} \gamma_{ij}\) <br>
+\( =\beta^k \partial_k \gamma_{ij} + \gamma_{kj} \partial_i \beta^k + \gamma_{ik} \partial_j \beta^k\) <br>
+\( =\beta^k \partial_k \gamma_{ij} + \partial_i (\gamma_{kj} \beta^k) - \beta^k \partial_i \gamma_{kj} + \partial_j (\gamma_{ik} \beta^k) - \beta^k \partial_j \gamma_{ik}\) <br>
+\( =\partial_i \beta_j + \partial_j \beta_i - \beta^k (\partial_i \gamma_{kj} + \partial_j \gamma_{ik} - \partial_k \gamma_{ij} )\) <br>
+\( =\partial_i \beta_j + \partial_j \beta_i - 2 \beta^k \Gamma_{kji}\) <br>
+\( =\partial_i \beta_j + \partial_j \beta_i - 2 \beta_k {\Gamma^k}_{ji}\) <br>
+\( =\partial_i \beta_j - \beta_k {\Gamma^k}_{ji} + \partial_j \beta_i - \beta_k {\Gamma^k}_{ij}\) <br>
+\( =\nabla_i \beta_j + \nabla_j \beta_i\) <br>
+\( = 2 \nabla_{(i} \beta_{j)} \) <br>
 ...using \(\nabla_i v^j=\nabla^\perp_i v^j\) for spatial \(v^j\)...<br>
-\( \mathcal{L}_\vec{N} q_{ij} = 2 \nabla^\perp_{(i} N_{j)} \) <br>
+\( \mathcal{L}_\vec{\beta} \gamma_{ij} = 2 \nabla^\perp_{(i} \beta_{j)} \) <br>
 <br>
 Time derivative of spatial metric:<br>
-\( \dot{q}_{ab} = \mathcal{L}_{\vec{t}}q_{ab} \)<br>
-\( = \mathcal{L}_{N \vec{n} + \vec{N}} q_{ab} \)<br>
-\( = N \mathcal{L}_{\vec{n}} q_{ab} + \mathcal{L}_{\vec{N}} q_{ab} \)<br>
-\( = -2N K_{ab} + \mathcal{L}_{\vec{N}} q_{ab} \)<br>
-\( \dot{q}_{ab} = -2N K_{ab} + 2 \nabla^\perp_{(i} N_{j)} \)<br>
+\( \dot{\gamma}_{ab} = \mathcal{L}_{\vec{t}}\gamma_{ab} \)<br>
+\( = \mathcal{L}_{\alpha \vec{n} + \vec{\beta}} \gamma_{ab} \)<br>
+\( = \alpha \mathcal{L}_{\vec{n}} \gamma_{ab} + \mathcal{L}_{\vec{\beta}} \gamma_{ab} \)<br>
+\( = -2\alpha K_{ab} + \mathcal{L}_{\vec{\beta}} \gamma_{ab} \)<br>
+\( \dot{\gamma}_{ab} = -2\alpha K_{ab} + 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
 <br>
 Einstein tensor contracted with normal:<br>
 \(G_{ab} = R_{ab} - {1\over2} g_{ab} R\)<br>
@@ -695,7 +695,7 @@ Einstein tensor contracted with normal:<br>
 \(2n^a n^b G_{ab} = 2 n^a n^b R_{ab} + R\)<br>
 <br>
 projected Riemann tensor:<br>
-\(q^{ac}q^{bd}R_{abcd}=(g^{ac} + n^a n^c)(g^{bd} + n^b n^d)R_{abcd}\)<br>
+\(\gamma^{ac}\gamma^{bd}R_{abcd}=(g^{ac} + n^a n^c)(g^{bd} + n^b n^d)R_{abcd}\)<br>
 \(=g^{ac}g^{bd} R_{abcd} + n^a n^c g^{bd} R_{abcd} + g^{ac} n^b n^d R_{abcd} + n^a n^b n^c n^d R_{abcd}\)<br>
 \(=R + n^a n^c R_{ac} + n^b n^d R_{bd}\)<br>
 \(=R + 2 n^a n^b R_{ab}\)<br>
@@ -714,11 +714,11 @@ Ricci tensor contracted with normal:<br>
 \(n^a n^b R_{ab}=K^2 - K_{ab} K^{ab} + \nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
 <br>
 contracting Gauss' equation:<br>
-\(R^\perp_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc} = {q_a}^p {q_b}^q {q_c}^r {q_d}^s R_{pqrs}\)<br>
-\(g^{ac} (R^\perp_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc}) = g^{ac} {q_a}^p {q_b}^q {q_c}^r {q_d}^s R_{pqrs}\)<br>
-\({R^{\perp a}}_{bad} + K K_{bd} - {K^a}_d K_{ba} = q^{pr} {q_b}^q {q_d}^s R_{pqrs}\)<br>
-\(g^{bd}({R^\perp}_{bd} + K K_{bd} - {K^a}_d K_{ba}) = g^{bd} q^{pr} {q_b}^q {q_d}^s R_{pqrs}\)<br>
-\({R^\perp} + K^2 - K^{ab} K_{ab} = q^{pr} q^{qs} R_{pqrs}\)<br>
+\(R^\perp_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc} = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs}\)<br>
+\(g^{ac} (R^\perp_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc}) = g^{ac} {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs}\)<br>
+\({R^{\perp a}}_{bad} + K K_{bd} - {K^a}_d K_{ba} = \gamma^{pr} {\gamma_b}^q {\gamma_d}^s R_{pqrs}\)<br>
+\(g^{bd}({R^\perp}_{bd} + K K_{bd} - {K^a}_d K_{ba}) = g^{bd} \gamma^{pr} {\gamma_b}^q {\gamma_d}^s R_{pqrs}\)<br>
+\({R^\perp} + K^2 - K^{ab} K_{ab} = \gamma^{pr} \gamma^{qs} R_{pqrs}\)<br>
 ...substitute projected Riemann...<br>
 \(R^\perp+K^2-K_{ab}K^{ab}=R + 2n^a n^b R_{ab}\)<br>
 ...solve for R...<br>
@@ -734,60 +734,73 @@ Lagrangian is equal to scalar curvature:<br>
 Densitized Lagrangian:<br>
 \(\mathcal{L}=\sqrt{-g}L\)<br>
 \(=\sqrt{-g}R\)<br>
-\(=N\sqrt{q}R\)<br>
+\(=\alpha\sqrt{\gamma}R\)<br>
 ...substitute Gauss-Codazzi equations...<br>
-\(=N\sqrt{q}(R^\perp + K_{ab} K^{ab} - K^2 - 2 \nabla_c (n^b \nabla_b n^c - n^c \nabla_b n^b))\)<br>
+\(=\alpha\sqrt{\gamma}(R^\perp + K_{ab} K^{ab} - K^2 - 2 \nabla_c (n^b \nabla_b n^c - n^c \nabla_b n^b))\)<br>
 ...consider only spatial integral / disregard total integral (TODO explain this one better)...<br>
-\(\mathcal{L}=N\sqrt{q}(R^\perp+K_{ij} K^{ij} - K^2)\)<br>
+\(\mathcal{L}=\alpha\sqrt{\gamma}(R^\perp+K_{ij} K^{ij} - K^2)\)<br>
 <br>
 Vacuum Action:<br>
 \( S = \int \sqrt{-g} R dx^4 \)<br>
-\( S = \int \int N \sqrt{q} (R^{\perp} + K_{ij} K^{ij} - K^2) dx^3 dt \)<br>
+\( S = \int \int \alpha \sqrt{\gamma} (R^{\perp} + K_{ij} K^{ij} - K^2) dx^3 dt \)<br>
 <br>
-\( \dot{q}_{ij} = -2 N K_{ij} + 2 \nabla^\perp_{(i} N_{j)} \)
-\( K_{ij} = -{1\over{2N}} \dot{q}_{ij} + {1\over N} \nabla^\perp_{(i} N_{j)} \)<br>
-\( {{\partial}\over{\partial \dot{q}_{ij}}} K_{kl} = -{1\over{2N}} \delta^i_k \delta^j_l \)<br>
+\( \dot{\gamma}_{ij} = -2 \alpha K_{ij} + 2 \nabla^\perp_{(i} \beta_{j)} \)
+\( K_{ij} = -{1\over{2\alpha}} \dot{\gamma}_{ij} + {1\over \alpha} \nabla^\perp_{(i} \beta_{j)} \)<br>
+\( {{\partial}\over{\partial \dot{\gamma}_{ij}}} K_{kl} = -{1\over{2\alpha}} \delta^i_k \delta^j_l \)<br>
 <br>
 Conjugate momentum:<br>
-\( \tilde\pi_{ij} = {{\partial \mathcal{L}}\over{\partial \dot{q}^{ij}}} \)<br>
-\( = {\partial\over{\partial \dot{q}^{ij}}} (N \sqrt{q} (R^{\perp} + K_{kl} K^{kl} - K^2)) \)<br>
-\( = {\partial\over{\partial \dot{q}^{ij}}} N \sqrt{q} (R^{\perp} + g_{km} g_{ln} K^{kl} K^{mn} - K^{kl} g_{kl} K^{mn} g_{mn}) \)<br>
-\( \tilde\pi_{ij} = N \sqrt{q} ({\delta\over{\delta\dot{q}^{ij}}} (q_{km} q_{ln} K^{kl} K^{mn}) - {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} q_{kl} K^{mn} q_{mn})) \)<br>
-\( \tilde\pi_{ij} = N \sqrt{q} (q_{km} q_{ln} {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} K^{mn}) - q_{kl} q_{mn} {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} K^{mn})) \)<br>
-\( \tilde\pi_{ij} = N \sqrt{q} (q_{km} q_{ln} - q_{kl} q_{mn}) {\delta\over{\delta\dot{q}^{ij}}} (K^{kl} K^{mn}) \)<br>
-\( \tilde\pi_{ij} = N \sqrt{q} (q_{km} q_{ln} - q_{kl} q_{mn}) (K^{kl} {\delta\over{\delta\dot{q}^{ij}}} K^{mn} + K^{mn} {\delta\over{\delta\dot{q}^{ij}}} K^{kl}) \)<br>
-\( \tilde\pi_{ij} = -N \sqrt{q} (q_{km} q_{ln} - q_{kl} q_{mn}) ({1\over{2N}} K^{kl} \delta^m_i \delta^n_j + {1\over{2N}} K^{mn} \delta^k_i \delta^l_j) \)<br>
-\( \tilde\pi_{ij} = -N {1\over{2N}} \sqrt{q} ((q_{km} q_{ln} - q_{kl} q_{mn}) K^{kl} \delta^m_i \delta^n_j + (q_{km} q_{ln} - q_{kl} q_{mn}) K^{mn} \delta^k_i \delta^l_j) \)<br>
-\( \tilde\pi_{ij} = -{1\over2} \sqrt{q} ((q_{km} q_{ln} K^{kl} \delta^m_i \delta^n_j - q_{kl} q_{mn} K^{kl} \delta^m_i \delta^n_j) + (q_{km} q_{ln} K^{mn} \delta^k_i \delta^l_j - q_{kl} q_{mn} K^{mn} \delta^k_i \delta^l_j)) \)<br>
-\( \tilde\pi_{ij} = -{1\over2} \sqrt{q} (K_{ij} - q_{ij} K + K_{ij} - q_{ij} K) \)<br>
-\( \tilde\pi_{ij} = -\sqrt{q} (K_{ij} - q_{ij} K) \)<br>
-\( \tilde\pi^{ij} = -\sqrt{q} (K^{ij} - q^{ij} K) \)<br>
+\( \pi_{ij} = {{\partial \mathcal{L}}\over{\partial \dot{\gamma}^{ij}}} \)<br>
+\( = {\partial\over{\partial \dot{\gamma}^{ij}}} (\alpha \sqrt{\gamma} (R^{\perp} + K_{kl} K^{kl} - K^2)) \)<br>
+\( = {\partial\over{\partial \dot{\gamma}^{ij}}} \alpha \sqrt{\gamma} (R^{\perp} + g_{km} g_{ln} K^{kl} K^{mn} - K^{kl} g_{kl} K^{mn} g_{mn}) \)<br>
+\( \pi_{ij} = \alpha \sqrt{\gamma} ({\delta\over{\delta\dot{\gamma}^{ij}}} (\gamma_{km} \gamma_{ln} K^{kl} K^{mn}) - {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} \gamma_{kl} K^{mn} \gamma_{mn})) \)<br>
+\( \pi_{ij} = \alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} K^{mn}) - \gamma_{kl} \gamma_{mn} {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} K^{mn})) \)<br>
+\( \pi_{ij} = \alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} K^{mn}) \)<br>
+\( \pi_{ij} = \alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) (K^{kl} {\delta\over{\delta\dot{\gamma}^{ij}}} K^{mn} + K^{mn} {\delta\over{\delta\dot{\gamma}^{ij}}} K^{kl}) \)<br>
+\( \pi_{ij} = -\alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) ({1\over{2\alpha}} K^{kl} \delta^m_i \delta^n_j + {1\over{2\alpha}} K^{mn} \delta^k_i \delta^l_j) \)<br>
+\( \pi_{ij} = -\alpha {1\over{2\alpha}} \sqrt{\gamma} ((\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) K^{kl} \delta^m_i \delta^n_j + (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) K^{mn} \delta^k_i \delta^l_j) \)<br>
+\( \pi_{ij} = -{1\over2} \sqrt{\gamma} ((\gamma_{km} \gamma_{ln} K^{kl} \delta^m_i \delta^n_j - \gamma_{kl} \gamma_{mn} K^{kl} \delta^m_i \delta^n_j) + (\gamma_{km} \gamma_{ln} K^{mn} \delta^k_i \delta^l_j - \gamma_{kl} \gamma_{mn} K^{mn} \delta^k_i \delta^l_j)) \)<br>
+\( \pi_{ij} = -{1\over2} \sqrt{\gamma} (K_{ij} - \gamma_{ij} K + K_{ij} - \gamma_{ij} K) \)<br>
+\( \pi_{ij} = -\sqrt{\gamma} (K_{ij} - \gamma_{ij} K) \)<br>
+\( \pi^{ij} = -\sqrt{\gamma} (K^{ij} - \gamma^{ij} K) \)<br>
 <br>
 Hamiltonian:
-\( \mathscr{H} = \tilde\pi^{ij} \dot{q}_{ij} - \mathcal{L} \)<br>
-\( = -N \sqrt{q} (R^{\perp} + K_{ij} K^{ij} - K^2) - \sqrt{q} (K^{ij} - q^{ij} K) (-2 N K_{ij} + 2 \nabla^\perp_{(i} N_{j)}) \)<br>
-\( = -N \sqrt{q} (R^{\perp} + K_{ij} K^{ij} - K^2) + 2 N \sqrt{q} (K^{ij} - q^{ij} K) K_{ij} - 2 \sqrt{q} (K^{ij} - q^{ij} K) \nabla^\perp_{(i} N_{j)} \)<br>
-\( = -\sqrt{q} (N (R^{\perp} + K_{ij} K^{ij} - K^2 - 2 (K^{ij} - q^{ij} K) K_{ij}) + 2 (K^{ij} - q^{ij} K) \nabla^\perp_{(i} N_{j)} ) \)<br>
-\( = -\sqrt{q} (N (R^{\perp} + K_{ij} K^{ij} - K^2 - 2 K^{ij} K_{ij} + 2 K^2) + 2 (K^{ij} - q^{ij} K) \nabla^\perp_{(i} N_{j)} ) \)<br>
-\( = -\sqrt{q} (N (R^{\perp} - K_{ij} K^{ij} + K^2) + 2 (K^{ij} - q^{ij} K) \nabla^\perp_{(i} N_{j)} ) \)<br>
-\( = -\sqrt{q} (N (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 {{\tilde\pi^{ij}}\over\sqrt{q}} \nabla^\perp_{(i} N_{j)} ) \)<br>
-using the symmetry of \( \tilde\pi^{ij} \):<br>
-\( = -\sqrt{q} (N (R^{\perp} - K_{ij} K^{ij} + K^2) - {2\over\sqrt{q}} \tilde\pi^{ij} \nabla^\perp_i N_j ) \)<br>
-using \( \nabla^\perp_i N_j = \partial_i N_j \)<br>
-\( = -\sqrt{q} (N (R^{\perp} - K_{ij} K^{ij} + K^2) - {2\over\sqrt{q}} \tilde\pi^{ij} \partial_i N_j ) \)<br>
-\( = -\sqrt{q} N (R^{\perp} - K_{ij} K^{ij} + K^2) + 2 \tilde\pi^{ij} \partial_i N_j \)<br>
-integration by parts<br>
-\( = -\sqrt{q} N (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 N_j \partial_i \tilde\pi^{ij} \)<br>
-using \( \partial_i \tilde\pi^{ij} = \nabla^\perp_i \tilde\pi^{ij} \) (TODO show this)<br>
-\( = -\sqrt{q} N (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 N_j \nabla^\perp_i \tilde\pi^{ij} \)<br>
+\( \mathscr{H} = \pi^{ij} \dot{\gamma}_{ij} - \mathcal{L} \)<br>
+\( = -\alpha \sqrt{\gamma} (R^{\perp} + K_{ij} K^{ij} - K^2) - \sqrt{\gamma} (K^{ij} - \gamma^{ij} K) (-2 \alpha K_{ij} + 2 \nabla^\perp_{(i} \beta_{j)}) \)<br>
+\( = -\alpha \sqrt{\gamma} (R^{\perp} + K_{ij} K^{ij} - K^2) + 2 \alpha \sqrt{\gamma} (K^{ij} - \gamma^{ij} K) K_{ij} - 2 \sqrt{\gamma} (K^{ij} - \gamma^{ij} K) \nabla^\perp_{(i} \beta_{j)} \)<br>
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} + K_{ij} K^{ij} - K^2 - 2 (K^{ij} - \gamma^{ij} K) K_{ij}) + 2 (K^{ij} - \gamma^{ij} K) \nabla^\perp_{(i} \beta_{j)} ) \)<br>
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} + K_{ij} K^{ij} - K^2 - 2 K^{ij} K_{ij} + 2 K^2) + 2 (K^{ij} - \gamma^{ij} K) \nabla^\perp_{(i} \beta_{j)} ) \)<br>
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} - K_{ij} K^{ij} + K^2) + 2 (K^{ij} - \gamma^{ij} K) \nabla^\perp_{(i} \beta_{j)} ) \)<br>
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 \pi^{ij} {1\over\sqrt{\gamma}} \nabla^\perp_{(i} \beta_{j)} ) \)<br>
+using \( \mathcal{L}_\vec\beta \gamma^{ij} = 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} - K_{ij} K^{ij} + K^2) - {1\over\sqrt{\gamma}} \pi^{ij} \mathcal{L}_\vec\beta \gamma_{ij} ) \)<br>
+\( = -\sqrt{\gamma} \alpha (R^{\perp} - K_{ij} K^{ij} + K^2) + \pi^{ij} \mathcal{L}_\vec\beta \gamma_{ij} \)<br>
+integration by parts: \( \int \pi^{ij} \mathcal{L}_\vec\beta \gamma_{ij} dx^3 = -\int \gamma_{ij} \mathcal{L}_\vec\beta \pi^{ij} dx^3 \)<br>
+\( = -\sqrt{\gamma} \alpha (R^{\perp} - K_{ij} K^{ij} + K^2) - \gamma_{ij} \mathcal{L}_\vec\beta \pi^{ij} \)<br>
+TODO \( = -\sqrt{\gamma} \alpha (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 \beta_j \nabla^\perp_i \pi^{ij} \)<br>
+<!-- 
 TODO show:<br>
-\( \mathscr{H} = (N(-q^{1/2} R^{\perp} + q^{-1/2} (\tilde\pi^{ij} \tilde\pi_{ij} - {1\over2} \tilde{\tilde\pi}^2)) - 2 N^j \nabla^\perp_i {\tilde\pi^i}_j) \)<br>
+\( \mathscr{H} = \alpha(-\gamma^{1/2} R^{\perp} + \gamma^{-1/2} (\pi^{ij} \pi_{ij} - {1\over2} \pi^2)) - 2 \beta^j \nabla^\perp_i {\pi^i}_j \)<br>
+-->
 <br>
 Constraints:<br>
-\( S = \int \int ((\tilde\pi_{ij} \dot{q}^{ij} + \tilde{N} (-q R + (\tilde\pi^{ij} \tilde\pi_{ij} - {1\over2} \tilde{\tilde\pi}^2)) - 2 N^j \nabla^\perp_i {\tilde{\pi}^i}_j)) dx^3 dt \)<br>
-Let \( \tilde{C}_a(\pi,q) = 2 \nabla^\perp_b {\tilde\pi^a}_b \)<br>
-Let \( \tilde{\tilde{C}}(\pi,q) = -\tilde{\tilde{q}} R + (\tilde\pi^{ab} \tilde\pi_{ab} - {1\over2} \tilde{\pi}^2) \)<br>
-Show: \( \{f(\tilde\pi, q), C(\vec{N})\} = \mathcal{L}_\vec{N} f(\tilde\pi, q) \)<br>
+Let \( \mathcal{H} = -\sqrt\gamma (R^\perp + K^2 - K_{ij} K^{ij}) \)<br>
+Let \( \mathcal{M}^j = 2 \nabla^\perp_i \pi^{ij} \)<br>
+\( \mathscr{H} = \alpha \mathcal{H} - \beta_i \mathcal{M}^i \)<br>
+<br>
+Let \( \textbf{H} = \int \mathscr{H} dx^3 \)<br>
+\( S = \int \textbf{H} dt \)<br>
+<br>
+Let \( \{p,q\} \) represent the Poisson bracket of \(p\) and \(q\):<br>
+\( \{p,q\} = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial g }\over{\partial \pi^{ij}}} - {{\partial f}\over{\partial \pi^{ij}}} {{\partial g}\over{\partial \gamma_{ij}}} \)<br>
+\( \{f, \beta_i \mathcal{M}^i\} \)<br>
+\( = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (\beta_k \mathcal{M}^k) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (\beta_k \mathcal{M}^k) \)<br>
+\( = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (2 \beta_k \nabla^\perp_l \pi^{lk}) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (2 \beta_k \nabla^\perp_l \pi^{lk}) \)<br>
+TODO \( = -{{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (2 \pi^{lk} \nabla^\perp_l \beta_k) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (2 \beta_k \nabla^\perp_l \pi^{lk}) \)<br>
+\( = -{{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (2 \pi^{lk} \nabla^\perp_l \beta_k) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (2 \beta^m \gamma_{mk} \nabla^\perp_l \pi^{lk}) \)<br>
+\( = -{{\partial f}\over{\partial \gamma_{ij}}} (2 \nabla^\perp_i (\gamma_{kj} \beta^k)) - {{\partial f}\over{\partial \pi^{ij}}} (2 \beta^i \nabla^\perp_k \pi^{kj}) \)<br>
+TODO \( = 2 {{\partial f}\over{\partial \gamma_{ij}}} \beta^k \partial_k \gamma_{ij} + 2 {{\partial f}\over{\partial \pi^{ij}}} \beta^k \partial_k \pi^{ij} \)<br>
+\( = 2 \beta^k \partial_k f \)<br>
+\( = 2 \mathcal{L}_\vec{\beta} f(\pi, \gamma) \)<br>
 <br>
 Minkowski metric: \( \eta_{IJ} = diag(-1, 1, 1, 1) \)<br>
 tetrad:<br>
@@ -897,9 +910,9 @@ Action on curvature of Lorentz covariant derivative, with Riemann curvature subs
 <br>
 TODO fix this up a bit:<br>
 \( \delta S / \delta {C_a}^{IJ} = \delta / \delta {C_a}^{IJ} \int e {e^b}_K {e^c}_L ({R_{bc}}^{KL} + 2 \nabla_{[b} {C_{c]}}^{KL} + 2 {C_{[b}}^{KM} {C_{c]M}}^L) dx^4 \)<br>
-TODO show \( \delta / \delta {C_a}^{IJ} {e^a}_I = 0 \)<br>
-TODO show \( \delta / \delta {C_a}^{IJ} {R_{cd}}^{KL} = 0 \)<br>
-TODO show \( \delta / \delta {C_a}^{IJ} \nabla_b {C_c}^{KL} = 0 \)<br>
+TODO show \( \delta / \delta {C_a}^{IJ} ({e^a}_I) = 0 \)<br>
+TODO show \( \delta / \delta {C_a}^{IJ} ({R_{cd}}^{KL}) = 0 \)<br>
+TODO show \( \delta / \delta {C_a}^{IJ} (\nabla_b {C_c}^{KL}) = 0 \)<br>
 \( \delta S / \delta {C_a}^{IJ} = \int e {e^b}_K {e^c}_L \delta / \delta {C_a}^{IJ} {C_{[b}}^{KM} {C_{c]M}}^L dx^4 \)<br>
 \( = \int {1\over2} e {e^b}_K {e^c}_L ({C_{cM}}^L \delta / \delta {C_a}^{IJ} {C_b}^{KM} + {C_b}^{KM} \delta / \delta {C_a}^{IJ} {C_{cM}}^L - {C_{bM}}^L \delta / \delta {C_a}^{IJ} {C_c}^{KM} - {C_c}^{KM} \delta / \delta {C_a}^{IJ} {C_{bM}}^L) dx^4 \)<br>
 \( = \int {1\over2} e {e^b}_K {e^c}_L (
@@ -932,8 +945,51 @@ TODO:<br>
 \( G_{ab} = 0 \) or \( e = 0 \)<br>
 TODO finish all this.<br>
 <br>	
-Self-Dual<br>
-<br>	
-<br>	
-	
+Self-Dual of Lorentz Connection:<br>
+Let \( {A_a}^{IJ} = {1\over2} ({\omega_a}^{IJ} - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
+such that \( {1\over2} {\epsilon_{MN}}^{IJ} {A_a}^{MN} \)
+\( = {1\over2} {\epsilon_{MN}}^{IJ} {1\over2} ({\omega_a}^{MN} - {i\over2} {\epsilon_{KL}}^{MN} {\omega_a}^{KL}) \)<br>
+\( = {1\over4} ({\epsilon_{MN}}^{IJ} {\omega_a}^{MN} - {i\over2} {\epsilon_{MN}}^{IJ} {\epsilon_{KL}}^{MN} {\omega_a}^{KL}) \)<br>
+\( = {i\over2} (-{1\over4} {\epsilon_{KL}}^{MN} {\epsilon_{MN}}^{IJ} {\omega_a}^{KL} - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
+\( = {i\over2} (\delta^{IJ}_{KL} {\omega_a}^{KL} - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
+\( = {i\over2} ({1\over2} (\delta^I_K \delta^J_L - \delta^I_L \delta^J_K) {\omega_a}^{KL} - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
+\( = {i\over2} ({1\over2} ({\omega_a}^{IJ} - {\omega_a}^{JI}) - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
+\( = i {1\over2} ({\omega_a}^{IJ} - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
+\( = i {A_a}^{IJ} \)<br>
+<br>
+Curvature of Self-Dual of Lorentz Connection:<br>
+Let \( {F_{ab}}^{IJ} = \partial_a {A_b}^{IJ} - \partial_b {A_a}^{IJ} + {A_a}^{IK} {A_{bK}}^J - {A_b}^{IK} {A_{aK}}^J \)<br>
+New Action: \( S = \int e {e^a}_I {e^b}_J {F_{ab}}^{IJ} dx^4 \)<br>
+TODO show \( \delta S / \delta {e^a}_I = 0 \) for \( {^+R_{ab}} - {1\over2} g_{ab} {^+R} = 0 \) for \(^+R_{ab}\) is the self-dual of \( R_{ab} \)?<br>
+<br>
+Redefine \( t^a, \alpha, \beta^a, n^a \) to be complex<br>
+Same as before, \( {\gamma_b}^a = \delta^a_b + n^a n_b \) and \( \delta^a_b = {\gamma_b}^a - n^a n_b \)<br>
+Let \( {E^a}_I = {\gamma_b}^a {e^b}_I \)<br>
+so \( {e^a}_I = \delta^a_b {e^b}_I = ({\gamma_b}^a - n^a n_b) {e^b}_I = {\gamma_b}^a {e^b}_I - n^a n_b {e^b}_I = {E^a}_I - n^a n_b {e^b}_I \)<br>
+Then<br>
+\( S = \int e {e^a}_I {e^b}_J {F_{ab}}^{IJ} dx^4 \)<br>
+\( = \int e ({E^a}_I - n^a n_c {e^c}_I) ({E^b}_J - n^b n_d {e^d}_J) {F_{ab}}^{IJ} dx^4 \)<br>
+\( = \int e ({E^a}_I {E^b}_J - n^a n_c {e^c}_I {E^b}_J - n^b n_d {e^d}_J {E^a}_I + n^a n_c n^b n_d {e^c}_I {e^d}_J) {F_{ab}}^{IJ} dx^4 \)<br>
+using symmetry of \( {F_{ab}}^{IJ} = -{F_{ba}}^{IJ} = -{F_{ab}}^{JI} \)<br>
+\( S = \int e ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 \)<br>
+<br>
+Remember \( e = N \sqrt\gamma \)<br>
+Let \( {\tilde{E}^a}_I = \sqrt\gamma {E^a}_I \)
+\( S = \int N \sqrt\gamma ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 \)<br>
+\( S = \int N ( {1\over\sqrt\gamma} {\tilde{E}^a}_I {\tilde{E}^b}_J - 2 {\tilde{E}^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 \)<br>
+<br>
+TODO show self-duality of \( {A_a}^{IJ} \) implies \( {F_{ab}}^{IJ} = -i {1\over2} {\epsilon^{IJ}}_{MN} {F_{ab}}^{MN} \)<br>
+\( S = \int -i {1\over2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{MN} {F_{ab}}^{MN} - 2 N {\tilde{E}^a}_I {e^c}_J n^b n_c {F_{ab}}^{IJ} dx^4 \)<br>
+\( S = \int -i {1\over2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{MN} {F_{ab}}^{MN} - 2 N {\tilde{E}^a}_I n^b n_J {F_{ab}}^{IJ} dx^4 \)<br>
+<br>
+Let \( n_I = (1, 0, 0, 0) \)<br>
+Then \( n^I = \eta^{IJ} N_J = (-1, 0, 0, 0) \)<br>
+Then \( {E^a}_0 = {\gamma_b}^a {e^b}_0 = (\delta^a_b + n^a n_b) {e^b}_0 = {e^a}_0 + n^a n_0 = {e^a}_0 + {e^a}_I n^I = {e^a}_0 - {e^a}_0 = 0 \)<br>
+(Notice the lower index of \({E^a}_0\) is a Lorentz index, yet once a value is substituted for an index there is no way to distinguish whether it is Lorentz or coordinate.
+I believe MTW uses hats over indexes (and index values) to denote Lorentz vs coordinate for just this reason.<br>
+Then \( \epsilon^{IJKL} n_L = \epsilon^{IJK0} = \epsilon^{IJK} \)<br>
+\( S = \int -i {1\over2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{M} {F_{ab}}^{M0} - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^{I0} dx^4 \)<br>
+<br>
+Let \( {A_a}^{I0} = {A_a}^I, {F_{ab}}^I = {F_{ab}}^{I0} \)<br>
+\( S = \int -i {1\over2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{M} {F_{ab}}^M - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^I dx^4 \)<br>
 </div>
