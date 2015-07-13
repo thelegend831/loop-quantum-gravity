@@ -13,9 +13,16 @@ using:<br>
 <li type='disc'><a href='http://arxiv.org/pdf/hep-th/9301028v2.pdf'>http://arxiv.org/pdf/hep-th/9301028v2.pdf</a></li>
 <li type='disc'><a href='http://arxiv.org/pdf/gr-qc/9303032v1.pdf'>http://arxiv.org/pdf/gr-qc/9303032v1.pdf</a></li>
 <li type='disc'><a href='http://en.wikipedia.org/wiki/Tetradic_Palatini_action'>http://en.wikipedia.org/wiki/Tetradic_Palatini_action</a></li>
+<li type='disc'><a href='https://en.wikipedia.org/wiki/Self-dual_Palatini_action'>https://en.wikipedia.org/wiki/Self-dual_Palatini_action</a></li>
+<li type='disc'><a href='https://en.wikipedia.org/wiki/Ashtekar_variables'>https://en.wikipedia.org/wiki/Ashtekar_variables</a></li>
 </ul>
 <br>
 <br>
+Indexes:<br>
+\(a-h, o-w\) = spacetime coordinates: \(t, x, y, z\)<br>
+\(i-n\) = spatial coordinates: \(x, y, z\)<br>
+\(\hat a-\hat h, \hat o-\hat w\) = Lorentz coordinates: \(t, x, y, z\)<br>
+\(\hat i-\hat n\) = Lorentz spatial coordinates: \(x, y, z\)<br>
 <br>
 coordinate system \( x_i \)<br>
 vector basis: \( \textbf{e}_j = {e_j}^{\hat k}\)<br>
@@ -238,7 +245,7 @@ Ricci curvature: \( R_{ij} = {R^k}_{ikj} \)<br>
 Gaussian curvature: \( R = {R^i}_i \)<br>
 <br>
 exterior derivative: \( \textbf{d} \)<br>
-exchangeability of exterior and covariant derivative for 2-forms: \( \textbf{dF} = \boldsymbol{\nabla} \cdot\star\textbf{F}, \textbf{d}\star\textbf{F} = \boldsymbol{\nabla} \cdot \textbf{F} \)<br>
+exchangeability of exterior and covariant derivative for 2-forms: \( \textbf{dF} = \boldsymbol{\nabla} \cdot\ast\textbf{F}\), \(\textbf{d}\) \(\ast\textbf{F} = \boldsymbol{\nabla} \cdot \textbf{F} \)<br>
 exterior derivative of scalar: 
 \( \textbf{d}\phi 
 	= \partial_i \phi \textbf{dx}^i 
@@ -330,8 +337,8 @@ so \( \textbf{d} \boldsymbol{\omega}^k
 This coincides with, in a holonomic basis, when \( \boldsymbol{\omega}^i = \textbf{d}x^i, \textbf{d} \boldsymbol{\omega}^i = \textbf{d}^2\textbf{x}^i = 0 \)<br>
 <br>
 <br>
-Einstein: \( {G^{ab}}_{cd} = {{\star R \star}^{ab}}_{cd} = \epsilon^{abef} {R_{ef}}^{gh} \epsilon_{ghcd} \)<br>
-Einstein: \( G_{ab} = R_{ab} - {1\over2} R g_{ab} = {G^{ua}}_{ub} \)<br>
+Einstein: \( {G^{ab}}_{cd} = {(\ast R\ast)^{ab}}_{cd} = {\epsilon^{ab}}_{ef} {R^{ef}}_{gh} {\epsilon^{gh}}_{cd} \)<br>
+Einstein: \( G_{ab} = R_{ab} - {1\over 2} R g_{ab} = {G^{ua}}_{ub} \)<br>
 <br>
 \(\delta^{abcd}_{pqrs} = -\epsilon^{abcde} \epsilon_{pqrse}\)<br>
 <br>
@@ -384,18 +391,18 @@ Einstein-Hilbert Action Principle:<br>
 \( \delta S_{vacuum} = \delta \int \sqrt{-g} R dx^4 \)<br>
 \( = \int \delta (\sqrt{-g} R) dx^4 \)<br>
 \( = \int ( \delta \sqrt{-g} R + \sqrt{-g} \delta R ) dx^4 \)<br>
-\( = \int ( {1\over2} {1\over\sqrt{-g}} \delta (-g) R + \sqrt{-g} \delta (R_{ab} g^{ab}) ) dx^4 \)<br>
+\( = \int ( {1\over 2} {1\over\sqrt{-g}} \delta (-g) R + \sqrt{-g} \delta (R_{ab} g^{ab}) ) dx^4 \)<br>
 \( = \int ( {1\over{2g}} \sqrt{-g} \delta g R + \sqrt{-g} (R_{ab} \delta g^{ab} + \delta R_{ab} g^{ab})) dx^4 \)<br>
 \( = \int \sqrt{-g} ( {1\over{2g}} \delta g R + R_{ab} \delta g^{ab} + g^{ab} \delta R_{ab} ) dx^4 \)<br>
 \( = \int \sqrt{-g} ( -{1\over{2g}} g g^{ab} + R \delta g^{ab} + g^{ab} \delta R_{ab}) dx^4 \)<br>
-\( = \int \sqrt{-g} ( \delta g^{ab} (R_{ab} - {1\over2} R g_{ab}) + g^{ab} \delta R_{ab} ) dx^4 \)<br>
+\( = \int \sqrt{-g} ( \delta g^{ab} (R_{ab} - {1\over 2} R g_{ab}) + g^{ab} \delta R_{ab} ) dx^4 \)<br>
 \( = \int \sqrt{-g} ( \delta g^{ab} G_{ab} + g^{ab} \delta R_{ab} ) dx^4 \)<br>
 \( = \int \sqrt{-g} ( \delta g^{ab} G_{ab} + g^{ab} (\nabla_u \delta {\Gamma^u}_{ab} - \nabla_b \delta {\Gamma^u}_{au}) ) dx^4 \)<br>
 \( \delta S_{vacuum} = \int \sqrt{-g} ( \delta g^{ab} G_{ab} ) dx^4 \)<br>
 <br>
 \( S_{matter} = -16 \pi \int \sqrt{-g} \mathcal{L}_{matter} dx^4 \)<br>
 \( \delta S_{matter} = -16 \pi \int \delta (\sqrt{-g} \mathcal{L}_{matter}) dx^4 \)<br>
-\( = -16 \pi \int ( {1\over2} {1\over\sqrt{-g}} \delta(-g) \mathcal{L}_{matter} + \sqrt{-g} \delta \mathcal{L}_{matter} ) dx^4 \)<br>
+\( = -16 \pi \int ( {1\over 2} {1\over\sqrt{-g}} \delta(-g) \mathcal{L}_{matter} + \sqrt{-g} \delta \mathcal{L}_{matter} ) dx^4 \)<br>
 \( = -8 \pi \int \sqrt{-g} ( 2 \delta \mathcal{L}_{matter} - \delta g^{ab} \mathcal{L}_{matter} ) dx^4 \)<br>
 Let \( T_{ab} = 2 {\delta\over{\delta g^{ab}}} \mathcal{L}_{matter} - \mathcal{L}_{matter} \)<br>
 \( \delta S_{matter} = -8 \pi \int \sqrt{-g} T_{ab} \delta g^{ab} dx^4 \)<br>
@@ -487,7 +494,7 @@ proof \(\three\nabla_a\) is the covariant derivative of \(\gamma_{ab}\):<br>
 TODO show \( \nabla_i v^j \) = \( \nabla^\perp_i v^j \) for spatial \(v^j\)<br>
 <br>
 spatial connection coefficients:<br>
-\({{\three\Gamma}^a}_{bc} = {1\over2}\gamma^{ad}(\partial_c \gamma_{db} + \partial_b \gamma_{dc} - \partial_d \gamma_{bc})\)<br>
+\({{\three\Gamma}^a}_{bc} = {1\over 2}\gamma^{ad}(\partial_c \gamma_{db} + \partial_b \gamma_{dc} - \partial_d \gamma_{bc})\)<br>
 spatial riemann tensor:<br>
 Let \({{\three R}^d}_{cba} w_d = 2 \three\nabla_{[a} \three\nabla_{b]} w_c\)<br>
 therefore \({{\three R}_{abc}}^d = \partial_b {{\three\Gamma}^d}_{ac} - \partial_a {{\three\Gamma}^d}_{bc} + {{\three\Gamma}^e}_{ac} {{\three\Gamma}^d}_{eb} - {{\three\Gamma}^e}_{bc} {{\three\Gamma}^d}_{ea}\)<br>
@@ -689,9 +696,9 @@ Time derivative of spatial metric:<br>
 \( \dot{\gamma}_{ab} = -2\alpha K_{ab} + 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
 <br>
 Einstein tensor contracted with normal:<br>
-\(G_{ab} = R_{ab} - {1\over2} g_{ab} R\)<br>
-\(n^a n^b G_{ab} = n^a n^b R_{ab} - {1\over2} g_{ab} n^a n^b R\)<br>
-\(n^a n^b G_{ab} = n^a n^b R_{ab} + {1\over2} R\)<br>
+\(G_{ab} = R_{ab} - {1\over 2} g_{ab} R\)<br>
+\(n^a n^b G_{ab} = n^a n^b R_{ab} - {1\over 2} g_{ab} n^a n^b R\)<br>
+\(n^a n^b G_{ab} = n^a n^b R_{ab} + {1\over 2} R\)<br>
 \(2n^a n^b G_{ab} = 2 n^a n^b R_{ab} + R\)<br>
 <br>
 projected Riemann tensor:<br>
@@ -758,8 +765,8 @@ Conjugate momentum:<br>
 \( \pi_{ij} = \alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) (K^{kl} {\delta\over{\delta\dot{\gamma}^{ij}}} K^{mn} + K^{mn} {\delta\over{\delta\dot{\gamma}^{ij}}} K^{kl}) \)<br>
 \( \pi_{ij} = -\alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) ({1\over{2\alpha}} K^{kl} \delta^m_i \delta^n_j + {1\over{2\alpha}} K^{mn} \delta^k_i \delta^l_j) \)<br>
 \( \pi_{ij} = -\alpha {1\over{2\alpha}} \sqrt{\gamma} ((\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) K^{kl} \delta^m_i \delta^n_j + (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) K^{mn} \delta^k_i \delta^l_j) \)<br>
-\( \pi_{ij} = -{1\over2} \sqrt{\gamma} ((\gamma_{km} \gamma_{ln} K^{kl} \delta^m_i \delta^n_j - \gamma_{kl} \gamma_{mn} K^{kl} \delta^m_i \delta^n_j) + (\gamma_{km} \gamma_{ln} K^{mn} \delta^k_i \delta^l_j - \gamma_{kl} \gamma_{mn} K^{mn} \delta^k_i \delta^l_j)) \)<br>
-\( \pi_{ij} = -{1\over2} \sqrt{\gamma} (K_{ij} - \gamma_{ij} K + K_{ij} - \gamma_{ij} K) \)<br>
+\( \pi_{ij} = -{1\over 2} \sqrt{\gamma} ((\gamma_{km} \gamma_{ln} K^{kl} \delta^m_i \delta^n_j - \gamma_{kl} \gamma_{mn} K^{kl} \delta^m_i \delta^n_j) + (\gamma_{km} \gamma_{ln} K^{mn} \delta^k_i \delta^l_j - \gamma_{kl} \gamma_{mn} K^{mn} \delta^k_i \delta^l_j)) \)<br>
+\( \pi_{ij} = -{1\over 2} \sqrt{\gamma} (K_{ij} - \gamma_{ij} K + K_{ij} - \gamma_{ij} K) \)<br>
 \( \pi_{ij} = -\sqrt{\gamma} (K_{ij} - \gamma_{ij} K) \)<br>
 \( \pi^{ij} = -\sqrt{\gamma} (K^{ij} - \gamma^{ij} K) \)<br>
 <br>
@@ -779,7 +786,7 @@ integration by parts: \( \int \pi^{ij} \mathcal{L}_\vec\beta \gamma_{ij} dx^3 = 
 TODO \( = -\sqrt{\gamma} \alpha (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 \beta_j \nabla^\perp_i \pi^{ij} \)<br>
 <!-- 
 TODO show:<br>
-\( \mathscr{H} = \alpha(-\gamma^{1/2} R^{\perp} + \gamma^{-1/2} (\pi^{ij} \pi_{ij} - {1\over2} \pi^2)) - 2 \beta^j \nabla^\perp_i {\pi^i}_j \)<br>
+\( \mathscr{H} = \alpha(-\gamma^{1/2} R^{\perp} + \gamma^{-1/2} (\pi^{ij} \pi_{ij} - {1\over 2} \pi^2)) - 2 \beta^j \nabla^\perp_i {\pi^i}_j \)<br>
 -->
 <br>
 Constraints:<br>
@@ -802,194 +809,229 @@ TODO \( = 2 {{\partial f}\over{\partial \gamma_{ij}}} \beta^k \partial_k \gamma_
 \( = 2 \beta^k \partial_k f \)<br>
 \( = 2 \mathcal{L}_\vec{\beta} f(\pi, \gamma) \)<br>
 <br>
-Minkowski metric: \( \eta_{IJ} = diag(-1, 1, 1, 1) \)<br>
+Minkowski metric: \( \eta_{\hat a \hat b} = diag(-1, 1, 1, 1) \)<br>
 tetrad:<br>
-\( g_{ab} = {e_a}^I {e_b}^J \eta_{IJ} \)<br>
-\( \eta^{IJ} = {e_a}^I {e_b}^J g^{ab} \)<br>
+\( g_{ab} = {e_a}^\hat a {e_b}^\hat b \eta_{\hat a \hat b} \)<br>
+\( \eta^{\hat a \hat b} = {e_a}^\hat a {e_b}^\hat b g^{ab} \)<br>
 tetrad inverse:<br>
-\( \eta_{IJ} = {e^a}_I {e^b}_J g_{ab} \)<br>
-\( g^{ab} = {e^a}_I {e^b}_J \eta^{IJ} \)<br>
-tetrad determinant: \( e = det||{e_a}^I|| = \sqrt{-g} \)<br>
+\( \eta_{\hat a \hat b} = {e^a}_\hat a {e^b}_\hat b g_{ab} \)<br>
+\( g^{ab} = {e^a}_\hat a {e^b}_\hat b \eta^{\hat a \hat b} \)<br>
+tetrad determinant: \( e = det||{e_a}^\hat a|| = \sqrt{-g} \)<br>
 orthonormality:<br>
-\( {e_a}^I {e^b}_I = \delta^b_a \)<br>
-\( {e^a}_I {e_a}^J = \delta^J_I \)<br>
-in coordinate frame: \( {e_a}^I = {{\partial x^I}\over{\partial x'^a}} \)<br>
+\( {e_a}^\hat a {e^b}_\hat a = \delta^b_a \)<br>
+\( {e^a}_\hat a {e_a}^\hat b = \delta^\hat b_\hat a \)<br>
+in coordinate frame: \( {e_a}^\hat a = {{\partial x^\hat a}\over{\partial x'^a}} \)<br>
 <br>
 Affine Covariant derivative of Lorentz coordinates:<br>
-\( \nabla_a V^I = \partial_a V^I + {{\omega_a}^I}_J V^J \)<br>
+\( \nabla_a V^\hat a = \partial_a V^\hat a + {{\omega_a}^\hat a}_\hat b V^\hat b \)<br>
 <br>
 Affine Covariant derivative cancels the tetrad (as well as metric):<br>
-\( \nabla_a {e_b}^I = 0 = \partial_a {e_b}^I - {\Gamma^c}_{ba} {e_c}^I + {{\tilde\omega_a}^I}_J {e_b}^J \)<br>
-\( 0 = \partial_a {e_b}^I - {\Gamma^I}_{ba} + {{\tilde\omega_a}^I}_b \)<br>
-\( {{\tilde\omega_a}^I}_b = {\Gamma^I}_{ba} - \partial_a {e_b}^I \)<br>
+\( \nabla_a {e_b}^\hat a = 0 = \partial_a {e_b}^\hat a - {\Gamma^c}_{ba} {e_c}^\hat a + {{\tilde\omega_a}^\hat a}_\hat b {e_b}^\hat b \)<br>
+\( 0 = \partial_a {e_b}^\hat a - {\Gamma^\hat a}_{ba} + {{\tilde\omega_a}^\hat a}_b \)<br>
+\( {{\tilde\omega_a}^\hat a}_b = {\Gamma^\hat a}_{ba} - \partial_a {e_b}^\hat a \)<br>
 <br>
 Lorentz-only Covariant derivative of Lorentz connection:<br>
-\( D_a K_I = \partial_a K_I - {{\omega_a}^J}_I K_J \)<br>
+\( D_a K_\hat a = \partial_a K_\hat a - {{\omega_a}^\hat b}_\hat a K_\hat b \)<br>
 <br>
 ...that annhilates the Minkowski metric:<br>
-\( 0 = D_a \eta_{IJ} = \partial_a \eta_{IJ} - {{\omega_a}^K}_I \eta_{KJ} - {{\omega_a}^K}_J \eta_{IK} \)<br>
-\( 0 = 0 - \omega_{aJI} - \omega_{aIJ} \)<br>
-\( \omega_{aIJ} = -\omega_{aJI} \)<br>
+\( 0 = D_a \eta_{\hat a \hat b} = \partial_a \eta_{\hat a \hat b} - {{\omega_a}^\hat c}_\hat a \eta_{\hat c\hat b} - {{\omega_a}^\hat c}_\hat b \eta_{\hat a\hat c} \)<br>
+\( 0 = 0 - \omega_{a\hat b\hat a} - \omega_{a\hat a\hat b} \)<br>
+\( \omega_{a\hat a\hat b} = -\omega_{a\hat b\hat a} \)<br>
 <br>
 Lorentz connection curvature:<br>
-\( {{\Omega_{ab}}^I}_J V^J = D_a D_b V^I - D_b D_a V^I \)<br>
-\( = D_a (\partial_b V^I + {{\omega_b}^I}_J V^J) - D_b (\partial_a V^I + {{\omega_a}^I}_J V^J) \)<br>
-\( = \partial_a (\partial_b V^I + {{\omega_b}^I}_J V^J) + {{\omega_a}^I}_K (\partial_b V^K + {{\omega_b}^K}_J V^J) 
-	- \partial_b (\partial_a V^I + {{\omega_a}^I}_J V^J) - {{\omega_b}^I}_K (\partial_a V^K + {{\omega_a}^K}_J V^J) \)<br>
-\( = \partial_a \partial_b V^I + \partial_a ({{\omega_b}^I}_J V^J) + {{\omega_a}^I}_K \partial_b V^K + {{\omega_a}^I}_K {{\omega_b}^K}_J V^J
-	- \partial_b \partial_a V^I - \partial_b ({{\omega_a}^I}_J V^J) - {{\omega_b}^I}_K \partial_a V^K - {{\omega_b}^I}_K {{\omega_a}^K}_J V^J \)<br>
+\( {{\Omega_{ab}}^\hat a}_\hat b V^\hat b = D_a D_b V^\hat a - D_b D_a V^\hat a \)<br>
+\( = D_a (\partial_b V^\hat a + {{\omega_b}^\hat a}_\hat b V^\hat b) - D_b (\partial_a V^\hat a + {{\omega_a}^\hat a}_\hat b V^\hat b) \)<br>
+\( = \partial_a (\partial_b V^\hat a + {{\omega_b}^\hat a}_\hat b V^\hat b) + {{\omega_a}^\hat a}_\hat c (\partial_b V^\hat c + {{\omega_b}^\hat c}_\hat b V^\hat b) 
+	- \partial_b (\partial_a V^\hat a + {{\omega_a}^\hat a}_\hat b V^\hat b) - {{\omega_b}^\hat a}_\hat c (\partial_a V^\hat c + {{\omega_a}^\hat c}_\hat b V^\hat b) \)<br>
+\( = \partial_a \partial_b V^\hat a + \partial_a ({{\omega_b}^\hat a}_\hat b V^\hat b) + {{\omega_a}^\hat a}_\hat c \partial_b V^\hat c + {{\omega_a}^\hat a}_\hat c {{\omega_b}^\hat c}_\hat b V^\hat b
+	- \partial_b \partial_a V^\hat a - \partial_b ({{\omega_a}^\hat a}_\hat b V^\hat b) - {{\omega_b}^\hat a}_\hat c \partial_a V^\hat c - {{\omega_b}^\hat a}_\hat c {{\omega_a}^\hat c}_\hat b V^\hat b \)<br>
 \( = 
-	V^J \partial_a {{\omega_b}^I}_J + {{\omega_b}^I}_J \partial_a V^J
-	- V^J \partial_b {{\omega_a}^I}_J - {{\omega_a}^I}_J \partial_b V^J
-	+ {{\omega_a}^I}_K \partial_b V^K - {{\omega_b}^I}_K \partial_a V^K 
-	+ {{\omega_a}^I}_K {{\omega_b}^K}_J V^J - {{\omega_a}^K}_J {{\omega_b}^I}_K V^J \)<br>
-\( {{\Omega_{ab}}^I}_J = 2 \partial_{[a} {{\omega_{b]}}^I}_J + 2 {{\omega_{[a}}^I}_{|K|} {{\omega_{b]}}^K}_J \)<br>
-\( {\Omega_{ab}}^{IJ} = 2 (\partial_{[a} {\omega_{b]}}^{IJ} + {\omega_{[a}}^{IK} {\omega_{b]K}}^J) \)<br>
+	V^\hat b \partial_a {{\omega_b}^\hat a}_\hat b + {{\omega_b}^\hat a}_\hat b \partial_a V^\hat b
+	- V^\hat b \partial_b {{\omega_a}^\hat a}_\hat b - {{\omega_a}^\hat a}_\hat b \partial_b V^\hat b
+	+ {{\omega_a}^\hat a}_\hat c \partial_b V^\hat c - {{\omega_b}^\hat a}_\hat c \partial_a V^\hat c 
+	+ {{\omega_a}^\hat a}_\hat c {{\omega_b}^\hat c}_\hat b V^\hat b - {{\omega_a}^\hat c}_\hat b {{\omega_b}^\hat a}_\hat c V^\hat b \)<br>
+\( {{\Omega_{ab}}^\hat a}_\hat b = 2 \partial_{[a} {{\omega_{b]}}^\hat a}_\hat b + 2 {{\omega_{[a}}^\hat a}_{|\hat c|} {{\omega_{b]}}^\hat c}_\hat b \)<br>
+\( {\Omega_{ab}}^{\hat a\hat b} = 2 (\partial_{[a} {\omega_{b]}}^{\hat a\hat b} + {\omega_{[a}}^{\hat a\hat c} {\omega_{b]\hat c}}^\hat b) \)<br>
 <br>
 Covariant derivatives difference:<br>
-\( {{C_a}^I}_J V^J = (D_a - \nabla_a) V^I \)<br>
-\( = \partial_a V^I + {{\omega_a}^I}_J V^J - \partial_a V^I - {{\tilde\omega_a}^I}_J V^J \)<br>
-\( = ({{\omega_a}^I}_J - {{\tilde\omega_a}^I}_J) V^J \)<br>
-\( {{C_a}^I}_J = {{\omega_a}^I}_J - {{\tilde\omega_a}^I}_J \)<br>
+\( {{C_a}^\hat a}_\hat b V^\hat b = (D_a - \nabla_a) V^\hat a \)<br>
+\( = \partial_a V^\hat a + {{\omega_a}^\hat a}_\hat b V^\hat b - \partial_a V^\hat a - {{\tilde\omega_a}^\hat a}_\hat b V^\hat b \)<br>
+\( = ({{\omega_a}^\hat a}_\hat b - {{\tilde\omega_a}^\hat a}_\hat b) V^\hat b \)<br>
+\( {{C_a}^\hat a}_\hat b = {{\omega_a}^\hat a}_\hat b - {{\tilde\omega_a}^\hat a}_\hat b \)<br>
 <br>
 Difference of affine Covariant and Lorentz Covariant derivative of mixed index tensor:<br>
-\( \nabla_a {T_b}^I = \partial_a {T_b}^I - {\Gamma^c}_{ba} {T_c}^I + {{\tilde\omega_a}^I}_J {T_b}^J \)<br>
-\( \partial_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\tilde\omega_a}^I}_J {T_b}^J \)<br>
-\( D_a {T_b}^I = \partial_a {T_b}^I + {{\omega_a}^I}_J V^J \)<br>
-\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\tilde\omega_a}^I}_J {T_b}^J + {{\omega_a}^I}_J V^J \)<br>
-\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{\omega_a}^I}_J V^J - {{\tilde\omega_a}^I}_J {T_b}^J \)<br>
-\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + ({{\omega_a}^I}_J - {{\tilde\omega_a}^I}_J) {T_b}^J \)<br>
-\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{C_a}^I}_J {T_b}^J \)<br>
+\( \nabla_a {T_b}^\hat a = \partial_a {T_b}^\hat a - {\Gamma^c}_{ba} {T_c}^\hat a + {{\tilde\omega_a}^\hat a}_\hat b {T_b}^\hat b \)<br>
+\( \partial_a {T_b}^\hat a = \nabla_a {T_b}^\hat a + {\Gamma^c}_{ba} {T_c}^\hat a - {{\tilde\omega_a}^\hat a}_\hat b {T_b}^\hat b \)<br>
+\( D_a {T_b}^\hat a = \partial_a {T_b}^\hat a + {{\omega_a}^\hat a}_\hat b V^\hat b \)<br>
+\( D_a {T_b}^\hat a = \nabla_a {T_b}^\hat a + {\Gamma^c}_{ba} {T_c}^\hat a - {{\tilde\omega_a}^\hat a}_\hat b {T_b}^\hat b + {{\omega_a}^\hat a}_\hat b V^\hat b \)<br>
+\( D_a {T_b}^\hat a = \nabla_a {T_b}^\hat a + {\Gamma^c}_{ba} {T_c}^\hat a + {{\omega_a}^\hat a}_\hat b V^\hat b - {{\tilde\omega_a}^\hat a}_\hat b {T_b}^\hat b \)<br>
+\( D_a {T_b}^\hat a = \nabla_a {T_b}^\hat a + {\Gamma^c}_{ba} {T_c}^\hat a + ({{\omega_a}^\hat a}_\hat b - {{\tilde\omega_a}^\hat a}_\hat b) {T_b}^\hat b \)<br>
+\( D_a {T_b}^\hat a = \nabla_a {T_b}^\hat a + {\Gamma^c}_{ba} {T_c}^\hat a + {{C_a}^\hat a}_\hat b {T_b}^\hat b \)<br>
 <br>
 Difference of Lorentz and Riemann curvature tensors:<br>
-\( ({\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ}) V_J = (D_a D_b - D_b D_a) V^I - (\nabla_a \nabla_b - \nabla_b \nabla_a) V^I \)<br>
-\( = D_a (D_b V^I) - D_b (D_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) \)<br>
-using \( D_a V^I = {{C_a}^I}_J V^J + \nabla_a V^I \)<br>
-\( = D_a ({{C_b}^I}_J V^J + \nabla_b V^I) - D_b ({{C_a}^I}_J V^J + \nabla_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) \)<br>
-\( = \nabla_a ({{C_b}^I}_J V^J + \nabla_b V^I) + {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) + {{C_a}^I}_K ({{C_b}^K}_J V^J + \nabla_b V^K) 
-	- \nabla_b ({{C_a}^I}_J V^J + \nabla_a V^I) - {\Gamma^c}_{ab} ({{C_c}^I}_J V^J + \nabla_c V^I) - {{C_b}^I}_K ({{C_a}^K}_J V^J + \nabla_a V^K)
-	- (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) \)<br>
-\( = \nabla_a {{C_b}^I}_J V^J + {{C_b}^I}_J \nabla_a V^J
-	+ \nabla_a \nabla_b V^I
-	+ {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) 
-	+ {{C_a}^I}_K {{C_b}^K}_J V^J
-	+ {{C_a}^I}_K \nabla_b V^K
-	- \nabla_b {{C_a}^I}_J V^J - {{C_a}^I}_J \nabla_b V^J
-	- \nabla_b \nabla_a V^I
-	- {\Gamma^c}_{ab} ({{C_c}^I}_J V^J + \nabla_c V^I)
-	- {{C_b}^I}_K {{C_a}^K}_J V^J
-	- {{C_b}^I}_K \nabla_a V^K
-	- \nabla_a \nabla_b V^I + \nabla_b \nabla_a V^I \)<br>
-\( = \nabla_a {{C_b}^I}_J V^J
-	- \nabla_b {{C_a}^I}_J V^J
-	+ {{C_a}^I}_K {{C_b}^K}_J V^J
-	- {{C_b}^I}_K {{C_a}^K}_J V^J
-	+ {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) 
-	- {\Gamma^c}_{ab} ({{C_c}^I}_J V^J + \nabla_c V^I)
+\( ({\Omega_{ab}}^{\hat a\hat b} - {R_{ab}}^{\hat a\hat b}) V_\hat b = (D_a D_b - D_b D_a) V^\hat a - (\nabla_a \nabla_b - \nabla_b \nabla_a) V^\hat a \)<br>
+\( = D_a (D_b V^\hat a) - D_b (D_a V^\hat a) - (\nabla_a \nabla_b V^\hat a - \nabla_b \nabla_a V^\hat a) \)<br>
+using \( D_a V^\hat a = {{C_a}^\hat a}_\hat b V^\hat b + \nabla_a V^\hat a \)<br>
+\( = D_a ({{C_b}^\hat a}_\hat b V^\hat b + \nabla_b V^\hat a) - D_b ({{C_a}^\hat a}_\hat b V^\hat b + \nabla_a V^\hat a) - (\nabla_a \nabla_b V^\hat a - \nabla_b \nabla_a V^\hat a) \)<br>
+\( = \nabla_a ({{C_b}^\hat a}_\hat b V^\hat b + \nabla_b V^\hat a) + {\Gamma^c}_{ba} ({{C_c}^\hat a}_\hat b V^\hat b + \nabla_c V^\hat a) + {{C_a}^\hat a}_\hat c ({{C_b}^\hat c}_\hat b V^\hat b + \nabla_b V^\hat c) 
+	- \nabla_b ({{C_a}^\hat a}_\hat b V^\hat b + \nabla_a V^\hat a) - {\Gamma^c}_{ab} ({{C_c}^\hat a}_\hat b V^\hat b + \nabla_c V^\hat a) - {{C_b}^\hat a}_\hat c ({{C_a}^\hat c}_\hat b V^\hat b + \nabla_a V^\hat c)
+	- (\nabla_a \nabla_b V^\hat a - \nabla_b \nabla_a V^\hat a) \)<br>
+\( = \nabla_a {{C_b}^\hat a}_\hat b V^\hat b + {{C_b}^\hat a}_\hat b \nabla_a V^\hat b
+	+ \nabla_a \nabla_b V^\hat a
+	+ {\Gamma^c}_{ba} ({{C_c}^\hat a}_\hat b V^\hat b + \nabla_c V^\hat a) 
+	+ {{C_a}^\hat a}_\hat c {{C_b}^\hat c}_\hat b V^\hat b
+	+ {{C_a}^\hat a}_\hat c \nabla_b V^\hat c
+	- \nabla_b {{C_a}^\hat a}_\hat b V^\hat b - {{C_a}^\hat a}_\hat b \nabla_b V^\hat b
+	- \nabla_b \nabla_a V^\hat a
+	- {\Gamma^c}_{ab} ({{C_c}^\hat a}_\hat b V^\hat b + \nabla_c V^\hat a)
+	- {{C_b}^\hat a}_\hat c {{C_a}^\hat c}_\hat b V^\hat b
+	- {{C_b}^\hat a}_\hat c \nabla_a V^\hat c
+	- \nabla_a \nabla_b V^\hat a + \nabla_b \nabla_a V^\hat a \)<br>
+\( = \nabla_a {{C_b}^\hat a}_\hat b V^\hat b
+	- \nabla_b {{C_a}^\hat a}_\hat b V^\hat b
+	+ {{C_a}^\hat a}_\hat c {{C_b}^\hat c}_\hat b V^\hat b
+	- {{C_b}^\hat a}_\hat c {{C_a}^\hat c}_\hat b V^\hat b
+	+ {\Gamma^c}_{ba} ({{C_c}^\hat a}_\hat b V^\hat b + \nabla_c V^\hat a) 
+	- {\Gamma^c}_{ab} ({{C_c}^\hat a}_\hat b V^\hat b + \nabla_c V^\hat a)
 \)<br>
-\( = 2 (\nabla_{[a} {{C_{b]}}^I}_J + {{C_{[a}}^I}_{|K|} {{C_{b]}}^K}_J
-	- {\Gamma^c}_{[ab]} ({{C_c}^I}_J + \delta^I_J \nabla_c)) V^J \)<br>
-\( ({\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ}) V_J = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J
-	- {\Gamma^c}_{[ab]} ({C_c}^{IJ} + \eta^{IJ} \nabla_c)) V_J \)<br>
-\( {\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ} = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J
-	- {\Gamma^c}_{[ab]} ({C_c}^{IJ} + \eta^{IJ} \nabla_c)) \)<br>
+\( = 2 (\nabla_{[a} {{C_{b]}}^\hat a}_\hat b + {{C_{[a}}^\hat a}_{|\hat c|} {{C_{b]}}^\hat c}_\hat b
+	- {\Gamma^c}_{[ab]} ({{C_c}^\hat a}_\hat b + \delta^\hat a_\hat b \nabla_c)) V^\hat b \)<br>
+\( ({\Omega_{ab}}^{\hat a\hat b} - {R_{ab}}^{\hat a\hat b}) V_\hat b = 2 (\nabla_{[a} {C_{b]}}^{\hat a\hat b} + {C_{[a}}^{\hat a\hat c} {C_{b]\hat c}}^\hat b
+	- {\Gamma^c}_{[ab]} ({C_c}^{\hat a\hat b} + \eta^{\hat a\hat b} \nabla_c)) V_\hat b \)<br>
+\( {\Omega_{ab}}^{\hat a\hat b} - {R_{ab}}^{\hat a\hat b} = 2 (\nabla_{[a} {C_{b]}}^{\hat a\hat b} + {C_{[a}}^{\hat a\hat c} {C_{b]\hat c}}^\hat b
+	- {\Gamma^c}_{[ab]} ({C_c}^{\hat a\hat b} + \eta^{\hat a\hat b} \nabla_c)) \)<br>
 for affine connections, \( {\Gamma^c}_{[ab]} = 0 \) and we get:<br>
-\( {\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ} = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J) \)<br>
+\( {\Omega_{ab}}^{\hat a\hat b} - {R_{ab}}^{\hat a\hat b} = 2 (\nabla_{[a} {C_{b]}}^{\hat a\hat b} + {C_{[a}}^{\hat a\hat c} {C_{b]\hat c}}^\hat b) \)<br>
 <br>
-\( {\Omega_{ab}}^{IJ} = {R_{ab}}^{IJ} + 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J) \)<br>
+\( {\Omega_{ab}}^{\hat a\hat b} = {R_{ab}}^{\hat a\hat b} + 2 (\nabla_{[a} {C_{b]}}^{\hat a\hat b} + {C_{[a}}^{\hat a\hat c} {C_{b]\hat c}}^\hat b) \)<br>
 <br>
-TODO show \( R = {e^a}_I {e^b}_J {R_{ab}}^{IJ} = {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} \)<br>
+TODO show \( R = {e^a}_\hat a {e^b}_\hat b {R_{ab}}^{\hat a\hat b} = {e^a}_\hat a {e^b}_\hat b {\Omega_{ab}}^{\hat a\hat b} \)<br>
 ...or is it?  If not, show the difference goes to zero.<br>
 <br>
 Action on curvature of Lorentz covariant derivative, with Riemann curvature substituted:<br>
 \( S = \int \sqrt{-g} R dx^4 \)<br>
 \( = \int e R dx^4 \)<br>
 \( = \int e {\Omega_{ab}}^{ab} dx^4 \)<br>
-\( = \int e {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} dx^4 \)<br>
-\( S = \int e {e^a}_I {e^b}_J ({R_{ab}}^{IJ} + 2 \nabla_{[a} {C_{b]}}^{IJ} + 2 {C_{[a}}^{IK} {C_{b]K}}^J) dx^4 \)<br>
+\( = \int e {e^a}_\hat a {e^b}_\hat b {\Omega_{ab}}^{\hat a\hat b} dx^4 \)<br>
+\( S = \int e {e^a}_\hat a {e^b}_\hat b ({R_{ab}}^{\hat a\hat b} + 2 \nabla_{[a} {C_{b]}}^{\hat a\hat b} + 2 {C_{[a}}^{\hat a\hat c} {C_{b]\hat c}}^\hat b) dx^4 \)<br>
 <br>
 TODO fix this up a bit:<br>
-\( \delta S / \delta {C_a}^{IJ} = \delta / \delta {C_a}^{IJ} \int e {e^b}_K {e^c}_L ({R_{bc}}^{KL} + 2 \nabla_{[b} {C_{c]}}^{KL} + 2 {C_{[b}}^{KM} {C_{c]M}}^L) dx^4 \)<br>
-TODO show \( \delta / \delta {C_a}^{IJ} ({e^a}_I) = 0 \)<br>
-TODO show \( \delta / \delta {C_a}^{IJ} ({R_{cd}}^{KL}) = 0 \)<br>
-TODO show \( \delta / \delta {C_a}^{IJ} (\nabla_b {C_c}^{KL}) = 0 \)<br>
-\( \delta S / \delta {C_a}^{IJ} = \int e {e^b}_K {e^c}_L \delta / \delta {C_a}^{IJ} {C_{[b}}^{KM} {C_{c]M}}^L dx^4 \)<br>
-\( = \int {1\over2} e {e^b}_K {e^c}_L ({C_{cM}}^L \delta / \delta {C_a}^{IJ} {C_b}^{KM} + {C_b}^{KM} \delta / \delta {C_a}^{IJ} {C_{cM}}^L - {C_{bM}}^L \delta / \delta {C_a}^{IJ} {C_c}^{KM} - {C_c}^{KM} \delta / \delta {C_a}^{IJ} {C_{bM}}^L) dx^4 \)<br>
-\( = \int {1\over2} e {e^b}_K {e^c}_L (
-	{C_{cM}}^L \delta^a_b \delta^K_I \delta^M_J
-	+ {C_b}^{KM} \delta^a_c \delta^N_I \delta^L_J \eta_{MN}
-	- {C_{bM}}^L \delta^a_c \delta^K_I \delta^M_J
-	- {C_c}^{KM} \delta^a_b \delta^N_I \delta^L_J \eta_{MN}
+\( \delta S / \delta {C_a}^{\hat a\hat b} = \delta / \delta {C_a}^{\hat a\hat b} \int e {e^b}_\hat c {e^c}_\hat d ({R_{bc}}^{\hat c\hat d} + 2 \nabla_{[b} {C_{c]}}^{\hat c\hat d} + 2 {C_{[b}}^{\hat c\hat e} {C_{c]\hat e}}^\hat d) dx^4 \)<br>
+TODO show \( \delta / \delta {C_a}^{\hat a\hat b} ({e^a}_\hat a) = 0 \)<br>
+TODO show \( \delta / \delta {C_a}^{\hat a\hat b} ({R_{cd}}^{\hat c\hat d}) = 0 \)<br>
+TODO show \( \delta / \delta {C_a}^{\hat a\hat b} (\nabla_b {C_c}^{\hat c\hat d}) = 0 \)<br>
+\( \delta S / \delta {C_a}^{\hat a\hat b} = \int e {e^b}_\hat c {e^c}_\hat d \delta / \delta {C_a}^{\hat a\hat b} {C_{[b}}^{\hat c\hat e} {C_{c]\hat e}}^\hat d dx^4 \)<br>
+\( = \int {1\over 2} e {e^b}_\hat c {e^c}_\hat d ({C_{c\hat e}}^\hat d \delta / \delta {C_a}^{\hat a\hat b} {C_b}^{\hat c\hat e} + {C_b}^{\hat c\hat e} \delta / \delta {C_a}^{\hat a\hat b} {C_{c\hat e}}^\hat d - {C_{b\hat e}}^\hat d \delta / \delta {C_a}^{\hat a\hat b} {C_c}^{\hat c\hat e} - {C_c}^{\hat c\hat e} \delta / \delta {C_a}^{\hat a\hat b} {C_{b\hat e}}^\hat d) dx^4 \)<br>
+\( = \int {1\over 2} e {e^b}_\hat c {e^c}_\hat d (
+	{C_{c\hat e}}^\hat d \delta^a_b \delta^\hat c_\hat a \delta^\hat e_\hat b
+	+ {C_b}^{\hat c\hat e} \delta^a_c \delta^\hat f_\hat a \delta^\hat d_\hat b \eta_{\hat e\hat f}
+	- {C_{b\hat e}}^\hat d \delta^a_c \delta^\hat c_\hat a \delta^\hat e_\hat b
+	- {C_c}^{\hat c\hat e} \delta^a_b \delta^\hat f_\hat a \delta^\hat d_\hat b \eta_{\hat e\hat f}
 	) dx^4 \)<br>
-\( = \int {1\over2} e {e^a}_K {e^b}_L (
-	\delta^K_I \delta^M_J {C_{bM}}^L
-	- \delta^K_J \delta^M_I {C_{bM}}^L
-	- \delta^L_I \delta^M_J {C_{bM}}^K
-	+ \delta^L_J \delta^M_I {C_{bM}}^K
+\( = \int {1\over 2} e {e^a}_\hat c {e^b}_\hat d (
+	\delta^\hat c_\hat a \delta^\hat e_\hat b {C_{b\hat e}}^\hat d
+	- \delta^\hat c_\hat b \delta^\hat e_\hat a {C_{b\hat e}}^\hat d
+	- \delta^\hat d_\hat a \delta^\hat e_\hat b {C_{b\hat e}}^\hat c
+	+ \delta^\hat d_\hat b \delta^\hat e_\hat a {C_{b\hat e}}^\hat c
 	) dx^4 \)<br>
-\( = \int {1\over2} e {e^a}_K {e^b}_L (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L - \delta^L_I \delta^M_J {C_{bM}}^K + \delta^L_J \delta^M_I {C_{bM}}^K) \)<br>
-\( = \int {1\over2} e ({e^a}_K {e^b}_L (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L) - {e^b}_K {e^a}_L (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L)) \)<br>
-\( = \int {1\over2} e ({e^a}_K {e^b}_L - {e^b}_K {e^a}_L) (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L) \)<br>
-\( = \int {1\over2} e ({e^a}_K {e^b}_L - {e^b}_K {e^a}_L) (\delta^K_I \delta^M_J - \delta^K_J \delta^M_I) {C_{bM}}^L \)<br>
-\( = \int e ({e^a}_K {e^b}_L - {e^b}_K {e^a}_L) \delta^K_{[I} \delta^M_{J]} {C_{bM}}^L \)<br>
-\( = \int 2 e {e^{[a}}_K {e^{b]}}_L \delta^K_{[I} \delta^M_{J]} {C_{bM}}^L \)<br>
+\( = \int {1\over 2} e {e^a}_\hat c {e^b}_\hat d (\delta^\hat c_\hat a \delta^\hat e_\hat b {C_{b\hat e}}^\hat d - \delta^\hat c_\hat b \delta^\hat e_\hat a {C_{b\hat e}}^\hat d - \delta^\hat d_\hat a \delta^\hat e_\hat b {C_{b\hat e}}^\hat c + \delta^\hat d_\hat b \delta^\hat e_\hat a {C_{b\hat e}}^\hat c) \)<br>
+\( = \int {1\over 2} e ({e^a}_\hat c {e^b}_\hat d (\delta^\hat c_\hat a \delta^\hat e_\hat b {C_{b\hat e}}^\hat d - \delta^\hat c_\hat b \delta^\hat e_\hat a {C_{b\hat e}}^\hat d) - {e^b}_\hat c {e^a}_\hat d (\delta^\hat c_\hat a \delta^\hat e_\hat b {C_{b\hat e}}^\hat d - \delta^\hat c_\hat b \delta^\hat e_\hat a {C_{b\hat e}}^\hat d)) \)<br>
+\( = \int {1\over 2} e ({e^a}_\hat c {e^b}_\hat d - {e^b}_\hat c {e^a}_\hat d) (\delta^\hat c_\hat a \delta^\hat e_\hat b {C_{b\hat e}}^\hat d - \delta^\hat c_\hat b \delta^\hat e_\hat a {C_{b\hat e}}^\hat d) \)<br>
+\( = \int {1\over 2} e ({e^a}_\hat c {e^b}_\hat d - {e^b}_\hat c {e^a}_\hat d) (\delta^\hat c_\hat a \delta^\hat e_\hat b - \delta^\hat c_\hat b \delta^\hat e_\hat a) {C_{b\hat e}}^\hat d \)<br>
+\( = \int e ({e^a}_\hat c {e^b}_\hat d - {e^b}_\hat c {e^a}_\hat d) \delta^\hat c_{[\hat a} \delta^\hat e_{\hat b]} {C_{b\hat e}}^\hat d \)<br>
+\( = \int 2 e {e^{[a}}_\hat c {e^{b]}}_\hat d \delta^\hat c_{[\hat a} \delta^\hat e_{\hat b]} {C_{b\hat e}}^\hat d \)<br>
 TODO where does the integral and scalar \(2 e\) go?<br>
-\( \delta S / \delta {C_a}^{IJ} = {e^{[a}}_K {e^{b]}}_L \delta^K_{[I} \delta^M_{J]} {C_{bM}}^L \)<br>
+\( \delta S / \delta {C_a}^{\hat a\hat b} = {e^{[a}}_\hat c {e^{b]}}_\hat d \delta^\hat c_{[\hat a} \delta^\hat e_{\hat b]} {C_{b\hat e}}^\hat d \)<br>
 <br>
 TODO:<br>
-\( S = \int e ( (\delta {e^a}_I) {e^b}_J {\Omega_{ab}}^{IJ} + {e^a}_I (\delta {e^b}_J) {\Omega_{ab}}^{IJ} - {e_c}^K (\delta {e^c}_K) {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} ) dx^4 \)<br>
-\( = 2 \int e ({e^b}_J {\Omega_{ab}}^{IJ} - {1\over2} {e^c}_M {e^d}_N {e_a}^I {\Omega_{cd}}^{MN}) \delta {e^a}_I dx^4 \)<br>
-...substite \( {\Omega_{ab}}^{IJ} = {R_{ab}}^{IJ} \), solve for \( \delta S / \delta {e^a}_I = 0 \) to get...<br>
-\( {e^c}_J {R_{ac}}^{IJ} - {1\over2} {R_{cd}}^{MN} {e^c}_M {e^d}_N {e_a}^I = 0 \)<br>
-\( R_{ab} - {1\over2} R g_{ab} = 0 \) or \( e = 0 \)<br>
+\( S = \int e ( (\delta {e^a}_\hat a) {e^b}_\hat b {\Omega_{ab}}^{\hat a\hat b} + {e^a}_\hat a (\delta {e^b}_\hat b) {\Omega_{ab}}^{\hat a\hat b} - {e_c}^\hat c (\delta {e^c}_\hat c) {e^a}_\hat a {e^b}_\hat b {\Omega_{ab}}^{\hat a\hat b} ) dx^4 \)<br>
+\( = 2 \int e ({e^b}_\hat b {\Omega_{ab}}^{\hat a\hat b} - {1\over 2} {e^c}_\hat e {e^d}_\hat f {e_a}^\hat a {\Omega_{cd}}^{\hat e\hat f}) \delta {e^a}_\hat a dx^4 \)<br>
+...substite \( {\Omega_{ab}}^{\hat a\hat b} = {R_{ab}}^{\hat a\hat b} \), solve for \( \delta S / \delta {e^a}_\hat a = 0 \) to get...<br>
+\( {e^c}_\hat b {R_{ac}}^{\hat a\hat b} - {1\over 2} {R_{cd}}^{\hat e\hat f} {e^c}_\hat e {e^d}_\hat f {e_a}^\hat a = 0 \)<br>
+\( R_{ab} - {1\over 2} R g_{ab} = 0 \) or \( e = 0 \)<br>
 \( G_{ab} = 0 \) or \( e = 0 \)<br>
 TODO finish all this.<br>
 <br>	
 Self-Dual of Lorentz Connection:<br>
-Let \( {A_a}^{IJ} = {1\over2} ({\omega_a}^{IJ} - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
-such that \( {1\over2} {\epsilon_{MN}}^{IJ} {A_a}^{MN} \)
-\( = {1\over2} {\epsilon_{MN}}^{IJ} {1\over2} ({\omega_a}^{MN} - {i\over2} {\epsilon_{KL}}^{MN} {\omega_a}^{KL}) \)<br>
-\( = {1\over4} ({\epsilon_{MN}}^{IJ} {\omega_a}^{MN} - {i\over2} {\epsilon_{MN}}^{IJ} {\epsilon_{KL}}^{MN} {\omega_a}^{KL}) \)<br>
-\( = {i\over2} (-{1\over4} {\epsilon_{KL}}^{MN} {\epsilon_{MN}}^{IJ} {\omega_a}^{KL} - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
-\( = {i\over2} (\delta^{IJ}_{KL} {\omega_a}^{KL} - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
-\( = {i\over2} ({1\over2} (\delta^I_K \delta^J_L - \delta^I_L \delta^J_K) {\omega_a}^{KL} - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
-\( = {i\over2} ({1\over2} ({\omega_a}^{IJ} - {\omega_a}^{JI}) - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
-\( = i {1\over2} ({\omega_a}^{IJ} - {i\over2} {\epsilon_{MN}}^{IJ} {\omega_a}^{MN}) \)<br>
-\( = i {A_a}^{IJ} \)<br>
+Let \( {A_a}^{\hat a\hat b} = {1\over 2} ({\omega_a}^{\hat a\hat b} - {i\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {\omega_a}^{\hat c\hat d}) \)<br>
+such that \( {1\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {A_a}^{\hat c\hat d} \)<br>
+\( = {1\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {1\over 2} ({\omega_a}^{\hat c\hat d} - {i\over 2} {\epsilon^{\hat c\hat d}}_{\hat e\hat f} {\omega_a}^{\hat e\hat f}) \)<br>
+\( = {1\over4} ({\epsilon^{\hat a\hat b}}_{\hat c\hat d} {\omega_a}^{\hat c\hat d} - {i\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {\epsilon^{\hat c\hat d}}_{\hat e\hat f} {\omega_a}^{\hat e\hat f}) \)<br>
+\( = {i\over 2} (-{1\over4} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {\epsilon^{\hat c\hat d}}_{\hat e\hat f} {\omega_a}^{\hat e\hat f} - {i\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {\omega_a}^{\hat c\hat d}) \)<br>
+\( = {i\over 2} (\delta^{\hat a\hat b}_{\hat e\hat f} {\omega_a}^{\hat e\hat f} - {i\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {\omega_a}^{\hat c\hat d}) \)<br>
+\( = {i\over 2} ({1\over 2} (\delta^\hat a_\hat e \delta^\hat b_\hat f - \delta^\hat a_\hat f \delta^\hat b_\hat e) {\omega_a}^{\hat e\hat f} - {i\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {\omega_a}^{\hat c\hat d}) \)<br>
+\( = {i\over 2} ({1\over 2} ({\omega_a}^{\hat a\hat b} - {\omega_a}^{\hat b\hat a}) - {i\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {\omega_a}^{\hat c\hat d}) \)<br>
+using \( {\omega_a}^{\hat a\hat b} = -{\omega_a}^{\hat b\hat a} \)<br>
+\( = i {1\over 2} ({\omega_a}^{\hat a\hat b} - {i\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {\omega_a}^{\hat c\hat d}) \)<br>
+\( = i {A_a}^{\hat a\hat b} \)<br>
 <br>
 Curvature of Self-Dual of Lorentz Connection:<br>
-Let \( {F_{ab}}^{IJ} = \partial_a {A_b}^{IJ} - \partial_b {A_a}^{IJ} + {A_a}^{IK} {A_{bK}}^J - {A_b}^{IK} {A_{aK}}^J \)<br>
-New Action: \( S = \int e {e^a}_I {e^b}_J {F_{ab}}^{IJ} dx^4 \)<br>
-TODO show \( \delta S / \delta {e^a}_I = 0 \) for \( {^+R_{ab}} - {1\over2} g_{ab} {^+R} = 0 \) for \(^+R_{ab}\) is the self-dual of \( R_{ab} \)?<br>
+Let \( {F_{ab}}^{\hat a\hat b} = \partial_a {A_b}^{\hat a\hat b} - \partial_b {A_a}^{\hat a\hat b} + {A_a}^{\hat a\hat c} {A_{b\hat c}}^\hat b - {A_b}^{\hat a\hat c} {A_{a\hat c}}^\hat b \)<br>
+New Action: \( S = \int e {e^a}_\hat a {e^b}_\hat b {F_{ab}}^{\hat a\hat b} dx^4 \)<br>
+TODO show \( \delta S / \delta {e^a}_\hat a = 0 \) for \( {^+R_{ab}} - {1\over 2} g_{ab} {^+R} = 0 \) for \(^+R_{ab}\) is the self-dual of \( R_{ab} \)?<br>
 <br>
 Redefine \( t^a, \alpha, \beta^a, n^a \) to be complex<br>
 Same as before, \( {\gamma_b}^a = \delta^a_b + n^a n_b \) and \( \delta^a_b = {\gamma_b}^a - n^a n_b \)<br>
-Let \( {E^a}_I = {\gamma_b}^a {e^b}_I \)<br>
-so \( {e^a}_I = \delta^a_b {e^b}_I = ({\gamma_b}^a - n^a n_b) {e^b}_I = {\gamma_b}^a {e^b}_I - n^a n_b {e^b}_I = {E^a}_I - n^a n_b {e^b}_I \)<br>
+Let \( {E^a}_\hat a \) be the projected vierbein defined by \( {E^a}_\hat a = {\gamma_b}^a {e^b}_\hat a \)<br>
+so \( {e^a}_\hat a = \delta^a_b {e^b}_\hat a = ({\gamma_b}^a - n^a n_b) {e^b}_\hat a = {\gamma_b}^a {e^b}_\hat a - n^a n_b {e^b}_\hat a = {E^a}_\hat a - n^a n_b {e^b}_\hat a \)<br>
 Then<br>
-\( S = \int e {e^a}_I {e^b}_J {F_{ab}}^{IJ} dx^4 \)<br>
-\( = \int e ({E^a}_I - n^a n_c {e^c}_I) ({E^b}_J - n^b n_d {e^d}_J) {F_{ab}}^{IJ} dx^4 \)<br>
-\( = \int e ({E^a}_I {E^b}_J - n^a n_c {e^c}_I {E^b}_J - n^b n_d {e^d}_J {E^a}_I + n^a n_c n^b n_d {e^c}_I {e^d}_J) {F_{ab}}^{IJ} dx^4 \)<br>
-using symmetry of \( {F_{ab}}^{IJ} = -{F_{ba}}^{IJ} = -{F_{ab}}^{JI} \)<br>
-\( S = \int e ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 \)<br>
+\( S = \int e {e^a}_\hat a {e^b}_\hat b {F_{ab}}^{\hat a\hat b} dx^4 \)<br>
+\( = \int e ({E^a}_\hat a - n^a n_c {e^c}_\hat a) ({E^b}_\hat b - n^b n_d {e^d}_\hat b) {F_{ab}}^{\hat a\hat b} dx^4 \)<br>
+\( = \int e ({E^a}_\hat a {E^b}_\hat b - n^a n_c {e^c}_\hat a {E^b}_\hat b - n^b n_d {e^d}_\hat b {E^a}_\hat a + n^a n_c n^b n_d {e^c}_\hat a {e^d}_\hat b) {F_{ab}}^{\hat a\hat b} dx^4 \)<br>
+using symmetry of \( {F_{ab}}^{\hat a\hat b} = -{F_{ba}}^{\hat a\hat b} = -{F_{ab}}^{\hat b\hat a} \)<br>
+\( S = \int e ({E^a}_\hat a {E^b}_\hat b - 2 {E^a}_\hat a {e^c}_\hat b n^b n_c) {F_{ab}}^{\hat a\hat b} dx^4 \)<br>
 <br>
 Remember \( e = N \sqrt\gamma \)<br>
-Let \( {\tilde{E}^a}_I = \sqrt\gamma {E^a}_I \)
-\( S = \int N \sqrt\gamma ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 \)<br>
-\( S = \int N ( {1\over\sqrt\gamma} {\tilde{E}^a}_I {\tilde{E}^b}_J - 2 {\tilde{E}^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 \)<br>
+Let \( {\tilde{E}^a}_\hat a = \sqrt\gamma {E^a}_\hat a \)
+\( S = \int N \sqrt\gamma ({E^a}_\hat a {E^b}_\hat b - 2 {E^a}_\hat a {e^c}_\hat b n^b n_c) {F_{ab}}^{\hat a\hat b} dx^4 \)<br>
+\( S = \int N ( {1\over\sqrt\gamma} {\tilde{E}^a}_\hat a {\tilde{E}^b}_\hat b - 2 {\tilde{E}^a}_\hat a {e^c}_\hat b n^b n_c) {F_{ab}}^{\hat a\hat b} dx^4 \)<br>
 <br>
-TODO show self-duality of \( {A_a}^{IJ} \) implies \( {F_{ab}}^{IJ} = -i {1\over2} {\epsilon^{IJ}}_{MN} {F_{ab}}^{MN} \)<br>
-\( S = \int -i {1\over2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{MN} {F_{ab}}^{MN} - 2 N {\tilde{E}^a}_I {e^c}_J n^b n_c {F_{ab}}^{IJ} dx^4 \)<br>
-\( S = \int -i {1\over2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{MN} {F_{ab}}^{MN} - 2 N {\tilde{E}^a}_I n^b n_J {F_{ab}}^{IJ} dx^4 \)<br>
+Self-duality of \( {F_{ab}}^{\hat a\hat b} \): <br>
+\( {F_{ab}}^{\hat a\hat b} = \partial_a {A_b}^{\hat a\hat b} - \partial_b {A_a}^{\hat a\hat b} + {A_a}^{\hat a\hat c} {A_{b\hat c}}^\hat b - {A_b}^{\hat a\hat c} {A_{a\hat c}}^\hat b \)<br>
+\( =
+	\partial_a (-{i\over 2} {\epsilon^{\hat a\hat b}}_{\hat e\hat f} {A_b}^{\hat e\hat f})
+	- \partial_b (-{i\over 2} {\epsilon^{\hat a\hat b}}_{\hat e\hat f} {A_a}^{\hat e\hat f})
+	+ 	(-{i\over 2} {\epsilon^{\hat a\hat c}}_{\hat e\hat f} {A_a}^{\hat e\hat f}) {A_{b\hat c}}^\hat b
+	-	(-{i\over 2} {\epsilon^{\hat a\hat c}}_{\hat e\hat f} {A_b}^{\hat e\hat f}) {A_{a\hat c}}^\hat b
+\)<br>
+...TODO...<br>
+\(= -i {1\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} ( \partial_a {A_b}^{\hat c\hat d} - \partial_b {A_a}^{\hat c\hat d}) - i {1\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} ({A_a}^{\hat c\hat e} {A_{b\hat e}}^\hat d - {A_b}^{\hat c\hat e} {A_{a\hat e}}^\hat d ) \)<br>
+\(= -i {1\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} ( \partial_a {A_b}^{\hat c\hat d} - \partial_b {A_a}^{\hat c\hat d} + {A_a}^{\hat c\hat e} {A_{b\hat e}}^\hat d - {A_b}^{\hat c\hat e} {A_{a\hat e}}^\hat d ) \)<br>
+\(= -i {1\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {F_{ab}}^{\hat c\hat d} \)<br>
 <br>
-Let \( n_I = (1, 0, 0, 0) \)<br>
-Then \( n^I = \eta^{IJ} N_J = (-1, 0, 0, 0) \)<br>
-Then \( {E^a}_0 = {\gamma_b}^a {e^b}_0 = (\delta^a_b + n^a n_b) {e^b}_0 = {e^a}_0 + n^a n_0 = {e^a}_0 + {e^a}_I n^I = {e^a}_0 - {e^a}_0 = 0 \)<br>
+\( S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_\hat a {\tilde{E}^b}_\hat b {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {F_{ab}}^{\hat c\hat d} - 2 N {\tilde{E}^a}_\hat a {e^c}_\hat b n^b n_c {F_{ab}}^{\hat a\hat b} dx^4 \)<br>
+\( S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_\hat a {\tilde{E}^b}_\hat b {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {F_{ab}}^{\hat c\hat d} - 2 N {\tilde{E}^a}_\hat a n^b n_\hat b {F_{ab}}^{\hat a\hat b} dx^4 \)<br>
+<br>
+Let \( n_\hat a = (1, 0, 0, 0) \)<br>
+Then \( n^\hat a = \eta^{\hat a\hat b} n_\hat b = (-1, 0, 0, 0) \)<br>
+Then \( {E^a}_\hat 0 = {\gamma_b}^a {e^b}_\hat 0 = (\delta^a_b + n^a n_b) {e^b}_\hat 0 = {e^a}_\hat 0 + n^a n_\hat 0 = {e^a}_\hat 0 + {e^a}_\hat a n^\hat a = {e^a}_\hat 0 - {e^a}_\hat 0 = 0 \)<br>
 (Notice the lower index of \({E^a}_0\) is a Lorentz index, yet once a value is substituted for an index there is no way to distinguish whether it is Lorentz or coordinate.
 I believe MTW uses hats over indexes (and index values) to denote Lorentz vs coordinate for just this reason.<br>
-Then \( \epsilon^{IJKL} n_L = \epsilon^{IJK0} = \epsilon^{IJK} \)<br>
-\( S = \int -i {1\over2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{M} {F_{ab}}^{M0} - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^{I0} dx^4 \)<br>
 <br>
-Let \( {A_a}^{I0} = {A_a}^I, {F_{ab}}^I = {F_{ab}}^{I0} \)<br>
-\( S = \int -i {1\over2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{M} {F_{ab}}^M - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^I dx^4 \)<br>
+\( e_{\hat a\hat b\hat c\hat d} \) is the permutations of \(\hat a,\hat b,\hat c,\hat d\)<br>
+\( e^{\hat a\hat b\hat c\hat d} = \eta^{\hat a\hat e} \eta^{\hat b\hat f} \eta^{\hat c\hat g} \eta^{\hat d\hat h} \epsilon_{\hat e\hat f\hat g\hat h} \)<br>
+\( = tr||\eta_{uv}|| \eta_{\hat a\hat b\hat c\hat d} \)<br>
+\( = -\eta_{\hat a\hat b\hat c\hat d} \)<br>
+\( \epsilon^{\hat a\hat b\hat c\hat d} n_\hat d = \epsilon^{\hat a\hat b\hat c\hat 0} = -\epsilon^{\hat 0\hat a\hat b\hat c} = \epsilon_{\hat 0\hat a\hat b\hat c} = \epsilon_{\hat a\hat b\hat c} = \epsilon^{\hat a\hat b\hat c} \)<br>
+<br>
+\( S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_\hat a {\tilde{E}^b}_\hat b {\epsilon^{\hat a\hat b}}_{\hat c} {F_{ab}}^{\hat c\hat 0} - 2 N {\tilde{E}^a}_\hat a n^b {F_{ab}}^{\hat a\hat 0} dx^4 \)<br>
+<br>
+Let \( {A_a}^{\hat a} = {A_a}^{\hat a\hat 0} \)<br>
+\( = {1\over 2} ({\omega_a}^{\hat a\hat 0} - {i\over 2} {\epsilon^{\hat a\hat 0}}_{\hat c\hat d} {\omega_a}^{\hat c\hat d}) \)<br>
+\( = {1\over 2} {\omega_a}^{\hat a\hat 0} - {i\over 4} \epsilon^{\hat a\hat b\hat c} \omega_{a\hat b\hat c} \)<br>
+Let \( {F_{ab}}^\hat a = {F_{ab}}^{\hat a\hat 0} \)<br>
+\( S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_\hat a {\tilde{E}^b}_\hat b {\epsilon^{\hat a\hat b}}_{\hat e} {F_{ab}}^\hat e - 2 N {\tilde{E}^a}_\hat a n^b {F_{ab}}^\hat a dx^4 \)<br>
+<br>
+TODO "Ashtekar Variables" wiki entry says: \( {A_a}^\hat a = {\Gamma_a}^\hat a + \beta {K_a}^\hat a \), for \( {\Gamma_a}^\hat a = \Gamma_{a\hat b\hat c} \epsilon^{\hat b\hat c\hat a} \) <br>
+\( {K_a}^\hat a = {K_a}^b {e_b}^{\hat a} = {K_a}^b {E_b}^\hat a \)<br>
+\( {K_a}^\hat a \) can have its coordinate changed by either \( {e_a}^\hat a \) or its associated projection \( {E_a}^\hat a \) because \( K_{ab} \) itself is already projected on both coordinates.<br> 
+\( K_{ab} g^{bc} {e_c}^hat a = -{\gamma_a}^e {\gamma_b}^f \nabla_e n_f g^{bc} {e_c}^\hat a \)<br>
+\( = -{\gamma_a}^e \gamma^{cf} \nabla_e n_f {e_c}^\hat a \)<br>
+\( = -{\gamma_a}^e \gamma^{cf} \nabla_e ({e_f}^\hat b n_\hat b) {e_c}^\hat a \)<br>
+\( = -{\gamma_a}^e \gamma^{cf} \nabla_e ({e_f}^\hat 0) {e_c}^\hat a \)<br>
+So if we want \( {K_a}^\hat a \) to have a value, either (1) don't fix \( n_\hat a \) or (2) don't fix \( \nabla_a {e_b}^\hat a = 0 \) (which is what I use to define \( {\tilde\omega_a}^{\hat a\hat b} \))<br>
+But doesn't the "affine covariant derivative cancel tetrad"?  That would mean this goes to zero.<br>
+TODO "Self-Dual Palatini Action" wiki entry says: \( \mathscr{D}_a (t^b {A_b}^\hat a) = \partial_a (t^b {A_b}^\hat a + {\epsilon^\hat a}_{\hat b\hat c} {A_a}^\hat a (t^b {A_b}^\hat c)  \)<br>
+TODO show \( t^a {F_{ab}}^\hat a = \mathcal{L}_\vec{t} {A_b}^\hat a - \mathscr{D}_b (t^a {A_a}^\hat a) \)<br>
 </div>
+
