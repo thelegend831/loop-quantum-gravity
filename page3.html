@@ -1,0 +1,106 @@
+<script type="text/javascript" src="/MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<div class='entry'>
+
+Lagrangian is equal to scalar curvature:<br>
+\(L=R\)<br>
+<br>
+Densitized Lagrangian:<br>
+\(\mathcal{L}=\sqrt{-g}L\)<br>
+\(=\sqrt{-g}R\)<br>
+\(=\alpha\sqrt{\gamma}R\)<br>
+...substitute Gauss-Codazzi equations...<br>
+\(=\alpha\sqrt{\gamma}(R^\perp + K_{ab} K^{ab} - K^2 - 2 \nabla_c (n^b \nabla_b n^c - n^c \nabla_b n^b))\)<br>
+...consider only spatial integral / disregard total integral (TODO explain this one better)...<br>
+\(\mathcal{L}=\alpha\sqrt{\gamma}(R^\perp+K_{ij} K^{ij} - K^2)\)<br>
+<br>
+Vacuum Action:<br>
+\( S = \int \sqrt{-g} R dx^4 \)<br>
+\( S = \int \int \alpha \sqrt{\gamma} (R^{\perp} + K_{ij} K^{ij} - K^2) dx^3 dt \)<br>
+<br>
+\( \dot{\gamma}_{ij} = -2 \alpha K_{ij} + 2 \nabla^\perp_{(i} \beta_{j)} \)
+\( K_{ij} = -{1\over{2\alpha}} \dot{\gamma}_{ij} + {1\over \alpha} \nabla^\perp_{(i} \beta_{j)} \)<br>
+\( {{\partial}\over{\partial \dot{\gamma}_{ij}}} K_{kl} = -{1\over{2\alpha}} \delta^i_k \delta^j_l \)<br>
+<br>
+Conjugate momentum:<br>
+\( \pi_{ij} = {{\partial \mathcal{L}}\over{\partial \dot{\gamma}^{ij}}} \)<br>
+\( = {\partial\over{\partial \dot{\gamma}^{ij}}} (\alpha \sqrt{\gamma} (R^{\perp} + K_{kl} K^{kl} - K^2)) \)<br>
+\( = {\partial\over{\partial \dot{\gamma}^{ij}}} \alpha \sqrt{\gamma} (R^{\perp} + g_{km} g_{ln} K^{kl} K^{mn} - K^{kl} g_{kl} K^{mn} g_{mn}) \)<br>
+\( \pi_{ij} = \alpha \sqrt{\gamma} ({\delta\over{\delta\dot{\gamma}^{ij}}} (\gamma_{km} \gamma_{ln} K^{kl} K^{mn}) - {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} \gamma_{kl} K^{mn} \gamma_{mn})) \)<br>
+\( \pi_{ij} = \alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} K^{mn}) - \gamma_{kl} \gamma_{mn} {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} K^{mn})) \)<br>
+\( \pi_{ij} = \alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} K^{mn}) \)<br>
+\( \pi_{ij} = \alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) (K^{kl} {\delta\over{\delta\dot{\gamma}^{ij}}} K^{mn} + K^{mn} {\delta\over{\delta\dot{\gamma}^{ij}}} K^{kl}) \)<br>
+\( \pi_{ij} = -\alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) ({1\over{2\alpha}} K^{kl} \delta^m_i \delta^n_j + {1\over{2\alpha}} K^{mn} \delta^k_i \delta^l_j) \)<br>
+\( \pi_{ij} = -\alpha {1\over{2\alpha}} \sqrt{\gamma} ((\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) K^{kl} \delta^m_i \delta^n_j + (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) K^{mn} \delta^k_i \delta^l_j) \)<br>
+\( \pi_{ij} = -{1\over 2} \sqrt{\gamma} ((\gamma_{km} \gamma_{ln} K^{kl} \delta^m_i \delta^n_j - \gamma_{kl} \gamma_{mn} K^{kl} \delta^m_i \delta^n_j) + (\gamma_{km} \gamma_{ln} K^{mn} \delta^k_i \delta^l_j - \gamma_{kl} \gamma_{mn} K^{mn} \delta^k_i \delta^l_j)) \)<br>
+\( \pi_{ij} = -{1\over 2} \sqrt{\gamma} (K_{ij} - \gamma_{ij} K + K_{ij} - \gamma_{ij} K) \)<br>
+\( \pi_{ij} = -\sqrt{\gamma} (K_{ij} - \gamma_{ij} K) \)<br>
+\( \pi^{ij} = -\sqrt{\gamma} (K^{ij} - \gamma^{ij} K) \)<br>
+<br>
+Extrinsic curvature in terms of conjugate momentum:<br>
+\( \gamma_{ij} \pi^{ij} = \gamma_{ij} (-\sqrt\gamma (K^{ij} - \gamma^{ij} K)) \)<br>
+solve conjugate momentum trace:<br>
+\( \pi = -\sqrt\gamma (\gamma_{ij} K^{ij} - \gamma_{ij} \gamma^{ij} K) \)<br>
+\( \pi = -\sqrt\gamma (K - 3 K) \)<br>
+\( \pi = 2 \sqrt\gamma K \)<br>
+\( K = \pi / (2 \sqrt\gamma) \)<br>
+substitute into equation of conjugate momentum in terms of extrinsic curvature:<br>
+\( \pi^{ij} = -\sqrt{\gamma} (K^{ij} - \gamma^{ij} K) \)<br>
+\( \pi^{ij} = -\sqrt{\gamma} K^{ij} + \sqrt\gamma \gamma^{ij} \pi / (2 \sqrt\gamma) \)<br>
+\( \pi^{ij} = -\sqrt{\gamma} K^{ij} + {1\over 2} \gamma^{ij} \pi \)<br>
+\( K^{ij} = -{1\over\sqrt\gamma} (\pi^{ij} - {1\over 2} \gamma^{ij} \pi) \)<br>
+<br>
+useful identity:<br>
+\( K^2 - K_{ij} K^{ij} \)<br>
+\( = (\pi / (2 \sqrt\gamma))^2 - {1\over\gamma} (\pi_{ij} - {1\over 2} \gamma_{ij} \pi) (\pi^{ij} - {1\over 2} \gamma^{ij} \pi) \)<br>
+\( = {1\over{4\gamma}} \pi^2 - {1\over\gamma} (\pi_{ij} \pi^{ij} - {1\over 2} \pi \gamma^{ij} \pi_{ij} - {1\over 2} \pi \gamma_{ij} \pi^{ij} + {1\over 4} \pi \gamma_{ij} \gamma^{ij} \pi) \)<br>
+\( = {1\over\gamma} ( {1\over 4} \pi^2 - \pi_{ij} \pi^{ij} + {1\over 2} \pi^2 + {1\over 2} \pi^2 - {3\over 4} \pi^2 ) \)<br>
+\( = {1\over\gamma} ({1\over 2} \pi^2 - \pi_{ij} \pi^{ij}) \)<br>
+<br>
+Hamiltonian:
+\( \mathscr{H} = \pi^{ij} \dot{\gamma}_{ij} - \mathcal{L} \)<br>
+\( = -\alpha \sqrt{\gamma} (R^{\perp} + K_{ij} K^{ij} - K^2) - \sqrt{\gamma} (K^{ij} - \gamma^{ij} K) (-2 \alpha K_{ij} + 2 \nabla^\perp_{(i} \beta_{j)}) \)<br>
+\( = -\alpha \sqrt{\gamma} (R^{\perp} + K_{ij} K^{ij} - K^2) + 2 \alpha \sqrt{\gamma} (K^{ij} - \gamma^{ij} K) K_{ij} - 2 \sqrt{\gamma} (K^{ij} - \gamma^{ij} K) \nabla^\perp_{(i} \beta_{j)} \)<br>
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} + K_{ij} K^{ij} - K^2 - 2 (K^{ij} - \gamma^{ij} K) K_{ij}) + 2 (K^{ij} - \gamma^{ij} K) \nabla^\perp_{(i} \beta_{j)} ) \)<br>
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} + K_{ij} K^{ij} - K^2 - 2 K^{ij} K_{ij} + 2 K^2) + 2 (K^{ij} - \gamma^{ij} K) \nabla^\perp_{(i} \beta_{j)} ) \)<br>
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} - K_{ij} K^{ij} + K^2) + 2 (K^{ij} - \gamma^{ij} K) \nabla^\perp_{(i} \beta_{j)} ) \)<br>
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 \pi^{ij} {1\over\sqrt{\gamma}} \nabla^\perp_{(i} \beta_{j)} ) \)<br>
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} + {1\over\gamma} ({1\over 2} \pi^2 - \pi_{ij} \pi^{ij})) - 2 \pi^{ij} {1\over\sqrt{\gamma}} \nabla^\perp_{(i} \beta_{j)} ) \)<br>
+\( = \alpha (-\sqrt{\gamma} R^{\perp} + {1\over\sqrt\gamma} (\pi_{ij} \pi^{ij} - {1\over 2} \pi^2)) + 2 \pi^{ij} \nabla^\perp_i \beta_j \)<br>
+using integration by parts: \( 2 \pi^{ij} \nabla^\perp_j \beta_i = -2 \beta_i \nabla^\perp_j \pi^{ij} \)<br>
+(TODO prove that integration-by-parts works with the spatial projected covariant derivative)<br>
+\( = \alpha (-\sqrt{\gamma} R^{\perp} + {1\over\sqrt\gamma} (\pi_{ij} \pi^{ij} - {1\over 2} \pi^2)) - 2 \beta_i \nabla^\perp_j \pi^{ij} \)<br>
+<br>
+Constraints:<br>
+Let \( \mathcal{H} = -\sqrt\gamma R^\perp + {1\over\sqrt\gamma} (\pi_{ij} \pi^{ij} - {1\over 2}\pi^2) \)<br>
+Let \( \mathcal{M}^i = 2 \nabla^\perp_j \pi^{ij} \)<br>
+\( \mathscr{H} = \alpha \mathcal{H} - \beta_i \mathcal{M}^i \)<br>
+<br>
+Let \( \textbf{H} = \int \mathscr{H} dx^3 \)<br>
+\( S = \int \textbf{H} dt \)<br>
+<br>
+\( \beta_i \mathcal{M}^i = 2 \beta^k \gamma_{ki} \nabla^\perp_j \pi^{ij} \)<br>
+\( = 2 \beta_i \nabla^\perp_j \pi^{ij} \)<br>
+\( = -2 \pi^{ij} \nabla^\perp_i \beta_j \)<br>
+\( = -\pi^{ij} \cdot 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
+using \( \mathcal{L}_\vec\beta \gamma_{ij} = 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
+\( = -\pi^{ij} \mathcal{L}_\vec\beta \gamma_{ij} \)<br>
+\( = \gamma_{ij} \mathcal{L}_\vec\beta pi^{ij} \)<br>
+so \( \delta / \delta \gamma_{ij} ( \beta_k \mathcal{M}^k ) = \mathcal{L}_\vec\beta \pi^{ij} \)<br>
+and \( \delta / \delta \pi^{ij} ( \beta_k \mathcal{M}^k ) = -\mathcal{L}_\vec\beta \gamma_{ij} \)<br>
+<br>
+Let \( \{p,q\} \) represent the Poisson bracket of \(p\) and \(q\):<br>
+\( \{p,q\} = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial g }\over{\partial \pi^{ij}}} - {{\partial f}\over{\partial \pi^{ij}}} {{\partial g}\over{\partial \gamma_{ij}}} \)<br>
+\( \{f, \beta_i \mathcal{M}^i\} \)<br>
+\( = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (\beta_k \mathcal{M}^k) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (\beta_k \mathcal{M}^k) \)<br>
+\( = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (2 \beta_k \nabla^\perp_l \pi^{lk}) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (2 \beta_k \nabla^\perp_l \pi^{lk}) \)<br>
+TODO \( = -{{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (2 \pi^{lk} \nabla^\perp_l \beta_k) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (2 \beta_k \nabla^\perp_l \pi^{lk}) \)<br>
+\( = -{{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (2 \pi^{lk} \nabla^\perp_l \beta_k) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (2 \beta^m \gamma_{mk} \nabla^\perp_l \pi^{lk}) \)<br>
+\( = -{{\partial f}\over{\partial \gamma_{ij}}} (2 \nabla^\perp_i (\gamma_{kj} \beta^k)) - {{\partial f}\over{\partial \pi^{ij}}} (2 \beta^i \nabla^\perp_k \pi^{kj}) \)<br>
+TODO \( = 2 {{\partial f}\over{\partial \gamma_{ij}}} \beta^k \partial_k \gamma_{ij} + 2 {{\partial f}\over{\partial \pi^{ij}}} \beta^k \partial_k \pi^{ij} \)<br>
+\( = 2 \beta^k \partial_k f \)<br>
+\( = 2 \mathcal{L}_\vec{\beta} f(\pi, \gamma) \)<br>
+<br>
+
+
+</div>
+
