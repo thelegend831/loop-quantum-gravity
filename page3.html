@@ -80,10 +80,10 @@ proof \(\nabla^\perp_a\) is the covariant derivative of \(\gamma_{ab}\):<br>
 TODO show \( \nabla_i v^j \) = \( \nabla^\perp_i v^j \) for spatial \(v^j\)<br>
 <br>
 spatial connection coefficients:<br>
-\({{\three\Gamma}^a}_{bc} = {1\over 2}\gamma^{ad}(\partial_c \gamma_{db} + \partial_b \gamma_{dc} - \partial_d \gamma_{bc})\)<br>
+\({{\Gamma^\perp}^a}_{bc} = {1\over 2}\gamma^{ad}(\partial_c \gamma_{db} + \partial_b \gamma_{dc} - \partial_d \gamma_{bc})\)<br>
 spatial riemann tensor:<br>
-Let \({{\three R}^d}_{cba} w_d = 2 \nabla^\perp_{[a} \nabla^\perp_{b]} w_c\)<br>
-therefore \({{\three R}_{abc}}^d = \partial_b {{\three\Gamma}^d}_{ac} - \partial_a {{\three\Gamma}^d}_{bc} + {{\three\Gamma}^e}_{ac} {{\three\Gamma}^d}_{eb} - {{\three\Gamma}^e}_{bc} {{\three\Gamma}^d}_{ea}\)<br>
+Let \({{R^\perp}^d}_{cba} w_d = 2 \nabla^\perp_{[a} \nabla^\perp_{b]} w_c\)<br>
+therefore \({{R^\perp}_{abc}}^d = \partial_b {{\Gamma^\perp}^d}_{ac} - \partial_a {{\Gamma^\perp}^d}_{bc} + {{\Gamma^\perp}^e}_{ac} {{\Gamma^\perp}^d}_{eb} - {{\Gamma^\perp}^e}_{bc} {{\Gamma^\perp}^d}_{ea}\)<br>
 <br>
 Extrinsic curvature:<br>
 \(K_{ab} = -\perp \nabla_a n_b\)<br>
@@ -211,7 +211,7 @@ use antisymmetry to switch indices, and combine ...<br>
 - 2 {\gamma_b}^p {\gamma_{[c}}^r n_{d]} n_a n^q n^s) R_{pqrs}\)<br>
 <br>
 Riemann tensor of spatial covariant derivative:<br>
-\({{\three R}^{dc}}_{ba} v_d\)<br>
+\({{R^\perp}^{dc}}_{ba} v_d\)<br>
 \(= \nabla^\perp_a \nabla^\perp_b v^c - \nabla^\perp_b \nabla^\perp_a v^c \)<br>
 \(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
 - K_{ab} {\gamma_r}^c n^p \nabla_p v^r <br>
@@ -222,16 +222,16 @@ Riemann tensor of spatial covariant derivative:<br>
 \(= 2 {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_{[p} \nabla_{\gamma]} v^r - 2 {K_{[a}}^c K_{b]p} v^p\)<br>
 \(= {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r R_{drqp} v^d - {K_a}^c K_{bd} v^d + {K_b}^c K_{ad} v^d\)<br>
 \(= {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs} v^d - {K_a}^c K_{bd} v^d + {K_b}^c K_{ad} v^d\)<br>
-\({{\three R}^{dc}}_{ba} v_d = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r R_{drqp} v^d - {K_a}^c K_{bd} v^d + {K_b}^c K_{ad} v^d\)<br>
+\({{R^\perp}^{dc}}_{ba} v_d = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r R_{drqp} v^d - {K_a}^c K_{bd} v^d + {K_b}^c K_{ad} v^d\)<br>
 Gauss' equation:<br>
-\(\three{R}_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc} = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs}\)<br>
+\({R^\perp}_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc} = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs}\)<br>
 <br>
 spatial Riemann is orthogonal to normal:<br>
-\(\three{R}_{abcd} n^d\)<br>
+\({R^\perp}_{abcd} n^d\)<br>
 \(={\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs} n^d - K_{ac} K_{bd} n^d + K_{ad} K_{bc} n^d\)<br>
 \(={\gamma_a}^p {\gamma_b}^q {\gamma_c}^r (n^d {\gamma_d}^s) R_{pqrs} - K_{ac} (K_{bd} n^d) + (K_{ad} n^d) K_{bc}\)<br>
 \(={\gamma_a}^p {\gamma_b}^q {\gamma_c}^r \cdot 0 \cdot R_{pqrs} - K_{ac} \cdot 0 + 0 \cdot K_{bc}\)<br>
-\(\three{R}_{abcd} n^d = 0\)<br>
+\({R^\perp}_{abcd} n^d = 0\)<br>
 <br>
 spatial covariant derivative of extrinsic curvature:<br>
 \(\nabla^\perp_a K_{bc}\)<br>
@@ -308,21 +308,6 @@ Ricci tensor contracted with normal:<br>
 \(=\nabla_c (n^b  \nabla_b n^c) - \nabla_b(n^b \nabla_c n^c) - K_{ab} K^{ab} + K^2\)<br>
 \(=\nabla_c (n^b  \nabla_b n^c) - \nabla_c(n^c \nabla_b n^b) - K_{ab} K^{ab} + K^2\)<br>
 \(n^a n^b R_{ab}=K^2 - K_{ab} K^{ab} + \nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
-<br>
-contracting Gauss' equation:<br>
-\(R^\perp_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc} = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs}\)<br>
-\(g^{ac} (R^\perp_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc}) = g^{ac} {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs}\)<br>
-\({R^{\perp a}}_{bad} + K K_{bd} - {K^a}_d K_{ba} = \gamma^{pr} {\gamma_b}^q {\gamma_d}^s R_{pqrs}\)<br>
-\(g^{bd}({R^\perp}_{bd} + K K_{bd} - {K^a}_d K_{ba}) = g^{bd} \gamma^{pr} {\gamma_b}^q {\gamma_d}^s R_{pqrs}\)<br>
-\({R^\perp} + K^2 - K^{ab} K_{ab} = \gamma^{pr} \gamma^{qs} R_{pqrs}\)<br>
-...substitute projected Riemann...<br>
-\(R^\perp+K^2-K_{ab}K^{ab}=R + 2n^a n^b R_{ab}\)<br>
-...solve for R...<br>
-\(R =R^\perp-K_{ab}K^{ab}+K^2-2n^a n^b R_{ab}\)<br>
-...substitute contracted Ricci tensor...<br>
-\(R=R^\perp-K_{ab}K^{ab}+K^2-2(K^2 - K_{ab} K^{ab} + \nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b))\)<br>
-\(R=R^\perp-K_{ab}K^{ab}+K^2-2K^2 + 2K_{ab} K^{ab} - 2\nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
-\(R=R^\perp+K_{ab}K^{ab}-K^2 - 2\nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
-<br>
+
 </div>
 
