@@ -10,8 +10,8 @@ using:<br>
 <li type='disc'>Baumgarte, Thomas W.; Shapiro, Stuart L. (2010), <i>Numerical Relativity: Solving Einstein's Equations on the Computer</i>, New York: Cambridge University Press, ISBN 978-0-521-51407-1</li>
 <li type='disc'>Misner, Charles W.; Thorne, Kip S.; Wheeler, John Archibald (1970), <i>Gravitation</i>, New York: W.H. Freeman, ISBN 0-7167-0344-0</li>
 <li type='disc'>Flanders, Harley (1989), <i>Differential Forms With Applications to the Physical Sciences</i>, Mineola, New York: Dover Publications, ISBN 0-486-66169-5</li>
-<li type='disc'><a href='http://arxiv.org/pdf/hep-th/9301028v2.pdf'>http://arxiv.org/pdf/hep-th/9301028v2.pdf</a></li>
-<li type='disc'><a href='http://arxiv.org/pdf/gr-qc/9303032v1.pdf'>http://arxiv.org/pdf/gr-qc/9303032v1.pdf</a></li>
+<li type='disc'>Pullin, Jorge (2000) <a href='http://arxiv.org/abs/hep-th/9301028'>Knot Theory and Quantum Gravity in Loop Space: A Primer</a></li>
+<li type='disc'>Romano, Joseph D. (1993), <a href='http://arxiv.org/abs/gr-qc/9303032'>Geometrodynamics vs. Connection Dynamics</a></li>
 <li type='disc'><a href='http://en.wikipedia.org/wiki/Tetradic_Palatini_action'>http://en.wikipedia.org/wiki/Tetradic_Palatini_action</a></li>
 <li type='disc'><a href='https://en.wikipedia.org/wiki/Self-dual_Palatini_action'>https://en.wikipedia.org/wiki/Self-dual_Palatini_action</a></li>
 <li type='disc'><a href='https://en.wikipedia.org/wiki/Ashtekar_variables'>https://en.wikipedia.org/wiki/Ashtekar_variables</a></li>
@@ -500,8 +500,9 @@ Let \({{\three R}^d}_{cba} w_d = 2 \three\nabla_{[a} \three\nabla_{b]} w_c\)<br>
 therefore \({{\three R}_{abc}}^d = \partial_b {{\three\Gamma}^d}_{ac} - \partial_a {{\three\Gamma}^d}_{bc} + {{\three\Gamma}^e}_{ac} {{\three\Gamma}^d}_{eb} - {{\three\Gamma}^e}_{bc} {{\three\Gamma}^d}_{ea}\)<br>
 <br>
 Extrinsic curvature:<br>
-\(K_{ab} = -{\gamma_a}^c {\gamma_b}^d \nabla_c n_d\)<br>
-\(K_{ab} = -(g_a^c + n_a n^c)(g_b^d + n_b n^d) \nabla_c n_d\)<br>
+\(K_{ab} = -\perp \nabla_a n_b\)<br>
+\(= -{\gamma_a}^c {\gamma_b}^d \nabla_c n_d\)<br>
+\(= -(g_a^c + n_a n^c)(g_b^d + n_b n^d) \nabla_c n_d\)<br>
 \(= -\nabla_a n_b - n_a n^c \nabla_c n_b - n_b n^d \nabla_a n_d - n_a n_b n^c n^d \nabla_c n_d\)<br>
 \(= -\nabla_a n_b - n_a a_b\)<br>
 <br>
@@ -623,6 +624,7 @@ use antisymmetry to switch indices, and combine ...<br>
 + 2 {\gamma_a}^p {\gamma_{[c}}^r n_{d]} n_b n^q n^s<br>
 - 2 {\gamma_b}^p {\gamma_{[c}}^r n_{d]} n_a n^q n^s) R_{pqrs}\)<br>
 <br>
+Riemann tensor of spatial covariant derivative:<br>
 \({{\three R}^{dc}}_{ba} v_d\)<br>
 \(= \three\nabla_a \three\nabla_b v^c - \three\nabla_b \three\nabla_a v^c \)<br>
 \(= {\gamma_a}^p {\gamma_b}^q {\gamma_r}^c \nabla_p \nabla_q v^r <br>
@@ -645,6 +647,7 @@ spatial Riemann is orthogonal to normal:<br>
 \(={\gamma_a}^p {\gamma_b}^q {\gamma_c}^r \cdot 0 \cdot R_{pqrs} - K_{ac} \cdot 0 + 0 \cdot K_{bc}\)<br>
 \(\three{R}_{abcd} n^d = 0\)<br>
 <br>
+spatial covariant derivative of extrinsic curvature:<br>
 \(\three\nabla_a K_{bc}\)<br>
 \(=-{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r \nabla_p K_{qr}\)<br>
 \(=-{\gamma_a}^p {\gamma_b}^q {\gamma_c}^r \nabla_p (\nabla_q n_r + n_q a_r)\)<br>
@@ -770,6 +773,26 @@ Conjugate momentum:<br>
 \( \pi_{ij} = -\sqrt{\gamma} (K_{ij} - \gamma_{ij} K) \)<br>
 \( \pi^{ij} = -\sqrt{\gamma} (K^{ij} - \gamma^{ij} K) \)<br>
 <br>
+Extrinsic curvature in terms of conjugate momentum:<br>
+\( \gamma_{ij} \pi^{ij} = \gamma_{ij} (-\sqrt\gamma (K^{ij} - \gamma^{ij} K)) \)<br>
+solve conjugate momentum trace:<br>
+\( \pi = -\sqrt\gamma (\gamma_{ij} K^{ij} - \gamma_{ij} \gamma^{ij} K) \)<br>
+\( \pi = -\sqrt\gamma (K - 3 K) \)<br>
+\( \pi = 2 \sqrt\gamma K \)<br>
+\( K = \pi / (2 \sqrt\gamma) \)<br>
+substitute into equation of conjugate momentum in terms of extrinsic curvature:<br>
+\( \pi^{ij} = -\sqrt{\gamma} (K^{ij} - \gamma^{ij} K) \)<br>
+\( \pi^{ij} = -\sqrt{\gamma} K^{ij} + \sqrt\gamma \gamma^{ij} \pi / (2 \sqrt\gamma) \)<br>
+\( \pi^{ij} = -\sqrt{\gamma} K^{ij} + {1\over 2} \gamma^{ij} \pi \)<br>
+\( K^{ij} = -{1\over\sqrt\gamma} (\pi^{ij} - {1\over 2} \gamma^{ij} \pi) \)<br>
+<br>
+useful identity:<br>
+\( K^2 - K_{ij} K^{ij} \)<br>
+\( = (\pi / (2 \sqrt\gamma))^2 - {1\over\gamma} (\pi_{ij} - {1\over 2} \gamma_{ij} \pi) (\pi^{ij} - {1\over 2} \gamma^{ij} \pi) \)<br>
+\( = {1\over{4\gamma}} \pi^2 - {1\over\gamma} (\pi_{ij} \pi^{ij} - {1\over 2} \pi \gamma^{ij} \pi_{ij} - {1\over 2} \pi \gamma_{ij} \pi^{ij} + {1\over 4} \pi \gamma_{ij} \gamma^{ij} \pi) \)<br>
+\( = {1\over\gamma} ( {1\over 4} \pi^2 - \pi_{ij} \pi^{ij} + {1\over 2} \pi^2 + {1\over 2} \pi^2 - {3\over 4} \pi^2 ) \)<br>
+\( = {1\over\gamma} ({1\over 2} \pi^2 - \pi_{ij} \pi^{ij}) \)<br>
+<br>
 Hamiltonian:
 \( \mathscr{H} = \pi^{ij} \dot{\gamma}_{ij} - \mathcal{L} \)<br>
 \( = -\alpha \sqrt{\gamma} (R^{\perp} + K_{ij} K^{ij} - K^2) - \sqrt{\gamma} (K^{ij} - \gamma^{ij} K) (-2 \alpha K_{ij} + 2 \nabla^\perp_{(i} \beta_{j)}) \)<br>
@@ -778,24 +801,28 @@ Hamiltonian:
 \( = -\sqrt{\gamma} (\alpha (R^{\perp} + K_{ij} K^{ij} - K^2 - 2 K^{ij} K_{ij} + 2 K^2) + 2 (K^{ij} - \gamma^{ij} K) \nabla^\perp_{(i} \beta_{j)} ) \)<br>
 \( = -\sqrt{\gamma} (\alpha (R^{\perp} - K_{ij} K^{ij} + K^2) + 2 (K^{ij} - \gamma^{ij} K) \nabla^\perp_{(i} \beta_{j)} ) \)<br>
 \( = -\sqrt{\gamma} (\alpha (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 \pi^{ij} {1\over\sqrt{\gamma}} \nabla^\perp_{(i} \beta_{j)} ) \)<br>
-using \( \mathcal{L}_\vec\beta \gamma^{ij} = 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
-\( = -\sqrt{\gamma} (\alpha (R^{\perp} - K_{ij} K^{ij} + K^2) - {1\over\sqrt{\gamma}} \pi^{ij} \mathcal{L}_\vec\beta \gamma_{ij} ) \)<br>
-\( = -\sqrt{\gamma} \alpha (R^{\perp} - K_{ij} K^{ij} + K^2) + \pi^{ij} \mathcal{L}_\vec\beta \gamma_{ij} \)<br>
-integration by parts: \( \int \pi^{ij} \mathcal{L}_\vec\beta \gamma_{ij} dx^3 = -\int \gamma_{ij} \mathcal{L}_\vec\beta \pi^{ij} dx^3 \)<br>
-\( = -\sqrt{\gamma} \alpha (R^{\perp} - K_{ij} K^{ij} + K^2) - \gamma_{ij} \mathcal{L}_\vec\beta \pi^{ij} \)<br>
-TODO \( = -\sqrt{\gamma} \alpha (R^{\perp} - K_{ij} K^{ij} + K^2) - 2 \beta_j \nabla^\perp_i \pi^{ij} \)<br>
-<!-- 
-TODO show:<br>
-\( \mathscr{H} = \alpha(-\gamma^{1/2} R^{\perp} + \gamma^{-1/2} (\pi^{ij} \pi_{ij} - {1\over 2} \pi^2)) - 2 \beta^j \nabla^\perp_i {\pi^i}_j \)<br>
--->
+\( = -\sqrt{\gamma} (\alpha (R^{\perp} + {1\over\gamma} ({1\over 2} \pi^2 - \pi_{ij} \pi^{ij})) - 2 \pi^{ij} {1\over\sqrt{\gamma}} \nabla^\perp_{(i} \beta_{j)} ) \)<br>
+\( = \alpha (-\sqrt{\gamma} R^{\perp} + {1\over\sqrt\gamma} (\pi_{ij} \pi^{ij} - {1\over 2} \pi^2)) + 2 \pi^{ij} \nabla^\perp_i \beta_j \)<br>
+using integration by parts: \( 2 \pi^{ij} \nabla^\perp_j \beta_i = -2 \beta_i \nabla^\perp_j \pi^{ij} \)<br>
+(TODO prove that integration-by-parts works with the spatial projected covariant derivative)<br>
+\( = \alpha (-\sqrt{\gamma} R^{\perp} + {1\over\sqrt\gamma} (\pi_{ij} \pi^{ij} - {1\over 2} \pi^2)) - 2 \beta_i \nabla^\perp_j \pi^{ij} \)<br>
 <br>
 Constraints:<br>
-Let \( \mathcal{H} = -\sqrt\gamma (R^\perp + K^2 - K_{ij} K^{ij}) \)<br>
-Let \( \mathcal{M}^j = 2 \nabla^\perp_i \pi^{ij} \)<br>
+Let \( \mathcal{H} = -\sqrt\gamma R^\perp + {1\over\sqrt\gamma} (\pi_{ij} \pi^{ij} - {1\over 2}\pi^2) \)<br>
+Let \( \mathcal{M}^i = 2 \nabla^\perp_j \pi^{ij} \)<br>
 \( \mathscr{H} = \alpha \mathcal{H} - \beta_i \mathcal{M}^i \)<br>
 <br>
 Let \( \textbf{H} = \int \mathscr{H} dx^3 \)<br>
 \( S = \int \textbf{H} dt \)<br>
+<br>
+\( \beta_i \mathcal{M}^i = 2 \beta^k \gamma_{ki} \nabla^\perp_j \pi^{ij} \)<br>
+\( = 2 \beta_i \nabla^\perp_j \pi^{ij} \)<br>
+\( = -2 \pi^{ij} \nabla^\perp_i \beta_j \)<br>
+\( = -\pi^{ij} \cdot 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
+\( = -\pi^{ij} \mathscr{L}_\vec\beta \gamma_{ij} \)<br>
+\( = \gamma_{ij} \mathscr{L}_\vec\beta pi^{ij} \)<br>
+so \( \delta / \delta \gamma_{ij} ( \beta_k \mathcal{M}^k ) = \mathscr{L}_\vec\beta \pi^{ij} \)<br>
+and \( \delta / \delta \pi^{ij} ( \beta_k \mathcal{M}^k ) = -\mathscr{L}_\vec\beta \gamma_{ij} \)<br>
 <br>
 Let \( \{p,q\} \) represent the Poisson bracket of \(p\) and \(q\):<br>
 \( \{p,q\} = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial g }\over{\partial \pi^{ij}}} - {{\partial f}\over{\partial \pi^{ij}}} {{\partial g}\over{\partial \gamma_{ij}}} \)<br>
@@ -1025,12 +1052,12 @@ Let \( {F_{ab}}^\hat a = {F_{ab}}^{\hat a\hat 0} \)<br>
 TODO "Ashtekar Variables" wiki entry says: \( {A_a}^\hat a = {\Gamma_a}^\hat a + \beta {K_a}^\hat a \), for \( {\Gamma_a}^\hat a = \Gamma_{a\hat b\hat c} \epsilon^{\hat b\hat c\hat a} \) <br>
 \( {K_a}^\hat a = {K_a}^b {e_b}^{\hat a} = {K_a}^b {E_b}^\hat a \)<br>
 \( {K_a}^\hat a \) can have its coordinate changed by either \( {e_a}^\hat a \) or its associated projection \( {E_a}^\hat a \) because \( K_{ab} \) itself is already projected on both coordinates.<br> 
-\( K_{ab} g^{bc} {e_c}^hat a = -{\gamma_a}^e {\gamma_b}^f \nabla_e n_f g^{bc} {e_c}^\hat a \)<br>
+\( K_{ab} g^{bc} {e_c}^\hat a = -{\gamma_a}^e {\gamma_b}^f \nabla_e n_f g^{bc} {e_c}^\hat a \)<br>
 \( = -{\gamma_a}^e \gamma^{cf} \nabla_e n_f {e_c}^\hat a \)<br>
 \( = -{\gamma_a}^e \gamma^{cf} \nabla_e ({e_f}^\hat b n_\hat b) {e_c}^\hat a \)<br>
-\( = -{\gamma_a}^e \gamma^{cf} \nabla_e ({e_f}^\hat 0) {e_c}^\hat a \)<br>
-So if we want \( {K_a}^\hat a \) to have a value, either (1) don't fix \( n_\hat a \) or (2) don't fix \( \nabla_a {e_b}^\hat a = 0 \) (which is what I use to define \( {\tilde\omega_a}^{\hat a\hat b} \))<br>
-But doesn't the "affine covariant derivative cancel tetrad"?  That would mean this goes to zero.<br>
+\( = -{\gamma_a}^e \gamma^{cf} (n_\hat b \nabla_e {e_f}^\hat b + {e_f}^\hat b \nabla_e n_\hat b) {e_c}^\hat a \)<br>
+using \( \nabla_a {e_b}^\hat a = 0 \)<br>
+\( = -{\gamma_a}^e \gamma^{\hat a\hat b} \nabla_e n_\hat b \)<br>
 TODO "Self-Dual Palatini Action" wiki entry says: \( \mathscr{D}_a (t^b {A_b}^\hat a) = \partial_a (t^b {A_b}^\hat a + {\epsilon^\hat a}_{\hat b\hat c} {A_a}^\hat a (t^b {A_b}^\hat c)  \)<br>
 TODO show \( t^a {F_{ab}}^\hat a = \mathcal{L}_\vec{t} {A_b}^\hat a - \mathscr{D}_b (t^a {A_a}^\hat a) \)<br>
 </div>
