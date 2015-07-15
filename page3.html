@@ -48,9 +48,20 @@ Normal in the ADM metric:<br>
 <br>
 
 Projection / spatial metric, in ADM metric:<br>
-\(||{\gamma_a}^b|| = \left[ \matrix{ 1 & 0 \\ 0 & \delta_i^j } \right] + \left[ \matrix{ -\alpha \\ 0 } \right] \left[ \matrix{ 1/\alpha & -\beta^j/\alpha  } \right]  \)<br>
-\(||{\gamma_a}^b|| = \left[ \matrix{ 1 & 0 \\ 0 & \delta_i^j } \right] + \left[ \matrix{ -1 & \beta^j \\ 0 & 0 } \right] \)<br>
-\(||{\gamma_a}^b|| = \left[ \matrix{ 0 & \beta^j \\ 0 & \delta_i^j } \right] \)<br>
+\(||{\gamma_a}^b|| = ||\delta^b_a + n_a n^b||\)<br>
+\( = \left[ \matrix{ 1 & 0 \\ 0 & \delta_i^j } \right] + \left[ \matrix{ -\alpha \\ 0 } \right] \left[ \matrix{ 1/\alpha & -\beta^j/\alpha  } \right]  \)<br>
+\( = \left[ \matrix{ 1 & 0 \\ 0 & \delta_i^j } \right] + \left[ \matrix{ -1 & \beta^j \\ 0 & 0 } \right] \)<br>
+\( = \left[ \matrix{ 0 & \beta^j \\ 0 & \delta_i^j } \right] \)<br>
+<br>
+\( ||\gamma_{ab}|| = ||g_{ab} + n_a n_b||\)<br>
+\( = \left[ \matrix{-\alpha^2 + \beta_k \beta^k & \beta_j \\ \beta_i & \gamma_{ij}} \right] + \left[ \matrix{ -\alpha \\ 0 } \right] \left[ \matrix{ -\alpha & 0 } \right] \)<br>
+\( = \left[ \matrix{-\alpha^2+\beta_k \beta^k & \beta_j \\ \beta_i & \gamma_{ij}} \right]+\left[\matrix{\alpha^2&0\\0&0}\right] \)<br>
+\( =\left[ \matrix{\beta_k \beta^k & \beta_j \\ \beta_i & \gamma_{ij}} \right] \)<br>
+<br>
+\( ||\gamma^{ab}|| = ||g^{ab}+n^a n^b|| \)<br>
+\( = \left[ \matrix{-1/\alpha^2 & \beta^j / \alpha^2 \\ \beta^i / \alpha^2 & \gamma^{ij} - \beta^i \beta^j / \alpha^2} \right]+\left[ \matrix{ 1/\alpha \\ -\beta^i/\alpha } \right] \left[ \matrix{ 1/\alpha & -\beta^j/\alpha } \right] \)<br>
+\( = \left[ \matrix{-1/\alpha^2 & \beta^j / \alpha^2 \\ \beta^i / \alpha^2 & \gamma^{ij} - \beta^i \beta^j / \alpha^2} \right]+\left[\matrix{1/\alpha^2 & -\beta^j/\alpha^2 \\ -\beta^i/\alpha^2 & \beta^i\beta^j/\alpha^2 }\right] \)<br>
+\( = \left[\matrix{0&0\\0&\gamma^{ij}}\right] \)<br>
 <br>
 
 Metric contracted with normal:<br>
@@ -277,6 +288,17 @@ Lie derivative along shift vector of spatial metric:<br>
 ...using \(\nabla_i v^j=\nabla^\perp_i v^j\) for spatial \(v^j\)...<br>
 \( \mathcal{L}_\vec{\beta} \gamma_{ij} = 2 \nabla^\perp_{(i} \beta_{j)} \) <br>
 <br>
+Equivalence of Lie derivative along time vector and time partial derivative of spatial metric:<br>
+\( \mathcal{L}_\vec{t} \gamma_{ab} \)<br>
+\( = \alpha \mathcal{L}_\vec{n} \gamma_{ab} + \mathcal{L}_\vec\beta \gamma_{ab} \)<br>
+\( = \alpha (n^c \partial_c \gamma_{ab} + \gamma_{cb} \partial_a n^c + \gamma_{ac} \partial_b n^c) + (\beta^c \partial_c \gamma_{ab} + \gamma_{cb} \partial_a \beta^c + \gamma_{ac} \partial_b \beta^c) \)<br>
+\( = \alpha n^t \partial_t \gamma_{ab} + \alpha n^i \partial_i \gamma_{ab} + \alpha \gamma_{tb} \partial_a n^t + \alpha \gamma_{ib} \partial_a n^i + \alpha \gamma_{at} \partial_b n^t + \alpha \gamma_{ai} \partial_b n^i + \beta^t \partial_t \gamma_{ab} + \beta^i \partial_i \gamma_{ab} + \gamma_{tb} \partial_a \beta^t + \gamma_{ib} \partial_a \beta^i + \gamma_{at} \partial_b \beta^t + \gamma_{ai} \partial_b \beta^i \)<br>
+\( = \alpha {1\over\alpha} \partial_t \gamma_{ab} + \alpha (-{\beta^i\over\alpha}) \partial_i \gamma_{ab} + \alpha \gamma_{tb} \partial_a ({1\over\alpha}) + \alpha \gamma_{ib} \partial_a (-{\beta^i\over\alpha}) + \alpha \gamma_{at} \partial_b ({1\over\alpha}) + \alpha \gamma_{ai} \partial_b (-{\beta^i\over\alpha}) + \beta^t \partial_t \gamma_{ab} + \beta^i \partial_i \gamma_{ab} + \gamma_{tb} \partial_a \beta^t + \gamma_{ib} \partial_a \beta^i + \gamma_{at} \partial_b \beta^t + \gamma_{ai} \partial_b \beta^i \)<br>
+\( = \partial_t \gamma_{ab} - \beta^i \partial_i \gamma_{ab} - {1\over\alpha} \gamma_{tb} \partial_a \alpha - \gamma_{ib} \partial_a \beta^i + {1\over\alpha} \beta^i \gamma_{ib} \partial_a \alpha - {1\over\alpha} \gamma_{at} \partial_b \alpha - \gamma_{ai} \partial_b \beta^i + {1\over\alpha} \beta^i \gamma_{ai} \partial_b \alpha + \beta^t \partial_t \gamma_{ab} + \beta^i \partial_i \gamma_{ab} + \gamma_{tb} \partial_a \beta^t + \gamma_{ib} \partial_a \beta^i + \gamma_{at} \partial_b \beta^t + \gamma_{ai} \partial_b \beta^i \)<br>
+\( = \partial_t \gamma_{ab} + {1\over\alpha} \beta_b \partial_a \alpha + {1\over\alpha} \beta_a \partial_b \alpha - {1\over\alpha} \gamma_{tb} \partial_a \alpha - {1\over\alpha} \gamma_{at} \partial_b \alpha \)<br>
+\( = \partial_t \gamma_{ab} + {1\over\alpha} \beta_b \partial_a \alpha + {1\over\alpha} \beta_a \partial_b \alpha - {1\over\alpha} \beta_b \partial_a \alpha - {1\over\alpha} \beta_a \partial_b \alpha \)<br>
+\( = \partial_t \gamma_{ab} \)<br>
+<br>
 Time derivative of spatial metric:<br>
 \( \dot{\gamma}_{ab} = \mathcal{L}_{\vec{t}}\gamma_{ab} \)<br>
 \( = \mathcal{L}_{\alpha \vec{n} + \vec{\beta}} \gamma_{ab} \)<br>
@@ -284,30 +306,5 @@ Time derivative of spatial metric:<br>
 \( = -2\alpha K_{ab} + \mathcal{L}_{\vec{\beta}} \gamma_{ab} \)<br>
 \( \dot{\gamma}_{ab} = -2\alpha K_{ab} + 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
 <br>
-Einstein tensor contracted with normal:<br>
-\(G_{ab} = R_{ab} - {1\over 2} g_{ab} R\)<br>
-\(n^a n^b G_{ab} = n^a n^b R_{ab} - {1\over 2} g_{ab} n^a n^b R\)<br>
-\(n^a n^b G_{ab} = n^a n^b R_{ab} + {1\over 2} R\)<br>
-\(2n^a n^b G_{ab} = 2 n^a n^b R_{ab} + R\)<br>
-<br>
-projected Riemann tensor:<br>
-\(\gamma^{ac}\gamma^{bd}R_{abcd}=(g^{ac} + n^a n^c)(g^{bd} + n^b n^d)R_{abcd}\)<br>
-\(=g^{ac}g^{bd} R_{abcd} + n^a n^c g^{bd} R_{abcd} + g^{ac} n^b n^d R_{abcd} + n^a n^b n^c n^d R_{abcd}\)<br>
-\(=R + n^a n^c R_{ac} + n^b n^d R_{bd}\)<br>
-\(=R + 2 n^a n^b R_{ab}\)<br>
-\(=2n^a n^b G_{ab}\)<br>
-<br>
-Ricci tensor contracted with normal:<br>
-\(n^a n^b R_{ab}\)<br>
-\(=n^a n^b {R^c}_{acb}\)<br>
-\(=n^b (\nabla_c \nabla_b n^c - \nabla_b \nabla_c n^c)\)<br>
-\(=n^b \nabla_c \nabla_b n^c - n^b \nabla_b \nabla_c n^c\)<br>
-\(=\nabla_c (n^b  \nabla_b n^c) - (\nabla_c n^b)(\nabla_b n^c) - \nabla_b(n^b \nabla_c n^c) + (\nabla_b n^b) (\nabla_c n^c)\)<br>
-\(=\nabla_c (n^b  \nabla_b n^c) - (-{K_c}^b + n_c a^b)(-{K_b}^c + n_b a^c) - \nabla_b(n^b \nabla_c n^c) + (-{K_b}^b + n_b a^b) (-{K_c}^c + n_c a^c)\)<br>
-\(=\nabla_c (n^b  \nabla_b n^c) - ({K_c}^b {K_b}^c - n_c a^b {K_b}^c - n_b a^c {K_c}^b + n_b n_c a^b a^c) - \nabla_b(n^b \nabla_c n^c) + K^2\)<br>
-\(=\nabla_c (n^b  \nabla_b n^c) - \nabla_b(n^b \nabla_c n^c) - K_{ab} K^{ab} + K^2\)<br>
-\(=\nabla_c (n^b  \nabla_b n^c) - \nabla_c(n^c \nabla_b n^b) - K_{ab} K^{ab} + K^2\)<br>
-\(n^a n^b R_{ab}=K^2 - K_{ab} K^{ab} + \nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
-
 </div>
 

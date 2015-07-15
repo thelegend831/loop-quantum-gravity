@@ -1,6 +1,33 @@
 <script type="text/javascript" src="/MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <div class='entry'>
 
+Einstein tensor contracted with normal:<br>
+\(G_{ab} = R_{ab} - {1\over 2} g_{ab} R\)<br>
+\(n^a n^b G_{ab} = n^a n^b R_{ab} - {1\over 2} g_{ab} n^a n^b R\)<br>
+\(n^a n^b G_{ab} = n^a n^b R_{ab} + {1\over 2} R\)<br>
+\(2n^a n^b G_{ab} = 2 n^a n^b R_{ab} + R\)<br>
+<br>
+projected Riemann tensor:<br>
+\(\gamma^{ac}\gamma^{bd}R_{abcd}=(g^{ac} + n^a n^c)(g^{bd} + n^b n^d)R_{abcd}\)<br>
+\(=g^{ac}g^{bd} R_{abcd} + n^a n^c g^{bd} R_{abcd} + g^{ac} n^b n^d R_{abcd} + n^a n^b n^c n^d R_{abcd}\)<br>
+\(=R + n^a n^c R_{ac} + n^b n^d R_{bd}\)<br>
+\(=R + 2 n^a n^b R_{ab}\)<br>
+\(=2n^a n^b G_{ab}\)<br>
+<br>
+Ricci tensor contracted with normal:<br>
+\(n^a n^b R_{ab}\)<br>
+\(=n^a n^b {R^c}_{acb}\)<br>
+\(=n^b (\nabla_c \nabla_b n^c - \nabla_b \nabla_c n^c)\)<br>
+\(=n^b \nabla_c \nabla_b n^c - n^b \nabla_b \nabla_c n^c\)<br>
+\(=\nabla_c (n^b  \nabla_b n^c) - (\nabla_c n^b)(\nabla_b n^c) - \nabla_b(n^b \nabla_c n^c) + (\nabla_b n^b) (\nabla_c n^c)\)<br>
+\(=\nabla_c (n^b  \nabla_b n^c) - (-{K_c}^b + n_c a^b)(-{K_b}^c + n_b a^c) - \nabla_b(n^b \nabla_c n^c) + (-{K_b}^b + n_b a^b) (-{K_c}^c + n_c a^c)\)<br>
+\(=\nabla_c (n^b  \nabla_b n^c) - ({K_c}^b {K_b}^c - n_c a^b {K_b}^c - n_b a^c {K_c}^b + n_b n_c a^b a^c) - \nabla_b(n^b \nabla_c n^c) + K^2\)<br>
+\(=\nabla_c (n^b  \nabla_b n^c) - \nabla_b(n^b \nabla_c n^c) - K_{ab} K^{ab} + K^2\)<br>
+\(=\nabla_c (n^b  \nabla_b n^c) - \nabla_c(n^c \nabla_b n^b) - K_{ab} K^{ab} + K^2\)<br>
+\(n^a n^b R_{ab}=K^2 - K_{ab} K^{ab} + \nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
+
+
+<br>
 contracting Gauss' equation:<br>
 \(R^\perp_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc} = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs}\)<br>
 \(g^{ac} (R^\perp_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc}) = g^{ac} {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs}\)<br>
@@ -32,7 +59,7 @@ Vacuum Action:<br>
 \( S = \int \sqrt{-g} R dx^4 \)<br>
 \( S = \int \int \alpha \sqrt{\gamma} (R^{\perp} + K_{ij} K^{ij} - K^2) dx^3 dt \)<br>
 <br>
-\( \dot{\gamma}_{ij} = -2 \alpha K_{ij} + 2 \nabla^\perp_{(i} \beta_{j)} \)
+\( \dot{\gamma}_{ij} = -2 \alpha K_{ij} + 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
 \( K_{ij} = -{1\over{2\alpha}} \dot{\gamma}_{ij} + {1\over \alpha} \nabla^\perp_{(i} \beta_{j)} \)<br>
 \( {{\partial}\over{\partial \dot{\gamma}_{ij}}} K_{kl} = -{1\over{2\alpha}} \delta^i_k \delta^j_l \)<br>
 <br>
