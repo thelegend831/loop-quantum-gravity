@@ -1,6 +1,10 @@
 <script type="text/javascript" src="/MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <div class='entry'>
 
+Indexes: \(a-h, o-z\) = curved spacetime, \(i-n\) = curved spatial.<br>
+Also, from here on out, raising and lowering of spatial indexes is done by the spatial metric \(\gamma_{ij}\).<br>
+<br>
+
 Einstein tensor contracted with normal:<br>
 \(G_{ab} = R_{ab} - {1\over 2} g_{ab} R\)<br>
 \(n^a n^b G_{ab} = n^a n^b R_{ab} - {1\over 2} g_{ab} n^a n^b R\)<br>
@@ -26,7 +30,6 @@ Ricci tensor contracted with normal:<br>
 \(=\nabla_c (n^b  \nabla_b n^c) - \nabla_c(n^c \nabla_b n^b) - K_{ab} K^{ab} + K^2\)<br>
 \(n^a n^b R_{ab}=K^2 - K_{ab} K^{ab} + \nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
 
-
 <br>
 contracting Gauss' equation:<br>
 \(R^\perp_{abcd} + K_{ac} K_{bd} - K_{ad} K_{bc} = {\gamma_a}^p {\gamma_b}^q {\gamma_c}^r {\gamma_d}^s R_{pqrs}\)<br>
@@ -43,6 +46,7 @@ contracting Gauss' equation:<br>
 \(R=R^\perp-K_{ab}K^{ab}+K^2-2K^2 + 2K_{ab} K^{ab} - 2\nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
 \(R=R^\perp+K_{ab}K^{ab}-K^2 - 2\nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)\)<br>
 <br>
+
 Lagrangian is equal to scalar curvature:<br>
 \(L=R\)<br>
 <br>
@@ -63,10 +67,11 @@ Vacuum Action:<br>
 \( K_{ij} = -{1\over{2\alpha}} \dot{\gamma}_{ij} + {1\over \alpha} \nabla^\perp_{(i} \beta_{j)} \)<br>
 \( {{\partial}\over{\partial \dot{\gamma}_{ij}}} K_{kl} = -{1\over{2\alpha}} \delta^i_k \delta^j_l \)<br>
 <br>
-Conjugate momentum:<br>
+
+conjugate momentum:<br>
 \( \pi_{ij} = {{\partial \mathcal{L}}\over{\partial \dot{\gamma}^{ij}}} \)<br>
 \( = {\partial\over{\partial \dot{\gamma}^{ij}}} (\alpha \sqrt{\gamma} (R^{\perp} + K_{kl} K^{kl} - K^2)) \)<br>
-\( = {\partial\over{\partial \dot{\gamma}^{ij}}} \alpha \sqrt{\gamma} (R^{\perp} + g_{km} g_{ln} K^{kl} K^{mn} - K^{kl} g_{kl} K^{mn} g_{mn}) \)<br>
+\( = {\partial\over{\partial \dot{\gamma}^{ij}}} \alpha \sqrt{\gamma} (R^{\perp} + \gamma_{km} \gamma_{ln} K^{kl} K^{mn} - K^{kl} \gamma_{kl} K^{mn} \gamma_{mn}) \)<br>
 \( \pi_{ij} = \alpha \sqrt{\gamma} ({\delta\over{\delta\dot{\gamma}^{ij}}} (\gamma_{km} \gamma_{ln} K^{kl} K^{mn}) - {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} \gamma_{kl} K^{mn} \gamma_{mn})) \)<br>
 \( \pi_{ij} = \alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} K^{mn}) - \gamma_{kl} \gamma_{mn} {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} K^{mn})) \)<br>
 \( \pi_{ij} = \alpha \sqrt{\gamma} (\gamma_{km} \gamma_{ln} - \gamma_{kl} \gamma_{mn}) {\delta\over{\delta\dot{\gamma}^{ij}}} (K^{kl} K^{mn}) \)<br>
@@ -110,7 +115,7 @@ Hamiltonian:
 \( = \alpha (-\sqrt{\gamma} R^{\perp} + {1\over\sqrt\gamma} (\pi_{ij} \pi^{ij} - {1\over 2} \pi^2)) + 2 \pi^{ij} \nabla^\perp_i \beta_j \)<br>
 using integration by parts: \( 2 \pi^{ij} \nabla^\perp_j \beta_i = -2 \beta_i \nabla^\perp_j \pi^{ij} \)<br>
 (TODO prove that integration-by-parts works with the spatial projected covariant derivative)<br>
-\( = \alpha (-\sqrt{\gamma} R^{\perp} + {1\over\sqrt\gamma} (\pi_{ij} \pi^{ij} - {1\over 2} \pi^2)) - 2 \beta_i \nabla^\perp_j \pi^{ij} \)<br>
+\( = \alpha (-\sqrt{\gamma} R^{\perp} + {1\over\sqrt\gamma} (\pi_{ij} \pi^{ij} - {1\over 2} \pi^2)) - 2 \beta^i \gamma_{ij} \nabla^\perp_k \pi^{jk} \)<br>
 <br>
 Constraints:<br>
 Let \( \mathcal{H} = -\sqrt\gamma R^\perp + {1\over\sqrt\gamma} (\pi_{ij} \pi^{ij} - {1\over 2}\pi^2) \)<br>
@@ -120,29 +125,84 @@ Let \( \mathcal{M}^i = 2 \nabla^\perp_j \pi^{ij} \)<br>
 Let \( \textbf{H} = \int \mathscr{H} dx^3 \)<br>
 \( S = \int \textbf{H} dt \)<br>
 <br>
-\( \beta_i \mathcal{M}^i = 2 \beta^k \gamma_{ki} \nabla^\perp_j \pi^{ij} \)<br>
-\( = 2 \beta_i \nabla^\perp_j \pi^{ij} \)<br>
-\( = -2 \pi^{ij} \nabla^\perp_i \beta_j \)<br>
-\( = -\pi^{ij} \cdot 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
+Derivatives of momentum constraint:<br>
+\( \beta_i \mathcal{M}^i = -2 \beta^k \gamma_{ki} \nabla^\perp_j \pi^{ij} \)<br>
+\( = -2 \beta_i \nabla^\perp_j \pi^{ij} \)<br>
+using integration-by-parts of spatial covariant derivative (TODO verify you can do this)<br>
+\( = 2 \pi^{ij} \nabla^\perp_i \beta_j \)<br>
+\( = \pi^{ij} \cdot 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
 using \( \mathcal{L}_\vec\beta \gamma_{ij} = 2 \nabla^\perp_{(i} \beta_{j)} \)<br>
-\( = -\pi^{ij} \mathcal{L}_\vec\beta \gamma_{ij} \)<br>
-\( = \gamma_{ij} \mathcal{L}_\vec\beta pi^{ij} \)<br>
-so \( \delta / \delta \gamma_{ij} ( \beta_k \mathcal{M}^k ) = \mathcal{L}_\vec\beta \pi^{ij} \)<br>
-and \( \delta / \delta \pi^{ij} ( \beta_k \mathcal{M}^k ) = -\mathcal{L}_\vec\beta \gamma_{ij} \)<br>
+\( = \pi^{ij} \mathcal{L}_\vec\beta \gamma_{ij} \)<br>
+using integration by parts of Lie derivative (TODO verify you can do this)<br>
+\( = -\gamma_{ij} \mathcal{L}_\vec\beta \pi^{ij} \)<br>
+so \( {\partial\over{\partial\gamma_{ij}}} ( \beta_k \mathcal{M}^k ) = -\mathcal{L}_\vec\beta \pi^{ij} \)<br>
+and \( {\partial\over{\partial\pi^{ij}}} ( \beta_k \mathcal{M}^k ) = \mathcal{L}_\vec\beta \gamma_{ij} \)<br>
 <br>
-Let \( \{p,q\} \) represent the Poisson bracket of \(p\) and \(q\):<br>
-\( \{p,q\} = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial g }\over{\partial \pi^{ij}}} - {{\partial f}\over{\partial \pi^{ij}}} {{\partial g}\over{\partial \gamma_{ij}}} \)<br>
-\( \{f, \beta_i \mathcal{M}^i\} \)<br>
+Let \( \{f,g\} \) represent the Poisson bracket of \(f\) and \(g\):<br>
+\( \{f,g\} = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial g }\over{\partial \pi^{ij}}} - {{\partial f}\over{\partial \pi^{ij}}} {{\partial g}\over{\partial \gamma_{ij}}} \)<br>
+<br>
+Poisson bracket of momentum constraint and arbitrary function:<br>
+\( \{f(\pi, \gamma), \beta_k \mathcal{M}^k\} \)<br>
 \( = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (\beta_k \mathcal{M}^k) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (\beta_k \mathcal{M}^k) \)<br>
-\( = {{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (2 \beta_k \nabla^\perp_l \pi^{lk}) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (2 \beta_k \nabla^\perp_l \pi^{lk}) \)<br>
-TODO \( = -{{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (2 \pi^{lk} \nabla^\perp_l \beta_k) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (2 \beta_k \nabla^\perp_l \pi^{lk}) \)<br>
-\( = -{{\partial f}\over{\partial \gamma_{ij}}} {{\partial}\over{\partial \pi^{ij}}} (2 \pi^{lk} \nabla^\perp_l \beta_k) - {{\partial f}\over{\partial \pi^{ij}}} {{\partial}\over{\partial \gamma_{ij}}} (2 \beta^m \gamma_{mk} \nabla^\perp_l \pi^{lk}) \)<br>
-\( = -{{\partial f}\over{\partial \gamma_{ij}}} (2 \nabla^\perp_i (\gamma_{kj} \beta^k)) - {{\partial f}\over{\partial \pi^{ij}}} (2 \beta^i \nabla^\perp_k \pi^{kj}) \)<br>
-TODO \( = 2 {{\partial f}\over{\partial \gamma_{ij}}} \beta^k \partial_k \gamma_{ij} + 2 {{\partial f}\over{\partial \pi^{ij}}} \beta^k \partial_k \pi^{ij} \)<br>
-\( = 2 \beta^k \partial_k f \)<br>
-\( = 2 \mathcal{L}_\vec{\beta} f(\pi, \gamma) \)<br>
+\( = {{\partial f}\over{\partial \gamma_{ij}}} \mathcal{L}_\vec\beta \gamma_{ij} + {{\partial f}\over{\partial \pi^{ij}}} \mathcal{L}_\vec\beta \pi^{ij} \)<br>
+\( = \mathcal{L}_\vec{\beta} f \)<br>
 <br>
 
+Derivatives of Hamiltonian constraint:<br>
+\( {\partial\over{\partial \gamma_{ij}}} \mathcal{H} \)<br>
+\( = {\partial\over{\partial \gamma_{ij}}} (-\sqrt\gamma R^\perp + {1\over\sqrt\gamma} (\gamma_{km} \gamma_{ln} \pi^{kl} \pi^{mn} - {1\over 2} \gamma_{kl} \gamma_{mn} \pi^{kl} \pi^{mn})) \)<br>
+\( =  -(
+		{1\over 2} {1\over\sqrt\gamma} R^\perp {\partial\over{\partial \gamma_{ij}}} (\gamma)
+		+ \sqrt\gamma {\partial\over{\partial \gamma_{ij}}} (R^\perp)
+	)
+	-{1\over 2} {1\over\gamma^{3/2}} {\partial\over{\partial \gamma_{ij}}} (\gamma) (\gamma_{km} \gamma_{ln} \pi^{kl} \pi^{mn} - {1\over 2} \gamma_{kl} \gamma_{mn} \pi^{kl} \pi^{mn})
+	+ {2\over\sqrt\gamma} ( {\pi^i}_k \pi^{kj} - {1\over 2} \pi \pi^{ij}
+) \)<br>
+\( = - {1\over 2} {1\over\sqrt\gamma} R^\perp \gamma \gamma^{ij} 
+	- \sqrt\gamma {\partial\over{\partial \gamma_{ij}}} (R^\perp)
+	- {1\over 2} {1\over\gamma^{3/2}} \gamma \gamma^{ij} ( \pi_{kl} \pi^{kl} - {1\over 2} \pi^2)
+	+ {2\over\sqrt\gamma} ( {\pi^i}_k \pi^{kj} - {1\over 2} \pi \pi^{ij}
+) \)<br>
+\( = 
+	- {1\over 2} \sqrt\gamma R^\perp \gamma^{ij} 
+	- \sqrt\gamma {\partial\over{\partial \gamma_{ij}}} (R^\perp)
+	- {1\over 2} {1\over\sqrt\gamma} \gamma^{ij} ( \pi_{kl} \pi^{kl} - {1\over 2} \pi^2)
+	+ {2\over\sqrt\gamma} ( {\pi^i}_k \pi^{kj} - {1\over 2} \pi \pi^{ij}
+) \)<br>
+
+<br>
+
+\( {\partial\over{\partial \pi^{ij}}} \mathcal{H} \)<br>
+\( = {\partial\over{\partial \pi^{ij}}} (-\sqrt\gamma R^\perp + {1\over\sqrt\gamma} (\gamma_{km} \gamma_{ln} \pi^{kl} \pi^{mn} - {1\over 2} \gamma_{kl} \gamma_{mn} \pi^{kl} \pi^{mn})) \)<br>
+\( = {1\over\sqrt\gamma} (
+	\gamma_{im} \gamma_{jn} \pi^{mn}
+	+ \gamma_{ki} \gamma_{lj} \pi^{kl}
+	- {1\over 2} (
+		\gamma_{ij} \gamma_{mn} \pi^{mn}
+		+ \gamma_{kl} \gamma_{ij} \pi^{kl}
+	)
+) \)<br>
+\( = {2\over\sqrt\gamma} ( \pi_{ij} - {1\over 2} \gamma_{ij} \pi ) \)<br>
+<br>
+Lie bracket of momentum constraint and momentum constraint:<br>
+TODO Should these be two shift vectors at separate \(\vec{x}\) and \(\vec{y}\), and should it factor out an additional \( \delta^3(x-y) \)?<br>
+TODO Should the first term be \(\beta_k(\vec{x}) \mathcal{M}^k(\vec{x}) \) and the second term be \(\beta_k(\vec{y}) \mathcal{M}^k(\vec{y}) \)?<br>
+\( \{ \beta_k \mathcal{M}^k, b_k \mathcal{M}^k \} \)<br>
+\( = {\partial\over{\partial\gamma_{ij}}} (\beta_k \mathcal{M}^k ) {\partial\over{\partial\pi^{ij}}} (b_l \mathcal{M}^l) - {\partial\over{\partial\pi^{ij}}} ( \beta_k \mathcal{M}^k ) {\partial\over{\partial\gamma_{ij}}} ( b_l \mathcal{M}^l ) \)<br>
+\( = -\mathcal{L}_\vec\beta \pi^{ij} {\partial\over{\partial\pi^{ij}}} (b_l \mathcal{M}^l) - \mathcal{L}_\vec\beta \gamma_{ij} {\partial\over{\partial\gamma^{ij}}} ( b_l \mathcal{M}^l ) \)<br>
+\( = -\mathcal{L}_\vec\beta (b_k \mathcal{M}^k ) \)<br>
+\( = [b_k \mathcal{M}^k, \vec\beta] \)<br>
+<br>
+Lie bracket of momentum constraint and Hamiltonian constraint:<br>
+TODO Should this be \(\{ \beta_k(\vec{x}) \mathcal{M}^k(\vec{x}), \alpha(\vec{y}) \mathcal{H}(\vec{y}) \}\)?<br>
+\( \{ \beta_k \mathcal{M}^k, b \mathcal{H} \} \)<br>
+\( = {\partial\over{\partial\gamma_{ij}}} (\beta_k \mathcal{M}^k ) {\partial\over{\partial\pi^{ij}}} (b \mathcal{H}) - {\partial\over{\partial\pi^{ij}}} ( \beta_k \mathcal{M}^k ) {\partial\over{\partial\gamma_{ij}}} ( b \mathcal{H} ) \)<br>
+\( = -\mathcal{L}_\vec\beta \pi^{ij} {\partial\over{\partial\pi^{ij}}} (b \mathcal{H}) - \mathcal{L}_\vec\beta \gamma_{ij} {\partial\over{\partial\gamma^{ij}}} ( b \mathcal{H} ) \)<br>
+\( = -\mathcal{L}_\vec\beta (b \mathcal{H}) \)<br>
+\( = [b \mathcal{H}, \vec\beta] \)<br>
+<br>
+TODO show \( \{ \alpha \mathcal{H}, b \mathcal{H} \} = (\alpha \partial^k b - b \partial^k \alpha) \mathcal{M}_k \)<br>
+<br>
 
 </div>
 

@@ -1,16 +1,17 @@
 <script type="text/javascript" src="/MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <div class='entry'>
 
-Indexes:<br>
-\(a-h, o-w\) = spacetime coordinates: \(t, x, y, z\)<br>
-\(i-n\) = spatial coordinates: \(x, y, z\)<br>
-\(\hat a-\hat h, \hat o-\hat w\) = Lorentz coordinates: \(t, x, y, z\)<br>
-\(\hat i-\hat n\) = Lorentz spatial coordinates: \(x, y, z\)<br>
+<br>
+I also need to come up with a system of denoting whether indexes...<br>
+(a) span the spatial vs the spacetime<br>
+(b) are associated with the metric tensor vs the Minkowski metric<br>
+(c) are being raised/lowered by the spacetime metric vs the local spatial metric<br>
+<hr>
+Indexes: \(I-N\) = embedded, \(a-z\) = curved coordinate<br>
 <br>
 coordinate system \( x_i \)<br>
-vector basis: \( \textbf{e}_j = {e_j}^{\hat k}\)<br>
-one-form basis: \( \boldsymbol{\omega}^i = {\omega^i}_{\hat k} \)<br>
-for indexes \(i\) in the coordinates and indexes \({\hat k}\) in the embedded space<br>
+vector basis: \( \textbf{e}_j = {e_j}^I\)<br>
+one-form basis: \( \boldsymbol{\omega}^i = {\omega^i}_I \)<br>
 contravariant representation \( {\textbf v} = v^i {\textbf e}_i \)<br>
 covariant representation \( \textbf{w} = w_i \boldsymbol{\omega}^i \)<br>
 orthogonality of vector and one-form basis: \( \langle \boldsymbol{\omega}^i, {\textbf e}_j \rangle = \delta^i_j \)<br>
@@ -50,7 +51,18 @@ wedge product of one-forms: \( \textbf{a} \wedge \textbf{b}
 	= \textbf{a} \otimes \textbf{b} - \textbf{b} \otimes \textbf{a}
 \)<br>
 wedge product basis antisymmetry: \( \textbf{dx}^i \wedge \textbf{dx}^j = -\textbf{dx}^j \wedge \textbf{dx}^i \)<br>
-wedge product antisymmetry: \( \textbf{a} \wedge \textbf{b} = (-1)^{pq} \textbf{b} \wedge \textbf{a} \) for p-form \(\textbf{a}\) and q-form \(\textbf{b}\).<br>
+<br>
+wedge product antisymmetry for p-form \(\textbf{a}\) and q-form \(\textbf{b}\):<br>
+\( \textbf{a} \wedge \textbf{b} \)<br>
+\( = (a_{I_1 ... I_p} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p}) \wedge (b_{J_1 ... J_q} \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}) \)<br>
+If any of \( I_1 ... I_p, J_q ... J_q \) are not unique then the result is zero (courtesy of \( \textbf{dx}^I \wedge \textbf{dx}^I = 0 \) ). Otherwise:<br>
+\( = a_{I_1 ... I_p} b_{J_1 ... J_q} (\textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p}) \wedge (\textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}) \)<br>
+Rotate the first \( \textbf{dx}^{J_1} \) to the far left side using \( \textbf{dx}^I \wedge \textbf{dx}^J = -\textbf{dx}^J \wedge \textbf{dx}^I \).  Doing so requires \(p\) applications of the rule.<br>
+\( = (-1)^p a_{I_1 ... I_p} b_{J_1 ... J_q} \textbf{dx}^{J_1} \wedge (\textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p}) \wedge \textbf{dx}^{J_2} \wedge ... \wedge \textbf{dx}^{J_q} \)<br>
+Continue to do the same for the rest of the \(\textbf{dx}^{J_k}\)'s, doIng so a number of \(q\) times:<br>
+\( = (-1)^{pq} a_{I_1 ... I_p} b_{J_1 ... J_q} (\textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}) \wedge (\textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p}) \)<br>
+\( = (-1)^{pq} (b_{J_1 ... J_q} \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}) \wedge (a_{I_1 ... I_p} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p}) \)<br>
+\( = (-1)^{pq} \textbf{b} \wedge \textbf{a} \)<br>
 <br>
 commutation coefficients: 
 \( [\textbf{e}_i, \textbf{e}_j] 
@@ -70,14 +82,14 @@ metric symmetry: \( g_{ij} = \textbf{e}_i \cdot \textbf{e}_j = \textbf{e}_j \cdo
 metric inverse symmetry implied from metric symmetry.<br>
 identity derivative: \( 0 = \partial_k \delta^i_j = \partial_k (g^{il} g_{lj}) = \partial_k g^{il} g_{lj} + g^{il} \partial_k g_{lj} \)<br>
 <br>
-connection coefficient of the 1st kind: \( \Gamma_{ijk} \) <br>
+Christoffel of the 1st kind: \( \Gamma_{ijk} \) <br>
 in a holonmic basis: \( \Gamma_{ijk} = {1 \over 2} (\partial_k g_{ij} + \partial_j g_{ik} - \partial_i g_{jk}) \)<br>
 in an anholonomic basis: \( \Gamma_{ijk} = {1 \over 2} (\partial_k g_{ij} + \partial_j g_{ik} - \partial_i g_{jk} + c_{ijk} + c_{ikj} - c_{jki}) \)<br>
 1st kind symmetry: \( \Gamma_{i[jk]} = {1 \over 2} (\Gamma_{ijk} - \Gamma_{ikj}) = {1 \over 4} (\partial_k g_{ij} + \partial_j g_{ik} - \partial_i g_{jk} + c_{ijk} + c_{ikj} - c_{jki} - \partial_j g_{ik} - \partial_k g_{ij} + \partial_i g_{kj} - c_{ikj} - c_{ijk} + c_{kji}) = {1 \over 4} ( c_{jki} - c_{kji} ) = {1 \over 2} c_{kji} \)<br>
 which reduces to 0 in a holonomic basis<br>
 1st kind antisymmetry: \( \Gamma_{(ij)k} = {1 \over 2} (\Gamma_{ijk} + \Gamma_{jik}) = {1 \over 4} (\partial_k g_{ij} + \partial_j g_{ik} - \partial_i g_{jk} + c_{ijk} + c_{ikj} - c_{jki} + \partial_k g_{ji} + \partial_i g_{jk} - \partial_j g_{ik} + c_{jik} + c_{jki} - c_{ikj}) = {1 \over 4} (2 \partial_k g_{ij} + c_{ijk} + c_{jik}) = {1 \over 2} \partial_k g_{ij} \)<br>
 <br>
-connection coefficient of the 2nd kind: \( {\Gamma^i}_{jk} = g^{il} \Gamma_{ljk} \)<br>
+Christoffel of the 2nd kind / affine connection: \( {\Gamma^i}_{jk} = g^{il} \Gamma_{ljk} \)<br>
 <br>
 covariant derivative: \( \boldsymbol{\nabla} \)<br>
 covariant derivative per component: \( \boldsymbol{\nabla} = \nabla_i \boldsymbol{\omega}^i \)<br>
@@ -242,7 +254,24 @@ exterior derivative of one-form:
 	= \partial_i w_j \textbf{dx}^i \wedge \textbf{dx}^j
 	= (\partial_i w_j - \partial_j w_i) \textbf{dx}^{|i} \wedge \textbf{dx}^{j|}
 \)<br>
-exterior derivative of wedge product of p-form \(\textbf{a}\) and q-form \(\textbf{b}\): \( \textbf{d} ( \textbf{a} \wedge \textbf{b} ) = \textbf{da} \wedge \textbf{b} + (-1)^p \textbf{a} \wedge \textbf{db} \)<br>
+exterior derivative of p-form: \( \textbf{da} = \textbf{d}( a_{I_1...I_p} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} ) = \sum_{j \notin I_i} {{\partial a_{I_1...I_p}}\over{\partial x^j}} \textbf{dx}^j \wedge \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \)<br>
+<br>
+<!-- TODO when to use omegas and when to use dx's, and a better explination of why which is chosen? -->
+exterior derivative of wedge product of p-form \(\textbf{a}\) and q-form \(\textbf{b}\):<br>
+\( \textbf{d} ( \textbf{a} \wedge \textbf{b} ) \)<br>
+\( = \textbf{d} ( a_{I_1...I_p} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge b_{J_1 ... J_q} \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q})\)<br>
+\( = \textbf{d} ( a_{I_1...I_p} b_{J_1 ... J_q} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q})\)<br>
+using \( \textbf{d}^2\textbf{x}^i = 0 \)<br>
+\( = \textbf{d} ( a_{I_1...I_p} b_{J_1 ... J_q}) \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}\)<br>
+\( = {\partial\over{\partial x^k}} ( a_{I_1...I_p} b_{J_1 ... J_q}) \textbf{dx}^k \wedge \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}\)<br>
+\( = ( {\partial\over{\partial x^k}} a_{I_1...I_p} b_{J_1 ... J_q} + a_{I_1...I_p} {\partial\over{\partial x^k}} b_{J_1 ... J_q}) \textbf{dx}^k \wedge \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}\)<br>
+\( = {\partial\over{\partial x^k}} a_{I_1...I_p} b_{J_1 ... J_q} \textbf{dx}^k \wedge \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}
+	+ a_{I_1...I_p} {\partial\over{\partial x^k}} b_{J_1 ... J_q} \textbf{dx}^k \wedge \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}\)<br>
+rotate the 2nd term's \(\textbf{dx}^k\) through the \(\textbf{dx}^{I_i}\)'s to right before the \(\textbf{dx}^{J_j}\)'s begin, requiring a total of \(p\) rotations, incurring a scalar of \((-1)^p\):<br> 
+\( = {\partial\over{\partial x^k}} a_{I_1...I_p} \textbf{dx}^k \wedge \textbf{dx}^{I_1} \wedge ... b_{J_1 ... J_q} \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}
+	+ (-1)^p a_{I_1...I_p} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge {\partial\over{\partial x^k}} b_{J_1 ... J_q} \textbf{dx}^k \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}\)<br>
+\( = \textbf{da} \wedge \textbf{b} + (-1)^p \textbf{a} \wedge \textbf{db} \)<br> 
+<br>
 exterior derivative of vector as a linear relation to vector basis: \( \textbf{de}_i = \textbf{e}_k \otimes {\boldsymbol{\omega}^k}_i \)<br>
 equating covariant and exterior derivative for vector basis: 
 \( \textbf{de}_i 
