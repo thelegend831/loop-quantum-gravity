@@ -1,4 +1,5 @@
 <script type="text/javascript" src="/MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\$','\$']]}});</script>
 <div class='entry'>
 
 <br>
@@ -7,346 +8,346 @@ I also need to come up with a system of denoting whether indexes...<br>
 (b) are associated with the metric tensor vs the Minkowski metric<br>
 (c) are being raised/lowered by the spacetime metric vs the local spatial metric<br>
 <hr>
-Indexes: \(I-N\) = embedded, \(a-z\) = curved coordinate<br>
+Indexes: $I-N$ = embedded, $a-z$ = curved coordinate<br>
 <br>
-coordinate system \( x_i \)<br>
-vector basis: \( \textbf{e}_j = {e_j}^I\)<br>
-one-form basis: \( \boldsymbol{\omega}^i = {\omega^i}_I \)<br>
-contravariant representation \( {\textbf v} = v^i {\textbf e}_i \)<br>
-covariant representation \( \textbf{w} = w_i \boldsymbol{\omega}^i \)<br>
-orthogonality of vector and one-form basis: \( \langle \boldsymbol{\omega}^i, {\textbf e}_j \rangle = \delta^i_j \)<br>
+coordinate system $x_\alpha$<br>
+vector basis: $ \textbf{e}_\alpha = {e_\alpha}^I$<br>
+one-form basis: $ \boldsymbol{\omega}^\alpha = {\omega^\alpha}_I $<br>
+contravariant representation $ {\textbf v} = v^\alpha {\textbf e}_\alpha $<br>
+covariant representation $ \textbf{w} = w_\alpha \boldsymbol{\omega}^\alpha $<br>
+orthogonality of vector and one-form basis: $ \langle \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle = \delta^\alpha_\beta $<br>
 elements of vectors: 
-\( \langle \boldsymbol{\omega}^i, \textbf{v} \rangle 
-	= \langle \boldsymbol{\omega}^i, v^j \textbf{e}_j \rangle
-	= v^j \langle \boldsymbol{\omega}^i, \textbf{e}_j \rangle
-	= v^j \delta^i_j
-	= v^i
-\)<br>
+$ \langle \boldsymbol{\omega}^\alpha, \textbf{v} \rangle 
+	= \langle \boldsymbol{\omega}^\alpha, v^\beta \textbf{e}_\beta \rangle
+	= v^\beta \langle \boldsymbol{\omega}^\alpha, \textbf{e}_\beta \rangle
+	= v^\beta \delta^\alpha_\beta
+	= v^\alpha
+$<br>
 elements of one-forms:
-\( \langle \textbf{w}, \textbf{e}_i \rangle
-	= \langle w_j \boldsymbol{\omega}^j, \textbf{e}_i \rangle
-	= w_j \langle \boldsymbol{\omega}^j, \textbf{e}_i \rangle
-	= w_j \delta^i_j
-	= w_i
-\)<br>
+$ \langle \textbf{w}, \textbf{e}_\alpha \rangle
+	= \langle w_\beta \boldsymbol{\omega}^\beta, \textbf{e}_\alpha \rangle
+	= w_\beta \langle \boldsymbol{\omega}^\beta, \textbf{e}_\alpha \rangle
+	= w_\beta \delta^\alpha_\beta
+	= w_\alpha
+$<br>
 <br>
 inner product of vector and one-form: 
-\( \langle \textbf{w}, \textbf{v} \rangle
-	= \langle w_i \boldsymbol{\omega}^i, v^j \textbf{e}_j \rangle
-	= w_i v^j \langle \boldsymbol{\omega}^i, \textbf{e}_j \rangle
-	= w_i v^j \delta^i_j
-	= w_i v^i
-\)<br>
-inner product symmetry: \( \langle \textbf{a}, \textbf{b} \rangle = \langle \textbf{b}, \textbf{a} \rangle \)<br>
-dot product of vectors: \( \textbf{a} \cdot \textbf{b} = a^i \textbf{e}_i \cdot b^j \textbf{e}_j = a^i b^j \textbf{e}_i \cdot \textbf{e}_j = a^i b^j g_{ij} = a^i b_i = a_i b^i \)<br>
-dot product symmetry: \( \textbf{a} \cdot \textbf{b} = \textbf{b} \cdot \textbf{a} \)<br>
-outer product of vectors: \( \textbf{a} \otimes \textbf{b} = a^i \textbf{e}_i \otimes b^j \textbf{e}_j = a^i b^j \textbf{e}_i \otimes \textbf{e}_j \)<br>
-outer product of one-forms: \( \textbf{a} \otimes \textbf{b} = a_i \boldsymbol{\omega}^i \otimes b_j \boldsymbol{\omega}^j = a_i b_j \boldsymbol{\omega}^i \otimes \boldsymbol{\omega}^j \)<br>
-wedge product of one-form basis: \( \boldsymbol{\omega}^i \wedge \boldsymbol{\omega}^j = \boldsymbol{\omega}^i \otimes \boldsymbol{\omega}^j - \boldsymbol{\omega}^j \otimes \boldsymbol{\omega}^i \)<br>
-wedge product of one-forms: \( \textbf{a} \wedge \textbf{b} 
-	= a_i \boldsymbol{\omega}^i \wedge b_j \boldsymbol{\omega}^j
-	= a_i b_j \boldsymbol{\omega}^i \wedge \boldsymbol{\omega}^j
-	= a_i b_j (\boldsymbol{\omega}^i \otimes \boldsymbol{\omega}^j - \boldsymbol{\omega}^j \otimes \boldsymbol{\omega}^i)
-	= (a_i b_j - b_i a_j) \boldsymbol{\omega}^i \otimes \boldsymbol{\omega}^j
+$ \langle \textbf{w}, \textbf{v} \rangle
+	= \langle w_\alpha \boldsymbol{\omega}^\alpha, v^\beta \textbf{e}_\beta \rangle
+	= w_\alpha v^\beta \langle \boldsymbol{\omega}^\alpha, \textbf{e}_\beta \rangle
+	= w_\alpha v^\beta \delta^\alpha_\beta
+	= w_\alpha v^\alpha
+$<br>
+inner product symmetry: $ \langle \textbf{a}, \textbf{b} \rangle = \langle \textbf{b}, \textbf{a} \rangle $<br>
+dot product of vectors: $ \textbf{a} \cdot \textbf{b} = a^\alpha \textbf{e}_\alpha \cdot b^\beta \textbf{e}_\beta = a^\alpha b^\beta \textbf{e}_\alpha \cdot \textbf{e}_\beta = a^\alpha b^\beta g_{\alpha\beta} = a^\alpha b_\alpha = a_\alpha b^\alpha $<br>
+dot product symmetry: $ \textbf{a} \cdot \textbf{b} = \textbf{b} \cdot \textbf{a} $<br>
+outer product of vectors: $ \textbf{a} \otimes \textbf{b} = a^\alpha \textbf{e}_\alpha \otimes b^\beta \textbf{e}_\beta = a^\alpha b^\beta \textbf{e}_\alpha \otimes \textbf{e}_\beta $<br>
+outer product of one-forms: $ \textbf{a} \otimes \textbf{b} = a_\alpha \boldsymbol{\omega}^\alpha \otimes b_\beta \boldsymbol{\omega}^\beta = a_\alpha b_\beta \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta $<br>
+wedge product of one-form basis: $ \boldsymbol{\omega}^\alpha \wedge \boldsymbol{\omega}^\beta = \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta - \boldsymbol{\omega}^\beta \otimes \boldsymbol{\omega}^\alpha $<br>
+wedge product of one-forms: $ \textbf{a} \wedge \textbf{b} 
+	= a_\alpha \boldsymbol{\omega}^\alpha \wedge b_\beta \boldsymbol{\omega}^\beta
+	= a_\alpha b_\beta \boldsymbol{\omega}^\alpha \wedge \boldsymbol{\omega}^\beta
+	= a_\alpha b_\beta (\boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta - \boldsymbol{\omega}^\beta \otimes \boldsymbol{\omega}^\alpha)
+	= (a_\alpha b_\beta - b_\alpha a_\beta) \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta
 	= \textbf{a} \otimes \textbf{b} - \textbf{b} \otimes \textbf{a}
-\)<br>
-wedge product basis antisymmetry: \( \textbf{dx}^i \wedge \textbf{dx}^j = -\textbf{dx}^j \wedge \textbf{dx}^i \)<br>
+$<br>
+wedge product basis antisymmetry: $ \textbf{dx}^\alpha \wedge \textbf{dx}^\beta = -\textbf{dx}^\beta \wedge \textbf{dx}^\alpha $<br>
 <br>
-wedge product antisymmetry for p-form \(\textbf{a}\) and q-form \(\textbf{b}\):<br>
-\( \textbf{a} \wedge \textbf{b} \)<br>
-\( = (a_{I_1 ... I_p} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p}) \wedge (b_{J_1 ... J_q} \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}) \)<br>
-If any of \( I_1 ... I_p, J_q ... J_q \) are not unique then the result is zero (courtesy of \( \textbf{dx}^I \wedge \textbf{dx}^I = 0 \) ). Otherwise:<br>
-\( = a_{I_1 ... I_p} b_{J_1 ... J_q} (\textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p}) \wedge (\textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}) \)<br>
-Rotate the first \( \textbf{dx}^{J_1} \) to the far left side using \( \textbf{dx}^I \wedge \textbf{dx}^J = -\textbf{dx}^J \wedge \textbf{dx}^I \).  Doing so requires \(p\) applications of the rule.<br>
-\( = (-1)^p a_{I_1 ... I_p} b_{J_1 ... J_q} \textbf{dx}^{J_1} \wedge (\textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p}) \wedge \textbf{dx}^{J_2} \wedge ... \wedge \textbf{dx}^{J_q} \)<br>
-Continue to do the same for the rest of the \(\textbf{dx}^{J_k}\)'s, doIng so a number of \(q\) times:<br>
-\( = (-1)^{pq} a_{I_1 ... I_p} b_{J_1 ... J_q} (\textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}) \wedge (\textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p}) \)<br>
-\( = (-1)^{pq} (b_{J_1 ... J_q} \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}) \wedge (a_{I_1 ... I_p} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p}) \)<br>
-\( = (-1)^{pq} \textbf{b} \wedge \textbf{a} \)<br>
+wedge product antisymmetry for p-form $\textbf{a}$ and q-form $\textbf{b}$:<br>
+$ \textbf{a} \wedge \textbf{b} $<br>
+$ = (a_{\alpha_1 ... \alpha_p} \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p}) \wedge (b_{\beta_1 ... \beta_q} \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}) $<br>
+if any of $ \alpha_1 ... \alpha_p, \beta_q ... \beta_q $ are not unique then the result is zero (courtesy of $ \textbf{dx}^\alpha \wedge \textbf{dx}^\alpha = 0 $ ). Otherwise:<br>
+$ = a_{\alpha_1 ... \alpha_p} b_{\beta_1 ... \beta_q} (\textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p}) \wedge (\textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}) $<br>
+Rotate the first $ \textbf{dx}^{\beta_1} $ to the far left side using $ \textbf{dx}^\alpha \wedge \textbf{dx}^\beta = -\textbf{dx}^\beta \wedge \textbf{dx}^\alpha $.  Doing so requires $p$ applications of the rule.<br>
+$ = (-1)^p a_{\alpha_1 ... \alpha_p} b_{\beta_1 ... \beta_q} \textbf{dx}^{\beta_1} \wedge (\textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p}) \wedge \textbf{dx}^{\beta_2} \wedge ... \wedge \textbf{dx}^{\beta_q} $<br>
+Continue to do the same for the rest of the $\textbf{dx}^{\beta_k}$'s, do\alphang so a number of $q$ times:<br>
+$ = (-1)^{pq} a_{\alpha_1 ... \alpha_p} b_{\beta_1 ... \beta_q} (\textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}) \wedge (\textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p}) $<br>
+$ = (-1)^{pq} (b_{\beta_1 ... \beta_q} \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}) \wedge (a_{\alpha_1 ... \alpha_p} \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p}) $<br>
+$ = (-1)^{pq} \textbf{b} \wedge \textbf{a} $<br>
 <br>
 commutation coefficients: 
-\( [\textbf{e}_i, \textbf{e}_j] 
-	= \boldsymbol{\nabla}_{\textbf{e}_i} \textbf{e}_j - \boldsymbol{\nabla}_{\textbf{e}_j} \textbf{e}_i 
-	= \nabla_i \textbf{e}_j - \nabla_j \textbf{e}_i
-	= {c_{ij}}^k \textbf{e}_k
-\)<br>
-commutation coefficient antisymmetry: \( [ \textbf{e}_i, \textbf{e}_j ] = -[ \textbf{e}_j, \textbf{e}_i ] \) implies \( {c_{ij}}^k = -{c_{ji}}^k \)<br>
+$ [\textbf{e}_\alpha, \textbf{e}_\beta]
+	= \boldsymbol{\nabla}_{\textbf{e}_\alpha} \textbf{e}_\beta - \boldsymbol{\nabla}_{\textbf{e}_\beta} \textbf{e}_\alpha
+	= \nabla_\alpha \textbf{e}_\beta - \nabla_\beta \textbf{e}_\alpha
+	= {c_{\alpha\beta}}^\gamma \textbf{e}_\gamma
+$<br>
+commutation coefficient antisymmetry: $ [ \textbf{e}_\alpha, \textbf{e}_\beta ] = -[ \textbf{e}_\beta, \textbf{e}_\alpha ] $ implies $ {c_{\alpha\beta}}^\gamma = -{c_{\beta\alpha}}^\gamma $<br>
 <br>
-A basis is <i>holonomic</i> when all \( {c_{ij}}^k = 0 \).<br>
-This coincides with when \( \textbf{e}_i = {\partial \over {\partial x^i}} \) such that \( [\textbf{e}_i, \textbf{e}_j] = \left [ {\partial \over {\partial x^i}}, {\partial \over {\partial x^j}} \right ] = 0 \).  Subsequently \( \boldsymbol{\omega}^i = \textbf{dx}^i \).<br>
+A basis is <i>holonomic</i> when all $ {c_{\alpha\beta}}^\gamma = 0 $.<br>
+This coincides with when $ \textbf{e}_\alpha = {\partial \over {\partial x^\alpha}} $ such that $ [\textbf{e}_\alpha, \textbf{e}_\beta] = \left [ {\partial \over {\partial x^\alpha}}, {\partial \over {\partial x^\beta}} \right ] = 0 $.  Subsequently $ \boldsymbol{\omega}^\alpha = \textbf{dx}^\alpha $.<br>
 A basis that does not meet this condition is considered <i>anholonomic</i>.<br> 
 <br>	
-metric: \( g_{ij} = {\textbf e}_i \cdot {\textbf e}_j \)<br>
-metric inverse: \( ||g^{ij}|| = \) inverse of \( ||g_{ij}|| \) such that \( g^{ik} g_{kj} = \delta^i_j \)<br>
-metric symmetry: \( g_{ij} = \textbf{e}_i \cdot \textbf{e}_j = \textbf{e}_j \cdot \textbf{e}_i = g_{ji} \)<br>
+metric: $ g_{\alpha\beta} = {\textbf e}_\alpha \cdot {\textbf e}_\beta $<br>
+metric inverse: $ ||g^{\alpha\beta}|| = $ inverse of $ ||g_{\alpha\beta}|| $ such that $ g^{\alpha\gamma} g_{\gamma\beta} = \delta^\alpha_\beta $<br>
+metric symmetry: $ g_{\alpha\beta} = \textbf{e}_\alpha \cdot \textbf{e}_\beta = \textbf{e}_\beta \cdot \textbf{e}_\alpha = g_{\beta\alpha} $<br>
 metric inverse symmetry implied from metric symmetry.<br>
-identity derivative: \( 0 = \partial_k \delta^i_j = \partial_k (g^{il} g_{lj}) = \partial_k g^{il} g_{lj} + g^{il} \partial_k g_{lj} \)<br>
+identity derivative: $ 0 = \partial_\gamma \delta^\alpha_\beta = \partial_\gamma (g^{\alpha\delta} g_{\delta\beta}) = \partial_\gamma g^{\alpha\delta} g_{\delta\beta} + g^{\alpha\delta} \partial_\gamma g_{\delta\beta} $<br>
 <br>
-Christoffel of the 1st kind: \( \Gamma_{ijk} \) <br>
-in a holonmic basis: \( \Gamma_{ijk} = {1 \over 2} (\partial_k g_{ij} + \partial_j g_{ik} - \partial_i g_{jk}) \)<br>
-in an anholonomic basis: \( \Gamma_{ijk} = {1 \over 2} (\partial_k g_{ij} + \partial_j g_{ik} - \partial_i g_{jk} + c_{ijk} + c_{ikj} - c_{jki}) \)<br>
-1st kind symmetry: \( \Gamma_{i[jk]} = {1 \over 2} (\Gamma_{ijk} - \Gamma_{ikj}) = {1 \over 4} (\partial_k g_{ij} + \partial_j g_{ik} - \partial_i g_{jk} + c_{ijk} + c_{ikj} - c_{jki} - \partial_j g_{ik} - \partial_k g_{ij} + \partial_i g_{kj} - c_{ikj} - c_{ijk} + c_{kji}) = {1 \over 4} ( c_{jki} - c_{kji} ) = {1 \over 2} c_{kji} \)<br>
+Christoffel of the 1st kind: $ \Gamma_{\alpha\beta\gamma} $ <br>
+in a holonmic basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma}) $<br>
+in an anholonomic basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}) $<br>
+1st kind symmetry: $ \Gamma_{\alpha[\beta\gamma]} = {1 \over 2} (\Gamma_{\alpha\beta\gamma} - \Gamma_{\alpha\gamma\beta}) = {1 \over 4} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha} - \partial_\beta g_{\alpha\gamma} - \partial_\gamma g_{\alpha\beta} + \partial_\alpha g_{\gamma\beta} - c_{\alpha\gamma\beta} - c_{\alpha\beta\gamma} + c_{\gamma\beta\alpha}) = {1 \over 4} ( c_{\beta\gamma\alpha} - c_{\gamma\beta\alpha} ) = {1 \over 2} c_{\gamma\beta\alpha} $<br>
 which reduces to 0 in a holonomic basis<br>
-1st kind antisymmetry: \( \Gamma_{(ij)k} = {1 \over 2} (\Gamma_{ijk} + \Gamma_{jik}) = {1 \over 4} (\partial_k g_{ij} + \partial_j g_{ik} - \partial_i g_{jk} + c_{ijk} + c_{ikj} - c_{jki} + \partial_k g_{ji} + \partial_i g_{jk} - \partial_j g_{ik} + c_{jik} + c_{jki} - c_{ikj}) = {1 \over 4} (2 \partial_k g_{ij} + c_{ijk} + c_{jik}) = {1 \over 2} \partial_k g_{ij} \)<br>
+1st kind antisymmetry: $ \Gamma_{(\alpha\beta)\gamma} = {1 \over 2} (\Gamma_{\alpha\beta\gamma} + \Gamma_{\beta\alpha\gamma}) = {1 \over 4} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha} + \partial_\gamma g_{\beta\alpha} + \partial_\alpha g_{\beta\gamma} - \partial_\beta g_{\alpha\gamma} + c_{\beta\alpha\gamma} + c_{\beta\gamma\alpha} - c_{\alpha\gamma\beta}) = {1 \over 4} (2 \partial_\gamma g_{\alpha\beta} + c_{\alpha\beta\gamma} + c_{\beta\alpha\gamma}) = {1 \over 2} \partial_\gamma g_{\alpha\beta} $<br>
 <br>
-Christoffel of the 2nd kind / affine connection: \( {\Gamma^i}_{jk} = g^{il} \Gamma_{ljk} \)<br>
+Christoffel of the 2nd kind / affine connection: $ {\Gamma^\alpha}_{\beta\gamma} = g^{\alpha\delta} \Gamma_{\delta\beta\gamma} $<br>
 <br>
-covariant derivative: \( \boldsymbol{\nabla} \)<br>
-covariant derivative per component: \( \boldsymbol{\nabla} = \nabla_i \boldsymbol{\omega}^i \)<br>
+covariant derivative: $ \boldsymbol{\nabla} $<br>
+covariant derivative per component: $ \boldsymbol{\nabla} = \nabla_\alpha \boldsymbol{\omega}^\alpha $<br>
 covariant derivative of scalar: 
-\( \boldsymbol{\nabla} \phi 
-	= \nabla_i \phi \boldsymbol{\omega}^i 
-	= \partial_i \phi \boldsymbol{\omega}^i
-\)<br>
+$ \boldsymbol{\nabla} \phi 
+	= \nabla_\alpha \phi \boldsymbol{\omega}^\alpha
+	= \partial_\alpha \phi \boldsymbol{\omega}^\alpha
+$<br>
 covariant derivative of inner product: 
-\( \boldsymbol{\nabla} \langle \textbf{a}, \textbf{b} \rangle 
+$ \boldsymbol{\nabla} \langle \textbf{a}, \textbf{b} \rangle 
 	= \langle \boldsymbol{\nabla} \textbf{a}, \textbf{b} \rangle + \langle \textbf{a}, \boldsymbol{\nabla} \textbf{b} \rangle
-\)<br>
+$<br>
 covariant derivative of dot product: 
-\( \boldsymbol{\nabla} ( \textbf{a} \cdot \textbf{b} ) 
+$ \boldsymbol{\nabla} ( \textbf{a} \cdot \textbf{b} ) 
 	= (\boldsymbol{\nabla} \textbf{a}) \cdot \textbf{b} + \textbf{a} \cdot (\boldsymbol{\nabla} \textbf{b})
-\)<br>
+$<br>
 covariant derivative of outer product: 
-\( \boldsymbol{\nabla} ( \textbf{a} \otimes \textbf{b} ) 
+$ \boldsymbol{\nabla} ( \textbf{a} \otimes \textbf{b} ) 
 	= (\boldsymbol{\nabla} \textbf{a}) \otimes \textbf{b} + \textbf{a} \otimes (\boldsymbol{\nabla} \textbf{b})
-\)<br>
+$<br>
 <br>
-\( 0 
-	= \nabla_k \delta^i_j 
-	= \nabla_k \langle \boldsymbol{\omega}^i, {\textbf e}_j \rangle 
-	= \langle \nabla_k \boldsymbol{\omega}^i, {\textbf e}_j \rangle + \langle \boldsymbol{\omega}^i, \nabla_k {\textbf e}_j \rangle 
-\)<br>
-so \(
-	\langle \nabla_k \boldsymbol{\omega}^i, {\textbf e}_j \rangle = - \langle \boldsymbol{\omega}^i, \nabla_k {\textbf e}_j \rangle 
-\)<br>
-let \( \langle \boldsymbol{\omega}^i, \nabla_k {\textbf e}_j \rangle = {\Gamma^i}_{jk} \)<br>
-so \( \langle \nabla_k \boldsymbol{\omega}^i, {\textbf e}_j \rangle = -{\Gamma^i}_{jk} \)<br>
+$ 0 
+	= \nabla_\gamma \delta^\alpha_\beta
+	= \nabla_\gamma \langle \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle 
+	= \langle \nabla_\gamma \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle + \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma {\textbf e}_\beta \rangle 
+$<br>
+so $
+	\langle \nabla_\gamma \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle = - \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma {\textbf e}_\beta \rangle 
+$<br>
+let $ \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma {\textbf e}_\beta \rangle = {\Gamma^\alpha}_{\beta\gamma} $<br>
+so $ \langle \nabla_\gamma \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle = -{\Gamma^\alpha}_{\beta\gamma} $<br>
 <br>
-covariant derivative of vector basis: \( \langle \nabla_k {\textbf e}_j, \boldsymbol{\omega}^i \rangle = {\Gamma^i}_{jk} \), so \( \nabla_k {\textbf e}_j = {\Gamma^i}_{jk} {\textbf e}_i \)<br>
-covariant derivative of one-form basis: \( -\langle \nabla_k \boldsymbol{\omega}^i, {\textbf e}_j \rangle = {\Gamma^i}_{jk} \), so \( \nabla_k \boldsymbol{\omega}^i = -{\Gamma^i}_{jk} \boldsymbol{\omega}^j \)<br>
+covariant derivative of vector basis: $ \langle \nabla_\gamma {\textbf e}_\beta, \boldsymbol{\omega}^\alpha \rangle = {\Gamma^\alpha}_{\beta\gamma} $, so $ \nabla_\gamma {\textbf e}_\beta = {\Gamma^\alpha}_{\beta\gamma} {\textbf e}_\alpha $<br>
+covariant derivative of one-form basis: $ -\langle \nabla_\gamma \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle = {\Gamma^\alpha}_{\beta\gamma} $, so $ \nabla_\gamma \boldsymbol{\omega}^\alpha = -{\Gamma^\alpha}_{\beta\gamma} \boldsymbol{\omega}^\beta $<br>
 <br>
 covariant derivative of vector: 
-\( \boldsymbol{\nabla} \textbf{v} 
-	= \nabla_j \textbf{v} \otimes \boldsymbol{\omega}^j 
-	= \nabla_j (v^i \textbf{e}_i) \otimes \boldsymbol{\omega}^j
-	= (\nabla_j v^i \textbf{e}_i + v^i \nabla_j \textbf{e}_i) \otimes \boldsymbol{\omega}^j
-	= (\partial_j v^k + v^i {\Gamma^k}_{ji}) \textbf{e}_k \otimes \boldsymbol{\omega}^j
-\) <br>
-covariant derivative of vector in index notation: \( \nabla_i v^j = \partial_i v^j + {\Gamma^j}_{ki} v^k \)<br>
+$ \boldsymbol{\nabla} \textbf{v} 
+	= \nabla_\alpha \textbf{v} \otimes \boldsymbol{\omega}^\alpha
+	= \nabla_\alpha (v^\gamma \textbf{e}_\gamma) \otimes \boldsymbol{\omega}^\alpha
+	= (\nabla_\alpha v^\gamma \textbf{e}_\gamma + v^\gamma \nabla_\alpha \textbf{e}_\gamma) \otimes \boldsymbol{\omega}^\alpha
+	= (\partial_\alpha v^\beta + v^\gamma {\Gamma^\beta}_{\gamma\alpha}) \textbf{e}_\beta \otimes \boldsymbol{\omega}^\alpha
+$ <br>
+covariant derivative of vector in index notation: $ \nabla_\alpha v^\beta = \partial_\alpha v^\beta + {\Gamma^\beta}_{\gamma\alpha} v^\gamma $<br>
 <br>
 covariant derivative of one-form:
-\( \boldsymbol{\nabla} \textbf{w} 
-	= \nabla_j \textbf{w} \otimes \boldsymbol{\omega}^j
-	= \nabla_j (w_i \boldsymbol{\omega}^i) \otimes \boldsymbol{\omega}^j
-	= (\nabla_j w_i \boldsymbol{\omega}^i + w_i \nabla_j \boldsymbol{\omega}^i) \otimes \boldsymbol{\omega}^j
-	= (\partial_j w_k - {\Gamma^k}_{ji} w_i ) \boldsymbol{\omega}^k \otimes \boldsymbol{\omega}^j 
-\)<br>
-covariant derivative of one-form in index notation: \( \nabla_i w_j = \partial_i w_j - {\Gamma^k}_{ji} w_k \)<br>
+$ \boldsymbol{\nabla} \textbf{w} 
+	= \nabla_\alpha \textbf{w} \otimes \boldsymbol{\omega}^\alpha
+	= \nabla_\alpha (w_\gamma \boldsymbol{\omega}^\gamma) \otimes \boldsymbol{\omega}^\alpha
+	= (\nabla_\alpha w_\gamma \boldsymbol{\omega}^\gamma + w_\gamma \nabla_\alpha \boldsymbol{\omega}^\gamma) \otimes \boldsymbol{\omega}^\alpha
+	= (\partial_\alpha w_\beta - {\Gamma^\gamma}_{\beta\alpha} w_\gamma ) \boldsymbol{\omega}^\beta \otimes \boldsymbol{\omega}^\alpha
+$<br>
+covariant derivative of one-form in index notation: $ \nabla_\alpha w_\beta = \partial_\alpha w_\beta - {\Gamma^\gamma}_{\beta\alpha} w_\gamma $<br>
 <br>
-This is where we see that in index notation \( \nabla_k \) treats \( v^i \) as a vector due to its raised index, while in object notation \( \nabla_k \) treats \( v^i \) as a scalars of the \( \textbf{e}_i \) vector.<br>
+This is where we see that in index notation $ \nabla_\gamma $ treats $ v^\alpha $ as a vector due to its raised index, while in object notation $ \nabla_\gamma $ treats $ v^\alpha $ as a scalars of the $ \textbf{e}_\alpha $ vector.<br>
 <br>
 covariant derivative of metric in index notation: 
-\( \nabla_k g_{ij} 
-	= \partial_k g_{ij} - {\Gamma^l}_{ik} g_{lj} - {\Gamma^l}_{jk} g_{il} 
-	= \partial_k g_{ij} - \Gamma_{jik} - \Gamma_{ijk} 
-	= \partial_k g_{ij} - \partial_k g_{ij} 
+$ \nabla_\gamma g_{\alpha\beta}
+	= \partial_\gamma g_{\alpha\beta} - {\Gamma^\delta}_{\alpha\gamma} g_{\delta\beta} - {\Gamma^\delta}_{\beta\gamma} g_{\alpha\delta}
+	= \partial_\gamma g_{\alpha\beta} - \Gamma_{\beta\alpha\gamma} - \Gamma_{\alpha\beta\gamma}
+	= \partial_\gamma g_{\alpha\beta} - \partial_\gamma g_{\alpha\beta}
 	= 0 
-\)<br>
+$<br>
 <br>
 covariant vector derivative: 
-\( \nabla_{\textbf{u}} \textbf{v} 
+$ \nabla_{\textbf{u}} \textbf{v} 
 	= \textbf{u} \cdot \boldsymbol{\nabla} \textbf{v}
-	= u^i \textbf{e}_i \cdot \nabla_j v^k \textbf{e}_k \otimes \boldsymbol{\omega}^j
-	= u^i \textbf{e}_i \cdot (\partial_j v^k + v^l {\Gamma^k}_{jl}) \textbf{e}_k \otimes \boldsymbol{\omega}^j
-	= u^i (\partial_j v^k + v^l {\Gamma^k}_{jl}) \textbf{e}_i \cdot \textbf{e}_k \otimes \boldsymbol{\omega}^j
-	= u^i (\partial_j v^k + v^l {\Gamma^k}_{jl}) g_{ik} \boldsymbol{\omega}^j
-	= u_k (\partial_j v^k + v^i {\Gamma^k}_{ji}) \boldsymbol{\omega}^j
-\)<br>
+	= u^\alpha \textbf{e}_\alpha \cdot \nabla_\beta v^\gamma \textbf{e}_\gamma \otimes \boldsymbol{\omega}^\beta
+	= u^\alpha \textbf{e}_\alpha \cdot (\partial_\beta v^\gamma + v^\delta {\Gamma^\gamma}_{\beta\delta}) \textbf{e}_\gamma \otimes \boldsymbol{\omega}^\beta
+	= u^\alpha (\partial_\beta v^\gamma + v^\delta {\Gamma^\gamma}_{\beta\delta}) \textbf{e}_\alpha \cdot \textbf{e}_\gamma \otimes \boldsymbol{\omega}^\beta
+	= u^\alpha (\partial_\beta v^\gamma + v^\delta {\Gamma^\gamma}_{\beta\delta}) g_{\alpha\gamma} \boldsymbol{\omega}^\beta
+	= u_\gamma (\partial_\beta v^\gamma + v^\alpha {\Gamma^\gamma}_{\beta\alpha}) \boldsymbol{\omega}^\beta
+$<br>
 <br>	
 Riemann curvature in terms of covariant derivative:<br>
-\( {R^i}_{jkl} = \langle \boldsymbol{\omega}^i, (\left [ \nabla_k, \nabla_l \right ] - \nabla_{[k,l]}) \textbf{e}_j \rangle \)<br>
-\( = \langle \boldsymbol{\omega}^i, \nabla_k \nabla_l \textbf{e}_j - \nabla_l \nabla_k \textbf{e}_j - \nabla_{[k,l]} \textbf{e}_j \rangle \)<br>
-\( = \langle \boldsymbol{\omega}^i, \nabla_k ({\Gamma^m}_{jl} \textbf{e}_m) - \nabla_l ({\Gamma^m}_{jk} \textbf{e}_m) - {c_{kl}}^m \nabla_m \textbf{e}_j \rangle \)<br>
-\( = \langle \boldsymbol{\omega}^i, \nabla_k {\Gamma^n}_{jl} \textbf{e}_n + {\Gamma^n}_{jl} \nabla_k \textbf{e}_n - \nabla_l {\Gamma^n}_{jk} \textbf{e}_n - {\Gamma^n}_{jk} \nabla_l \textbf{e}_n - {c_{kl}}^m {\Gamma^n}_{jm} \textbf{e}_n \rangle \)<br>
-\( = \langle \boldsymbol{\omega}^i, \textbf{e}_n \rangle ( \partial_k {\Gamma^n}_{jl} + {\Gamma^m}_{jl} {\Gamma^n}_{mk} - \partial_l {\Gamma^n}_{jk} - {\Gamma^m}_{jk} {\Gamma^n}_{ml} - {\Gamma^n}_{jm} {c_{kl}}^m ) \)<br>
-\( = \partial_k {\Gamma^i}_{jl} - \partial_l {\Gamma^i}_{jk} + {\Gamma^i}_{mk} {\Gamma^m}_{jl} - {\Gamma^i}_{ml} {\Gamma^m}_{jk} - {\Gamma^i}_{jm} {c_{kl}}^m \)<br>
+$ {R^\alpha}_{\beta\gamma\delta} = \langle \boldsymbol{\omega}^\alpha, (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]}) \textbf{e}_\beta \rangle $<br>
+$ = \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma \nabla_\delta \textbf{e}_\beta - \nabla_\delta \nabla_\gamma \textbf{e}_\beta - \nabla_{[\gamma,\delta]} \textbf{e}_\beta \rangle $<br>
+$ = \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma ({\Gamma^\mu}_{\beta\delta} \textbf{e}_\mu) - \nabla_\delta ({\Gamma^\mu}_{\beta\gamma} \textbf{e}_\mu) - {c_{\gamma\delta}}^\mu \nabla_\mu \textbf{e}_\beta \rangle $<br>
+$ = \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma {\Gamma^\nu}_{\beta\delta} \textbf{e}_\nu + {\Gamma^\nu}_{\beta\delta} \nabla_\gamma \textbf{e}_\nu - \nabla_\delta {\Gamma^\nu}_{\beta\gamma} \textbf{e}_\nu - {\Gamma^\nu}_{\beta\gamma} \nabla_\delta \textbf{e}_\nu - {c_{\gamma\delta}}^\mu {\Gamma^\nu}_{\beta\mu} \textbf{e}_\nu \rangle $<br>
+$ = \langle \boldsymbol{\omega}^\alpha, \textbf{e}_\nu \rangle ( \partial_\gamma {\Gamma^\nu}_{\beta\delta} + {\Gamma^\mu}_{\beta\delta} {\Gamma^\nu}_{\mu\gamma} - \partial_\delta {\Gamma^\nu}_{\beta\gamma} - {\Gamma^\mu}_{\beta\gamma} {\Gamma^\nu}_{\mu\delta} - {\Gamma^\nu}_{\beta\mu} {c_{\gamma\delta}}^\mu ) $<br>
+$ = \partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alpha}_{\beta\gamma} + {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} - {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} - {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu $<br>
 <br>
 Riemann curvature in terms of covariant derivative, in index notation:<br>
-<!-- TODO account for the disappearance of c_kl^m \partial_m v^i -->
-<!-- TODO show nabla_k Gamma^i_jl - nabla_l Gamma^i_jk = partial_k Gamma^i_jl - partial_l Gamma^i_jk -->
-\( (\left [ \nabla_k, \nabla_l \right ] - \nabla_{[k,l]} ) v^i \)<br>
-\(= \nabla_k \nabla_l v^i 
-	- \nabla_l \nabla_k v^i
-	- \nabla_{[k,l]} v^i
-\)<br>
-\(= \nabla_k (\partial_l v^i 
-	+ {\Gamma^i}_{jl} v^j) 
-	- \nabla_l (\partial_k v^i 
-	+ {\Gamma^i}_{jk} v^j)
-	- {c_{kl}}^m \nabla_m v^i
-\)<br>
-\(= \nabla_k \partial_l v^i 
-	+ \nabla_k {\Gamma^i}_{jl} v^j 
-	+ {\Gamma^i}_{jl} \nabla_k v^j 
-	- \nabla_l \partial_k v^i 
-	- \nabla_l {\Gamma^i}_{jk} v^j 
-	- {\Gamma^i}_{jk} \nabla_l v^j
-	- {c_{kl}}^m (\partial_m v^i + {\Gamma^i}_{jm} v^j)
-\)<br>
-\(= \partial_k \partial_l v^i 
-	- {\Gamma^m}_{lk} \partial_m v^i 
-	+ {\Gamma^i}_{mk} \partial_l v^m 
-	+ \nabla_k {\Gamma^i}_{jl} v^j 
-	+ {\Gamma^i}_{jl} \partial_k v^j 
-	+ {\Gamma^i}_{jl} {\Gamma^j}_{mk} v^m
-	- \partial_l \partial_k v^i 
-	+ {\Gamma^m}_{kl} \partial_m v^i 
-	- {\Gamma^i}_{ml} \partial_k v^m 
-	- \nabla_l {\Gamma^i}_{jk} v^j 
-	- {\Gamma^i}_{jk} \partial_l v^j 
-	- {\Gamma^i}_{jk} {\Gamma^j}_{ml} v^m
-	- {c_{kl}}^m \partial_m v^i
-	- {\Gamma^i}_{jm} {c_{kl}}^m v^j
-\)<br>
-\( = 
-	\partial_k \partial_l v^i - \partial_l \partial_k v^i
-	- {\Gamma^m}_{lk} \partial_m v^i 
-	+ {\Gamma^m}_{kl} \partial_m v^i 
-	+ {\Gamma^i}_{mk} \partial_l v^m 
-	- {\Gamma^i}_{jk} \partial_l v^j
-	+ {\Gamma^i}_{jl} \partial_k v^j 
-	- {\Gamma^i}_{ml} \partial_k v^m
-	+ \nabla_k {\Gamma^i}_{jl} v^j - \nabla_l {\Gamma^i}_{jk} v^j 
-	+ {\Gamma^i}_{jl} {\Gamma^j}_{mk} v^m
-	- {\Gamma^i}_{jk} {\Gamma^j}_{ml} v^m
-	- {\Gamma^i}_{jm} {c_{kl}}^m v^j
-	- {c_{kl}}^m \partial_m v^i
-\)<br>
-\( 	= (\nabla_k {\Gamma^i}_{jl} - \nabla_l {\Gamma^i}_{jk}
-		+ {\Gamma^i}_{ml} {\Gamma^m}_{jk}
-		- {\Gamma^i}_{mk} {\Gamma^m}_{jl}
-		- {\Gamma^i}_{jm} {c_{kl}}^m ) v^j
-\)<br>
-\( 	= (\partial_k {\Gamma^i}_{jl} - \partial_l {\Gamma^i}_{jk}
-		+ {\Gamma^i}_{ml} {\Gamma^m}_{jk}
-		- {\Gamma^i}_{mk} {\Gamma^m}_{jl}
-		 - {\Gamma^i}_{jm} {c_{kl}}^m
-		) v^j
-\)<br>
-let \( {R^i}_{jkl} = \partial_k {\Gamma^i}_{jl} - \partial_l {\Gamma^i}_{jk} + {\Gamma^i}_{mk} {\Gamma^m}_{jl} - {\Gamma^i}_{ml} {\Gamma^m}_{jk} - {\Gamma^i}_{jm} {c_{kl}}^m \)<br>
-so \( (\left [ \nabla_k \nabla_l \right ] - \nabla_{[k,l]}) v^i = {R^i}_{jkl} v^j \)<br>
+<!-- TODO account for the disappearance of c_\gamma\delta^\mu \partial_\mu v^\alpha -->
+<!-- TODO show nabla_\gamma Gamma^\alpha_\beta\delta - nabla_\delta Gamma^\alpha_\beta\gamma = partial_\gamma Gamma^\alpha_\beta\delta - partial_\delta Gamma^\alpha_\beta\gamma -->
+$ (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]} ) v^i $<br>
+$= \nabla_\gamma \nabla_\delta v^\alpha
+	- \nabla_\delta \nabla_\gamma v^\alpha
+	- \nabla_{[\gamma,\delta]} v^\alpha
+$<br>
+$= \nabla_\gamma (\partial_\delta v^\alpha
+	+ {\Gamma^\alpha}_{\beta\delta} v^\beta) 
+	- \nabla_\delta (\partial_\gamma v^\alpha
+	+ {\Gamma^\alpha}_{\beta\gamma} v^\beta)
+	- {c_{\gamma\delta}}^\mu \nabla_\mu v^\alpha
+$<br>
+$= \nabla_\gamma \partial_\delta v^\alpha
+	+ \nabla_\gamma {\Gamma^\alpha}_{\beta\delta} v^\beta
+	+ {\Gamma^\alpha}_{\beta\delta} \nabla_\gamma v^\beta
+	- \nabla_\delta \partial_\gamma v^\alpha
+	- \nabla_\delta {\Gamma^\alpha}_{\beta\gamma} v^\beta
+	- {\Gamma^\alpha}_{\beta\gamma} \nabla_\delta v^\beta
+	- {c_{\gamma\delta}}^\mu (\partial_\mu v^\alpha + {\Gamma^\alpha}_{\beta\mu} v^\beta)
+$<br>
+$= \partial_\gamma \partial_\delta v^\alpha
+	- {\Gamma^\mu}_{\delta\gamma} \partial_\mu v^\alpha
+	+ {\Gamma^\alpha}_{\mu\gamma} \partial_\delta v^\mu
+	+ \nabla_\gamma {\Gamma^\alpha}_{\beta\delta} v^\beta
+	+ {\Gamma^\alpha}_{\beta\delta} \partial_\gamma v^\beta
+	+ {\Gamma^\alpha}_{\beta\delta} {\Gamma^\beta}_{\mu\gamma} v^\mu
+	- \partial_\delta \partial_\gamma v^\alpha
+	+ {\Gamma^\mu}_{\gamma\delta} \partial_\mu v^\alpha
+	- {\Gamma^\alpha}_{\mu\delta} \partial_\gamma v^\mu
+	- \nabla_\delta {\Gamma^\alpha}_{\beta\gamma} v^\beta
+	- {\Gamma^\alpha}_{\beta\gamma} \partial_\delta v^\beta
+	- {\Gamma^\alpha}_{\beta\gamma} {\Gamma^\beta}_{\mu\delta} v^\mu
+	- {c_{\gamma\delta}}^\mu \partial_\mu v^\alpha
+	- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu v^\beta
+$<br>
+$ = 
+	\partial_\gamma \partial_\delta v^\alpha - \partial_\delta \partial_\gamma v^\alpha
+	- {\Gamma^\mu}_{\delta\gamma} \partial_\mu v^\alpha
+	+ {\Gamma^\mu}_{\gamma\delta} \partial_\mu v^\alpha
+	+ {\Gamma^\alpha}_{\mu\gamma} \partial_\delta v^\mu
+	- {\Gamma^\alpha}_{\beta\gamma} \partial_\delta v^\beta
+	+ {\Gamma^\alpha}_{\beta\delta} \partial_\gamma v^\beta
+	- {\Gamma^\alpha}_{\mu\delta} \partial_\gamma v^\mu
+	+ \nabla_\gamma {\Gamma^\alpha}_{\beta\delta} v^\beta - \nabla_\delta {\Gamma^\alpha}_{\beta\gamma} v^\beta
+	+ {\Gamma^\alpha}_{\beta\delta} {\Gamma^\beta}_{\mu\gamma} v^\mu
+	- {\Gamma^\alpha}_{\beta\gamma} {\Gamma^\beta}_{\mu\delta} v^\mu
+	- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu v^\beta
+	- {c_{\gamma\delta}}^\mu \partial_\mu v^\alpha
+$<br>
+$ 	= (\nabla_\gamma {\Gamma^\alpha}_{\beta\delta} - \nabla_\delta {\Gamma^\alpha}_{\beta\gamma}
+		+ {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma}
+		- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta}
+		- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu ) v^\beta
+$<br>
+$ 	= (\partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alpha}_{\beta\gamma}
+		+ {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma}
+		- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta}
+		 - {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu
+		) v^\beta
+$<br>
+let $ {R^\alpha}_{\beta\gamma\delta} = \partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alpha}_{\beta\gamma} + {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} - {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} - {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu $<br>
+so $ (\left [ \nabla_\gamma \nabla_\delta \right ] - \nabla_{[\gamma,\delta]}) v^\alpha = {R^\alpha}_{\beta\gamma\delta} v^\beta $<br>
 <br>
-Ricci curvature: \( R_{ij} = {R^k}_{ikj} \)<br>
-Gaussian curvature: \( R = {R^i}_i \)<br>
+Ricci curvature: $ R_{\alpha\beta} = {R^\gamma}_{\alpha\gamma\beta} $<br>
+Gaussian curvature: $ R = {R^\alpha}_\alpha $<br>
 <br>
-exterior derivative: \( \textbf{d} \)<br>
-exchangeability of exterior and covariant derivative for 2-forms: \( \textbf{dF} = \boldsymbol{\nabla} \cdot\ast\textbf{F}\), \(\textbf{d}\) \(\ast\textbf{F} = \boldsymbol{\nabla} \cdot \textbf{F} \)<br>
+exterior derivative: $ \textbf{d} $<br>
+exchangeability of exterior and covariant derivative for 2-forms: $ \textbf{dF} = \boldsymbol{\nabla} \cdot\ast\textbf{F}$, $\textbf{d}$ $\ast\textbf{F} = \boldsymbol{\nabla} \cdot \textbf{F} $<br>
 exterior derivative of scalar: 
-\( \textbf{d}\phi 
-	= \partial_i \phi \textbf{dx}^i 
-	= \partial_i \phi \boldsymbol{\omega}^i
-\) <br>
+$ \textbf{d}\phi 
+	= \partial_\alpha \phi \textbf{dx}^\alpha
+	= \partial_\alpha \phi \boldsymbol{\omega}^\alpha
+$ <br>
 exterior derivative of one-form: 
-\( \textbf{dw} 
-	= \textbf{d}(w_j \textbf{dx}^j)
-	= \textbf{d}w_j \wedge \textbf{dx}^j + w_j \textbf{d}^2\textbf{x}^j
-	= \textbf{d}w_j \wedge \textbf{dx}^j
-	= \partial_i w_j \textbf{dx}^i \wedge \textbf{dx}^j
-	= (\partial_i w_j - \partial_j w_i) \textbf{dx}^{|i} \wedge \textbf{dx}^{j|}
-\)<br>
-exterior derivative of p-form: \( \textbf{da} = \textbf{d}( a_{I_1...I_p} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} ) = \sum_{j \notin I_i} {{\partial a_{I_1...I_p}}\over{\partial x^j}} \textbf{dx}^j \wedge \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \)<br>
+$ \textbf{dw} 
+	= \textbf{d}(w_\beta \textbf{dx}^\beta)
+	= \textbf{d}w_\beta \wedge \textbf{dx}^\beta + w_\beta \textbf{d}^2\textbf{x}^\beta
+	= \textbf{d}w_\beta \wedge \textbf{dx}^\beta
+	= \partial_\alpha w_\beta \textbf{dx}^\alpha \wedge \textbf{dx}^\beta
+	= (\partial_\alpha w_\beta - \partial_\beta w_\alpha) \textbf{dx}^{|\alpha} \wedge \textbf{dx}^{\beta|}
+$<br>
+exterior derivative of p-form: $ \textbf{da} = \textbf{d}( a_{\alpha_1...\alpha_p} \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p} ) = \sum_{\beta \notin \alpha_i} {{\partial a_{\alpha_1...\alpha_p}}\over{\partial x^\beta}} \textbf{dx}^\beta \wedge \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p} $<br>
 <br>
 <!-- TODO when to use omegas and when to use dx's, and a better explination of why which is chosen? -->
-exterior derivative of wedge product of p-form \(\textbf{a}\) and q-form \(\textbf{b}\):<br>
-\( \textbf{d} ( \textbf{a} \wedge \textbf{b} ) \)<br>
-\( = \textbf{d} ( a_{I_1...I_p} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge b_{J_1 ... J_q} \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q})\)<br>
-\( = \textbf{d} ( a_{I_1...I_p} b_{J_1 ... J_q} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q})\)<br>
-using \( \textbf{d}^2\textbf{x}^i = 0 \)<br>
-\( = \textbf{d} ( a_{I_1...I_p} b_{J_1 ... J_q}) \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}\)<br>
-\( = {\partial\over{\partial x^k}} ( a_{I_1...I_p} b_{J_1 ... J_q}) \textbf{dx}^k \wedge \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}\)<br>
-\( = ( {\partial\over{\partial x^k}} a_{I_1...I_p} b_{J_1 ... J_q} + a_{I_1...I_p} {\partial\over{\partial x^k}} b_{J_1 ... J_q}) \textbf{dx}^k \wedge \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}\)<br>
-\( = {\partial\over{\partial x^k}} a_{I_1...I_p} b_{J_1 ... J_q} \textbf{dx}^k \wedge \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}
-	+ a_{I_1...I_p} {\partial\over{\partial x^k}} b_{J_1 ... J_q} \textbf{dx}^k \wedge \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}\)<br>
-rotate the 2nd term's \(\textbf{dx}^k\) through the \(\textbf{dx}^{I_i}\)'s to right before the \(\textbf{dx}^{J_j}\)'s begin, requiring a total of \(p\) rotations, incurring a scalar of \((-1)^p\):<br> 
-\( = {\partial\over{\partial x^k}} a_{I_1...I_p} \textbf{dx}^k \wedge \textbf{dx}^{I_1} \wedge ... b_{J_1 ... J_q} \wedge \textbf{dx}^{I_p} \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}
-	+ (-1)^p a_{I_1...I_p} \textbf{dx}^{I_1} \wedge ... \wedge \textbf{dx}^{I_p} \wedge {\partial\over{\partial x^k}} b_{J_1 ... J_q} \textbf{dx}^k \wedge \textbf{dx}^{J_1} \wedge ... \wedge \textbf{dx}^{J_q}\)<br>
-\( = \textbf{da} \wedge \textbf{b} + (-1)^p \textbf{a} \wedge \textbf{db} \)<br> 
+exterior derivative of wedge product of p-form $\textbf{a}$ and q-form $\textbf{b}$:<br>
+$ \textbf{d} ( \textbf{a} \wedge \textbf{b} ) $<br>
+$ = \textbf{d} ( a_{\alpha_1...\alpha_p} \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p} \wedge b_{\beta_1 ... \beta_q} \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q})$<br>
+$ = \textbf{d} ( a_{\alpha_1...\alpha_p} b_{\beta_1 ... \beta_q} \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p} \wedge \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q})$<br>
+using $ \textbf{d}^2\textbf{x}^i = 0 $<br>
+$ = \textbf{d} ( a_{\alpha_1...\alpha_p} b_{\beta_1 ... \beta_q}) \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p} \wedge \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}$<br>
+$ = {\partial\over{\partial x^\gamma}} ( a_{\alpha_1...\alpha_p} b_{\beta_1 ... \beta_q}) \textbf{dx}^\gamma \wedge \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p} \wedge \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}$<br>
+$ = ( {\partial\over{\partial x^\gamma}} a_{\alpha_1...\alpha_p} b_{\beta_1 ... \beta_q} + a_{\alpha_1...\alpha_p} {\partial\over{\partial x^\gamma}} b_{\beta_1 ... \beta_q}) \textbf{dx}^\gamma \wedge \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p} \wedge \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}$<br>
+$ = {\partial\over{\partial x^\gamma}} a_{\alpha_1...\alpha_p} b_{\beta_1 ... \beta_q} \textbf{dx}^\gamma \wedge \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p} \wedge \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}
+	+ a_{\alpha_1...\alpha_p} {\partial\over{\partial x^\gamma}} b_{\beta_1 ... \beta_q} \textbf{dx}^\gamma \wedge \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p} \wedge \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}$<br>
+rotate the 2nd term's $\textbf{dx}^\gamma$ through the $\textbf{dx}^{\alpha_i}$'s to right before the $\textbf{dx}^{\beta_j}$'s begin, requiring a total of $p$ rotations, incurring a scalar of $(-1)^p$:<br> 
+$ = {\partial\over{\partial x^\gamma}} a_{\alpha_1...\alpha_p} \textbf{dx}^\gamma \wedge \textbf{dx}^{\alpha_1} \wedge ... b_{\beta_1 ... \beta_q} \wedge \textbf{dx}^{\alpha_p} \wedge \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}
+	+ (-1)^p a_{\alpha_1...\alpha_p} \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p} \wedge {\partial\over{\partial x^\gamma}} b_{\beta_1 ... \beta_q} \textbf{dx}^\gamma \wedge \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}$<br>
+$ = \textbf{da} \wedge \textbf{b} + (-1)^p \textbf{a} \wedge \textbf{db} $<br> 
 <br>
-exterior derivative of vector as a linear relation to vector basis: \( \textbf{de}_i = \textbf{e}_k \otimes {\boldsymbol{\omega}^k}_i \)<br>
+exterior derivative of vector as a linear relation to vector basis: $ \textbf{de}_\alpha = \textbf{e}_\gamma \otimes {\boldsymbol{\omega}^\gamma}_\alpha $<br>
 equating covariant and exterior derivative for vector basis: 
-\( \textbf{de}_i 
-	= \boldsymbol{\nabla} \textbf{e}_i 
-	= {\Gamma^k}_{ij} \textbf{e}_k \otimes \boldsymbol{\omega}^j 
-	= \textbf{e}_k \otimes {\boldsymbol{\omega}^k}_i
-\)<br>
-so \( {\boldsymbol{\omega}^k}_i = {\Gamma^k}_{ij} \boldsymbol{\omega}^j \) and \( \nabla_i \boldsymbol{\omega}^k = -{\boldsymbol{\omega}^k}_i \)<br>
+$ \textbf{de}_\alpha 
+	= \boldsymbol{\nabla} \textbf{e}_\alpha
+	= {\Gamma^\gamma}_{\alpha\beta} \textbf{e}_\gamma \otimes \boldsymbol{\omega}^\beta
+	= \textbf{e}_\gamma \otimes {\boldsymbol{\omega}^\gamma}_\alpha
+$<br>
+so $ {\boldsymbol{\omega}^\gamma}_\alpha = {\Gamma^\gamma}_{\alpha\beta} \boldsymbol{\omega}^\beta $ and $ \nabla_\alpha \boldsymbol{\omega}^\gamma = -{\boldsymbol{\omega}^\gamma}_\alpha $<br>
 exterior derivative expanded in a contravariant basis: 
-\( \textbf{dv} 
-	= \textbf{d} (v^i \textbf{e}_i) 
-	= \textbf{d}v^i \otimes \textbf{e}_i + v^i \textbf{de}_i 
-	= (\textbf{d}v^k + v^i {\boldsymbol{\omega}^k}_i) \otimes \textbf{e}_k 
-	= (\partial_j v^k + {\Gamma^k}_{ij} v^i) \boldsymbol{\omega}^j \otimes \textbf{e}_k
-\)<br>
+$ \textbf{dv} 
+	= \textbf{d} (v^\alpha \textbf{e}_\alpha) 
+	= \textbf{d}v^\alpha \otimes \textbf{e}_\alpha + v^\alpha \textbf{de}_\alpha
+	= (\textbf{d}v^\gamma + v^\alpha {\boldsymbol{\omega}^\gamma}_\alpha) \otimes \textbf{e}_\gamma
+	= (\partial_\beta v^\gamma + {\Gamma^\gamma}_{\alpha\beta} v^\alpha) \boldsymbol{\omega}^\beta \otimes \textbf{e}_\gamma
+$<br>
 exterior derivative of inner product: 
-\( \textbf{d}(\textbf{u} \cdot \textbf{v}) 
+$ \textbf{d}(\textbf{u} \cdot \textbf{v}) 
 	= \textbf{du} \cdot \textbf{v} + \textbf{u} \cdot \textbf{dv}
-\)<br>
+$<br>
 exterior derivative of metric tensor: 
-\( \textbf{d}g_{ij} 
-	= (\textbf{de}_i \cdot \textbf{e}_j) 
-	= \textbf{de}_i \cdot \textbf{e}_j + \textbf{e}_i \cdot \textbf{de}_j
-	= \textbf{e}_k \otimes {\boldsymbol{\omega}^k}_i \cdot \textbf{e}_j + \textbf{e}_i \cdot \textbf{e}_k \otimes {\boldsymbol{\omega}^k}_j
-	= g_{jk} {\boldsymbol{\omega}^k}_i + g_{ik} {\boldsymbol{\omega}^k}_j
-	= \boldsymbol{\omega}_{ji} + \boldsymbol{\omega}_{ij}
-\)<br>
+$ \textbf{d}g_{\alpha\beta} 
+	= \textbf{d} (\textbf{e}_\alpha \cdot \textbf{e}_\beta)
+	= \textbf{de}_\alpha \cdot \textbf{e}_\beta + \textbf{e}_\alpha \cdot \textbf{de}_\beta
+	= \textbf{e}_\gamma \otimes {\boldsymbol{\omega}^\gamma}_\alpha \cdot \textbf{e}_\beta + \textbf{e}_\alpha \cdot \textbf{e}_\gamma \otimes {\boldsymbol{\omega}^\gamma}_\beta
+	= g_{\beta\gamma} {\boldsymbol{\omega}^\gamma}_\alpha + g_{\alpha\gamma} {\boldsymbol{\omega}^\gamma}_\beta
+	= \boldsymbol{\omega}_{\beta\alpha} + \boldsymbol{\omega}_{\alpha\beta}
+$<br>
 <br>
-second exterior derivative of a one-form: \( \textbf{d}(\textbf{dw}) = 0 \) <br>
+second exterior derivative of a one-form: $ \textbf{d}(\textbf{dw}) = 0 $ <br>
 second exterior derivative of vector: 
-\( \textbf{d}^2 \textbf{v} 
-	= \textbf{d}^2 ( v^i \textbf{e}_i )
-	= \textbf{d} ( \textbf{d} v^i \textbf{e}_i + v^i \textbf{de}_i )
-	= \textbf{d} ( \textbf{d} v^i \textbf{e}_i + v^i \textbf{e}_j {\boldsymbol{\omega}^j}_i )
-	= \textbf{d}^2 v^i \textbf{e}_i 
-		+ \textbf{d} v^i \wedge \textbf{d} \textbf{e}_i 
-		+ \textbf{d} v^i \wedge \textbf{e}_j {\boldsymbol{\omega}^j}_i
-		+ v^i \textbf{de}_j \wedge {\boldsymbol{\omega}^j}_i
-		+ v^i \textbf{e}_j \textbf{d}{\boldsymbol{\omega}^j}_i
-	= \textbf{d}^2 v^i \textbf{e}_i
-		+ 2 \textbf{d} v^i \wedge \textbf{e}_j {\boldsymbol{\omega}^j}_i
-		+ v^i \textbf{e}_k {\boldsymbol{\omega}^k}_j \wedge {\boldsymbol{\omega}^j}_i
-		+ v^i \textbf{e}_j \textbf{d}{\boldsymbol{\omega}^j}_i
-\)<br>
+$ \textbf{d}^2 \textbf{v} 
+	= \textbf{d}^2 ( v^\alpha \textbf{e}_\alpha )
+	= \textbf{d} ( \textbf{d} v^\alpha \textbf{e}_\alpha + v^\alpha \textbf{de}_\alpha )
+	= \textbf{d} ( \textbf{d} v^\alpha \textbf{e}_\alpha + v^\alpha \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\alpha )
+	= \textbf{d}^2 v^\alpha \textbf{e}_\alpha
+		+ \textbf{d} v^\alpha \wedge \textbf{d} \textbf{e}_\alpha 
+		+ \textbf{d} v^\alpha \wedge \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\alpha
+		+ v^\alpha \textbf{de}_\beta \wedge {\boldsymbol{\omega}^\beta}_\alpha
+		+ v^\alpha \textbf{e}_\beta \textbf{d}{\boldsymbol{\omega}^\beta}_\alpha
+	= \textbf{d}^2 v^\alpha \textbf{e}_\alpha
+		+ 2 \textbf{d} v^\alpha \wedge \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\alpha
+		+ v^\alpha \textbf{e}_\gamma {\boldsymbol{\omega}^\gamma}_\beta \wedge {\boldsymbol{\omega}^\beta}_\alpha
+		+ v^\alpha \textbf{e}_\beta \textbf{d}{\boldsymbol{\omega}^\beta}_\alpha
+$<br>
 <!-- TODO i'm zeroing the 2dv^i term as well, find out why -->
 ...zero second exterior derivatives of one-forms... 
-\( = v^i \textbf{e}_j {\boldsymbol{\omega}^j}_k \wedge {\boldsymbol{\omega}^k}_i
-	+ v^i \textbf{e}_j \textbf{d}{\boldsymbol{\omega}^j}_i \)<br>
-let \( {\textbf{R}^i}_j = {\boldsymbol{\omega}^i}_k \wedge {\boldsymbol{\omega}^k}_j + \textbf{d}{\boldsymbol{\omega}^i}_j \)<br>
-so \( \textbf{d}^2 \textbf{v} = \textbf{e}_i {\textbf{R}^i}_j v^j \)<br>
+$ = v^\alpha \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\gamma \wedge {\boldsymbol{\omega}^\gamma}_\alpha
+	+ v^\alpha \textbf{e}_\beta \textbf{d}{\boldsymbol{\omega}^\beta}_\alpha $<br>
+let $ {\textbf{R}^\alpha}_\beta = {\boldsymbol{\omega}^\alpha}_\gamma \wedge {\boldsymbol{\omega}^\gamma}_\beta + \textbf{d}{\boldsymbol{\omega}^\alpha}_\beta $<br>
+so $ \textbf{d}^2 \textbf{v} = \textbf{e}_\alpha {\textbf{R}^\alpha}_\beta v^\beta $<br>
 <br>
 Riemann metric two-form:<br>
- \( {\textbf{R}^i}_j = {\boldsymbol{\omega}^i}_m \wedge {\boldsymbol{\omega}^m}_j + \textbf{d}{\boldsymbol{\omega}^i}_j \)<br>
-\( = {\Gamma^i}_{mk} {\Gamma^m}_{jl} \boldsymbol{\omega}^k \wedge \boldsymbol{\omega}^l + \textbf{d} ( {\Gamma^i}_{jl} \boldsymbol{\omega}^l ) \)<br>
-\( = {\Gamma^i}_{mk} {\Gamma^m}_{jl} \boldsymbol{\omega}^k \wedge \boldsymbol{\omega}^l + \textbf{d} {\Gamma^i}_{jl} \boldsymbol{\omega}^l + {\Gamma^i}_{jl} \textbf{d} \boldsymbol{\omega}^l \)<br>
-\( = ( \partial_k {\Gamma^i}_{jl} + {\Gamma^i}_{mk} {\Gamma^m}_{jl} ) \boldsymbol{\omega}^k \wedge \boldsymbol{\omega}^l \)<br>
-\( = ( \partial_k {\Gamma^i}_{jl} - \partial_l {\Gamma^i}_{jk} + {\Gamma^i}_{mk} {\Gamma^m}_{jl} - {\Gamma^i}_{ml} {\Gamma^m}_{jk} ) \boldsymbol{\omega}^{|k} \wedge \boldsymbol{\omega}^{l|} \)<br>
-\( = {R^i}_{jkl}\boldsymbol{\omega}^{|k} \wedge \boldsymbol{\omega}^{l|} \)<br>
-\( = {R^i}_{j|kl|}\boldsymbol{\omega}^k \wedge \boldsymbol{\omega}^l \)<br>
+ $ {\textbf{R}^\alpha}_\beta = {\boldsymbol{\omega}^\alpha}_\mu \wedge {\boldsymbol{\omega}^\mu}_\beta + \textbf{d}{\boldsymbol{\omega}^\alpha}_\beta $<br>
+$ = {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} \boldsymbol{\omega}^\gamma \wedge \boldsymbol{\omega}^\delta + \textbf{d} ( {\Gamma^\alpha}_{\beta\delta} \boldsymbol{\omega}^\delta ) $<br>
+$ = {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} \boldsymbol{\omega}^\gamma \wedge \boldsymbol{\omega}^\delta + \textbf{d} {\Gamma^\alpha}_{\beta\delta} \boldsymbol{\omega}^\delta + {\Gamma^\alpha}_{\beta\delta} \textbf{d} \boldsymbol{\omega}^\delta $<br>
+$ = ( \partial_\gamma {\Gamma^\alpha}_{\beta\delta} + {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} ) \boldsymbol{\omega}^\gamma \wedge \boldsymbol{\omega}^\delta $<br>
+$ = ( \partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alpha}_{\beta\gamma} + {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} - {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} ) \boldsymbol{\omega}^{|\gamma} \wedge \boldsymbol{\omega}^{\delta|} $<br>
+$ = {R^\alpha}_{\beta\gamma\delta}\boldsymbol{\omega}^{|\gamma} \wedge \boldsymbol{\omega}^{\delta|} $<br>
+$ = {R^\alpha}_{\beta|\gamma\delta|}\boldsymbol{\omega}^\gamma \wedge \boldsymbol{\omega}^\delta $<br>
 <br>
-\( 0 = \textbf{d} P 
-	= \textbf{d} (\textbf{e}_k \otimes \boldsymbol{\omega}^k)
-	= \textbf{de}_k \wedge \boldsymbol{\omega}^k + \textbf{e}_k \otimes \textbf{d}\boldsymbol{\omega}^k 
-	= \textbf{e}_i \otimes {\boldsymbol{\omega}^i}_k \wedge \boldsymbol{\omega}^k + \textbf{e}_i \otimes \textbf{d} \boldsymbol{\omega}^i
-	= \textbf{e}_i \otimes ({\boldsymbol{\omega}^i}_k \wedge \boldsymbol{\omega}^k + \textbf{d} \boldsymbol{\omega}^i)
-\)<br>
-so \( {\boldsymbol{\omega}^i}_k \wedge \boldsymbol{\omega}^k + \textbf{d} \boldsymbol{\omega}^i = 0 \)<br>
-so \( \textbf{d} \boldsymbol{\omega}^k
-	= -{\boldsymbol{\omega}^k}_i \wedge \boldsymbol{\omega}^i
-	= -{\Gamma^k}_{ji} \boldsymbol{\omega}^j \wedge \boldsymbol{\omega}^i
-	= {\Gamma^k}_{ji} \boldsymbol{\omega}^i \wedge \boldsymbol{\omega}^j
-	= ({\Gamma^k}_{ji} - {\Gamma^k}_{ij}) \boldsymbol{\omega}^i \otimes \boldsymbol{\omega}^j
-	= {c_{ij}}^k \boldsymbol{\omega}^i \otimes \boldsymbol{\omega}^j
-\)<br> 
-This coincides with, in a holonomic basis, when \( \boldsymbol{\omega}^i = \textbf{d}x^i, \textbf{d} \boldsymbol{\omega}^i = \textbf{d}^2\textbf{x}^i = 0 \)<br>
+$ 0 = \textbf{d} P 
+	= \textbf{d} (\textbf{e}_\gamma \otimes \boldsymbol{\omega}^\gamma)
+	= \textbf{de}_\gamma \wedge \boldsymbol{\omega}^\gamma + \textbf{e}_\gamma \otimes \textbf{d}\boldsymbol{\omega}^\gamma
+	= \textbf{e}_\alpha \otimes {\boldsymbol{\omega}^\alpha}_\gamma \wedge \boldsymbol{\omega}^\gamma + \textbf{e}_\alpha \otimes \textbf{d} \boldsymbol{\omega}^\alpha
+	= \textbf{e}_\alpha \otimes ({\boldsymbol{\omega}^\alpha}_\gamma \wedge \boldsymbol{\omega}^\gamma + \textbf{d} \boldsymbol{\omega}^\alpha)
+$<br>
+so $ {\boldsymbol{\omega}^\alpha}_\gamma \wedge \boldsymbol{\omega}^\gamma + \textbf{d} \boldsymbol{\omega}^\alpha = 0 $<br>
+so $ \textbf{d} \boldsymbol{\omega}^\gamma
+	= -{\boldsymbol{\omega}^\gamma}_\alpha \wedge \boldsymbol{\omega}^\alpha
+	= -{\Gamma^\gamma}_{\beta\alpha} \boldsymbol{\omega}^\beta \wedge \boldsymbol{\omega}^\alpha
+	= {\Gamma^\gamma}_{\beta\alpha} \boldsymbol{\omega}^\alpha \wedge \boldsymbol{\omega}^\beta
+	= ({\Gamma^\gamma}_{\beta\alpha} - {\Gamma^\gamma}_{\alpha\beta}) \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta
+	= {c_{\alpha\beta}}^\gamma \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta
+$<br> 
+This coincides with, in a holonomic basis, when $ \boldsymbol{\omega}^\alpha = \textbf{d}x^\alpha, \textbf{d} \boldsymbol{\omega}^\alpha = \textbf{d}^2\textbf{x}^\alpha = 0 $<br>
 
 </div>
 
