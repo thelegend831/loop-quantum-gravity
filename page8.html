@@ -1,0 +1,76 @@
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- script type="text/javascript" src="/MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script -->
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+<div class='entry'>
+
+Indexes: \(\alpha-\omega\) = spacetime curved, \(a-h,o-z\) = spatial curved, \(A-Z\) = spacetime flat, \(i-n\) = spatial flat<br>
+spatial curved indexes are raised and lowered by the spatial metric \( \gamma_{ij} \)<br>
+spatial flat indexes are raised and lowered by the spatial components of the Minkowski metric, i.e. \( \delta_{ij} \)<br>
+<br>
+
+<hr>
+<br>
+
+LQG variables:<br>
+definitions from "Spin foam models for quantum gravity and semi-classical limit" by Dupuis<br>
+spatial relation to spatial metric:<br>
+for \(abc\) curved spatial coordinates and \(ijk\) Lorentz spatial coordinates<br>
+redefine \( {e_a}^i \) to be the 3-basis (TODO show relation to old definition of \({e_a}^I\))<br> 
+redeine \( \gamma_{ab} = {e_a}^i {e_b}^j \delta_{ij} \)<br>
+\( {E^a}_i = {1\over 2} \epsilon_{ijk} \epsilon^{abc} {e_b}^j {e_c}^k \)<br>
+\( \gamma \gamma^{ab} = {E^a}_i {E^b}_j \delta^{ij} \)<br>
+<br>
+treating \({e_a}^i\) as purely spatial, transforming from flat to curved coordinates:<br>
+\( {E^a}_i = {1\over 2} \epsilon_{ijk} \epsilon^{abc} {e_b}^j {e_c}^k \)<br>
+\( = {1\over 2} \epsilon_{ijk} \epsilon^{ljk} {e^a}_l \)<br>
+\( = {1\over 2} (2 \delta^l_i) {e^a}_l \)<br>
+\( = {e^a}_i \)<br>
+<br>
+looks very similar to the definition from Pullin: \( {E^a}_I = {\gamma^a}_b {e^b}_I \)<br>
+which says that the \( {E^a}_I \) tensor is just the spatial projection of the tetrad \( {e^a}_I \)<br>
+note that the 4D projection \( {\gamma_a}^b \) zeroes the time component and maintains the rest.<br> 
+<br>
+\(\nabla_a\) applies to... curved or flat space?<br>
+\(D_a\) applies to... curved or flat space?<br>
+\( R_{ab} \) the curvature of \({e_a}^i\)<br>
+\(F_{ab}\) the curvature of \({A_a}^i\)<br>
+<br>
+
+TODO show that \( H = \sqrt\gamma ( K_{ab} K^{ab} - K^2 - R^\perp) \) equals \( {1\over\sqrt\gamma} tr((F_{ab} - 2 R_{ab})[E^a, E^b]) \)<br>
+
+<hr>
+
+Show \( \{ {K_a}^i(x), {\tilde E^b}_j(y) \} = \kappa \delta^{(3)}(x,y) \delta^b_a \delta^i_j \)<br>
+(with \(\alpha-\omega\) representing spacetime curved coordinates,<br>
+\(A-Z\) representing spacetime flat coordinates,<br>
+\( a-h,o-z \) representing spatial curved coordinates,<br>
+and \( i-n \) representing spatial flat coordinates.)<br>
+for \( {E^\mu}_I = {\gamma_\nu}^\mu {e^\nu}_I \)<br>
+note that \( ||\gamma^{\mu\nu}|| = \left[ \matrix{0 & 0 \\ 0 & \gamma^{ab}} \right] \)
+and \( ||{\gamma_\mu}^\nu|| = \left[ \matrix{0 & \beta^b \\ 0 & \delta^b_a} \right] \)<br>
+so \( {E^\mu}_I \)'s timelike coordinates are zero'd, and spacelike coordinates are \( {e^\mu}_I \)'s flat-spacelike coordinates, shiftted by \( \beta^a \) times \( {e^\mu}_I \)'s flat-time component<br>
+if a transposed definition of \(\gamma^{\mu\nu}\) were used then \( {E^\mu}_I \)'s spacelike components would not be modified, but its timelike components would not be zero.<br> 
+This works a lot better if all these spatial indexes are raised and lowered by \(\gamma^{ab}\) and \(\gamma_{ab}\) instead of \(g\)<br>
+for \( {\tilde E^\mu}_I = \sqrt\gamma {E^\mu}_I \)<br>
+\( \{ {K_a}^i(x), {\tilde E^b}_j(y) \} \)<br>
+<div style='font-size:1.4em'>\( = {{\partial {K_a}^k}\over{\partial \gamma_{cd}}} {{\partial {\tilde E^b}_l}\over{\partial \pi^{cd}}} - {{\partial {K_a}^k}\over{\partial \pi^{cd}}} {{\partial {\tilde E^b}_l}\over{\partial \gamma_{cd}}} \)</div>
+<div style='font-size:1.4em'>\( 
+	= {{\partial K_{ae} {\tilde E^e}_j \eta^{jk}} \over {\partial \gamma_{cd}}}
+		{{\partial {\tilde E^b}_l} \over {\partial \pi^{cd}}}
+	- {{\partial K_{ae} {\tilde E^e}_j \eta^{jk}} \over {\partial \pi^{cd}}}
+		{{\partial {\tilde E^b}_l} \over {\partial \gamma_{cd}}}
+\)</div>
+<br>
+What is \( {{\partial \tilde {E^c}_I}\over{\partial \gamma_{ab}}} \)?<br>
+\( = {\partial\over{\partial \gamma_{ab}}} ( \sqrt\gamma {\gamma_d}^c {e^d}_I ) \)<br>
+is \( {E^a}_I \) raised by \( \gamma^{ab} \) or \( g^{ab} \)?<br>
+Seems like Alcubierre say spatial tensors are raised by \( \gamma^{ab} \) -- have I been doing that?<br> 
+Yes but I got around that by following Baumgarte & Shapiro's ADM work, and that uses raising/lowering by the spacetime metric<br>
+<br>
+<hr>
+
+
+
+
+</div>
+
