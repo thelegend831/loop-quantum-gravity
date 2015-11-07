@@ -1,64 +1,18 @@
-<script type="text/javascript" src="/MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- script type="text/javascript" src="/MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script -->
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
 <div class='entry'>
 
-Indexes: \(a-h\) and \(o-z\) = spacetime curved, \(i-n\) = spatial curved, \(A-Z\) and \(\hat a-\hat z\) = spacetime flat (Minkowski)<br>
-\({e_a}^I\) pertains to the vierbein - i.e. the 4D tensor that transforms the Minkowski metric to the metric tensor.<br>
-<br>
-
-Notice that when using separate sets of letters for separate coordinate systems there is ambiguity when represeting specific indexes.
-If vector \( a^a \) is represented in coordinate space and \( a^I = a^a {e_a}^I \) represents the Minkowski space, then there is no way to discern whether \( a^0 \) represents the 0'th index of \( a^a \) or \( a^I \).
-I believe this is why MTW uses hats over indexes (and index values) to denote Minkowski vs coordinates.<br>
-<br>
-I'm not going to, because it's much easier to write and type.<br>
-<br>
-
-Minkowski metric: \( \eta_{IJ} = diag(-1, 1, 1, 1) \)<br>
-tetrad:<br>
-\( g_{ab} = {e_a}^I {e_b}^J \eta_{IJ} \)<br>
-\( \eta^{IJ} = {e_c}^I {e_d}^J g^{cd} \)<br>
-tetrad inverse:<br>
-\( \eta_{IJ} = {e^a}_I {e^b}_J g_{ab} \)<br>
-\( g^{ab} = {e^a}_I {e^b}_J \eta^{IJ} \)<br>
-tetrad determinant: \( e = det||{e_a}^I|| = \sqrt{-g} \)<br>
-orthonormality:<br>
-\( {e_a}^I {e^b}_I = \delta^b_a \)<br>
-\( {e^a}_I {e_a}^J = \delta^J_I \)<br>
-in coordinate frame: \( {e_a}^I = {{\partial x^I}\over{\partial x'^a}} \)<br>
-<br>
+Indexes: $\alpha-\omega$, $a-h$ and $o-z$ = spacetime curved, $i-n$ = spatial curved, $A-Z$ and $\hat a-\hat z$ = spacetime flat (Minkowski)<br>
 
 <hr>
-
-Notice that \( g_{ab} \) and \( g^{ab} \) are used to raise and lower curved spacetime coordinates.<br>
-Likewise \( \eta_{IJ} \) and \( \eta^{IJ} \) are used to raise and lower flat spacetime coordinates.<br>
-The vierbein \( {e_a}^I \) and inverse \( {e^a}_I \) are used to transform to and fro the curved coordinate metric and the Minkowski metric,
-and such transformations are expressed by changing the letter associated with the transform.<br>
-Notice that, if correct index applications are given, \( {e_a}^I \) is found to <b>not</b> equal \( {e^I}_a \) (but instead its transpose: <a href='http://physics.stackexchange.com/questions/142836/correct-tetrad-index-notation'>http://physics.stackexchange.com/questions/142836/correct-tetrad-index-notation</a>)<br>
-The convention I use for the vierbein tensors that transform between curved and Minkowski coordinates is to specify the curved coordinate first then the Minkowski second.  Any other convention works, but you do need to distinguish your first and second indexes.<br>
-<br>
-Also notice that, using our rule that indexes represent tetrad transformations, we find that:<br>
-\( \eta^{ab} = {e^a}_I \eta^{IJ} {e^b}_J = g^{ab} \)<br> 
-\( \eta_{ab} = {e_a}^I \eta_{IJ} {e_b}^J = g_{ab} \)<br>
-\( e_{ab} = {e_a}^I e_{bI} = {e_a}^I \eta_{IJ} {e_b}^J = g_{ab} \)<br>
-<br>
-So as long as you follow these rules.<br>
-(1) raising and lowering of curved spacetime coordinates is done by the metric tensor: \(g^{ab}\) and \(g_{ab}\), respectively.<br> 
-(2) raising and lowering of Minkowski spacetime coordinates is done by the Minkowski metric tensor: \(\eta^{IJ}\) and \(\eta_{IJ}\), respectively.<br>
-(3) transforming from contravariant or covariant curved to Minkowski coordinates is done using \( {e_a}^I \) or \( {e^a}_I\), respectively.<br>
-...then all three tensors: \( g \), \(\eta\), and \(e\) could all be represented by a single symbol, with only their indexes necessary to determine which tensor is which.<br>
-<br>
-This concept runs into trouble when you introduce specific metrics/tensors that are raised and lowered with different metrics (such as how raised spatial indexes are considered to be raised by the spatial metric inverse \(\gamma^{ij}\))<br>
-Since \(\gamma^{\mu\nu}\) has zeroes in its timelike components, this means whether spatial indexes are raised by \(\gamma^{ij}\) or \(\gamma^{\mu\nu}\) the result will be the same.<br>
-In light of that, maybe I should add a third set of indexes to represent spatial metric indexes (separate of spatial contra- or co-variant curved coordinate indexes).<br>
-<br>
-<hr>
-
 Affine covariant and Lorentz covariant connection notation standards:<br>
 
-Affine connection: \( {\Gamma^a}_{bc} \) uses the first two terms to denote the linear transformation of the source tensor; and uses the third index to denote which derivative this is in regards to.
+Affine connection: $ {\Gamma^a}_{bc} $ uses the first two terms to denote the linear transformation of the source tensor; and uses the third index to denote which derivative this is in regards to.
 Probably due to the old comma derivative convention when the derivative index was placed last.<br>
 
-Lorentz/spin connection: \( {\omega_{aI}}^J \) uses the last two indexes to denote the linear transformation of source tensor; and the first to denote which derivative this is in regards to.
-Probably due to the change in standards from using comma derivatives to writing prefix \( \partial \) symbols, where the derivative index would be seen first.<br>
+Lorentz/spin connection: $ {\omega_{aI}}^J $ uses the last two indexes to denote the linear transformation of source tensor; and the first to denote which derivative this is in regards to.
+Probably due to the change in standards from using comma derivatives to writing prefix $ \partial $ symbols, where the derivative index would be seen first.<br>
 
 The two tensors are distinctly different, though some sources use the same symbol and rely on the use of coordinate vs Lorentz indexes to distinguish which tensor is used.
 This causes the representation of the connection transformed from one coordinate system to another to be ambiguous.<br>
@@ -68,114 +22,118 @@ To get around this, I'll choose separate symbols for the connections of coordina
 A bigger fix is needed for connections:<br>
 (1) to pick one set of index ordering, rather than having a separate ordering for the affine connection.<br>
 I'll use the new standard, derivative-index-first, for all (pseudo)tensors <i>except</i> the traditional affine connection.<br>
-(Maybe I'll eventually use it with the affine as well.  After all, it does match up with the (Walton 1967) version: \( \{ {{_a}^c}_b \} \).)<br>
+(Maybe I'll eventually use it with the affine as well.  After all, it does match up with the (Walton 1967) version: $ \{ {{_a}^c}_b \} $.)<br>
 (2) to somehow denote a relationship between a particular covariant derivative's coordinate connection and Lorentz connection.<br>
-I'd like to use \( {A_{ab}}^c \) vs \( {\hat A_{a\hat b}}^\hat c \) for coordinate vs Lorentz connection tensors.  This way indexes can be transformed between coordinate and Lorentz without ambiguity.<br>
+I'd like to use $ {A_{ab}}^c $ vs $ {\hat A_{a\hat b}}^\hat c $ for coordinate vs Lorentz connection tensors.  This way indexes can be transformed between coordinate and Lorentz without ambiguity.<br>
 Instead I'm going to stick with tradition.<br>
 <br>
 
 <hr>
-affine covariant derivative of Lorentz coordinates:<br>
-\( \nabla_a V^I = \partial_a V^I + {{\omega_a}^I}_J V^J \)<br>
-\( \nabla_a V_I = \partial_a V_I - {{\omega_a}^J}_I V_J \)<br>
-\( = \partial_a V_I + {\omega_{aI}}^J V_J \)<br>
+introduce new connection ${{\omega_a}^I}_J$ that acts on Lorentz indexes for the affine covariant derivative:<br>
+$ \nabla_a V^I = \partial_a V^I + {{\omega_a}^I}_J V^J $<br>
+$ \nabla_a V_I = \partial_a V_I - {{\omega_a}^J}_I V_J $<br>
+$ = \partial_a V_I + {\omega_{aI}}^J V_J $<br>
 <br>
-affine covariant derivative cancels the tetrad (as well as metric):<br>
-\( \nabla_a {e_b}^I = 0 = \partial_a {e_b}^I - {\Gamma^d}_{ba} {e_d}^I + {{\omega_a}^I}_J {e_b}^J \)<br>
-\( 0 = \partial_a {e_b}^I - {\Gamma^I}_{ba} + {{\omega_a}^I}_b \)<br>
-\( {{\omega_a}^I}_b = {\Gamma^I}_{ba} - \partial_a {e_b}^I \)<br>
+Define ${{\omega_a}^I}_J$ such that the affine covariant derivative cancels the tetrad (as well as metric):<br>
+$ \nabla_a {e_b}^I = 0 = \partial_a {e_b}^I - {\Gamma^d}_{ba} {e_d}^I + {{\omega_a}^I}_J {e_b}^J $<br>
+$ 0 = \partial_a {e_b}^I - {\Gamma^I}_{ba} + {{\omega_a}^I}_b $<br>
+$ {{\omega_a}^I}_b = {\Gamma^I}_{ba} - \partial_a {e_b}^I $<br>
 <br>
-...that annhilates the Minkowski metric:<br>
-\( 0 = D_a \eta_{I J} = \partial_a \eta_{I J} - {{\omega_a}^K}_I \eta_{KJ} - {{\omega_a}^K}_J \eta_{IK} \)<br>
-\( 0 = 0 - \omega_{aJI} - \omega_{aIJ} \)<br>
-\( \omega_{aIJ} = -\omega_{aJI} \)<br>
+
+Define ${{\omega_a}^I}_J$ such that it annhilates the Minkowski metric:<br>
+$ 0 = \nabla_a \eta_{I J} = \partial_a \eta_{I J} - {{\omega_a}^K}_I \eta_{KJ} - {{\omega_a}^K}_J \eta_{IK} $<br>
+$ 0 = 0 - \omega_{aJI} - \omega_{aIJ} $<br>
+$ \omega_{aIJ} = -\omega_{aJI} $<br>
 <br>
+
+Introduce a new covariant derivative that acts on Lorentz indexes alone (where is this used?):<br>
+$D_a {T^I}_J = \partial_a {T^I}_J + {{\omega_a}^I}_K {T^K}_J - {{\omega_a}^K}_J {T^I}_K $ <br>
+<br>
+
 curvature of Lorentz connection:<br>
-\( {{\hat R_{ab}}^I}_J V^J = \nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I \)<br>
-\( = \nabla_a (\partial_b V^I + {{\omega_b}^I}_J V^J) - \nabla_b (\partial_a V^I + {{\omega_a}^I}_J V^J) \)<br>
-\( = \partial_a (\partial_b V^I + {{\omega_b}^I}_J V^J)
+$ {{\hat R_{ab}}^I}_J V^J = \nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I $<br>
+$ = \nabla_a (\partial_b V^I + {{\omega_b}^I}_J V^J) - \nabla_b (\partial_a V^I + {{\omega_a}^I}_J V^J) $<br>
+$ = \partial_a (\partial_b V^I + {{\omega_b}^I}_J V^J)
 		- {\Gamma^c}_{ba} (\partial_c V^I + {{\omega_c}^I}_J V^J)
 		+ {{\omega_a}^I}_K (\partial_b V^K + {{\omega_b}^K}_J V^J)
 	- \partial_b (\partial_a V^I + {{\omega_a}^I}_J V^J)
 		+ {\Gamma^c}_{ab} (\partial_c V^I + {{\omega_c}^I}_J V^J)
 		- {{\omega_b}^I}_K (\partial_a V^K + {{\omega_a}^K}_J V^J)
-\)<br>
-\( = \partial_a \partial_b V^I + \partial_a {{\omega_b}^I}_J V^J + {{\omega_b}^I}_J \partial_a V^J
+$<br>
+$ = \partial_a \partial_b V^I + \partial_a {{\omega_b}^I}_J V^J + {{\omega_b}^I}_J \partial_a V^J
 		+ {{\omega_a}^I}_K \partial_b V^K + {{\omega_a}^I}_K {{\omega_b}^K}_J V^J
 	- \partial_b \partial_a V^I - \partial_b {{\omega_a}^I}_J V^J - {{\omega_a}^I}_J \partial_b V^J
 		- {{\omega_b}^I}_K \partial_a V^K - {{\omega_b}^I}_K {{\omega_a}^K}_J V^J
 		+ 2 {\Gamma^c}_{[ab]} (\partial_c V^I + {{\omega_c}^I}_J V^J)
-\)<br>
-using \( {\Gamma^a}_{[bc]} = 0 \)<br>
-\( = 2 (\partial_{[a} {{\omega_{b]}}^I}_J + {\omega_{[a}}^{IK} {\omega_{b]KJ}}) V^J \)<br>
-\( {\hat R_{ab}}^{IJ} = 2 (\partial_{[a} {\omega_{b]}}^{IJ} + {\omega_{[a}}^{IK} {\omega_{b]K}}^J ) \)<br>
+$<br>
+using $ {\Gamma^a}_{[bc]} = 0 $<br>
+$ = 2 (\partial_{[a} {{\omega_{b]}}^I}_J + {\omega_{[a}}^{IK} {\omega_{b]KJ}}) V^J $<br>
+$ {\hat R_{ab}}^{IJ} = 2 (\partial_{[a} {\omega_{b]}}^{IJ} + {\omega_{[a}}^{IK} {\omega_{b]K}}^J ) $<br>
 <br>
 
-show \( {\hat R_{ab}}^{cd} = {R_{ab}}^{cd} \):<br>
-\( {{R_{ab}}^c}_d V^d = 2 \nabla_{[a} \nabla_{b]} V^c \)<br>
-\( {{R_{ab}}^c}_d V^d = 2 \nabla_{[a} \nabla_{b]} ({e^c}_I V^I) \)<br>
-using \( \nabla_a {e^b}_I = 0 \)<br>
-\( {{R_{ab}}^c}_d V^d = 2 \nabla_{[a} ({e^c}_I \nabla_{b]} V^I) \)<br>
-\( {{R_{ab}}^c}_d V^d = 2 {e^c}_I \nabla_{[a} \nabla_{b]} V^I \)<br>
-\( {{R_{ab}}^c}_d V^d = {e^c}_I {{\hat R_{ab}}^I}_J V^J \)<br>
-\( {{R_{ab}}^c}_d V^d = {{\hat R_{ab}}^c}_d V^d \)<br>
-\( {R_{ab}}^{cd} = {\hat R_{ab}}^{cd} \)<br>
+show $ {\hat R_{ab}}^{cd} = {R_{ab}}^{cd} $:<br>
+$ {{R_{ab}}^c}_d V^d = 2 \nabla_{[a} \nabla_{b]} V^c $<br>
+$ {{R_{ab}}^c}_d V^d = 2 \nabla_{[a} \nabla_{b]} ({e^c}_I V^I) $<br>
+using $ \nabla_a {e^b}_I = 0 $<br>
+$ {{R_{ab}}^c}_d V^d = 2 \nabla_{[a} ({e^c}_I \nabla_{b]} V^I) $<br>
+$ {{R_{ab}}^c}_d V^d = 2 {e^c}_I \nabla_{[a} \nabla_{b]} V^I $<br>
+$ {{R_{ab}}^c}_d V^d = {e^c}_I {{\hat R_{ab}}^I}_J V^J $<br>
+$ {{R_{ab}}^c}_d V^d = {{\hat R_{ab}}^c}_d V^d $<br>
+$ {R_{ab}}^{cd} = {\hat R_{ab}}^{cd} $<br>
 <br>
-<br>
-<br>
-<br>
+<hr>
 <br>
 Do we really need another connection on Lorentz coordinates?<br>
 Does Palatini action use an arbitrary connection, or does it use the affine connection extended to be compatible with the tetrad?<br>
-This is from Pullins' work, but why is it even here, especially if \({C_a}^{IJ} = 0\) in the end?<br>
+This is from Pullins' work, but why is it even here, especially if ${C_a}^{IJ} = 0$ in the end?<br>
 <br>
 Introduce a new Lorentz-only covariant derivative of Lorentz connection:<br>
-\( D_a K_I = \partial_a K_I - {{\hat\omega_a}^J}_I K_J \)<br>
+$ D_a K_I = \partial_a K_I - {{\hat\omega_a}^J}_I K_J $<br>
 <br>
 ...that annhilates the Minkowski metric:<br>
-\( 0 = D_a \eta_{I J} = \partial_a \eta_{I J} - {{\hat\omega_a}^K}_I \eta_{KJ} - {{\hat\omega_a}^K}_J \eta_{IK} \)<br>
-\( 0 = 0 - \hat\omega_{aJI} - \hat\omega_{aIJ} \)<br>
-\( \hat\omega_{aIJ} = -\hat\omega_{aJI} \)<br>
+$ 0 = D_a \eta_{I J} = \partial_a \eta_{I J} - {{\hat\omega_a}^K}_I \eta_{KJ} - {{\hat\omega_a}^K}_J \eta_{IK} $<br>
+$ 0 = 0 - \hat\omega_{aJI} - \hat\omega_{aIJ} $<br>
+$ \hat\omega_{aIJ} = -\hat\omega_{aJI} $<br>
 <br>
 Lorentz connection curvature:<br>
-\( {{\Omega_{ab}}^I}_J V^J = D_a D_b V^I - D_b D_a V^I \)<br>
-\( = D_a (\partial_b V^I + {{\hat\omega_b}^I}_J V^J) - D_b (\partial_a V^I + {{\hat\omega_a}^I}_J V^J) \)<br>
-\( = \partial_a (\partial_b V^I + {{\hat\omega_b}^I}_J V^J) + {{\hat\omega_a}^I}_K (\partial_b V^K + {{\hat\omega_b}^K}_J V^J) 
-	- \partial_b (\partial_a V^I + {{\hat\omega_a}^I}_J V^J) - {{\hat\omega_b}^I}_K (\partial_a V^K + {{\hat\omega_a}^K}_J V^J) \)<br>
-\( = \partial_a \partial_b V^I + \partial_a ({{\hat\omega_b}^I}_J V^J) + {{\hat\omega_a}^I}_K \partial_b V^K + {{\hat\omega_a}^I}_K {{\hat\omega_b}^K}_J V^J
-	- \partial_b \partial_a V^I - \partial_b ({{\hat\omega_a}^I}_J V^J) - {{\hat\omega_b}^I}_K \partial_a V^K - {{\hat\omega_b}^I}_K {{\hat\omega_a}^K}_J V^J \)<br>
-\( = 
+$ {{\Omega_{ab}}^I}_J V^J = D_a D_b V^I - D_b D_a V^I $<br>
+$ = D_a (\partial_b V^I + {{\hat\omega_b}^I}_J V^J) - D_b (\partial_a V^I + {{\hat\omega_a}^I}_J V^J) $<br>
+$ = \partial_a (\partial_b V^I + {{\hat\omega_b}^I}_J V^J) + {{\hat\omega_a}^I}_K (\partial_b V^K + {{\hat\omega_b}^K}_J V^J) 
+	- \partial_b (\partial_a V^I + {{\hat\omega_a}^I}_J V^J) - {{\hat\omega_b}^I}_K (\partial_a V^K + {{\hat\omega_a}^K}_J V^J) $<br>
+$ = \partial_a \partial_b V^I + \partial_a ({{\hat\omega_b}^I}_J V^J) + {{\hat\omega_a}^I}_K \partial_b V^K + {{\hat\omega_a}^I}_K {{\hat\omega_b}^K}_J V^J
+	- \partial_b \partial_a V^I - \partial_b ({{\hat\omega_a}^I}_J V^J) - {{\hat\omega_b}^I}_K \partial_a V^K - {{\hat\omega_b}^I}_K {{\hat\omega_a}^K}_J V^J $<br>
+$ = 
 	V^J \partial_a {{\hat\omega_b}^I}_J + {{\hat\omega_b}^I}_J \partial_a V^J
 	- V^J \partial_b {{\hat\omega_a}^I}_J - {{\hat\omega_a}^I}_J \partial_b V^J
 	+ {{\hat\omega_a}^I}_K \partial_b V^K - {{\hat\omega_b}^I}_K \partial_a V^K 
-	+ {{\hat\omega_a}^I}_K {{\hat\omega_b}^K}_J V^J - {{\hat\omega_a}^K}_J {{\hat\omega_b}^I}_K V^J \)<br>
-\( {{\Omega_{ab}}^I}_J = 2 \partial_{[a} {{\hat\omega_{b]}}^I}_J + 2 {{\hat\omega_{[a}}^I}_{|K|} {{\hat\omega_{b]}}^K}_J \)<br>
-\( {\Omega_{ab}}^{IJ} = 2 (\partial_{[a} {\hat\omega_{b]}}^{IJ} + {\hat\omega_{[a}}^{IK} {\hat\omega_{b]K}}^J) \)<br>
+	+ {{\hat\omega_a}^I}_K {{\hat\omega_b}^K}_J V^J - {{\hat\omega_a}^K}_J {{\hat\omega_b}^I}_K V^J $<br>
+$ {{\Omega_{ab}}^I}_J = 2 \partial_{[a} {{\hat\omega_{b]}}^I}_J + 2 {{\hat\omega_{[a}}^I}_{|K|} {{\hat\omega_{b]}}^K}_J $<br>
+$ {\Omega_{ab}}^{IJ} = 2 (\partial_{[a} {\hat\omega_{b]}}^{IJ} + {\hat\omega_{[a}}^{IK} {\hat\omega_{b]K}}^J) $<br>
 <br>
 covariant derivatives difference:<br>
-\( {{C_a}^I}_J V^J = (D_a - \nabla_a) V^I \)<br>
-\( = \partial_a V^I + {{\hat\omega_a}^I}_J V^J - \partial_a V^I - {{\omega_a}^I}_J V^J \)<br>
-\( = ({{\hat\omega_a}^I}_J - {{\omega_a}^I}_J) V^J \)<br>
-\( {{C_a}^I}_J = {{\hat\omega_a}^I}_J - {{\omega_a}^I}_J \)<br>
+$ {{C_a}^I}_J V^J = (D_a - \nabla_a) V^I $<br>
+$ = \partial_a V^I + {{\hat\omega_a}^I}_J V^J - \partial_a V^I - {{\omega_a}^I}_J V^J $<br>
+$ = ({{\hat\omega_a}^I}_J - {{\omega_a}^I}_J) V^J $<br>
+$ {{C_a}^I}_J = {{\hat\omega_a}^I}_J - {{\omega_a}^I}_J $<br>
 <br>
 difference of affine covariant and Lorentz covariant derivative of mixed index tensor:<br>
-\( \nabla_a {T_b}^I = \partial_a {T_b}^I - {\Gamma^c}_{ba} {T_c}^I + {{\omega_a}^I}_J {T_b}^J \)<br>
-\( \partial_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\omega_a}^I}_J {T_b}^J \)<br>
-\( D_a {T_b}^I = \partial_a {T_b}^I + {{\hat\omega_a}^I}_J V^J \)<br>
-\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\omega_a}^I}_J {T_b}^J + {{\hat\omega_a}^I}_J V^J \)<br>
-\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{\hat\omega_a}^I}_J V^J - {{\omega_a}^I}_J {T_b}^J \)<br>
-\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + ({{\hat\omega_a}^I}_J - {{\omega_a}^I}_J) {T_b}^J \)<br>
-\( D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{C_a}^I}_J {T_b}^J \)<br>
+$ \nabla_a {T_b}^I = \partial_a {T_b}^I - {\Gamma^c}_{ba} {T_c}^I + {{\omega_a}^I}_J {T_b}^J $<br>
+$ \partial_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\omega_a}^I}_J {T_b}^J $<br>
+$ D_a {T_b}^I = \partial_a {T_b}^I + {{\hat\omega_a}^I}_J V^J $<br>
+$ D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\omega_a}^I}_J {T_b}^J + {{\hat\omega_a}^I}_J V^J $<br>
+$ D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{\hat\omega_a}^I}_J V^J - {{\omega_a}^I}_J {T_b}^J $<br>
+$ D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + ({{\hat\omega_a}^I}_J - {{\omega_a}^I}_J) {T_b}^J $<br>
+$ D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{C_a}^I}_J {T_b}^J $<br>
 <br>
 difference of Lorentz and Riemann curvature tensors:<br>
-\( ({\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ}) V_J = (D_a D_b - D_b D_a) V^I - (\nabla_a \nabla_b - \nabla_b \nabla_a) V^I \)<br>
-\( = D_a (D_b V^I) - D_b (D_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) \)<br>
-using \( D_a V^I = {{C_a}^I}_J V^J + \nabla_a V^I \)<br>
-\( = D_a ({{C_b}^I}_J V^J + \nabla_b V^I) - D_b ({{C_a}^I}_J V^J + \nabla_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) \)<br>
-\( = \nabla_a ({{C_b}^I}_J V^J + \nabla_b V^I) + {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) + {{C_a}^I}_K ({{C_b}^K}_J V^J + \nabla_b V^K) 
+$ ({\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ}) V_J = (D_a D_b - D_b D_a) V^I - (\nabla_a \nabla_b - \nabla_b \nabla_a) V^I $<br>
+$ = D_a (D_b V^I) - D_b (D_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) $<br>
+using $ D_a V^I = {{C_a}^I}_J V^J + \nabla_a V^I $<br>
+$ = D_a ({{C_b}^I}_J V^J + \nabla_b V^I) - D_b ({{C_a}^I}_J V^J + \nabla_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) $<br>
+$ = \nabla_a ({{C_b}^I}_J V^J + \nabla_b V^I) + {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) + {{C_a}^I}_K ({{C_b}^K}_J V^J + \nabla_b V^K) 
 	- \nabla_b ({{C_a}^I}_J V^J + \nabla_a V^I) - {\Gamma^c}_{ab} ({{C_c}^I}_J V^J + \nabla_c V^I) - {{C_b}^I}_K ({{C_a}^K}_J V^J + \nabla_a V^K)
-	- (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) \)<br>
-\( = \nabla_a {{C_b}^I}_J V^J + {{C_b}^I}_J \nabla_a V^J
+	- (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) $<br>
+$ = \nabla_a {{C_b}^I}_J V^J + {{C_b}^I}_J \nabla_a V^J
 	+ \nabla_a \nabla_b V^I
 	+ {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) 
 	+ {{C_a}^I}_K {{C_b}^K}_J V^J
@@ -185,137 +143,92 @@ using \( D_a V^I = {{C_a}^I}_J V^J + \nabla_a V^I \)<br>
 	- {\Gamma^c}_{ab} ({{C_c}^I}_J V^J + \nabla_c V^I)
 	- {{C_b}^I}_K {{C_a}^K}_J V^J
 	- {{C_b}^I}_K \nabla_a V^K
-	- \nabla_a \nabla_b V^I + \nabla_b \nabla_a V^I \)<br>
-\( = \nabla_a {{C_b}^I}_J V^J
+	- \nabla_a \nabla_b V^I + \nabla_b \nabla_a V^I $<br>
+$ = \nabla_a {{C_b}^I}_J V^J
 	- \nabla_b {{C_a}^I}_J V^J
 	+ {{C_a}^I}_K {{C_b}^K}_J V^J
 	- {{C_b}^I}_K {{C_a}^K}_J V^J
 	+ {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) 
 	- {\Gamma^c}_{ab} ({{C_c}^I}_J V^J + \nabla_c V^I)
-\)<br>
-\( = 2 (\nabla_{[a} {{C_{b]}}^I}_J + {{C_{[a}}^I}_{|K|} {{C_{b]}}^K}_J
-	- {\Gamma^c}_{[ab]} ({{C_c}^I}_J + \delta^I_J \nabla_c)) V^J \)<br>
-\( ({\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ}) V_J = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J
-	- {\Gamma^c}_{[ab]} ({C_c}^{IJ} + \eta^{IJ} \nabla_c)) V_J \)<br>
-\( {\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ} = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J
-	- {\Gamma^c}_{[ab]} ({C_c}^{IJ} + \eta^{IJ} \nabla_c)) \)<br>
-for affine connections, \( {\Gamma^c}_{[ab]} = 0 \) and we get:<br>
-\( {\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ} = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J) \)<br>
+$<br>
+$ = 2 (\nabla_{[a} {{C_{b]}}^I}_J + {{C_{[a}}^I}_{|K|} {{C_{b]}}^K}_J
+	- {\Gamma^c}_{[ab]} ({{C_c}^I}_J + \delta^I_J \nabla_c)) V^J $<br>
+$ ({\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ}) V_J = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J
+	- {\Gamma^c}_{[ab]} ({C_c}^{IJ} + \eta^{IJ} \nabla_c)) V_J $<br>
+$ {\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ} = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J
+	- {\Gamma^c}_{[ab]} ({C_c}^{IJ} + \eta^{IJ} \nabla_c)) $<br>
+for affine connections, $ {\Gamma^c}_{[ab]} = 0 $ and we get:<br>
+$ {\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ} = 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J) $<br>
 <br>
-\( {\Omega_{ab}}^{IJ} = {R_{ab}}^{IJ} + 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J) \)<br>
+$ {\Omega_{ab}}^{IJ} = {R_{ab}}^{IJ} + 2 (\nabla_{[a} {C_{b]}}^{IJ} + {C_{[a}}^{IK} {C_{b]K}}^J) $<br>
 <br>
-TODO show \( R = {e^a}_I {e^b}_J {R_{ab}}^{IJ} = {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} \)<br>
+TODO show $ R = {e^a}_I {e^b}_J {R_{ab}}^{IJ} = {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} $<br>
 ...or is it?  If not, show the difference goes to zero.<br>
 <br>
 action on curvature of Lorentz covariant derivative, with Riemann curvature substituted:<br>
-\( S = \int \sqrt{-g} R dx^4 \)<br>
-\( = \int e R dx^4 \)<br>
-\( = \int e {\Omega_{ab}}^{ab} dx^4 \)<br>
-\( = \int e {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} dx^4 \)<br>
-\( S = \int e {e^a}_I {e^b}_J ({R_{ab}}^{IJ} + 2 \nabla_{[a} {C_{b]}}^{IJ} + 2 {C_{[a}}^{IK} {C_{b]K}}^J) dx^4 \)<br>
+$ S = \int \sqrt{-g} R dx^4 $<br>
+$ = \int e R dx^4 $<br>
+$ = \int e {\Omega_{ab}}^{ab} dx^4 $<br>
+$ = \int e {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} dx^4 $<br>
+$ S = \int e {e^a}_I {e^b}_J ({R_{ab}}^{IJ} + 2 \nabla_{[a} {C_{b]}}^{IJ} + 2 {C_{[a}}^{IK} {C_{b]K}}^J) dx^4 $<br>
 <br>
 TODO fix this up a bit:<br>
-TODO show \( \delta / \delta {C_a}^{IJ} ({e^b}_K) = 0 \)<br>
-TODO show \( \delta / \delta {C_a}^{IJ} ({R_{bc}}^{KL}) = 0 \)<br>
-TODO show \( \delta / \delta {C_a}^{IJ} (\nabla_b {C_c}^{KL}) = 0 \)<br>
-\( \delta S / \delta {C_a}^{IJ} = \delta / \delta {C_a}^{IJ} \int e {e^b}_K {e^c}_L ({R_{bc}}^{KL} + 2 \nabla_{[b} {C_{c]}}^{KL} + 2 {C_{[b}}^{KM} {C_{c]M}}^L) dx^4 \)<br>
-\( \delta S / \delta {C_a}^{IJ} = \int e {e^b}_K {e^c}_L \delta / \delta {C_a}^{IJ} {C_{[b}}^{KM} {C_{c]M}}^L dx^4 \)<br>
-\( = \int {1\over 2} e {e^b}_K {e^c}_L ({C_{cM}}^L \delta / \delta {C_a}^{IJ} {C_b}^{KM} + {C_b}^{KM} \delta / \delta {C_a}^{IJ} {C_{cM}}^L - {C_{bM}}^L \delta / \delta {C_a}^{IJ} {C_c}^{KM} - {C_c}^{KM} \delta / \delta {C_a}^{IJ} {C_{bM}}^L) dx^4 \)<br>
-\( = \int {1\over 2} e {e^b}_K {e^c}_L (
+TODO show $ \delta / \delta {C_a}^{IJ} ({e^b}_K) = 0 $<br>
+TODO show $ \delta / \delta {C_a}^{IJ} ({R_{bc}}^{KL}) = 0 $<br>
+TODO show $ \delta / \delta {C_a}^{IJ} (\nabla_b {C_c}^{KL}) = 0 $<br>
+$ \delta S / \delta {C_a}^{IJ} = \delta / \delta {C_a}^{IJ} \int e {e^b}_K {e^c}_L ({R_{bc}}^{KL} + 2 \nabla_{[b} {C_{c]}}^{KL} + 2 {C_{[b}}^{KM} {C_{c]M}}^L) dx^4 $<br>
+$ \delta S / \delta {C_a}^{IJ} = \int e {e^b}_K {e^c}_L \delta / \delta {C_a}^{IJ} {C_{[b}}^{KM} {C_{c]M}}^L dx^4 $<br>
+$ = \int {1\over 2} e {e^b}_K {e^c}_L ({C_{cM}}^L \delta / \delta {C_a}^{IJ} {C_b}^{KM} + {C_b}^{KM} \delta / \delta {C_a}^{IJ} {C_{cM}}^L - {C_{bM}}^L \delta / \delta {C_a}^{IJ} {C_c}^{KM} - {C_c}^{KM} \delta / \delta {C_a}^{IJ} {C_{bM}}^L) dx^4 $<br>
+$ = \int {1\over 2} e {e^b}_K {e^c}_L (
 	{C_{cM}}^L \delta^a_b \delta^K_I \delta^M_J
 	+ {C_b}^{KM} \delta^a_c \delta^N_I \delta^L_J \eta_{MN}
 	- {C_{bM}}^L \delta^a_c \delta^K_I \delta^M_J
 	- {C_c}^{KM} \delta^a_b \delta^N_I \delta^L_J \eta_{MN}
-	) dx^4 \)<br>
-\( = \int {1\over 2} e {e^a}_K {e^b}_L (
+	) dx^4 $<br>
+$ = \int {1\over 2} e {e^a}_K {e^b}_L (
 	\delta^K_I \delta^M_J {C_{bM}}^L
 	- \delta^K_J \delta^M_I {C_{bM}}^L
 	- \delta^L_I \delta^M_J {C_{bM}}^K
 	+ \delta^L_J \delta^M_I {C_{bM}}^K
-	) dx^4 \)<br>
-\( = \int {1\over 2} e {e^a}_K {e^b}_L (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L - \delta^L_I \delta^M_J {C_{bM}}^K + \delta^L_J \delta^M_I {C_{bM}}^K) \)<br>
-\( = \int {1\over 2} e ({e^a}_K {e^b}_L (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L) - {e^b}_K {e^a}_L (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L)) \)<br>
-\( = \int {1\over 2} e ({e^a}_K {e^b}_L - {e^b}_K {e^a}_L) (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L) \)<br>
-\( = \int {1\over 2} e ({e^a}_K {e^b}_L - {e^b}_K {e^a}_L) (\delta^K_I \delta^M_J - \delta^K_J \delta^M_I) {C_{bM}}^L \)<br>
-\( = \int e ({e^a}_K {e^b}_L - {e^b}_K {e^a}_L) \delta^K_{[I} \delta^M_{J]} {C_{bM}}^L \)<br>
-\( = \int 2 e {e^{[a}}_K {e^{b]}}_L \delta^K_{[I} \delta^M_{J]} {C_{bM}}^L \)<br>
-TODO where does the integral and scalar \(2 e\) go?<br>
-\( \delta S / \delta {C_a}^{IJ} = {e^{[a}}_K {e^{b]}}_L \delta^K_{[I} \delta^M_{J]} {C_{bM}}^L \)<br>
+	) dx^4 $<br>
+$ = \int {1\over 2} e {e^a}_K {e^b}_L (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L - \delta^L_I \delta^M_J {C_{bM}}^K + \delta^L_J \delta^M_I {C_{bM}}^K) $<br>
+$ = \int {1\over 2} e ({e^a}_K {e^b}_L (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L) - {e^b}_K {e^a}_L (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L)) $<br>
+$ = \int {1\over 2} e ({e^a}_K {e^b}_L - {e^b}_K {e^a}_L) (\delta^K_I \delta^M_J {C_{bM}}^L - \delta^K_J \delta^M_I {C_{bM}}^L) $<br>
+$ = \int {1\over 2} e ({e^a}_K {e^b}_L - {e^b}_K {e^a}_L) (\delta^K_I \delta^M_J - \delta^K_J \delta^M_I) {C_{bM}}^L $<br>
+$ = \int e ({e^a}_K {e^b}_L - {e^b}_K {e^a}_L) \delta^K_{[I} \delta^M_{J]} {C_{bM}}^L $<br>
+$ = \int 2 e {e^{[a}}_K {e^{b]}}_L \delta^K_{[I} \delta^M_{J]} {C_{bM}}^L $<br>
+TODO where does the integral and scalar $2 e$ go?<br>
+$ \delta S / \delta {C_a}^{IJ} = {e^{[a}}_K {e^{b]}}_L \delta^K_{[I} \delta^M_{J]} {C_{bM}}^L $<br>
 <br>
 TODO:<br>
-\( S = \int e ( (\delta {e^a}_I) {e^b}_J {\Omega_{ab}}^{IJ} + {e^a}_I (\delta {e^b}_J) {\Omega_{ab}}^{IJ} - {e_c}^K (\delta {e^c}_K) {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} ) dx^4 \)<br>
-\( = 2 \int e ({e^b}_J {\Omega_{ab}}^{IJ} - {1\over 2} {e^c}_M {e^d}_N {e_a}^I {\Omega_{cd}}^{MN}) \delta {e^a}_I dx^4 \)<br>
-...substite \( {\Omega_{ab}}^{IJ} = {R_{ab}}^{IJ} \), solve for \( \delta S / \delta {e^a}_I = 0 \) to get...<br>
-\( {e^c}_J {R_{ac}}^{IJ} - {1\over 2} {R_{cd}}^{MN} {e^c}_M {e^d}_N {e_a}^I = 0 \)<br>
-\( R_{ab} - {1\over 2} R g_{ab} = 0 \) or \( e = 0 \)<br>
-\( G_{ab} = 0 \) or \( e = 0 \)<br>
+$ S = \int e ( (\delta {e^a}_I) {e^b}_J {\Omega_{ab}}^{IJ} + {e^a}_I (\delta {e^b}_J) {\Omega_{ab}}^{IJ} - {e_c}^K (\delta {e^c}_K) {e^a}_I {e^b}_J {\Omega_{ab}}^{IJ} ) dx^4 $<br>
+$ = 2 \int e ({e^b}_J {\Omega_{ab}}^{IJ} - {1\over 2} {e^c}_M {e^d}_N {e_a}^I {\Omega_{cd}}^{MN}) \delta {e^a}_I dx^4 $<br>
+...substite $ {\Omega_{ab}}^{IJ} = {R_{ab}}^{IJ} $, solve for $ \delta S / \delta {e^a}_I = 0 $ to get...<br>
+$ {e^c}_J {R_{ac}}^{IJ} - {1\over 2} {R_{cd}}^{MN} {e^c}_M {e^d}_N {e_a}^I = 0 $<br>
+$ R_{ab} - {1\over 2} R g_{ab} = 0 $ or $ e = 0 $<br>
+$ G_{ab} = 0 $ or $ e = 0 $<br>
 TODO finish all this.<br>
 <br>	
 
 <hr>
 
-tetrad in ADM metric:<br>
+Spin connection and extrinsic curvature relation<br>
+$ {{\omega_\alpha}^I}_\beta = {\Gamma^I}_{\beta\alpha} - \partial_\alpha {e_\beta}^I $<br>
+Using $\omega_{\alpha IJ} = -\omega_{\alpha JI}$...<br>
+$ -{\omega_{\alpha\beta}}^I = {\Gamma^I}_{\beta\alpha} - \partial_\alpha {e_\beta}^I $<br>
+solve for time direction, and in spatial frame:<br>
+$ -{\omega_{ab}}^\hat{t} = {\Gamma^\hat{t}}_{ba} - \partial_a {e_b}^\hat{t} $<br>
+$ -{\omega_{ab}}^\hat{t} = {e_\mu}^\hat{t} {\Gamma^\mu}_{ba} - \partial_a {e_b}^\hat{t} $<br>
+$ -{\omega_{ab}}^\hat{t} = {e_t}^\hat{t} {\Gamma^t}_{ba} + {e_c}^\hat{t} {\Gamma^c}_{ba} - \partial_a {e_b}^\hat{t} $<br>
+use the ADM tetrad definition that ${e_t}^{\hat{t}} = \alpha$ and ${e_b}^\hat{t} = 0$<br>
+$ -{\omega_{ab}}^\hat{t} = \alpha {\Gamma^t}_{ba} $<br>
+using the extrinsic curvature spatial components in ADM metric: $K_{ab} = -\alpha {\Gamma^t}_{ba}$<br>
+$ -{\omega_{ab}}^\hat{t} = -{1\over\alpha} \alpha K_{ab} $<br>
+$ {\omega_{ab}}^\hat{t} = K_{ab} $<br>
 <br>
-\(\alpha-\omega\) = 4-curved<br>
-\(a-h,o-z\) = 3-curved<br>
-\(A-Z\) = 4-flat<br>
-\(i-n\) = 3-flat<br>
+TODO this relationship is usually referenced in terms of $\omega$'s self-dual -- does this still apply?<br>
+i.e. how is ${A_a}^i$ related to ${K_a}^i$?<br>
 <br>
-\(g_{\mu\nu}=\) metric tensor, matrix \(G\)<br>
-\(g^{\mu\nu}=\) metric tensor inverse, matrix \(G^{-1}\)<br>
-\(\eta_{IJ}=\) Minkowski flat-space metric \(=diag(-1,1,1,1)\), matrix \(H\)<br>
-\(\eta^{IJ}=\) Minkowski metric inverse, matrix \(H^{-1}\)<br>
-\({e_\mu}^I=\) tetrad relating the two.  matrix \(E\)<br>
-\({e^\mu}_I=\) tetrad inverse.  matrix \(E^{-1}\)<br>
-<br>
-\(g_{\mu\nu}={e_\mu}^I {e_\nu}^J \eta_{IJ}\) in matrix form \(G=E H E^T\)<br>
-\(g^{\mu\nu}={e^\mu}_I {e^\nu}_J \eta^{IJ}\) in matrix form \(G^{-1}=E^{-T}H^{-1}E^{-1}\)<br>
-\(\eta_{IJ} = {e^\mu}_I {e^\nu}_J g_{\mu\nu}\) in matrix form \(H=E^{-1}GE^{-T}\)<br>
-\(\eta^{IJ} = {e_\mu}^I {e_\nu}^J g^{\mu\nu}\) in matrix form \(H^{-1} = E^T G^{-1} E\)<br>
-<br>
-3-metric: \(\gamma_{uv}\) matrix \((^3G)\)<br>
-symmetric: \(\gamma_{uv}=\gamma_{vu}\) matrix \((^3G)=(^3G)^T\)<br>
-inverse: \(\gamma^{uv}\) matrix \((^3G)^{-1}\)<br>
-such that: \(\gamma^{ac} \gamma_{cb} = \delta^a_b\) matrix \((^3G)^{-1} (^3G) = I\)<br>
-<br>
-ADM metric:<br>
-\(||g_{\mu\nu}|| = \overset{\mu(u)\downarrow \nu(v)\rightarrow}{\left[ \matrix{-\alpha^2 + \beta^a \beta_a& \beta_v \\ \beta_u & \gamma_{uv}} \right]}\)<br>
-matrix form: \(\left[\matrix{-\alpha^2 + \beta^T (^3G) \beta & \beta^T (^3G) \\ (^3G) \beta & (^3G)}\right]\)<br>
-\(||g^{\mu\nu}|| = \overset{\mu(u)\downarrow \nu(v)\rightarrow}{\left[ \matrix{-1/\alpha^2 & \beta^v / \alpha^2 \\ \beta^u / \alpha^2 & \gamma^{uv} - \beta^u \beta^v / \alpha^2} \right]}\)<br>
-where \( \beta_v = \gamma_{uv} \beta^v = \gamma_{\mu v} \beta^v = g_{\mu v} \beta^v \) courtesy of the fact that \( g_{uv} = \gamma_{uv} \) and \( \beta^t = 0 \).<br>
-<br>
-Let \(n_\alpha = (-\alpha,0,0,0)\) be the normal.<br>
-<br>
-Let \({(^3e)_a}^i\) be the triad defined as the square-root of the 3-metric: \({(^3e)_a}^i {(^3e)_b}^j \eta_{ij} = \gamma_{ab}\)<br>
-equivalently in matrix form: \((^3E)(^3E)^T=(^3G)\)<br>
-<br>
-Let \(||{e_\mu}^I|| = \overset{\mu(u)\downarrow I(i)\rightarrow}{\left[\matrix{\alpha & \beta^i \\ 0 & {(^3 e)_u}^i}\right]}\) matrix \(E=\left[\matrix{\alpha & \beta^T (^3E) \\ 0 & (^3E) }\right]\)<br>
-<br>
-For \(\beta^i = {(^3e)_a}^i \beta^a \) the shift vector transformed by the triad.<br>
-Then \({e_\alpha}^\hat{t}=-n_\alpha=(\alpha,0,0,0)\) for \(\hat{t}\) the Minkowski time coordinate.<br>
-Then \(g_{\mu\nu} = {e_\mu}^I \eta_{IJ} {e_\nu}^J\) is computed in matrix form like so:<br>
-So \(EHE^T=\left[\matrix{\alpha & \beta^T(^3E) \\ 0 & (^3E)}\right] \left[\matrix{-1 & 0 \\ 0 & I}\right] \left[\matrix{\alpha & 0 \\ (^3E)^T \beta & (^3E)^T}\right]\)<br>
-\(=\left[\matrix{\alpha & \beta^T(^3E) \\ 0 & (^3E)}\right] \left[\matrix{-\alpha & 0 \\ (^3E)^T \beta & (^3E)^T}\right]\)<br>
-\(=\left[\matrix{-\alpha^2 + \beta^T (^3E) (^3E)^T \beta & \beta^T (^3E) (^3E)^T \\ (^3E)(^3E)^T \beta & (^3E)(^3E)^T }\right]\)<br>
-\(=\left[\matrix{-\alpha^2 + \beta^T (^3G) \beta & \beta^T (^3G) \\ (^3G) \beta & (^3G) }\right]\)<br>
-\(=G\)<br>
-<br>
-Let \(||{e^\mu}_I|| = \overset{\mu(u)\downarrow I(i)\rightarrow}{\left[\matrix{1/\alpha & 0 \\ -\beta^u/\alpha & {(^3e)^u}_i}\right]}\) matrix \(E^{-T}=\left[\matrix{1/\alpha & 0 \\ -\beta/\alpha & (^3E)^{-T}}\right]\)<br>
-So \(EE^{-1} = \left[\matrix{\alpha & \beta^T (^3E) \\ 0 & (^3E) }\right] \left[\matrix{1/\alpha & -\beta^T/\alpha \\ 0 & (^3E)^{-1}}\right]\)<br>
-\(= \left[\matrix{1 & -\beta + \beta^T (^3E) (^3E)^{-1} \\ 0 & (^3E) (^3E)^{-1}}\right]\)<br>
-\(= \left[\matrix{1 & 0 \\ 0 & I}\right]\)<br>
-<br>
-Therefore the spatial subset of curved coordinates of the 4D tetrad \({e_\mu}^I\) and \({e^\mu}_I\) are equal to the 3D triad \({e_u}^i\) and \({e^u}_i\).<br>
-Therefore tensors can be raised/lowered by 3D spatial indexes as well as 4D spacetime indexes without distinction... except that the shift cannot be neglected ...<br>
-i.e. representing a 3-space coordinate in terms of a 4-space coordinate:<br>
-For \( v^I \) 4D flat-space<br>
-\( v^\mu = v^I {e^\mu}_I \)<br>
-Calculating the individual \(t\) component in tetrad representation introduces influence from the (Minkowski representation of the) shift vector, as well as the spatial triad:<br>
-\( v^t = v^I {e^t}_I = v^\hat{t} {e^t}_\hat{t} + v^i {e^t}_i = \alpha v^\hat{t} + \beta^i {e^t}_i \)<br>
-Calculating the spatial \(a\) components in tetrad representation only makes use of the spatial triad:<br>
-\( v^a = v^I {e^a}_I = v^\hat{t} {e^a}_\hat{t} + v^i {e^a}_i = 0 \cdot v^\hat{t} + {({^3}e)^a}_i v^i = {({^3}e)^a}_i v^i \)<br>
-<br>
-...so if you have a 4D flat coordinate object and you want to represent the time component terms of 3D curved coordinates, don't forget to add the influence of the (3D flat coordinate representation of the) shift vector!<br>
-...but if you have a 4D flat coordinate object and you want to represent the spatial components in terms of 3D curved coordinates, you can just use the 3D triad transformation.<br>
+
 </div>
 

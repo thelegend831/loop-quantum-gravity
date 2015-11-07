@@ -1,5 +1,6 @@
-<script type="text/javascript" src="/MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\$','\$']]}});</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- script type="text/javascript" src="/MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script -->
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
 <div class='entry'>
 
 Indexes: $ \alpha-\omega $ = curved spacetime<br>
@@ -24,16 +25,16 @@ $4=\delta^\alpha_\alpha={a^\alpha}_\mu{(a^{-1})^\mu}_\alpha=({a^\alpha}_\mu )({1
 Therefore ${(a^{-1})^\mu}_\alpha={1\over{3!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta} {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma / det(a)$<br>
 ${(a^{-1})^\mu}_\alpha det(a)={1\over{3!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta} {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma$<br>
 <br>
-${d\over{d{a^u}_v}}det(a)={1\over{4!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta} {d\over{d{a^u}_v}}({a^\alpha}_\mu {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma)$<br>
-$={1\over{4!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta} {d\over{d{a^u}_v}}({a^\alpha}_\mu {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma)$<br>
-$={1\over{4!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta}({d\over{d{a^u}_v}}{a^\alpha}_\mu {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\alpha}_\mu {d\over{d{a^u}_v}}{a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\alpha}_\mu {a^\beta}_\nu {d\over{d{a^u}_v}}{a^\gamma}_\rho {a^\delta}_\sigma + {a^\alpha}_\mu {a^\beta}_\nu {a^\gamma}_\rho {d\over{d{a^u}_v}}{a^\delta}_\sigma)$<br>
-$={1\over{4!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta}(\delta^\alpha_u \delta^v_\mu {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\alpha}_\mu \delta^\beta_u \delta^v_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\alpha}_\mu {a^\beta}_\nu \delta^\gamma_u \delta^v_\rho {a^\delta}_\sigma + {a^\alpha}_\mu {a^\beta}_\nu {a^\gamma}_\rho \delta^\delta_u \delta^v_\sigma)$<br>
-$={1\over{4!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta}\delta^\alpha_u \delta^v_\mu ({a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma)$<br>
-$={1\over{3!}} \delta^{v\nu\rho\sigma}_{u\beta\gamma\delta} {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma$<br>
-${d\over{d{a^u}_v}}det(a)={(a^{-1})^v}_u det(a)$ ...aka... ${d\over{dA}}det(A)=A^{-T}det(A) =adj(A^T)$<br>
-$({d\over{d{a^u}_v}}det(a))/det(a)={(a^{-1})^v}_u$<br>
-${d\over{d{a^u}_v}}ln|det(a)|={(a^{-1})^v}_u$<br>
-$\boldsymbol{d} ln|det(a)|={(a^{-1})^v}_u d{a^u}_v$ ...aka... $\boldsymbol{d} ln|det(A)| = tr(A^{-1} dA)$<br>
+${d\over{d{a^\zeta}_\xi}}det(a)={1\over{4!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta} {d\over{d{a^\zeta}_\xi}}({a^\alpha}_\mu {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma)$<br>
+$={1\over{4!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta} {d\over{d{a^\zeta}_\xi}}({a^\alpha}_\mu {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma)$<br>
+$={1\over{4!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta}({d\over{d{a^\zeta}_\xi}}{a^\alpha}_\mu {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\alpha}_\mu {d\over{d{a^\zeta}_\xi}}{a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\alpha}_\mu {a^\beta}_\nu {d\over{d{a^\zeta}_\xi}}{a^\gamma}_\rho {a^\delta}_\sigma + {a^\alpha}_\mu {a^\beta}_\nu {a^\gamma}_\rho {d\over{d{a^\zeta}_\xi}}{a^\delta}_\sigma)$<br>
+$={1\over{4!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta}(\delta^\alpha_\zeta \delta^\zeta_\mu {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\alpha}_\mu \delta^\beta_\zeta \delta^\zeta_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\alpha}_\mu {a^\beta}_\nu \delta^\gamma_\zeta \delta^\zeta_\rho {a^\delta}_\sigma + {a^\alpha}_\mu {a^\beta}_\nu {a^\gamma}_\rho \delta^\delta_\zeta \delta^\zeta_\sigma)$<br>
+$={1\over{4!}} \delta^{\mu\nu\rho\sigma}_{\alpha\beta\gamma\delta}\delta^\alpha_\zeta \delta^\zeta_\mu ({a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma + {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma)$<br>
+$={1\over{3!}} \delta^{\xi\nu\rho\sigma}_{\zeta\beta\gamma\delta} {a^\beta}_\nu {a^\gamma}_\rho {a^\delta}_\sigma$<br>
+${d\over{d{a^\zeta}_\xi}}det(a)={(a^{-1})^\xi}_\zeta det(a)$ ...aka... ${d\over{dA}}det(A)=A^{-T}det(A) =adj(A^T)$<br>
+$({d\over{d{a^\zeta}_\xi}}det(a))/det(a)={(a^{-1})^\xi}_\zeta$<br>
+${d\over{d{a^\zeta}_\xi}}ln|det(a)|={(a^{-1})^\xi}_\zeta$<br>
+$\boldsymbol{d} ln|det(a)|={(a^{-1})^\xi}_\zeta d{a^\zeta}_\xi$ ...aka... $\boldsymbol{d} ln|det(A)| = tr(A^{-1} dA)$<br>
 <br>
 Using Jacobi's formula: $ \delta det(A) = tr(adj(A) \delta A) $<br>
 $ \delta g = \delta det(g_{\alpha\beta}) = g g^{\alpha\beta} \delta g_{\alpha\beta} $<br>
