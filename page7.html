@@ -91,6 +91,7 @@ Let \( {A_a}^{\hat a\hat b} = {1\over 2} ({\hat\omega_a}^{\hat a\hat b} - {i\ove
 
 self-dual Lorentz covariant derivative:<br>
 \( D_a {T_b}^I = \partial_a {T_b}^I + {{A_a}^I}_J {T_b}^J \)<br>
+<b>TODO</b> the non-self-dual Palatini action already defines $D_\alpha$ as the non-self-dual covariant derivative on Lorentz indexes.  Think up a new symbol?  How about ${^+D}$?<br>
 <br>
 self-dual Lorentz covariant derivative Lorentz connection compatible with Lorentz metric:<br>
 follows the same process as the similar proof for \( D_a \)<br>
@@ -107,45 +108,10 @@ TODO show work<br>
 TODO show \( {F_{ab}}^{IJ} \) is self-dual?  or is it the self-dual of \( {R_{ab}}^{IJ} \)? (the curvature of the self-dual of the spin connection is the self-dual of the curvature of the spin-connection ... which is the curvature of the affine connetion, transformed)<br>
 (Use that Lie bracket identity of the projection operator.)<br>
 <br>
-show \( {A_a}^{I0} \) in terms of \( {\omega_a}^{I0} \) and \( {K_a}^I \):<br>
-\( {A_a}^{IJ} = {1\over 2} ({\omega_a}^{IJ} - {i\over 2} {\epsilon^{IJ}}_{KL} {\omega_a}^{KL} ) \)<br>
+
+Timelike component at the bottom of the page.  The rest of this page should probably be redone.<br>
 <br>
 
-timelike component (in the works):<br>
-TODO show that, in the case that Minkowski timelike equals curved timelike, excluding a scalar factor of \(-2i\) and an added partial derivative of the tetrad, we reconstruct the self-dual of Ashtekar variables.<br>
-TODO also note that in Kiefer, "Quantum Gravity," p.128, eqn 4.128, he omits a \(1\over2\) scale term from the definition of self-dual (so this self-dual will double every time it's dual'd).<br>
-(let \(0\) representing the curved coordinate timelike component)<br>
-(let \(\hat 0\) represent the flat coordinate timelike component)<br>
-(let \(\alpha-\omega\) represent spacetime curved coordinate indexes)<br>
-(let \(a-h,o-w\) represent spatial curved coordinate indexes)<br>
-(let \(i-n\) represent spatial Lorentz coordinate indexes)<br>
-\( {A_a}^i = {A_a}^{i0} \)<br>
-\( = {1\over 2} ({\omega_a}^{i0} - {i\over 4} {\epsilon^{i0}}_{KL} {\omega_a}^{KL} ) \)<br>
-\( = {1\over 2} (-{\omega_a}^{0i} - {i\over 4} {e^0}_J {\epsilon^{iJ}}_{KL} {\omega_a}^{KL} ) \)<br>
-using \( {{\omega_a}^I}_b = {\Gamma^I}_{ba} - \partial_a {e_b}^I \)<br>
-\( = {1\over 2} (-{\Gamma^{0i}}_a + \partial_a {e_\mu}^0 e^{\mu i} - {i\over 4} ({e^0}_\hat 0 {\epsilon^{i\hat 0}}_{KL} + {e^0}_j {\epsilon^{ij}}_{KL}) {\omega_a}^{KL} ) \)<br>
-\( = {1\over 2} (-{\Gamma^0}_{\mu a} e^{\mu i} + \partial_a {e_\mu}^0 e^{\mu i} - {i\over 4} ({e^0}_\hat 0 {\epsilon^{i\hat 0}}_{KL} + {e^0}_j {\epsilon^{ij}}_{KL}) {\omega_a}^{KL} ) \)<br>
-\( = {1\over 2} (-{\Gamma^0}_{0a} e^{0i} - {\Gamma^0}_{ba} e^{bi} + \partial_a {e_\mu}^0 e^{\mu i} - {i\over 4} ({e^0}_\hat 0 {\epsilon^{i\hat 0}}_{KL} + {e^0}_j {\epsilon^{ij}}_{KL}) {\omega_a}^{KL} ) \)<br>
-using \( K_{ab} = -\alpha {\Gamma^t}_{ab} \) (for \(a,b\) curved spatial coordinates)<br>
-\( = {1\over 2} (-{\Gamma^0}_{0a} e^{0i} + {1\over\alpha} K_{ba} e^{bi} + \partial_a {e_\mu}^0 e^{\mu i} - {i\over 4} (\eta^{iI} e^{0\hat 0} \epsilon_{I \hat 0 KL} + \eta^{iI} e^{0j} \epsilon_{IjKL}) {\omega_a}^{KL} ) \)<br>
-\( = {1\over 2} (-{\Gamma^0}_{0a} e^{0i} + {1\over\alpha} K_{ba} e^{bi} + \partial_a {e_\mu}^0 e^{\mu i} - {i\over 4} (-\eta^{ij} e^{0\hat 0} \epsilon_{jkl} {\omega_a}^{kl} + \eta^{iI} e^{0j} \epsilon_{IjKL} {\omega_a}^{KL} )) \)<br>
-\( = {1\over 2} (-{\Gamma^0}_{0a} e^{0i} + {1\over\alpha} K_{ba} e^{bi} + \partial_a {e_\mu}^0 e^{\mu i} - {i\over 4} (-e^{0\hat 0} \epsilon^{ijk} \omega_{ajk} + \eta^{iI} e^{0j} \epsilon_{IjKL} {\omega_a}^{KL} )) \)<br>
-<br>
-\( = {1\over 2} ({\omega_a}^{i0} - {i\over 4} ({\epsilon^{iJ}}_{KL}) {\omega_a}^{KL} ) \)<br>
-\( = {1\over 2} (-{\omega_a}^{0i} - {i\over 4} \)<br>
-\( = {1\over 2} (e^{bi} (-{\Gamma^0}_{ba} + \partial_a {e_b}^0) - {i\over 4} {e_d}^i {\epsilon^{d0}}_{bc} {\omega_a}^{bc} ) \)<br>
-<br>
-\( {A_a}^i = {A_a}^{i0} \)<br>
-\( {A_a}^{i0} = {1\over 2} ( {{\omega_a}^i}_b e^{b0} - {i\over 4} \eta^{0M} \eta^{iJ} \epsilon_{JMKL} {\omega_a}^{KL} ) \)<br>
-\( {A_a}^{i0} = {1\over 2} ( {{\omega_a}^i}_b e^{b0} + {i\over 4} \eta^{0M} \eta^{iJ} \epsilon_{MJKL} {\omega_a}^{KL} ) \)<br>
-\( {A_a}^{i0} = {1\over 2} ( {{\omega_a}^i}_b e^{b0} + {i\over 4} \eta^{00} \eta^{iJ} \epsilon_{0JKL} {\omega_a}^{KL} ) \)<br>
-\( {A_a}^{i0} = {1\over 2} ( {{\omega_a}^i}_b e^{b0} - {i\over 4} \eta^{iJ} \epsilon_{JKL} {\omega_a}^{KL} ) \)<br>
-\( {A_a}^{i0} = {1\over 2} ( {{\omega_a}^i}_b e^{b0} - {i\over 4} \epsilon^{iKL} \omega_{aKL} ) \)<br>
-using \( {{\omega_a}^i}_b = {\Gamma^i}_{ba} - \partial_a {e_b}^i \)<br>
-\( {A_a}^{i0} = {1\over 2} ( ( {e_c}^i {\Gamma^c}_{ba} - \partial_a {e_b}^i) e^{b0} - {i\over 4} \epsilon^{iKL} \omega_{aKL} ) \)<br>
-
-<br>
-<br>
 (TODO from here on down I need to replace hats with capitol letters)<br>
 <br>
 
@@ -203,15 +169,27 @@ Let \( {A_a}^{I} = {A_a}^{I\hat 0} \)<br>
 Let \( {F_{ab}}^I = {F_{ab}}^{I\hat 0} \)<br>
 \( S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{M} {F_{ab}}^M - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^I dx^4 \)<br>
 <br>
-TODO "Ashtekar Variables" wiki entry says: \( {A_a}^I = {\Gamma_a}^I + \beta {K_a}^I \), for \( {\Gamma_a}^I = \Gamma_{aJK} \epsilon^{JKI} \) <br>
-\( {K_a}^I = {K_a}^b {e_b}^{I} = {K_a}^b {E_b}^I \)<br>
-\( {K_a}^I \) can have its coordinate changed by either \( {e_a}^I \) or its associated projection \( {E_a}^I \) because \( K_{ab} \) itself is already projected on both coordinates.<br> 
-\( K_{ab} g^{bc} {e_c}^I = -{\gamma_a}^e {\gamma_b}^f \nabla_e n_f g^{bc} {e_c}^I \)<br>
-\( = -{\gamma_a}^e \gamma^{cf} \nabla_e n_f {e_c}^I \)<br>
-\( = -{\gamma_a}^e \gamma^{cf} \nabla_e ({e_f}^J n_J) {e_c}^I \)<br>
-\( = -{\gamma_a}^e \gamma^{cf} (n_J \nabla_e {e_f}^J + {e_f}^J \nabla_e n_J) {e_c}^I \)<br>
-using \( \nabla_a {e_b}^I = 0 \)<br>
-\( = -{\gamma_a}^e \gamma^{IJ} \nabla_e n_J \)<br>
 
+<hr>
+<br>
+
+${K_a}^i = K_{a\mu} e^{\mu i}$<br>
+$= K_{at} e^{ti} + K_{ab} e^{bi}$<br>
+$= K_{at} \cdot 0 + K_{ab} e^{bi}$<br>
+$= K_{ab} e^{bi}$<br>
+$= K_{ab} \cdot (^3e)^{bi}$<br>
+<br>
+let ${\Gamma^i}_a = -{1\over2} {\epsilon^i}_{jk} {\omega_a}^{jk}$<br>
+<br>
+${A_\alpha}^{IJ} = {^+\omega_\alpha}^{IJ}$<br>
+${A_\alpha}^{IJ} = {1\over2} {\omega_\alpha}^{IJ} - {i\over4} {\epsilon^{IJ}}_{KL} {\omega_\alpha}^{KL}$<br>
+<br>
+${A_a}^i = {A_a}^{i\hat{t}}$<br>
+$= {1\over2} {\omega_a}^{i\hat{t}} - {i\over4} {\epsilon^{i\hat{t}}}_{KL} {\omega_a}^{KL}$<br>
+$= {1\over2} {\omega_a}^{i\hat{t}} + {i\over4} {\epsilon^{\hat{t}i}}_{jk} {\omega_a}^{jk}$<br>
+$= {1\over2} {K_a}^i + {i\over4} {\epsilon^i}_{jk} {\omega_a}^{jk}$<br>
+$= {1\over2} ({K_a}^i + i {1\over2} {\Gamma^i}_a)$<br>
+$= {1\over2} ({K_a}^i + {1\over2} \beta {\Gamma^i}_a)$<br>
+...for Barbero-Immirzi parameter $\beta=i$<br>
 </div>
 
