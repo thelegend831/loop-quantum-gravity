@@ -39,17 +39,13 @@ $ 0 = \partial_a {e_b}^I - {\Gamma^I}_{ba} + {{\omega_a}^I}_b $<br>
 $ {{\omega_a}^I}_b = {\Gamma^I}_{ba} - \partial_a {e_b}^I $<br>
 <br>
 
-Define ${{\omega_a}^I}_J$ such that it annhilates the Minkowski metric:<br>
+Require that ${{\omega_a}^I}_J$ annihilates the Minkowski metric:<br>
 $ 0 = \nabla_a \eta_{I J} = \partial_a \eta_{I J} - {{\omega_a}^K}_I \eta_{KJ} - {{\omega_a}^K}_J \eta_{IK} $<br>
 $ 0 = 0 - \omega_{aJI} - \omega_{aIJ} $<br>
 $ \omega_{aIJ} = -\omega_{aJI} $<br>
 <br>
 
-Introduce a new covariant derivative that acts on Lorentz indexes alone (where is this used?):<br>
-$D_a {T^I}_J = \partial_a {T^I}_J + {{\omega_a}^I}_K {T^K}_J - {{\omega_a}^K}_J {T^I}_K $ <br>
-<br>
-
-curvature of Lorentz connection:<br>
+curvature with spin connection on Lorentz indexes:<br>
 $ {{\hat R_{ab}}^I}_J V^J = \nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I $<br>
 $ = \nabla_a (\partial_b V^I + {{\omega_b}^I}_J V^J) - \nabla_b (\partial_a V^I + {{\omega_a}^I}_J V^J) $<br>
 $ = \partial_a (\partial_b V^I + {{\omega_b}^I}_J V^J)
@@ -80,23 +76,45 @@ $ {{R_{ab}}^c}_d V^d = {e^c}_I {{\hat R_{ab}}^I}_J V^J $<br>
 $ {{R_{ab}}^c}_d V^d = {{\hat R_{ab}}^c}_d V^d $<br>
 $ {R_{ab}}^{cd} = {\hat R_{ab}}^{cd} $<br>
 <br>
+
+Introduce a new covariant derivative that acts on Lorentz indexes alone:<br>
+$D_a {T^I}_J = \partial_a {T^I}_J + {{\omega_a}^I}_K {T^K}_J - {{\omega_a}^K}_J {T^I}_K $ <br>
+<br>
+
+curvature of spin covariant derivative on Lorentz indexes:<br>
+$ {{\Omega_{ab}}^I}_J V^J = D_a D_b V^I - D_b D_a V^I $<br>
+$ = D_a (\partial_b V^I + {{\omega_b}^I}_J V^J) - D_b (\partial_a V^I + {{\omega_a}^I}_J V^J) $<br>
+$ = \partial_a (\partial_b V^I + {{\omega_b}^I}_J V^J) + {{\omega_a}^I}_K (\partial_b V^K + {{\omega_b}^K}_J V^J) 
+	- \partial_b (\partial_a V^I + {{\omega_a}^I}_J V^J) - {{\omega_b}^I}_K (\partial_a V^K + {{\omega_a}^K}_J V^J) $<br>
+$ = \partial_a \partial_b V^I + \partial_a ({{\omega_b}^I}_J V^J) + {{\omega_a}^I}_K \partial_b V^K + {{\omega_a}^I}_K {{\omega_b}^K}_J V^J
+	- \partial_b \partial_a V^I - \partial_b ({{\omega_a}^I}_J V^J) - {{\omega_b}^I}_K \partial_a V^K - {{\omega_b}^I}_K {{\omega_a}^K}_J V^J $<br>
+$ = 
+	V^J \partial_a {{\omega_b}^I}_J + {{\omega_b}^I}_J \partial_a V^J
+	- V^J \partial_b {{\omega_a}^I}_J - {{\omega_a}^I}_J \partial_b V^J
+	+ {{\omega_a}^I}_K \partial_b V^K - {{\omega_b}^I}_K \partial_a V^K 
+	+ {{\omega_a}^I}_K {{\omega_b}^K}_J V^J - {{\omega_a}^K}_J {{\omega_b}^I}_K V^J $<br>
+$ {{\Omega_{ab}}^I}_J = 2 \partial_{[a} {{\omega_{b]}}^I}_J + 2 {{\omega_{[a}}^I}_{|K|} {{\omega_{b]}}^K}_J $<br>
+$ {\Omega_{ab}}^{IJ} = 2 (\partial_{[a} {\omega_{b]}}^{IJ} + {\omega_{[a}}^{IK} {\omega_{b]K}}^J) $<br>
+<br>
+Therefore<br>
+${\Omega_{ab}}^{IJ} = {\hat{R}_{ab}}^{IJ} = {R_{ab}}^{IJ}$<br>
+<br>
 <hr>
 <br>
 Do we really need another connection on Lorentz coordinates?<br>
 Does Palatini action use an arbitrary connection, or does it use the affine connection extended to be compatible with the tetrad?<br>
 This is from Pullins' work, but why is it even here, especially if ${C_a}^{IJ} = 0$ in the end?<br>
+Is this to prove that any covariant Lorentz connection chosen that annihilates the Minkowski metric must be the corvariant Lorentz connection that annihilates the tetrad as well?<br>
 <br>
-Introduce a new Lorentz-only covariant derivative of Lorentz connection:<br>
-$ D_a K_I = \partial_a K_I - {{\hat\omega_a}^J}_I K_J $<br>
+Introduce a new Lorentz-only covariant derivative and a new arbitrary connection:<br>
+$ \mathcal{D}_a K^I = \partial_a K^I + {{\hat\omega_a}^I}_J K^J $<br>
 <br>
-...that annhilates the Minkowski metric:<br>
-$ 0 = D_a \eta_{I J} = \partial_a \eta_{I J} - {{\hat\omega_a}^K}_I \eta_{KJ} - {{\hat\omega_a}^K}_J \eta_{IK} $<br>
-$ 0 = 0 - \hat\omega_{aJI} - \hat\omega_{aIJ} $<br>
+Require that it annihilates the Minkowski metric:<br>
 $ \hat\omega_{aIJ} = -\hat\omega_{aJI} $<br>
 <br>
-Lorentz connection curvature:<br>
-$ {{\Omega_{ab}}^I}_J V^J = D_a D_b V^I - D_b D_a V^I $<br>
-$ = D_a (\partial_b V^I + {{\hat\omega_b}^I}_J V^J) - D_b (\partial_a V^I + {{\hat\omega_a}^I}_J V^J) $<br>
+Curvature of the new Lorentz-only connection:<br>
+$ {{\Omega_{ab}}^I}_J V^J = \mathcal{D}_a \mathcal{D}_b V^I - \mathcal{D}_b \mathcal{D}_a V^I $<br>
+$ = \mathcal{D}_a (\partial_b V^I + {{\hat\omega_b}^I}_J V^J) - \mathcal{D}_b (\partial_a V^I + {{\hat\omega_a}^I}_J V^J) $<br>
 $ = \partial_a (\partial_b V^I + {{\hat\omega_b}^I}_J V^J) + {{\hat\omega_a}^I}_K (\partial_b V^K + {{\hat\omega_b}^K}_J V^J) 
 	- \partial_b (\partial_a V^I + {{\hat\omega_a}^I}_J V^J) - {{\hat\omega_b}^I}_K (\partial_a V^K + {{\hat\omega_a}^K}_J V^J) $<br>
 $ = \partial_a \partial_b V^I + \partial_a ({{\hat\omega_b}^I}_J V^J) + {{\hat\omega_a}^I}_K \partial_b V^K + {{\hat\omega_a}^I}_K {{\hat\omega_b}^K}_J V^J
@@ -110,7 +128,7 @@ $ {{\Omega_{ab}}^I}_J = 2 \partial_{[a} {{\hat\omega_{b]}}^I}_J + 2 {{\hat\omega
 $ {\Omega_{ab}}^{IJ} = 2 (\partial_{[a} {\hat\omega_{b]}}^{IJ} + {\hat\omega_{[a}}^{IK} {\hat\omega_{b]K}}^J) $<br>
 <br>
 covariant derivatives difference:<br>
-$ {{C_a}^I}_J V^J = (D_a - \nabla_a) V^I $<br>
+$ {{C_a}^I}_J V^J = (\mathcal{D}_a - \nabla_a) V^I $<br>
 $ = \partial_a V^I + {{\hat\omega_a}^I}_J V^J - \partial_a V^I - {{\omega_a}^I}_J V^J $<br>
 $ = ({{\hat\omega_a}^I}_J - {{\omega_a}^I}_J) V^J $<br>
 $ {{C_a}^I}_J = {{\hat\omega_a}^I}_J - {{\omega_a}^I}_J $<br>
@@ -118,17 +136,17 @@ $ {{C_a}^I}_J = {{\hat\omega_a}^I}_J - {{\omega_a}^I}_J $<br>
 difference of affine covariant and Lorentz covariant derivative of mixed index tensor:<br>
 $ \nabla_a {T_b}^I = \partial_a {T_b}^I - {\Gamma^c}_{ba} {T_c}^I + {{\omega_a}^I}_J {T_b}^J $<br>
 $ \partial_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\omega_a}^I}_J {T_b}^J $<br>
-$ D_a {T_b}^I = \partial_a {T_b}^I + {{\hat\omega_a}^I}_J V^J $<br>
-$ D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\omega_a}^I}_J {T_b}^J + {{\hat\omega_a}^I}_J V^J $<br>
-$ D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{\hat\omega_a}^I}_J V^J - {{\omega_a}^I}_J {T_b}^J $<br>
-$ D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + ({{\hat\omega_a}^I}_J - {{\omega_a}^I}_J) {T_b}^J $<br>
-$ D_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{C_a}^I}_J {T_b}^J $<br>
+$ \mathcal{D}_a {T_b}^I = \partial_a {T_b}^I + {{\hat\omega_a}^I}_J V^J $<br>
+$ \mathcal{D}_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I - {{\omega_a}^I}_J {T_b}^J + {{\hat\omega_a}^I}_J V^J $<br>
+$ \mathcal{D}_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{\hat\omega_a}^I}_J V^J - {{\omega_a}^I}_J {T_b}^J $<br>
+$ \mathcal{D}_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + ({{\hat\omega_a}^I}_J - {{\omega_a}^I}_J) {T_b}^J $<br>
+$ \mathcal{D}_a {T_b}^I = \nabla_a {T_b}^I + {\Gamma^c}_{ba} {T_c}^I + {{C_a}^I}_J {T_b}^J $<br>
 <br>
 difference of Lorentz and Riemann curvature tensors:<br>
-$ ({\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ}) V_J = (D_a D_b - D_b D_a) V^I - (\nabla_a \nabla_b - \nabla_b \nabla_a) V^I $<br>
-$ = D_a (D_b V^I) - D_b (D_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) $<br>
-using $ D_a V^I = {{C_a}^I}_J V^J + \nabla_a V^I $<br>
-$ = D_a ({{C_b}^I}_J V^J + \nabla_b V^I) - D_b ({{C_a}^I}_J V^J + \nabla_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) $<br>
+$ ({\Omega_{ab}}^{IJ} - {R_{ab}}^{IJ}) V_J = (\mathcal{D}_a \mathcal{D}_b - \mathcal{D}_b \mathcal{D}_a) V^I - (\nabla_a \nabla_b - \nabla_b \nabla_a) V^I $<br>
+$ = \mathcal{D}_a (\mathcal{D}_b V^I) - \mathcal{D}_b (\mathcal{D}_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) $<br>
+using $ \mathcal{D}_a V^I = {{C_a}^I}_J V^J + \nabla_a V^I $<br>
+$ = \mathcal{D}_a ({{C_b}^I}_J V^J + \nabla_b V^I) - D_b ({{C_a}^I}_J V^J + \nabla_a V^I) - (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) $<br>
 $ = \nabla_a ({{C_b}^I}_J V^J + \nabla_b V^I) + {\Gamma^c}_{ba} ({{C_c}^I}_J V^J + \nabla_c V^I) + {{C_a}^I}_K ({{C_b}^K}_J V^J + \nabla_b V^K) 
 	- \nabla_b ({{C_a}^I}_J V^J + \nabla_a V^I) - {\Gamma^c}_{ab} ({{C_c}^I}_J V^J + \nabla_c V^I) - {{C_b}^I}_K ({{C_a}^K}_J V^J + \nabla_a V^K)
 	- (\nabla_a \nabla_b V^I - \nabla_b \nabla_a V^I) $<br>
