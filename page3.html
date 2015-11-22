@@ -28,24 +28,29 @@ ADM spatial metric determinant: $ \gamma = det||\gamma_{ab}|| $<br>
 <br>
 
 normal in the ADM metric:<br>
-$n_\mu = \left[ \matrix{ -\alpha & 0 } \right] $<br>
+$n_\mu = \overset{\mu(a)\rightarrow}{\left[ \matrix{ -\alpha & 0 } \right]} $<br>
 <br>
-$n^\mu = \left[ \matrix{ 1/\alpha \\ -\beta^a/\alpha } \right] $<br>
+$n^\mu = \overset{\mu(a)\downarrow}{\left[ \matrix{ 1/\alpha \\ -\beta^a/\alpha } \right]} $<br>
 <br>
 normal is unit:<br>
-$n_\mu n^\mu  = \left[ \matrix{-\alpha & 0} \right] \left[ \matrix{1/\alpha \\ -\beta^a/\alpha} \right] = -1$<br>
+$n_\mu n^\mu 
+=	\overset{\mu(a)\rightarrow}{\left[ \matrix{-\alpha & 0} \right]}
+	\overset{\mu(a)\downarrow}{\left[ \matrix{1/\alpha \\ -\beta^a/\alpha} \right]}
+= -1$<br>
 <br>
 
 4D shift vector:<br>
-$ \beta^\mu = \left[ \matrix{0 \\ \beta^a} \right] $<br>
+$ \beta^\mu = \overset{\mu(a)\downarrow}{\left[ \matrix{0 \\ \beta^a} \right]} $<br>
 <br>
-$ \beta_\mu = g_{\mu\nu} \beta^\nu = \left[ \matrix{\beta^c\beta_c & \beta_b} \right] $<br>
+$ \beta_\mu = g_{\mu\nu} \beta^\nu = \overset{\mu(b)\rightarrow}{\left[ \matrix{\beta^c\beta_c & \beta_b} \right]} $<br>
 <br>
 
 timelike vector:<br>
-$ t^\mu = \alpha n^\mu + \beta^\mu = \alpha \left[ \matrix{ 1/\alpha \\ -\beta^a/\alpha  } \right] + \left[ \matrix{ 0 \\ \beta^a } \right] = \left[ \matrix{1 \\ 0} \right] $<br>
+$ t^\mu = \alpha n^\mu + \beta^\mu
+	= \alpha \overset{\mu(a)\downarrow}{\left[ \matrix{ 1/\alpha \\ -\beta^a/\alpha  } \right]} + \overset{\mu(a)\downarrow}{\left[ \matrix{ 0 \\ \beta^a } \right]}
+	= \overset{\mu(a)\downarrow}{\left[ \matrix{1 \\ 0} \right]} $<br>
 <br>
-$ t_\mu = g_{\mu\nu} t^\nu = \left[ \matrix{-\alpha^2 + \beta_c \beta^c & \beta_b} \right] $<br>
+$ t_\mu = g_{\mu\nu} t^\nu = \overset{\mu(b)\rightarrow}{\left[ \matrix{-\alpha^2 + \beta_c \beta^c & \beta_b} \right]} $<br>
 <br>
 
 spatial metric / projection tensor:<br>
@@ -53,19 +58,28 @@ $ \gamma_{\mu\nu} = g_{\mu\nu} + n_\mu n_\nu $<br>
 <br>
 spatial metric components using in ADM metric:<br>
 $||{\gamma_\mu}^\nu|| = ||\delta^\nu_\mu + n_\mu n^\nu||$<br>
-$ = \left[ \matrix{ 1 & 0 \\ 0 & \delta_a^b } \right] + \left[ \matrix{ -\alpha \\ 0 } \right] \left[ \matrix{ 1/\alpha & -\beta^b/\alpha  } \right]  $<br>
-$ = \left[ \matrix{ 1 & 0 \\ 0 & \delta_a^b } \right] + \left[ \matrix{ -1 & \beta^b \\ 0 & 0 } \right] $<br>
-$ = \left[ \matrix{ 0 & \beta^b \\ 0 & \delta_a^b } \right] $<br>
+$ = \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[ \matrix{ 1 & 0 \\ 0 & \delta_a^b } \right]}
+	+ \overset{\mu(a)\downarrow}{\left[ \matrix{ -\alpha \\ 0 } \right]}
+		\overset{\nu(b)\rightarrow}{\left[ \matrix{ 1/\alpha & -\beta^b/\alpha  } \right]} $<br>
+$ = \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[ \matrix{ 1 & 0 \\ 0 & \delta_a^b } \right]}
+	+ \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[ \matrix{ -1 & \beta^b \\ 0 & 0 } \right]} $<br>
+$ = \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[ \matrix{ 0 & \beta^b \\ 0 & \delta_a^b } \right]} $<br>
 <br>
 $ ||\gamma_{\mu\nu}|| = ||g_{\mu\nu} + n_\mu n_\nu||$<br>
-$ = \left[ \matrix{-\alpha^2 + \beta_c \beta^c & \beta_b \\ \beta_a & \gamma_{ab}} \right] + \left[ \matrix{ -\alpha \\ 0 } \right] \left[ \matrix{ -\alpha & 0 } \right] $<br>
-$ = \left[ \matrix{-\alpha^2 + \beta_c \beta^c & \beta_b \\ \beta_a & \gamma_{ab}} \right] + \left[ \matrix{ \alpha^2 & 0 \\ 0 & 0 } \right] $<br>
-$ =\left[ \matrix{\beta_c \beta^c & \beta_b \\ \beta_a & \gamma_{ab}} \right] $<br>
+$ = \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[ \matrix{-\alpha^2 + \beta_c \beta^c & \beta_b \\ \beta_a & \gamma_{ab}} \right]}
+	+ \overset{\mu(a)\downarrow}{\left[ \matrix{ -\alpha \\ 0 } \right]}
+	\overset{\nu(b)\rightarrow}{\left[ \matrix{ -\alpha & 0 } \right]} $<br>
+$ = \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[ \matrix{-\alpha^2 + \beta_c \beta^c & \beta_b \\ \beta_a & \gamma_{ab}} \right]}
+	+ \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[ \matrix{ \alpha^2 & 0 \\ 0 & 0 } \right]} $<br>
+$ = \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[ \matrix{\beta_c \beta^c & \beta_b \\ \beta_a & \gamma_{ab}} \right]} $<br>
 <br>
 $ ||\gamma^{\mu\nu}|| = ||g^{\mu\nu}+n^\mu n^\nu|| $<br>
-$ = \left[ \matrix{-1/\alpha^2 & \beta^b / \alpha^2 \\ \beta^a / \alpha^2 & \gamma^{ab} - \beta^a \beta^b / \alpha^2} \right] + \left[ \matrix{ 1/\alpha \\ -\beta^a/\alpha } \right] \left[ \matrix{ 1 / \alpha & -\beta^b / \alpha } \right] $<br>
-$ = \left[ \matrix{-1/\alpha^2 & \beta^b / \alpha^2 \\ \beta^a / \alpha^2 & \gamma^{ab} - \beta^a \beta^b / \alpha^2} \right] + \left[ \matrix{ 1/\alpha^2 & -\beta^b/\alpha^2 \\ -\beta^a / \alpha^2 & \beta^a \beta^b / \alpha^2 } \right] $<br>
-$ = \left[\matrix{0&0\\0&\gamma^{ab}}\right] $<br>
+$ = \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[ \matrix{-1/\alpha^2 & \beta^b / \alpha^2 \\ \beta^a / \alpha^2 & \gamma^{ab} - \beta^a \beta^b / \alpha^2} \right]}
+	+ \overset{\mu(a)\downarrow}{\left[ \matrix{ 1/\alpha \\ -\beta^a/\alpha } \right]}
+	\overset{\nu(b)\rightarrow}{\left[ \matrix{ 1 / \alpha & -\beta^b / \alpha } \right]} $<br>
+$ = \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[ \matrix{-1/\alpha^2 & \beta^b / \alpha^2 \\ \beta^a / \alpha^2 & \gamma^{ab} - \beta^a \beta^b / \alpha^2} \right]}
+	+ \overset{\mu(a)\downarrow\nu(b)\rightarrow}{ \left[ \matrix{ 1/\alpha^2 & -\beta^b/\alpha^2 \\ -\beta^a / \alpha^2 & \beta^a \beta^b / \alpha^2 } \right]} $<br>
+$ = \overset{\mu(a)\downarrow\nu(b)\rightarrow}{\left[\matrix{0&0\\0&\gamma^{ab}}\right]} $<br>
 <br>
 
 <hr>
@@ -110,47 +124,55 @@ $\gamma_{\mu\nu} n^\nu=0$<br>
 spatial covariant derivative:<br>
 scalar: $\nabla^\perp_\mu f = {\gamma_\mu}^\nu \nabla_\nu f$<br>
 tensor: $\nabla^\perp_\mu {T^\nu}_\alpha = {\gamma_\mu}^\beta {\gamma_\gamma}^\nu {\gamma_\alpha}^\delta \nabla_\beta {T^\gamma}_\delta$<br>
-<b>YOU ARE HERE in convering indexes</b><br>
 <br>
-proof $\nabla^\perp_a$ is the covariant derivative of $\gamma_{ab}$:<br>
-$\nabla^\perp_a \gamma_{bc}$<br>
-$={\gamma_a}^e {\gamma_b}^f {\gamma_c}^g \nabla_e \gamma_{fg}$<br>
-$={\gamma_a}^e {\gamma_b}^f {\gamma_c}^g \nabla_e (n_f n_g)$<br>
-$={\gamma_a}^e {\gamma_b}^f {\gamma_c}^g (n_g \nabla_e n_f + n_f \nabla_e n_g)$<br>
-$={\gamma_a}^e {\gamma_b}^f ({\gamma_c}^g n_g) \nabla_e n_f + {\gamma_a}^e {\gamma_c}^g ({\gamma_b}^f n_f) \nabla_e n_g$<br>
-$={\gamma_a}^e {\gamma_b}^f \cdot 0 \cdot \nabla_e n_f + {\gamma_a}^e {\gamma_c}^g \cdot 0 \cdot \nabla_e n_g$<br>
-$\nabla^\perp_a \gamma_{bc}=0$<br>
+proof $\nabla^\perp_\alpha$ is the covariant derivative of $\gamma_{\alpha\beta}$:<br>
+$\nabla^\perp_\alpha \gamma_{\beta\gamma}$<br>
+$={\gamma_\alpha}^\epsilon {\gamma_\beta}^\zeta {\gamma_\gamma}^\eta \nabla_\epsilon \gamma_{\zeta\eta}$<br>
+$={\gamma_\alpha}^\epsilon {\gamma_\beta}^\zeta {\gamma_\gamma}^\eta \nabla_\epsilon (n_\zeta n_\eta)$<br>
+$={\gamma_\alpha}^\epsilon {\gamma_\beta}^\zeta {\gamma_\gamma}^\eta (n_\eta \nabla_\epsilon n_\zeta + n_\zeta \nabla_\epsilon n_\eta)$<br>
+$={\gamma_\alpha}^\epsilon {\gamma_\beta}^\zeta ({\gamma_\gamma}^\eta n_\eta) \nabla_\epsilon n_\zeta + {\gamma_\alpha}^\epsilon {\gamma_\gamma}^\eta ({\gamma_\beta}^\zeta n_\zeta) \nabla_\epsilon n_\eta$<br>
+$={\gamma_\alpha}^\epsilon {\gamma_\beta}^\zeta \cdot 0 \cdot \nabla_\epsilon n_\zeta + {\gamma_\alpha}^\epsilon {\gamma_\gamma}^\eta \cdot 0 \cdot \nabla_\epsilon n_\eta$<br>
+$\nabla^\perp_\alpha \gamma_{\beta\gamma}=0$<br>
 <br>
 
 spatial connection coefficients:<br>
-${{\Gamma^\perp}^a}_{bc} = {1\over 2}\gamma^{ad}(\partial_c \gamma_{db} + \partial_b \gamma_{dc} - \partial_d \gamma_{bc})$<br>
+${{\Gamma^\perp}^\alpha}_{\beta\gamma} = {1\over 2}\gamma^{\alpha\delta}(\partial_\gamma \gamma_{\delta\beta} + \partial_\beta \gamma_{\delta\gamma} - \partial_\delta \gamma_{\beta\gamma})$<br>
 spatial riemann tensor:<br>
-Let ${{R^\perp}^d}_{cba} w_d = 2 \nabla^\perp_{[a} \nabla^\perp_{b]} w_c$<br>
+Let ${{R^\perp}^\delta}_{\gamma\beta\alpha} w_\delta = 2 \nabla^\perp_{[\alpha} \nabla^\perp_{\beta]} w_\gamma$<br>
 TODO is this next line true?  Does the using the projection definition of $\nabla^\perp$ to compute the curvature tensor resolve to the definition based on the connections of the spatial metric?<br>
-therefore ${{R^\perp}_{abc}}^d = \partial_b {{\Gamma^\perp}^d}_{ac} - \partial_a {{\Gamma^\perp}^d}_{bc} + {{\Gamma^\perp}^e}_{ac} {{\Gamma^\perp}^d}_{eb} - {{\Gamma^\perp}^e}_{bc} {{\Gamma^\perp}^d}_{ea}$<br>
+therefore ${{R^\perp}_{\alpha\beta\gamma}}^\delta = \partial_\beta {{\Gamma^\perp}^\delta}_{\alpha\gamma} - \partial_\alpha {{\Gamma^\perp}^\delta}_{\beta\gamma} + {{\Gamma^\perp}^\epsilon}_{\alpha\gamma} {{\Gamma^\perp}^\delta}_{\epsilon\beta} - {{\Gamma^\perp}^\epsilon}_{\beta\gamma} {{\Gamma^\perp}^\delta}_{\epsilon\alpha}$<br>
 <br>
 
 extrinsic curvature:<br>
-$K_{ab} = -\perp \nabla_a n_b$<br>
-$= -{\gamma_a}^c {\gamma_b}^d \nabla_c n_d$<br>
-$= -(g_a^c + n_a n^c)(g_b^d + n_b n^d) \nabla_c n_d$<br>
-$= -\nabla_a n_b - n_a n^c \nabla_c n_b - n_b n^d \nabla_a n_d - n_a n_b n^c n^d \nabla_c n_d$<br>
-$= -\nabla_a n_b - n_a a_b$<br>
+$K_{\alpha\beta} = -\perp \nabla_\alpha n_\beta$<br>
+$= -{\gamma_\alpha}^\gamma {\gamma_\beta}^\delta \nabla_\gamma n_\delta$<br>
+$= -(g_\alpha^\gamma + n_\alpha n^\gamma)(g_\beta^\delta + n_\beta n^\delta) \nabla_\gamma n_\delta$<br>
+$= -\nabla_\alpha n_\beta - n_\alpha n^\gamma \nabla_\gamma n_\beta - n_\beta n^\delta \nabla_\alpha n_\delta - n_\alpha n_\beta n^\gamma n^\delta \nabla_\gamma n_\delta$<br>
+$= -\nabla_\alpha n_\beta - n_\alpha a_\beta$<br>
 <br>
 extrinsic curvature components, in ADM metric:<br>
-$ K_{ab} = -{\gamma_a}^c \nabla_c n_d {\gamma_b}^d $<br>
-$ ||K_{ab}|| = -\left[ \matrix{ 0 & \beta^m \\ 0 & \delta_i^m } \right] \left( \left[ \matrix{ \partial_t n_t & 0 \\ \partial_m n_t & 0 } \right] - \left[ \matrix{ {\Gamma^t}_{tt} & {\Gamma^t}_{nt} \\ {\Gamma^t}_{tm} & {\Gamma^t}_{nm} } \right] n_t \right)\left[ \matrix{ 0 & 0 \\ \beta^n & \delta_j^n} \right]$<br>
-$= \left[ \matrix{ 0 & \beta^m \\ 0 & \delta_i^m } \right] \left[ \matrix{ {\Gamma^t}_{tt} n_t - \partial_t n_t & {\Gamma^t}_{nt} n_t \\ {\Gamma^t}_{tm} n_t - \partial_m n_t & {\Gamma^t}_{nm} n_t } \right] \left[ \matrix{ 0 & 0 \\ \beta^n & \delta_j^n} \right]$<br>
-$= -\alpha \left[ \matrix{ \beta^m \beta^n {\Gamma^t}_{nm} & \beta^m {\Gamma^t}_{jm} \\ \beta^n {\Gamma^t}_{ni} & {\Gamma^t}_{ji} } \right] $<br>
-$K_{ij} = -\alpha {\Gamma^t}_{ji}$<br>
+$ K_{\alpha\beta} = -{\gamma_\alpha}^\gamma \nabla_\gamma n_\delta {\gamma_\beta}^\delta $<br>
+$ ||K_{\alpha\beta}|| = 
+	-\overset{\alpha(a)\downarrow\gamma(c)\rightarrow}{\left[ \matrix{ 0 & \beta^c \\ 0 & \delta_a^c } \right]}
+	\left( 
+		\overset{\gamma(c)\downarrow\delta(d)\rightarrow}{\left[ \matrix{ \partial_t n_t & 0 \\ \partial_c n_t & 0 } \right]}
+		- \overset{\gamma(c)\downarrow\delta(d)\rightarrow}{\left[ \matrix{ {\Gamma^t}_{tt} & {\Gamma^t}_{dt} \\ {\Gamma^t}_{tc} & {\Gamma^t}_{dc} } \right]} n_t
+	\right)
+	\overset{\delta(d)\downarrow\beta(b)\rightarrow}{\left[ \matrix{ 0 & 0 \\ \beta^d & \delta_b^d } \right]}$<br>
+$= \overset{\alpha(a)\downarrow\gamma(c)\rightarrow}{\left[ \matrix{ 0 & \beta^c \\ 0 & \delta_a^c } \right]}
+	\overset{\gamma(c)\downarrow\delta(d)\rightarrow}{\left[ \matrix{ {\Gamma^t}_{tt} n_t - \partial_t n_t & {\Gamma^t}_{dt} n_t \\ {\Gamma^t}_{tc} n_t - \partial_c n_t & {\Gamma^t}_{dc} n_t } \right]}
+	\overset{\delta(d)\downarrow\beta(b)\rightarrow}{\left[ \matrix{ 0 & 0 \\ \beta^d & \delta_b^d} \right]} $<br>
+$= -\alpha \overset{\alpha(a)\downarrow\beta(b)\rightarrow}{ \left[ \matrix{ \beta^c \beta^d {\Gamma^t}_{dc} & \beta^c {\Gamma^t}_{bc} \\ \beta^d {\Gamma^t}_{da} & {\Gamma^t}_{ba} } \right]} $<br>
+$K_{ab} = -\alpha {\Gamma^t}_{ba}$<br>
 <br>
 extrinsic curvature is orthogonal to normal:<br>
-$K_{ab} n^b$<br>
-$=n^b {\gamma_a}^c {\gamma_b}^d \nabla_c n_d$<br>
-$=(n^b {\gamma_b}^d) {\gamma_a}^c \nabla_c n_d$<br>
-$=0 \cdot {\gamma_a}^c \nabla_c n_d$<br>
-$K_{ab} n^b = 0$<br>
+$K_{\alpha\beta} n^\beta$<br>
+$=n^\beta {\gamma_\alpha}^\gamma {\gamma_\beta}^\delta \nabla_\gamma n_\delta$<br>
+$=(n^\beta {\gamma_\beta}^\delta) {\gamma_\alpha}^\gamma \nabla_\gamma n_\delta$<br>
+$=0 \cdot {\gamma_\alpha}^\gamma \nabla_\gamma n_\delta$<br>
+$K_{\alpha\beta} n^\beta = 0$<br>
 <br>
+<b>YOU ARE HERE in converting indexes</b><br>
 
 spatial covariant derivative of spatial vector:<br>
 $ \nabla^\perp_a v^b $<br>

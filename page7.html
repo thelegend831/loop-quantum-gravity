@@ -2,188 +2,198 @@
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
 <div class='entry'>
 
-Indexes: \(a-z\) = curved spacetime, \(A-Z\) = flat spacetime<br>
+Indexes:<br>
+$\alpha-\omega$ = 4-curved<br>
+$a-h,o-z$ = 3-curved<br>
+$A-Z$ = 4-flat<br>
+$i-n$ = 3-flat<br>
 <br>
 
-A tensor \( T^{IJ} \) is self-dual if it fulfills:<br>
-\( \star T^{IJ} = i T^{IJ} \)<br>
-for \( \star \) is the dual of the Lorentz coordinates:<br>
-\( \star P^{IJKL} = {1\over 0!} P \epsilon_{IJKL} \)<br>
-\( \star Q^{JKL} = {1\over 1!} Q^I \epsilon_{IJKL} \)<br>
-\( \star R^{KL} = {1\over 2!} R^{IJ} \epsilon_{IJKL} \)<br>
-\( \star S^L = {1\over 3!} S^{IJK} \epsilon_{IJKL} \)<br>
-\( \star T = {1\over 4!} T^{IJKL} \epsilon_{IJKL} \)<br>
+A tensor $ T^{IJ} $ is self-dual if it fulfills:<br>
+$ \star T^{IJ} = i T^{IJ} $<br>
+for $ \star $ is the dual of the Lorentz coordinates:<br>
+$ \star P^{IJKL} = {1\over 0!} P \epsilon_{IJKL} $<br>
+$ \star Q^{JKL} = {1\over 1!} Q^I \epsilon_{IJKL} $<br>
+$ \star R^{KL} = {1\over 2!} R^{IJ} \epsilon_{IJKL} $<br>
+$ \star S^L = {1\over 3!} S^{IJK} \epsilon_{IJKL} $<br>
+$ \star T = {1\over 4!} T^{IJKL} \epsilon_{IJKL} $<br>
 in general, for rank-m tensor in dimension n:<br>
-\( \star T^{I_{m+1}...I_n} = {1\over m!} T^{I_1...I_m} \epsilon_{I_1, ..., I_m, I_{m+1}, ..., I_n} \)<br>
+$ \star T^{I_{m+1}...I_n} = {1\over m!} T^{I_1...I_m} \epsilon_{I_1, ..., I_m, I_{m+1}, ..., I_n} $<br>
 <br>
 
 self-dual projection opertor:<br>
-\( P^\pm = {1\over 2}(1\mp i\star) \)<br>
+$ P^\pm = {1\over 2}(1\mp i\star) $<br>
 <br>
 
 self-dual projection tensor:<br>
-\( {P^{\pm IJ}}_{KL} = {1 \over 2} ( \delta^I_K \delta^J_L \mp {i\over 2} {\epsilon^{IJ}}_{KL} ) \)<br>
+$ {P^{\pm IJ}}_{KL} = {1 \over 2} ( \delta^I_K \delta^J_L \mp {i\over 2} {\epsilon^{IJ}}_{KL} ) $<br>
 <br>
 
 any antisymmetric tensor can be decomposed into self-dual and anti-self-dual components:<br>
-self-dual: \( {^+T}^{IJ} = P^+ T^{IJ} = {1\over 2} (T^{IJ} - i {\star T}^{IJ}) = {1\over 2} ( T^{IJ} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL} ) \)<br>
-anti-self-dual: \( {^-T}^{IJ} = P^- T^{IJ} = {1\over 2} (T^{IJ} + i {\star T}^{IJ}) = {1\over 2} ( T^{IJ} + {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL} ) \)<br>
-such that: \( {^+T}^{IJ} + {^-T}^{IJ} = T^{IJ} \)<br>
+self-dual: $ {^+T}^{IJ} = P^+ T^{IJ} = {1\over 2} (T^{IJ} - i {\star T}^{IJ}) = {1\over 2} ( T^{IJ} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL} ) $<br>
+anti-self-dual: $ {^-T}^{IJ} = P^- T^{IJ} = {1\over 2} (T^{IJ} + i {\star T}^{IJ}) = {1\over 2} ( T^{IJ} + {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL} ) $<br>
+such that: $ {^+T}^{IJ} + {^-T}^{IJ} = T^{IJ} $<br>
 <br>
 
 verify self-duality:<br>
-for \( A^{IJ} = {^+T}^{IJ} \)<br>
-\( \star A^{IJ} \)<br>
-\( = {1\over 2} {\epsilon^{IJ}}_{KL} A^{KL} \)<br>
-\( = {1\over 2} {\epsilon^{IJ}}_{KL} {1\over 2} (T^{KL} - {i\over 2} {\epsilon^{KL}}_{MN} T^{MN}) \)<br>
-\( = {1\over4} ({\epsilon^{IJ}}_{KL} T^{KL} - {i\over 2} {\epsilon^{IJ}}_{KL} {\epsilon^{KL}}_{MN} T^{MN}) \)<br>
-\( = {i\over 2} (-{1\over4} {\epsilon^{IJ}}_{KL} {\epsilon^{KL}}_{MN} T^{MN} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) \)<br>
-\( = {i\over 2} (\delta^{IJ}_{MN} T^{MN} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) \)<br>
-\( = {i\over 2} ({1\over 2} (\delta^I_M \delta^J_N - \delta^I_N \delta^J_M) T^{MN} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) \)<br>
-\( = {i\over 2} ({1\over 2} (T^{IJ} - T^{JI}) - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) \)<br>
-using \( T^{IJ} = -T^{JI} \)<br>
-\( = i {1\over 2} (T^{IJ} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) \)<br>
-\( = i A^{IJ} \)<br>
+for $ A^{IJ} = {^+T}^{IJ} $<br>
+$ \star A^{IJ} $<br>
+$ = {1\over 2} {\epsilon^{IJ}}_{KL} A^{KL} $<br>
+$ = {1\over 2} {\epsilon^{IJ}}_{KL} {1\over 2} (T^{KL} - {i\over 2} {\epsilon^{KL}}_{MN} T^{MN}) $<br>
+$ = {1\over4} ({\epsilon^{IJ}}_{KL} T^{KL} - {i\over 2} {\epsilon^{IJ}}_{KL} {\epsilon^{KL}}_{MN} T^{MN}) $<br>
+$ = {i\over 2} (-{1\over4} {\epsilon^{IJ}}_{KL} {\epsilon^{KL}}_{MN} T^{MN} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) $<br>
+$ = {i\over 2} (\delta^{IJ}_{MN} T^{MN} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) $<br>
+$ = {i\over 2} ({1\over 2} (\delta^I_M \delta^J_N - \delta^I_N \delta^J_M) T^{MN} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) $<br>
+$ = {i\over 2} ({1\over 2} (T^{IJ} - T^{JI}) - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) $<br>
+using $ T^{IJ} = -T^{JI} $<br>
+$ = i {1\over 2} (T^{IJ} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) $<br>
+$ = i A^{IJ} $<br>
 <br>
 
 Lie bracket of two self-dual matrices is also self-dual:<br>
-\( [{^+A}, {^+B}]^{IJ} \)<br>
-\( = {^+A}^{IK} {{^+B}_K}^J - {^+B}^{IK} {{^+A}_K}^J \)<br>
-\(
+$ [{^+A}, {^+B}]^{IJ} $<br>
+$ = {^+A}^{IK} {{^+B}_K}^J - {^+B}^{IK} {{^+A}_K}^J $<br>
+$
 	{1\over 2} (A^{IK} - {i\over 2} {\epsilon^{IK}}_{MN} A^{MN}) \eta_{KL} {1\over 2} (B^{LJ} - {i\over 2}{\epsilon^{LJ}}_{PQ} B^{PQ})
 	- {1\over 2} (B^{IK} - {i\over 2} {\epsilon^{IK}}_{MN} B^{MN}) \eta_{KL} {1\over 2} (A^{LJ} - {i\over 2}{\epsilon^{LJ}}_{PQ} A^{PQ})
-\)<br>
-\(
+$<br>
+$
 	{1\over 4} \eta_{KL} (A^{IK} B^{LJ} - {i\over 2} {\epsilon^{IK}}_{MN} A^{MN} B^{LJ} - {i\over 2} A^{IK} {\epsilon^{LJ}}_{PQ} B^{PQ} - {1\over4} {\epsilon^{IK}}_{MN} A^{MN} {\epsilon^{LJ}}_{PQ} B^{PQ})
 	- {1\over 4} \eta_{KL} (B^{IK} A^{LJ} - {i\over 2} {\epsilon^{IK}}_{MN} B^{MN} A^{LJ} - {i\over 2} B^{IK} {\epsilon^{LJ}}_{PQ} A^{PQ} - {1\over4} {\epsilon^{IK}}_{MN} B^{MN} {\epsilon^{LJ}}_{PQ} A^{PQ})
-\)<br>
-\(
+$<br>
+$
 	{1\over 4} A^{IK} {B_K}^J - {1\over 16} \delta^{IMN}_{LPQ} \eta^{LJ} A_{MN} B^{PQ} - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ}
 	- {1\over 4} B^{IK} {A_K}^J + {1\over 16} \delta^{IMN}_{LPQ} \eta^{LJ} B_{MN} A^{PQ} + {i\over 8} {\epsilon^{IK}}_{MN} B^{MN} \eta_{KL} A^{LJ} + {i\over 8} B^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} A^{PQ}
-\)<br>
-\(
+$<br>
+$
 	{1\over 4} A^{IK} {B_K}^J - {1\over 4} B^{IK} {A_K}^J
 	- {1\over 16} \delta^{IMN}_{LPQ} \eta^{LJ} A_{MN} B^{PQ} + {1\over 16} \delta^{IMN}_{LPQ} \eta^{LJ} B_{MN} A^{PQ}
 	- {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} + {i\over 8} {\epsilon^{IK}}_{MN} B^{MN} \eta_{KL} A^{LJ}
 	- {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} + {i\over 8} B^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} A^{PQ}
-\)<br>
+$<br>
 FIXME:<br>
-\( {1\over 4} A^{IK} {B_K}^J - {1\over 16} \eta^{LJ} (\delta^I_L \delta^M_P \delta^N_Q + \delta^I_P \delta^M_Q \delta^N_L + \delta^I_Q \delta^M_L \delta^N_P - \delta^I_Q \delta^M_P \delta^N_L - \delta^I_P \delta^M_L \delta^N_Q - \delta^I_L \delta^M_Q \delta^N_P) A_{MN} B^{PQ} - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} \)<br>
-\( {1\over 4} A^{IK} {B_K}^J - {1\over 16} \eta^{LJ} (\delta^I_L A_{PQ} B^{PQ} + A_{QL} B^{IQ} + A_{LP} B^{PI} - A_{PL} B^{PI} - A_{LQ} B^{IQ} - \delta^I_L A_{QP} B^{PQ}) - {i\over 8} \eta_{KL} {\epsilon^{IK}}_{MN} A^{MN} B^{LJ} - {i\over 8} \eta_{KL} {\epsilon^{LJ}}_{PQ} A^{IK} B^{PQ} \)<br>
-\( {1\over 4} A^{IK} {B_K}^J - {1\over 4} B^{IK} {A_K}^J - {1\over 8} \eta^{IJ} A_{MN} B^{MN} - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} \)<br>
-\( {1\over 2} A^{IK} {B_K}^J - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} \)<br>
+$ {1\over 4} A^{IK} {B_K}^J - {1\over 16} \eta^{LJ} (\delta^I_L \delta^M_P \delta^N_Q + \delta^I_P \delta^M_Q \delta^N_L + \delta^I_Q \delta^M_L \delta^N_P - \delta^I_Q \delta^M_P \delta^N_L - \delta^I_P \delta^M_L \delta^N_Q - \delta^I_L \delta^M_Q \delta^N_P) A_{MN} B^{PQ} - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} $<br>
+$ {1\over 4} A^{IK} {B_K}^J - {1\over 16} \eta^{LJ} (\delta^I_L A_{PQ} B^{PQ} + A_{QL} B^{IQ} + A_{LP} B^{PI} - A_{PL} B^{PI} - A_{LQ} B^{IQ} - \delta^I_L A_{QP} B^{PQ}) - {i\over 8} \eta_{KL} {\epsilon^{IK}}_{MN} A^{MN} B^{LJ} - {i\over 8} \eta_{KL} {\epsilon^{LJ}}_{PQ} A^{IK} B^{PQ} $<br>
+$ {1\over 4} A^{IK} {B_K}^J - {1\over 4} B^{IK} {A_K}^J - {1\over 8} \eta^{IJ} A_{MN} B^{MN} - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} $<br>
+$ {1\over 2} A^{IK} {B_K}^J - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} $<br>
 TODO<br>
-\(= {1\over 2}( A^{IK} \eta_{KL} B^{LJ} - {i\over 2} {\epsilon^{IJ}}_{KL} A^{KM} \eta_{MN} B^{NL} ) \)<br>
-\(= {^+(AB)} \)<br>
-<hr>
-
-self-dual of Lorentz connection:<br>
-\( {A_a}^{IJ} = {{^+\omega}_a}^{IJ} \)<br>
-\( = {1\over 2} ( {\omega_a}^{IJ} - {i\over 2} {\epsilon^{IJ}}_{KL} {\omega_a}^{KL} ) \)<br>
+$= {1\over 2}( A^{IK} \eta_{KL} B^{LJ} - {i\over 2} {\epsilon^{IJ}}_{KL} A^{KM} \eta_{MN} B^{NL} ) $<br>
+$= {^+(AB)} $<br>
 <br>
 
-<!--
-\( \mathscr{D}_a {T_b}^\hat a = \partial_a {T_b}^\hat a - {A^c}_{ba} {T_c}^\hat a + {{\tilde{A}_a}^\hat a}_\hat b {T_b}^\hat b
-Let \( {A_a}^{\hat a\hat b} = {1\over 2} ({\hat\omega_a}^{\hat a\hat b} - {i\over 2} {\epsilon^{\hat a\hat b}}_{\hat c\hat d} {\hat\omega_a}^{\hat c\hat d}) \)<br>
-(TODO I don't think this is the correct definition of \( {A_a}^{\hat a\hat b} \) )<br>
-<br>
--->
-
-self-dual Lorentz covariant derivative:<br>
-\( D_a {T_b}^I = \partial_a {T_b}^I + {{A_a}^I}_J {T_b}^J \)<br>
-<b>TODO</b> the non-self-dual Palatini action already defines $D_\alpha$ as the non-self-dual covariant derivative on Lorentz indexes.  Think up a new symbol?  How about ${^+D}$?<br>
-<br>
-self-dual Lorentz covariant derivative Lorentz connection compatible with Lorentz metric:<br>
-follows the same process as the similar proof for \( D_a \)<br>
-\( 0 = D_a \eta_{I J} = \partial_a \eta_{I J} - {{A_a}^K}_I \eta_{KJ} - {{A_a}^K}_J \eta_{IK} \)<br>
-\( 0 = 0 - A_{aJI} - A_{aIJ} \)<br>
-\( A_{aIJ} = -A_{aJI} \)<br>
-<br>
-curvature of self-dual of Lorentz connection on Lorentz coordinates:<br>
-\( {{F_{ab}}^I}_J V^J = D_a D_b V^I - D_b D_a V^I \)<br>
-TODO show work<br>
-\( {F_{ab}}^{IJ} = \partial_a {A_b}^{IJ} - \partial_b {A_a}^{IJ} + {A_a}^{IK} {A_{bK}}^J - {A_b}^{IK} {A_{aK}}^J \)<br>
-\( {F_{ab}}^{IJ} = 2 ( \partial_{[a} {A_{b]}}^{IJ} + {A_{[a}}^{IK} {A_{b]K}}^J) \)<br>
-<br>
-TODO show \( {F_{ab}}^{IJ} \) is self-dual?  or is it the self-dual of \( {R_{ab}}^{IJ} \)? (the curvature of the self-dual of the spin connection is the self-dual of the curvature of the spin-connection ... which is the curvature of the affine connetion, transformed)<br>
-(Use that Lie bracket identity of the projection operator.)<br>
+self-dual of spin connection:<br>
+$ {A_\alpha}^{IJ} = {{^+\omega}_\alpha}^{IJ} $<br>
+$ = {1\over 2} {\omega_\alpha}^{IJ} - {i\over 4} {\epsilon^{IJ}}_{KL} {\omega_\alpha}^{KL} $<br>
 <br>
 
-Timelike component at the bottom of the page.  The rest of this page should probably be redone.<br>
+self-dual covariant derivative on Lorentz indexes:<br>
+$ {^+}D_\alpha {T_\beta}^I = \partial_\alpha {T_\beta}^I + {{A_\alpha}^I}_J {T_\beta}^J $<br>
 <br>
 
-(TODO from here on down I need to replace hats with capitol letters)<br>
+Make the self-dual covariant derivative on Lorentz indexes compatible with Lorentz metric:<br>
+follows the same process as the similar proof for $ D_a $<br>
+$ 0 = {^+}D_\alpha \eta_{IJ} = \partial_\alpha \eta_{IJ} - {{A_\alpha}^K}_I \eta_{KJ} - {{A_\alpha}^K}_J \eta_{IK} $<br>
+$ 0 = 0 - A_{\alpha JI} - A_{\alpha IJ} $<br>
+$ A_{aIJ} = -A_{\alpha JI} $<br>
+<br>
+curvature of self-dual spin connection on Lorentz indexes:<br>
+$ {{F_{\alpha\beta}}^I}_J V^J = {^+}D_\alpha {^+}D_\beta V^I - {^+}D_\beta {^+}D_\alpha V^I $<br>
+
+$ = {^+}D_\alpha (\partial_\beta V^I + {{A_\beta}^I}_J V^J) - {^+}D_\beta (\partial_\alpha V^I + {{A_\alpha}^I}_J V^J) $<br>
+$ = \partial_\alpha (\partial_\beta V^I + {{A_\beta}^I}_J V^J) + {{A_\alpha}^I}_K (\partial_\beta V^K + {{A_\beta}^K}_J V^J) 
+	- \partial_\beta (\partial_\alpha V^I + {{A_\alpha}^I}_J V^J) - {{A_\beta}^I}_K (\partial_\alpha V^K + {{A_\alpha}^K}_J V^J) $<br>
+$ = \partial_\alpha \partial_\beta V^I + \partial_\alpha ({{A_\beta}^I}_J V^J) + {{A_\alpha}^I}_K \partial_\beta V^K + {{A_\alpha}^I}_K {{A_\beta}^K}_J V^J
+	- \partial_\beta \partial_\alpha V^I - \partial_\beta ({{A_\alpha}^I}_J V^J) - {{A_\beta}^I}_K \partial_\alpha V^K - {{A_\beta}^I}_K {{A_\alpha}^K}_J V^J $<br>
+$ = 
+	V^J \partial_\alpha {{A_\beta}^I}_J + {{A_\beta}^I}_J \partial_\alpha V^J
+	- V^J \partial_\beta {{A_\alpha}^I}_J - {{A_\alpha}^I}_J \partial_\beta V^J
+	+ {{A_\alpha}^I}_K \partial_\beta V^K - {{A_\beta}^I}_K \partial_\alpha V^K 
+	+ {{A_\alpha}^I}_K {{A_\beta}^K}_J V^J - {{A_\alpha}^K}_J {{A_\beta}^I}_K V^J $<br>
+$ {{F_{\alpha\beta}}^I}_J = 2 \partial_{[\alpha} {{A_{\beta]}}^I}_J + 2 {{A_{[\alpha}}^I}_{|K|} {{A_{\beta]}}^K}_J $<br>
+$ {F_{\alpha\beta}}^{IJ} = 2 (\partial_{[\alpha} {A_{\beta]}}^{IJ} + {A_{[\alpha}}^{IK} {A_{\beta]K}}^J) $<br>
 <br>
 
-New Action: \( S = \int e {e^a}_I {e^b}_J {F_{ab}}^{IJ} dx^4 \)<br>
-TODO show \( \delta S / \delta {e^a}_I = 0 \) for \( {^+R_{ab}} - {1\over 2} g_{ab} {^+R} = 0 \) for \(^+R_{ab}\) is the self-dual of \( R_{ab} \)?<br>
-<br>
-Redefine \( t^a, \alpha, \beta^a, n^a \) to be complex<br>
-Same as before, \( {\gamma_b}^a = \delta^a_b + n^a n_b \) and \( \delta^a_b = {\gamma_b}^a - n^a n_b \)<br>
-Let \( {E^a}_I \) be the projected vierbein defined by \( {E^a}_I = {\gamma_b}^a {e^b}_I \)<br>
-so \( {e^a}_I = \delta^a_b {e^b}_I = ({\gamma_b}^a - n^a n_b) {e^b}_I = {\gamma_b}^a {e^b}_I - n^a n_b {e^b}_I = {E^a}_I - n^a n_b {e^b}_I \)<br>
-TODO which of these indexes are spatial and which are spacetime?  Similarly, which vielbeins are triads and which are tetrads?  When are we raising by the 4D metric and when by the 3D metric?<br>
-Then<br>
-\( S = \int e {e^a}_I {e^b}_J {F_{ab}}^{IJ} dx^4 \)<br>
-\( = \int e ({E^a}_I - n^a n_c {e^c}_I) ({E^b}_J - n^b n_d {e^d}_J) {F_{ab}}^{IJ} dx^4 \)<br>
-\( = \int e ({E^a}_I {E^b}_J - n^a n_c {e^c}_I {E^b}_J - n^b n_d {e^d}_J {E^a}_I + n^a n_c n^b n_d {e^c}_I {e^d}_J) {F_{ab}}^{IJ} dx^4 \)<br>
-using symmetry of \( {F_{ab}}^{IJ} = -{F_{ba}}^{IJ} = -{F_{ab}}^{JI} \)<br>
-\( S = \int e ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 \)<br>
-<br>
-Remember \( e = N \sqrt\gamma \)<br>
-Let \( {\tilde{E}^a}_I = \sqrt\gamma {E^a}_I \)
-\( S = \int N \sqrt\gamma ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 \)<br>
-\( S = \int N ( {1\over\sqrt\gamma} {\tilde{E}^a}_I {\tilde{E}^b}_J - 2 {\tilde{E}^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 \)<br>
-<br>
-Self-duality of \( {F_{ab}}^{IJ} \): <br>
-\( {F_{ab}}^{IJ} = \partial_a {A_b}^{IJ} - \partial_b {A_a}^{IJ} + {A_a}^{IK} {A_{bK}}^J - {A_b}^{IK} {A_{aK}}^J \)<br>
-\( =
-	\partial_a (-{i\over 2} {\epsilon^{IJ}}_{MN} {A_b}^{MN})
-	- \partial_b (-{i\over 2} {\epsilon^{IJ}}_{MN} {A_a}^{MN})
-	+ 	(-{i\over 2} {\epsilon^{IK}}_{MN} {A_a}^{MN}) {A_{bK}}^J
-	-	(-{i\over 2} {\epsilon^{IK}}_{MN} {A_b}^{MN}) {A_{aK}}^J
-\)<br>
-...TODO...<br>
-\(= -i {1\over 2} {\epsilon^{IJ}}_{KL} ( \partial_a {A_b}^{KL} - \partial_b {A_a}^{KL}) - i {1\over 2} {\epsilon^{IJ}}_{KL} ({A_a}^{KM} {A_{bM}}^L - {A_b}^{KM} {A_{aM}}^L ) \)<br>
-\(= -i {1\over 2} {\epsilon^{IJ}}_{KL} ( \partial_a {A_b}^{KL} - \partial_b {A_a}^{KL} + {A_a}^{KM} {A_{bM}}^L - {A_b}^{KM} {A_{aM}}^L ) \)<br>
-\(= -i {1\over 2} {\epsilon^{IJ}}_{KL} {F_{ab}}^{KL} \)<br>
-<br>
-\( S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{KL} {F_{ab}}^{KL} - 2 N {\tilde{E}^a}_I {e^c}_J n^b n_c {F_{ab}}^{IJ} dx^4 \)<br>
-\( S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{KL} {F_{ab}}^{KL} - 2 N {\tilde{E}^a}_I n^b n_J {F_{ab}}^{IJ} dx^4 \)<br>
-<br>
-Let \( n_I = (1, 0, 0, 0) \)<br>
-Then \( n^I = \eta^{IJ} n_J = (-1, 0, 0, 0) \)<br>
-Then \( {E^a}_\hat 0 = {\gamma_b}^a {e^b}_\hat 0 = (\delta^a_b + n^a n_b) {e^b}_\hat 0 = {e^a}_\hat 0 + n^a n_\hat 0 = {e^a}_\hat 0 + {e^a}_I n^I = {e^a}_\hat 0 - {e^a}_\hat 0 = 0 \)<br>
-<br>
-\( e_{IJKL} \) is the permutations of \(I,J,K,L\)<br>
-\( e^{IJKL} = \eta^{IM} \eta^{JN} \eta^{KP} \eta^{LQ} \epsilon_{MNPQ} \)<br>
-\( = tr||\eta_{uv}|| \eta_{IJKL} \)<br>
-\( = -\eta_{IJKL} \)<br>
-\( \epsilon^{IJKL} n_L = \epsilon^{IJK\hat 0} = -\epsilon^{\hat 0IJK} = \epsilon_{\hat 0IJK} = \epsilon_{IJK} = \epsilon^{IJK} \)<br>
-<br>
-\( S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{K} {F_{ab}}^{K\hat 0} - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^{I\hat 0} dx^4 \)<br>
-<br>
-Let \( {A_a}^{I} = {A_a}^{I\hat 0} \)<br>
-\( = {1\over 2} ({\hat\omega_a}^{I\hat 0} - {i\over 2} {\epsilon^{I\hat 0}}_{KL} {\hat\omega_a}^{KL}) \)<br>
-\( = {1\over 2} {\hat\omega_a}^{I\hat 0} - {i\over 4} \epsilon^{IJK} \hat\omega_{aJK} \)<br>
-Let \( {F_{ab}}^I = {F_{ab}}^{I\hat 0} \)<br>
-\( S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{M} {F_{ab}}^M - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^I dx^4 \)<br>
+useful identity:<br>
+${\epsilon^{IK}}_{MN} {\omega_\alpha}^{MN} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\beta}^{QR}$<br>
+$= {\epsilon^I}_{MNP} {{\epsilon^J}_{QR}}^P {\omega_\alpha}^{MN} {\omega_\beta}^{QR}$<br>
+$= -\epsilon^{IKLP} \epsilon_{SQRP} \eta_{KM} \eta_{LN} \eta^{JS} {\omega_\alpha}^{MN} {\omega_\beta}^{QR}$<br>
+$= \delta^{IKL}_{SQR} \eta_{KM} \eta_{LN} \eta^{JS} {\omega_\alpha}^{MN} {\omega_\beta}^{QR}$<br>
+$= (\delta^I_S \delta^K_Q \delta^L_R + \delta^I_Q \delta^K_R \delta^L_S + \delta^I_R \delta^K_S \delta^L_Q
+	- \delta^I_R \delta^K_Q \delta^L_S - \delta^I_Q \delta^K_S \delta^L_R - \delta^I_S \delta^K_R \delta^L_Q)
+	\eta^{JS}{\omega_\alpha}^{MN} {\omega_\beta}^{QR}$<br>
+$= \omega_{\alpha QR} {\omega_\beta}^{QR} \eta^{IJ} + {\omega_{\alpha R}}^J {\omega_\beta}^{IR} + {{\omega_\alpha}^J}_Q {\omega_\beta}^{QI}
+	- {\omega_{\alpha Q}}^J {{\omega_\beta}^QI} - {{\omega_\alpha}^J}_R {\omega_\beta}^{IR} - \omega_{\alpha RQ} {\omega_\beta}^{QR} \eta^{IJ} $<br>
+$= 2 \eta^{IJ} \omega_{\alpha KL} {\omega_\beta}^{KL} + 2 {\omega_{\alpha K}}^J {\omega_\beta}^{IK} + 2 {{\omega_\alpha}^J}_K {\omega_\beta}^{KI}$<br>
+$= 4 {{\omega_\beta}^I}_K {\omega_\alpha}^{KJ} + 2 \eta^{IJ} \omega_{\alpha KL} {\omega_\beta}^{KL}$<br>
+Therefore<br>
+${\epsilon^{IK}}_{MN} {\omega_{[\alpha}}^{MN} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_{\beta]}}^{QR}$<br>
+$= 4 {\omega_{[\alpha}}^{KJ} {{\omega_{\beta]}}^I}_K + 2 \eta^{IJ} \omega_{{[\alpha} KL} {\omega_{\beta]}}^{KL}$<br>
+$= 4 {\omega_{[\alpha}}^{KJ} {{\omega_{\beta]}}^I}_K$<br>
 <br>
 
-<hr>
+The curvature of the self-dual of the spin connection is the self-dual of the curvature of the spin-connection (... which itself is the curvature of the affine connetion with indexes transformed)<br>
+$ {F_{\alpha\beta}}^{IJ} = \partial_\alpha {A_\beta}^{IJ} - \partial_\beta {A_\alpha}^{IJ} + {A_\alpha}^{IK} {A_{\beta K}}^J - {A_\beta}^{IK} {A_{\alpha K}}^J $<br>
+$= \partial_\alpha ({1\over2} {\omega_\beta}^{IJ} - {i\over4} {\epsilon^{IJ}}_{MN} {\omega_\beta}^{MN})
+	- \partial_\beta ({1\over2} {\omega_\alpha}^{IJ} - {i\over4} {\epsilon^{IJ}}_{MN} {\omega_\alpha}^{MN})
+	+ ({1\over2} {\omega_\alpha}^{IK} - {i\over4} {\epsilon^{IK}}_{MN} {\omega_\alpha}^{MN} )
+		\eta_{KP} ({1\over2} {\omega_\beta}^{PJ} - {i\over4} {\epsilon^{PJ}}_{QR} {\omega_\beta}^{QR} )
+	- ({1\over2} {\omega_\beta}^{IK} - {i\over4} {\epsilon^{IK}}_{MN} {\omega_\beta}^{MN} )
+		\eta_{KP} ({1\over2} {\omega_\alpha}^{PJ} - {i\over4} {\epsilon^{PJ}}_{QR} {\omega_\alpha}^{QR})
+$<br>
+$= {1\over2} \partial_\alpha {\omega_\beta}^{IJ}
+	- {1\over2} \partial_\beta {\omega_\alpha}^{IJ}
+	+ {1\over4} {\omega_\alpha}^{IK} {\omega_{\beta K}}^J
+	- {1\over4} {\omega_\beta}^{IK} {\omega_{\alpha K}}^J
+	- {i\over4} {\epsilon^{IJ}}_{KL} (\partial_\alpha {\omega_\beta}^{KL} - \partial_\beta {\omega_\alpha}^{KL})
+	- {1\over16} {\epsilon^{IK}}_{MN} {\omega_\alpha}^{MN} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\beta}^{QR}
+	+ {1\over16} {\epsilon^{IK}}_{MN} {\omega_\beta}^{MN} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\alpha}^{QR}
+	- {i\over8} ({\omega_\alpha}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\beta}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\alpha}^{MN} \eta_{KP} {\omega_\beta}^{PJ})
+	+ {i\over8} ({\omega_\beta}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\alpha}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\beta}^{MN} \eta_{KP} {\omega_\alpha}^{PJ})
+$<br>
+using the identity above, ${\epsilon^{IK}}_{MN} {\omega_{[\alpha}}^{MN} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_{\beta]}}^{QR} = 4 {\omega_{[\alpha}}^{KJ} {{\omega_{\beta]}}^I}_K$<br>
+$= {1\over2} \partial_\alpha {\omega_\beta}^{IJ}
+	- {1\over2} \partial_\beta {\omega_\alpha}^{IJ}
+	+ {1\over4} {\omega_\alpha}^{IK} {\omega_{\beta K}}^J
+	- {1\over4} {\omega_\beta}^{IK} {\omega_{\alpha K}}^J
+	- {i\over4} {\epsilon^{IJ}}_{KL} (\partial_\alpha {\omega_\beta}^{KL} - \partial_\beta {\omega_\alpha}^{KL})
+	- {1\over4} {\omega_\alpha}^{KJ} {{\omega_\beta}^I}_K
+	+ {1\over4} {\omega_\beta}^{KJ} {{\omega_\alpha}^I}_K
+	- {i\over8} ({\omega_\alpha}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\beta}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\alpha}^{MN} \eta_{KP} {\omega_\beta}^{PJ})
+	+ {i\over8} ({\omega_\beta}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\alpha}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\beta}^{MN} \eta_{KP} {\omega_\alpha}^{PJ})
+$<br>
+$= {1\over2} \partial_\alpha {\omega_\beta}^{IJ}
+	- {1\over2} \partial_\beta {\omega_\alpha}^{IJ}
+	+ {1\over2} {\omega_\alpha}^{IK} {\omega_{\beta K}}^J
+	- {1\over2} {\omega_\beta}^{IK} {\omega_{\alpha K}}^J
+	- {i\over4} {\epsilon^{IJ}}_{KL} (\partial_\alpha {\omega_\beta}^{KL} - \partial_\beta {\omega_\alpha}^{KL})
+	- {i\over8} ({\omega_\alpha}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\beta}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\alpha}^{MN} \eta_{KP} {\omega_\beta}^{PJ})
+	+ {i\over8} ({\omega_\beta}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\alpha}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\beta}^{MN} \eta_{KP} {\omega_\alpha}^{PJ})
+$<br>
+$= {1\over2} {\Omega_{\alpha\beta}}^{IJ}
+	- {i\over4} {\epsilon^{IJ}}_{KL} (\partial_\alpha {\omega_\beta}^{KL} - \partial_\beta {\omega_\alpha}^{KL})
+	- {i\over8} ({\omega_\alpha}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\beta}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\alpha}^{MN} \eta_{KP} {\omega_\beta}^{PJ})
+	+ {i\over8} ({\omega_\beta}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\alpha}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\beta}^{MN} \eta_{KP} {\omega_\alpha}^{PJ})
+$<br>
+TODO use that Lie bracket identity to show that $[{^+}A,{^+}B] = {^+}(AB)$<br>
+$= {1\over2} {\Omega_{\alpha\beta}}^{IJ}
+	- {i\over4} {\epsilon^{IJ}}_{KL} (\partial_\alpha {\omega_\beta}^{KL} - \partial_\beta {\omega_\alpha}^{KL})
+	- {i\over4} {\epsilon^{IJ}}_{KL} ({\omega_\alpha}^{KM} {\omega_{\beta M}}^L - {\omega_\beta}^{KM} {\omega_{\alpha M}}^L) $<br>
+$= {1\over2} {\Omega_{\alpha\beta}}^{IJ} - {i\over4} {\epsilon^{IJ}}_{KL} (\partial_\alpha {\omega_\beta}^{KL} - \partial_\beta {\omega_\alpha}^{KL} + {\omega_\alpha}^{KM} {\omega_{\beta M}}^L - {\omega_\beta}^{KM} {\omega_{\alpha M}}^L) $<br>
+$ = {1\over2} {\Omega_{\alpha\beta}}^{IJ} - {i\over4} {\epsilon^{IJ}}_{KL} {\Omega_{\alpha\beta}}^{KL} $<br>
+$ {F_{\alpha\beta}}^{IJ} = {^+}{\Omega_{\alpha\beta}}^{IJ} $<br>
 <br>
 
+Extrinsic curvature in triad representation<br>
 ${K_a}^i = K_{a\mu} e^{\mu i}$<br>
 $= K_{at} e^{ti} + K_{ab} e^{bi}$<br>
 $= K_{at} \cdot 0 + K_{ab} e^{bi}$<br>
 $= K_{ab} e^{bi}$<br>
 $= K_{ab} \cdot (^3e)^{bi}$<br>
 <br>
-let ${\Gamma^i}_a = -{1\over2} {\epsilon^i}_{jk} {\omega_a}^{jk}$<br>
+dual of the spin connection in triad:<br>
+${\Gamma^i}_a = -{1\over2} {\epsilon^i}_{jk} {\omega_a}^{jk}$<br>
 <br>
-${A_\alpha}^{IJ} = {^+\omega_\alpha}^{IJ}$<br>
-${A_\alpha}^{IJ} = {1\over2} {\omega_\alpha}^{IJ} - {i\over4} {\epsilon^{IJ}}_{KL} {\omega_\alpha}^{KL}$<br>
-<br>
+timelike component of the self-dual spin connection:<br>
 ${A_a}^i = {A_a}^{i\hat{t}}$<br>
 $= {1\over2} {\omega_a}^{i\hat{t}} - {i\over4} {\epsilon^{i\hat{t}}}_{KL} {\omega_a}^{KL}$<br>
 $= {1\over2} {\omega_a}^{i\hat{t}} + {i\over4} {\epsilon^{\hat{t}i}}_{jk} {\omega_a}^{jk}$<br>
@@ -191,5 +201,57 @@ $= {1\over2} {K_a}^i + {i\over4} {\epsilon^i}_{jk} {\omega_a}^{jk}$<br>
 $= {1\over2} ({K_a}^i + i {1\over2} {\Gamma^i}_a)$<br>
 $= {1\over2} ({K_a}^i + {1\over2} \beta {\Gamma^i}_a)$<br>
 ...for Barbero-Immirzi parameter $\beta=i$<br>
+<br>
+
+Seems the original Ashtekar variables are derived from a definition of self-duals that neglects the ${1\over2}$ scalar and everyone ran with it after that.
+So the originals in fact double every time the dual is taken.<br>
+<br>
+
+<hr>
+<b>TODO</b> from here on down I need to replace hats with capitol letters and fix indexes<br>
+<br>
+
+New Action: $ S = \int e {e^a}_I {e^b}_J {F_{ab}}^{IJ} dx^4 $<br>
+TODO show $ \delta S / \delta {e^a}_I = 0 $ for $ {^+R_{ab}} - {1\over 2} g_{ab} {^+R} = 0 $ for $^+R_{ab}$ is the self-dual of $ R_{ab} $?<br>
+<br>
+Redefine $ t^a, \alpha, \beta^a, n^a $ to be complex<br>
+Same as before, $ {\gamma_b}^a = \delta^a_b + n^a n_b $ and $ \delta^a_b = {\gamma_b}^a - n^a n_b $<br>
+Let $ {E^a}_I $ be the projected vierbein defined by $ {E^a}_I = {\gamma_b}^a {e^b}_I $<br>
+so $ {e^a}_I = \delta^a_b {e^b}_I = ({\gamma_b}^a - n^a n_b) {e^b}_I = {\gamma_b}^a {e^b}_I - n^a n_b {e^b}_I = {E^a}_I - n^a n_b {e^b}_I $<br>
+TODO which of these indexes are spatial and which are spacetime?  Similarly, which vielbeins are triads and which are tetrads?  When are we raising by the 4D metric and when by the 3D metric?<br>
+Then<br>
+$ S = \int e {e^a}_I {e^b}_J {F_{ab}}^{IJ} dx^4 $<br>
+$ = \int e ({E^a}_I - n^a n_c {e^c}_I) ({E^b}_J - n^b n_d {e^d}_J) {F_{ab}}^{IJ} dx^4 $<br>
+$ = \int e ({E^a}_I {E^b}_J - n^a n_c {e^c}_I {E^b}_J - n^b n_d {e^d}_J {E^a}_I + n^a n_c n^b n_d {e^c}_I {e^d}_J) {F_{ab}}^{IJ} dx^4 $<br>
+using symmetry of $ {F_{ab}}^{IJ} = -{F_{ba}}^{IJ} = -{F_{ab}}^{JI} $<br>
+$ S = \int e ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 $<br>
+<br>
+Remember $ e = N \sqrt\gamma $<br>
+Let $ {\tilde{E}^a}_I = \sqrt\gamma {E^a}_I $
+$ S = \int N \sqrt\gamma ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 $<br>
+$ S = \int N ( {1\over\sqrt\gamma} {\tilde{E}^a}_I {\tilde{E}^b}_J - 2 {\tilde{E}^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 $<br>
+<br>
+$ S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{KL} {F_{ab}}^{KL} - 2 N {\tilde{E}^a}_I {e^c}_J n^b n_c {F_{ab}}^{IJ} dx^4 $<br>
+$ S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{KL} {F_{ab}}^{KL} - 2 N {\tilde{E}^a}_I n^b n_J {F_{ab}}^{IJ} dx^4 $<br>
+<br>
+Let $ n_I = (1, 0, 0, 0) $<br>
+Then $ n^I = \eta^{IJ} n_J = (-1, 0, 0, 0) $<br>
+Then $ {E^a}_\hat 0 = {\gamma_b}^a {e^b}_\hat 0 = (\delta^a_b + n^a n_b) {e^b}_\hat 0 = {e^a}_\hat 0 + n^a n_\hat 0 = {e^a}_\hat 0 + {e^a}_I n^I = {e^a}_\hat 0 - {e^a}_\hat 0 = 0 $<br>
+<br>
+$ e_{IJKL} $ is the permutations of $I,J,K,L$<br>
+$ e^{IJKL} = \eta^{IM} \eta^{JN} \eta^{KP} \eta^{LQ} \epsilon_{MNPQ} $<br>
+$ = tr||\eta_{uv}|| \eta_{IJKL} $<br>
+$ = -\eta_{IJKL} $<br>
+$ \epsilon^{IJKL} n_L = \epsilon^{IJK\hat 0} = -\epsilon^{\hat 0IJK} = \epsilon_{\hat 0IJK} = \epsilon_{IJK} = \epsilon^{IJK} $<br>
+<br>
+$ S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{K} {F_{ab}}^{K\hat 0} - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^{I\hat 0} dx^4 $<br>
+<br>
+Let $ {A_a}^{I} = {A_a}^{I\hat 0} $<br>
+$ = {1\over 2} ({\hat\omega_a}^{I\hat 0} - {i\over 2} {\epsilon^{I\hat 0}}_{KL} {\hat\omega_a}^{KL}) $<br>
+$ = {1\over 2} {\hat\omega_a}^{I\hat 0} - {i\over 4} \epsilon^{IJK} \hat\omega_{aJK} $<br>
+Let $ {F_{ab}}^I = {F_{ab}}^{I\hat 0} $<br>
+$ S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{M} {F_{ab}}^M - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^I dx^4 $<br>
+<br>
+
 </div>
 
