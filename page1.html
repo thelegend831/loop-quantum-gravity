@@ -16,6 +16,10 @@ $A-Z$ = spacetime Minkowski metric<br>
 $i-n$ = spatial components of spacetime Minkowski metric<br>
 <hr>
 <br>
+Kronecher delta: $\delta^\alpha_\beta = 1$ for $\alpha = \beta$, 0 otherwise.<br>
+Tensor notation: $v_{(\alpha_1 ... \alpha_n)} = {1\over n!} \cdot $ sum of even permutations plus sum of odd permutations<br>
+Tensor notation: $v_{[\alpha_1 ... \alpha_n]} = {1\over n!} \cdot $ sum of even permutations minus sum of odd permutations<br>
+<br>
 coordinate system $x_\alpha$<br>
 vector basis: $ \textbf{e}_\alpha = {e_\alpha}^I$<br>
 one-form basis: $ \boldsymbol{\omega}^\alpha = {\omega^\alpha}_I $<br>
@@ -33,7 +37,7 @@ elements of one-forms:
 $ \langle \textbf{w}, \textbf{e}_\alpha \rangle
 	= \langle w_\beta \boldsymbol{\omega}^\beta, \textbf{e}_\alpha \rangle
 	= w_\beta \langle \boldsymbol{\omega}^\beta, \textbf{e}_\alpha \rangle
-	= w_\beta \delta^\alpha_\beta
+	= w_\beta \delta^\beta_\alpha
 	= w_\alpha
 $<br>
 <br>
@@ -88,6 +92,13 @@ metric inverse: $ ||g^{\alpha\beta}|| = $ inverse of $ ||g_{\alpha\beta}|| $ suc
 metric symmetry: $ g_{\alpha\beta} = \textbf{e}_\alpha \cdot \textbf{e}_\beta = \textbf{e}_\beta \cdot \textbf{e}_\alpha = g_{\beta\alpha} $<br>
 metric inverse symmetry implied from metric symmetry.<br>
 identity derivative: $ 0 = \partial_\gamma \delta^\alpha_\beta = \partial_\gamma (g^{\alpha\delta} g_{\delta\beta}) = \partial_\gamma g^{\alpha\delta} g_{\delta\beta} + g^{\alpha\delta} \partial_\gamma g_{\delta\beta} $<br>
+<br>
+Minkowski (flat spacetime) metric: $\eta_{IJ} = diag(-1, 1, 1, 1)$<br>
+<br>
+Raising curved indexes: $v^\alpha = g^{\alpha\beta} v_\beta$<br>
+Lowering curved indexes: $v_\alpha = g_{\alpha\beta} v^\beta$<br>
+Raising flat indexes: $v^I = \eta^{IJ} v_J$<br>
+Lowering flat indexes: $v_I = \eta_{IJ} v^J$<br>
 <br>
 Christoffel of the 1st kind: $ \Gamma_{\alpha\beta\gamma} $ <br>
 in a holonmic basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma}) $<br>
