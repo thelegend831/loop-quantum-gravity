@@ -16,17 +16,19 @@ $A-Z$ = spacetime Minkowski metric<br>
 $i-n$ = spatial components of spacetime Minkowski metric<br>
 <hr>
 <br>
-Kronecher delta: $\delta^\alpha_\beta = 1$ for $\alpha = \beta$, 0 otherwise.<br>
-Tensor notation:<br>
-$v_{(\alpha_1 ... \alpha_n)} = {1\over n!} \cdot $ sum of even permutations of $\alpha_1 ... \alpha_n$ plus sum of odd permutations<br>
-$v_{[\alpha_1 ... \alpha_n]} = {1\over n!} \cdot $ sum of even permutations of $\alpha_1 ... \alpha_n$ minus sum of odd permutations<br>
-$v_{|\alpha_1 ... \alpha_n|} = $ sum of even minus sum of odd permutations, only summing indexes in increasing order<br>
-<br>
+
 coordinate system $x_\alpha$<br>
 vector basis: $ \textbf{e}_\alpha = {e_\alpha}^I$<br>
 one-form basis: $ \boldsymbol{\omega}^\alpha = {\omega^\alpha}_I $<br>
 contravariant representation $ {\textbf v} = v^\alpha {\textbf e}_\alpha $<br>
 covariant representation $ \textbf{w} = w_\alpha \boldsymbol{\omega}^\alpha $<br>
+<br>
+
+Kronecher delta:<br>
+$\delta^\alpha_\beta = 1$ for $\alpha = \beta$, otherwise 0.<br>
+$\delta^\alpha_\beta = \overset{\alpha\downarrow\beta\rightarrow}{\left[\matrix{1&0&..&1 \\ 0&1&..&0 \\ ..&..&..&.. \\ 0&0&..&1 }\right]}$<br>
+<br>
+
 orthogonality of vector and one-form basis: $ \langle \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle = \delta^\alpha_\beta $<br>
 elements of vectors: 
 $ \langle \boldsymbol{\omega}^\alpha, \textbf{v} \rangle 
@@ -35,6 +37,7 @@ $ \langle \boldsymbol{\omega}^\alpha, \textbf{v} \rangle
 	= v^\beta \delta^\alpha_\beta
 	= v^\alpha
 $<br>
+
 elements of one-forms:
 $ \langle \textbf{w}, \textbf{e}_\alpha \rangle
 	= \langle w_\beta \boldsymbol{\omega}^\beta, \textbf{e}_\alpha \rangle
@@ -43,6 +46,7 @@ $ \langle \textbf{w}, \textbf{e}_\alpha \rangle
 	= w_\alpha
 $<br>
 <br>
+
 inner product of vector and one-form: 
 $ \langle \textbf{w}, \textbf{v} \rangle
 	= \langle w_\alpha \boldsymbol{\omega}^\alpha, v^\beta \textbf{e}_\beta \rangle
@@ -95,6 +99,29 @@ metric symmetry: $ g_{\alpha\beta} = \textbf{e}_\alpha \cdot \textbf{e}_\beta = 
 metric inverse symmetry implied from metric symmetry.<br>
 identity derivative: $ 0 = \partial_\gamma \delta^\alpha_\beta = \partial_\gamma (g^{\alpha\delta} g_{\delta\beta}) = \partial_\gamma g^{\alpha\delta} g_{\delta\beta} + g^{\alpha\delta} \partial_\gamma g_{\delta\beta} $<br>
 <br>
+
+Tensor notation:<br>
+$v_{(\alpha_1 ... \alpha_n)} = {1\over n!} \cdot $ sum of even permutations of $\alpha_1 ... \alpha_n$ plus sum of odd permutations<br>
+$v_{[\alpha_1 ... \alpha_n]} = {1\over n!} \cdot $ sum of even permutations of $\alpha_1 ... \alpha_n$ minus sum of odd permutations<br>
+$v_{|\alpha_1 ... \alpha_n|} = $ sum of even minus sum of odd permutations, only summing indexes in increasing order<br>
+<br>
+
+antisymmetric tensors are tensors such that $T_{\alpha\beta} = T_{\beta\alpha}$:<br>
+$T_{[\alpha\beta]} = {1\over2} (T_{\alpha\beta} - T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} + T_{\alpha\beta}) = T_{\alpha\beta}$<br>
+$T_{(\alpha\beta)} = {1\over2} (T_{\alpha\beta} + T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} - T_{\alpha\beta}) = 0$<br>
+<br>
+
+symmetric tensors are tensors such that $T_{\alpha\beta} = T_{\beta\alpha}$:<br>
+$T_{[\alpha\beta]} = {1\over2} (T_{\alpha\beta} - T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} - T_{\alpha\beta}) = 0$<br>
+$T_{(\alpha\beta)} = {1\over2} (T_{\alpha\beta} + T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} + T_{\alpha\beta}) = T_{\alpha\beta}$<br>
+<br>
+
+any degree-2 tensor can be represented as its symmetric and antisymmetric components:<br>
+$T_{(\alpha\beta)} + T_{[\alpha\beta]} = {1\over2} (T_{\alpha\beta} + T_{\beta\alpha}) + {1\over2} (T_{\alpha\beta} - T_{\beta\alpha})$<br>
+$= {1\over2}(T_{\alpha\beta} + T_{\alpha\beta})$<br>
+$= T_{\alpha\beta}$<br>
+<br>
+
 Minkowski (flat spacetime) metric: $\eta_{IJ} = diag(-1, 1, 1, 1)$<br>
 <br>
 Raising curved indexes: $v^\alpha = g^{\alpha\beta} v_\beta$<br>

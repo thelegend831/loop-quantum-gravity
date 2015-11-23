@@ -9,16 +9,19 @@ $A-Z$ = 4-flat<br>
 $i-n$ = 3-flat<br>
 <br>
 
+dual of a dual of a degree-2 tensor:<br>
+$ \star \star T^{IJ} = {1\over4} {\epsilon^{IJ}}_{KL} {\epsilon^{KL}}_{MN} T^{MN} $<br>
+$ = -\delta^I_{[M} \delta^J_{N]} T^{MN}$<br> 
+$ = -T^{[IJ]}$<br> 
+<br>
+
+dual of dual of antisymmetric tensor:<br>
+$ \star \star T^{IJ} = -T^{[IJ]} = -T^{IJ}$<br>
+<br>
+
 A tensor $ T^{IJ} $ is self-dual if it fulfills:<br>
 $ \star T^{IJ} = i T^{IJ} $<br>
-for $ \star $ is the dual of the Lorentz coordinates:<br>
-$ \star P^{IJKL} = {1\over 0!} P \epsilon_{IJKL} $<br>
-$ \star Q^{JKL} = {1\over 1!} Q^I \epsilon_{IJKL} $<br>
-$ \star R^{KL} = {1\over 2!} R^{IJ} \epsilon_{IJKL} $<br>
-$ \star S^L = {1\over 3!} S^{IJK} \epsilon_{IJKL} $<br>
-$ \star T = {1\over 4!} T^{IJKL} \epsilon_{IJKL} $<br>
-in general, for rank-m tensor in dimension n:<br>
-$ \star T^{I_{m+1}...I_n} = {1\over m!} T^{I_1...I_m} \epsilon_{I_1, ..., I_m, I_{m+1}, ..., I_n} $<br>
+for $ \star $ is the dual of the Lorentz coordinates<br>
 <br>
 
 self-dual projection opertor:<br>
@@ -36,9 +39,8 @@ such that: $ {^+T}^{IJ} + {^-T}^{IJ} = T^{IJ} $<br>
 <br>
 
 verify self-duality:<br>
-for $ A^{IJ} = {^+T}^{IJ} $<br>
-$ \star A^{IJ} $<br>
-$ = {1\over 2} {\epsilon^{IJ}}_{KL} A^{KL} $<br>
+$ \star {^+T}^{IJ} $<br>
+$ = {1\over 2} {\epsilon^{IJ}}_{KL} {^+T}^{KL} $<br>
 $ = {1\over 2} {\epsilon^{IJ}}_{KL} {1\over 2} (T^{KL} - {i\over 2} {\epsilon^{KL}}_{MN} T^{MN}) $<br>
 $ = {1\over4} ({\epsilon^{IJ}}_{KL} T^{KL} - {i\over 2} {\epsilon^{IJ}}_{KL} {\epsilon^{KL}}_{MN} T^{MN}) $<br>
 $ = {i\over 2} (-{1\over4} {\epsilon^{IJ}}_{KL} {\epsilon^{KL}}_{MN} T^{MN} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) $<br>
@@ -47,38 +49,7 @@ $ = {i\over 2} ({1\over 2} (\delta^I_M \delta^J_N - \delta^I_N \delta^J_M) T^{MN
 $ = {i\over 2} ({1\over 2} (T^{IJ} - T^{JI}) - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) $<br>
 using $ T^{IJ} = -T^{JI} $<br>
 $ = i {1\over 2} (T^{IJ} - {i\over 2} {\epsilon^{IJ}}_{KL} T^{KL}) $<br>
-$ = i A^{IJ} $<br>
-<br>
-
-Lie bracket of two self-dual matrices is also self-dual:<br>
-$ [{^+A}, {^+B}]^{IJ} $<br>
-$ = {^+A}^{IK} {{^+B}_K}^J - {^+B}^{IK} {{^+A}_K}^J $<br>
-$
-	{1\over 2} (A^{IK} - {i\over 2} {\epsilon^{IK}}_{MN} A^{MN}) \eta_{KL} {1\over 2} (B^{LJ} - {i\over 2}{\epsilon^{LJ}}_{PQ} B^{PQ})
-	- {1\over 2} (B^{IK} - {i\over 2} {\epsilon^{IK}}_{MN} B^{MN}) \eta_{KL} {1\over 2} (A^{LJ} - {i\over 2}{\epsilon^{LJ}}_{PQ} A^{PQ})
-$<br>
-$
-	{1\over 4} \eta_{KL} (A^{IK} B^{LJ} - {i\over 2} {\epsilon^{IK}}_{MN} A^{MN} B^{LJ} - {i\over 2} A^{IK} {\epsilon^{LJ}}_{PQ} B^{PQ} - {1\over4} {\epsilon^{IK}}_{MN} A^{MN} {\epsilon^{LJ}}_{PQ} B^{PQ})
-	- {1\over 4} \eta_{KL} (B^{IK} A^{LJ} - {i\over 2} {\epsilon^{IK}}_{MN} B^{MN} A^{LJ} - {i\over 2} B^{IK} {\epsilon^{LJ}}_{PQ} A^{PQ} - {1\over4} {\epsilon^{IK}}_{MN} B^{MN} {\epsilon^{LJ}}_{PQ} A^{PQ})
-$<br>
-$
-	{1\over 4} A^{IK} {B_K}^J - {1\over 16} \delta^{IMN}_{LPQ} \eta^{LJ} A_{MN} B^{PQ} - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ}
-	- {1\over 4} B^{IK} {A_K}^J + {1\over 16} \delta^{IMN}_{LPQ} \eta^{LJ} B_{MN} A^{PQ} + {i\over 8} {\epsilon^{IK}}_{MN} B^{MN} \eta_{KL} A^{LJ} + {i\over 8} B^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} A^{PQ}
-$<br>
-$
-	{1\over 4} A^{IK} {B_K}^J - {1\over 4} B^{IK} {A_K}^J
-	- {1\over 16} \delta^{IMN}_{LPQ} \eta^{LJ} A_{MN} B^{PQ} + {1\over 16} \delta^{IMN}_{LPQ} \eta^{LJ} B_{MN} A^{PQ}
-	- {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} + {i\over 8} {\epsilon^{IK}}_{MN} B^{MN} \eta_{KL} A^{LJ}
-	- {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} + {i\over 8} B^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} A^{PQ}
-$<br>
-FIXME:<br>
-$ {1\over 4} A^{IK} {B_K}^J - {1\over 16} \eta^{LJ} (\delta^I_L \delta^M_P \delta^N_Q + \delta^I_P \delta^M_Q \delta^N_L + \delta^I_Q \delta^M_L \delta^N_P - \delta^I_Q \delta^M_P \delta^N_L - \delta^I_P \delta^M_L \delta^N_Q - \delta^I_L \delta^M_Q \delta^N_P) A_{MN} B^{PQ} - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} $<br>
-$ {1\over 4} A^{IK} {B_K}^J - {1\over 16} \eta^{LJ} (\delta^I_L A_{PQ} B^{PQ} + A_{QL} B^{IQ} + A_{LP} B^{PI} - A_{PL} B^{PI} - A_{LQ} B^{IQ} - \delta^I_L A_{QP} B^{PQ}) - {i\over 8} \eta_{KL} {\epsilon^{IK}}_{MN} A^{MN} B^{LJ} - {i\over 8} \eta_{KL} {\epsilon^{LJ}}_{PQ} A^{IK} B^{PQ} $<br>
-$ {1\over 4} A^{IK} {B_K}^J - {1\over 4} B^{IK} {A_K}^J - {1\over 8} \eta^{IJ} A_{MN} B^{MN} - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} $<br>
-$ {1\over 2} A^{IK} {B_K}^J - {i\over 8} {\epsilon^{IK}}_{MN} A^{MN} \eta_{KL} B^{LJ} - {i\over 8} A^{IK} \eta_{KL} {\epsilon^{LJ}}_{PQ} B^{PQ} $<br>
-TODO<br>
-$= {1\over 2}( A^{IK} \eta_{KL} B^{LJ} - {i\over 2} {\epsilon^{IJ}}_{KL} A^{KM} \eta_{MN} B^{NL} ) $<br>
-$= {^+(AB)} $<br>
+$ = i \cdot {^+T}^{IJ} $<br>
 <br>
 
 self-dual of spin connection:<br>
@@ -131,6 +102,31 @@ $= 4 {\omega_{[\alpha}}^{KJ} {{\omega_{\beta]}}^I}_K + 2 \eta^{IJ} \omega_{{[\al
 $= 4 {\omega_{[\alpha}}^{KJ} {{\omega_{\beta]}}^I}_K$<br>
 <br>
 
+antisymmetric operator applied to curved coordinates of square of spin connection is antisymmetric in Lorentz coordinates:<br>
+${\omega_{[\alpha}}^{IK} {\omega_{{\beta]}K}}^J$<br>
+apply antisymmetric relation on curved coordinate indexes:<br>
+$= -{\omega_{[\beta}}^{IK} {\omega_{{\alpha]}K}}^J$<br>
+reverse order of terms<br>
+$= -{\omega_{{[\alpha}K}}^J {\omega_{\beta]}}^{IK}$<br>
+apply antisymmetric property of Lorentz indexes of spin connection<br>
+$= -{{\omega_{[\alpha}}^J}_K {\omega_{\beta]}}^{KI}$<br>
+index gymnastics:<br>
+$= -{\omega_{[\alpha}}^{JK} {\omega_{\beta]K}}^I$<br>
+<br>
+
+TODO show the antisym of spin times dual spin and antisym of dual spin times spin are both antisym themselves<br>
+then, because antisym of spin squared and antisym of dual-spin spin and spin dual-spin are all antisym,<br>
+use the property that $\star \star = -1$ for antisym only to show the next identity:<br>
+
+also useful:<br>
+$\star({\omega_{[\alpha}}^{IK} {\omega_{{\beta]}K}}^J) = {1\over2} ({\omega_{[\alpha}}^{IK} {(\star\omega)_{{\beta]}K}}^J + {(\star\omega)_{[\alpha}}^{IK} {\omega_{{\beta]}K}}^J)$<br>
+${1\over2} {\epsilon^{IJ}}_{KL} ({\omega_\alpha}^{KM} {\omega_{\beta M}}^L - {\omega_\beta}^{KM} {\omega_{\alpha M}}^L)
+	= {1\over4}
+	 ({\omega_\alpha}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\beta}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\alpha}^{MN} \eta_{KP} {\omega_\beta}^{PJ}
+	- {\omega_\beta}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\alpha}^{QR} - {\epsilon^{IK}}_{MN} {\omega_\beta}^{MN} \eta_{KP} {\omega_\alpha}^{PJ})
+$<br>
+<br>
+
 The curvature of the self-dual of the spin connection is the self-dual of the curvature of the spin-connection (... which itself is the curvature of the affine connetion with indexes transformed)<br>
 $ {F_{\alpha\beta}}^{IJ} = \partial_\alpha {A_\beta}^{IJ} - \partial_\beta {A_\alpha}^{IJ} + {A_\alpha}^{IK} {A_{\beta K}}^J - {A_\beta}^{IK} {A_{\alpha K}}^J $<br>
 $= \partial_\alpha ({1\over2} {\omega_\beta}^{IJ} - {i\over4} {\epsilon^{IJ}}_{MN} {\omega_\beta}^{MN})
@@ -174,7 +170,7 @@ $= {1\over2} {\Omega_{\alpha\beta}}^{IJ}
 	- {i\over8} ({\omega_\alpha}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\beta}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\alpha}^{MN} \eta_{KP} {\omega_\beta}^{PJ})
 	+ {i\over8} ({\omega_\beta}^{IK} \eta_{KP} {\epsilon^{PJ}}_{QR} {\omega_\alpha}^{QR} + {\epsilon^{IK}}_{MN} {\omega_\beta}^{MN} \eta_{KP} {\omega_\alpha}^{PJ})
 $<br>
-TODO use that Lie bracket identity to show that $[{^+}A,{^+}B] = {^+}(AB)$<br>
+using the identity above that $\star \star [a,b] = \star [\star a,b] = [a,\star b]$<br>
 $= {1\over2} {\Omega_{\alpha\beta}}^{IJ}
 	- {i\over4} {\epsilon^{IJ}}_{KL} (\partial_\alpha {\omega_\beta}^{KL} - \partial_\beta {\omega_\alpha}^{KL})
 	- {i\over4} {\epsilon^{IJ}}_{KL} ({\omega_\alpha}^{KM} {\omega_{\beta M}}^L - {\omega_\beta}^{KM} {\omega_{\alpha M}}^L) $<br>
