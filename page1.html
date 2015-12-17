@@ -26,7 +26,7 @@ covariant representation $ \textbf{w} = w_\alpha \boldsymbol{\omega}^\alpha $<br
 
 Kronecher delta:<br>
 $\delta^\alpha_\beta = 1$ for $\alpha = \beta$, otherwise 0.<br>
-$\delta^\alpha_\beta = \overset{\alpha\downarrow\beta\rightarrow}{\left[\matrix{1&0&..&1 \\ 0&1&..&0 \\ ..&..&..&.. \\ 0&0&..&1 }\right]}$<br>
+$\delta^\alpha_\beta = \alpha\downarrow\overset{\beta\rightarrow}{\left[\matrix{1&0&..&1 \\ 0&1&..&0 \\ ..&..&..&.. \\ 0&0&..&1 }\right]}$<br>
 <br>
 
 orthogonality of vector and one-form basis: $ \langle \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle = \delta^\alpha_\beta $<br>
@@ -106,7 +106,7 @@ $v_{[\alpha_1 ... \alpha_n]} = {1\over n!} \cdot $ sum of even permutations of $
 $v_{|\alpha_1 ... \alpha_n|} = $ sum of even minus sum of odd permutations, only summing indexes in increasing order<br>
 <br>
 
-antisymmetric tensors are tensors such that $T_{\alpha\beta} = T_{\beta\alpha}$:<br>
+antisymmetric tensors are tensors such that $T_{\alpha\beta} = -T_{\beta\alpha}$:<br>
 $T_{[\alpha\beta]} = {1\over2} (T_{\alpha\beta} - T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} + T_{\alpha\beta}) = T_{\alpha\beta}$<br>
 $T_{(\alpha\beta)} = {1\over2} (T_{\alpha\beta} + T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} - T_{\alpha\beta}) = 0$<br>
 <br>
@@ -348,21 +348,21 @@ $ \textbf{d}g_{\alpha\beta}
 $<br>
 <br>
 second exterior derivative of a one-form: $ \textbf{d}(\textbf{dw}) = 0 $ <br>
-second exterior derivative of vector: 
-$ \textbf{d}^2 \textbf{v} 
-	= \textbf{d}^2 ( v^\alpha \textbf{e}_\alpha )
-	= \textbf{d} ( \textbf{d} v^\alpha \textbf{e}_\alpha + v^\alpha \textbf{de}_\alpha )
-	= \textbf{d} ( \textbf{d} v^\alpha \textbf{e}_\alpha + v^\alpha \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\alpha )
-	= \textbf{d}^2 v^\alpha \textbf{e}_\alpha
-		+ \textbf{d} v^\alpha \wedge \textbf{d} \textbf{e}_\alpha 
-		+ \textbf{d} v^\alpha \wedge \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\alpha
-		+ v^\alpha \textbf{de}_\beta \wedge {\boldsymbol{\omega}^\beta}_\alpha
-		+ v^\alpha \textbf{e}_\beta \textbf{d}{\boldsymbol{\omega}^\beta}_\alpha
-	= \textbf{d}^2 v^\alpha \textbf{e}_\alpha
-		+ 2 \textbf{d} v^\alpha \wedge \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\alpha
-		+ v^\alpha \textbf{e}_\gamma {\boldsymbol{\omega}^\gamma}_\beta \wedge {\boldsymbol{\omega}^\beta}_\alpha
-		+ v^\alpha \textbf{e}_\beta \textbf{d}{\boldsymbol{\omega}^\beta}_\alpha
-$<br>
+second exterior derivative of vector:<br>
+$ \textbf{d}^2 \textbf{v} $<br>
+$ = \textbf{d}^2 ( v^\alpha \textbf{e}_\alpha ) $<br>
+$ = \textbf{d} ( \textbf{d} v^\alpha \textbf{e}_\alpha + v^\alpha \textbf{de}_\alpha ) $<br>
+$ = \textbf{d} ( \textbf{d} v^\alpha \textbf{e}_\alpha + v^\alpha \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\alpha ) $<br>
+$ = \textbf{d}^2 v^\alpha \textbf{e}_\alpha
+	+ \textbf{d} v^\alpha \wedge \textbf{d} \textbf{e}_\alpha 
+	+ \textbf{d} v^\alpha \wedge \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\alpha
+	+ v^\alpha \textbf{de}_\beta \wedge {\boldsymbol{\omega}^\beta}_\alpha
+	+ v^\alpha \textbf{e}_\beta \textbf{d}{\boldsymbol{\omega}^\beta}_\alpha $<br>
+$ = \textbf{d}^2 v^\alpha \textbf{e}_\alpha
+	+ 2 \textbf{d} v^\alpha \wedge \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\alpha
+	+ v^\alpha \textbf{e}_\gamma {\boldsymbol{\omega}^\gamma}_\beta \wedge {\boldsymbol{\omega}^\beta}_\alpha
+	+ v^\alpha \textbf{e}_\beta \textbf{d}{\boldsymbol{\omega}^\beta}_\alpha $<br>
+<br>
 <!-- TODO i'm zeroing the 2dv^i term as well, find out why -->
 ...zero second exterior derivatives of one-forms... 
 $ = v^\alpha \textbf{e}_\beta {\boldsymbol{\omega}^\beta}_\gamma \wedge {\boldsymbol{\omega}^\gamma}_\alpha
