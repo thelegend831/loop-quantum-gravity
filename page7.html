@@ -186,15 +186,27 @@ $= K_{at} \cdot 0 + K_{ab} e^{bi}$<br>
 $= K_{ab} e^{bi}$<br>
 $= K_{ab} \cdot (^3e)^{bi}$<br>
 <br>
+
+Levi-Civita covariant relation between 3D and 4D:<br>
+$\epsilon_{0ijk} = \epsilon_{ijk}$ by definition<br>
+<br>
+
+Levi-Civita contravariant relation between 3D and 4D:<br>
+$-\epsilon^{0ijk} = \epsilon_{0ijk}$ because $\epsilon^{IJKL} = \sigma \epsilon_{IJKL} = -\epsilon_{IJKL}$ for signature $\sigma = -1$<br>
+$= \epsilon_{ijk}$ by converting the permutation tensor from 4D to 3D<br>
+$= \epsilon^{ijk}$ by raising by $\eta^{ij} = \delta^{ij}$<br>
+<br>
+
 dual of the spin connection in triad:<br>
 ${\Gamma^i}_a = -{1\over2} {\epsilon^i}_{jk} {\omega_a}^{jk}$<br>
+TODO more on this, i.e. from Kiefer<br>
 <br>
 timelike component of the self-dual spin connection:<br>
-${A_a}^i = {A_a}^{i\hat{t}}$<br>
-$= {1\over2} {\omega_a}^{i\hat{t}} - {i\over4} {\epsilon^{i\hat{t}}}_{KL} {\omega_a}^{KL}$<br>
-$= {1\over2} {\omega_a}^{i\hat{t}} + {i\over4} {\epsilon^{\hat{t}i}}_{jk} {\omega_a}^{jk}$<br>
-$= {1\over2} {K_a}^i + {i\over4} {\epsilon^i}_{jk} {\omega_a}^{jk}$<br>
-$= {1\over2} ({K_a}^i + i {1\over2} {\Gamma^i}_a)$<br>
+${A_a}^i = {A_a}^{i0}$<br>
+$= {1\over2} {\omega_a}^{i0} - {i\over4} {\epsilon^{i0}}_{KL} {\omega_a}^{KL}$<br>
+$= {1\over2} {\omega_a}^{i0} + {i\over4} {\epsilon^{0i}}_{jk} {\omega_a}^{jk}$ by permuting $\epsilon^{IJKL}$<br>
+$= {1\over2} {K_a}^i - {i\over4} {\epsilon^i}_{jk} {\omega_a}^{jk}$ by definition $-\epsilon^{0ijk} = \epsilon^{ijk}$<br>
+$= {1\over2} ({K_a}^i + {i\over2} {\Gamma^i}_a)$<br>
 $= {1\over2} ({K_a}^i + {1\over2} \beta {\Gamma^i}_a)$<br>
 ...for Barbero-Immirzi parameter $\beta=i$<br>
 <br>
@@ -204,8 +216,6 @@ So the originals in fact double every time the dual is taken.<br>
 <br>
 
 <hr>
-<b>TODO</b> from here on down I need to replace hats with capitol letters and fix indexes<br>
-<br>
 
 New Action: $ S = \int e {e^a}_I {e^b}_J {F_{ab}}^{IJ} dx^4 $<br>
 TODO show $ \delta S / \delta {e^a}_I = 0 $ for $ {^+R_{ab}} - {1\over 2} g_{ab} {^+R} = 0 $ for $^+R_{ab}$ is the self-dual of $ R_{ab} $?<br>
@@ -222,32 +232,55 @@ $ = \int e ({E^a}_I {E^b}_J - n^a n_c {e^c}_I {E^b}_J - n^b n_d {e^d}_J {E^a}_I 
 using symmetry of $ {F_{ab}}^{IJ} = -{F_{ba}}^{IJ} = -{F_{ab}}^{JI} $<br>
 $ S = \int e ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 $<br>
 <br>
-Remember $ e = N \sqrt\gamma $<br>
+using $ e = \alpha \sqrt\gamma $<br>
 Let $ {\tilde{E}^a}_I = \sqrt\gamma {E^a}_I $
-$ S = \int N \sqrt\gamma ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 $<br>
-$ S = \int N ( {1\over\sqrt\gamma} {\tilde{E}^a}_I {\tilde{E}^b}_J - 2 {\tilde{E}^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 $<br>
+$ S = \int \alpha \sqrt\gamma ({E^a}_I {E^b}_J - 2 {E^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 $<br>
+$ S = \int \alpha ( {1\over\sqrt\gamma} {\tilde{E}^a}_I {\tilde{E}^b}_J - 2 {\tilde{E}^a}_I {e^c}_J n^b n_c) {F_{ab}}^{IJ} dx^4 $<br>
+using $\star {F_{ab}}^{IJ} = {1\over 2} {\epsilon^{IJ}}_{KL} {F_{ab}}^{KL} = i {F_{ab}}^{IJ} $<br>
+$ S = \int -i {1\over 2} {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{MN} {F_{ab}}^{MN} - 2 \alpha {\tilde{E}^a}_I {e^c}_J n^b n_c {F_{ab}}^{IJ} dx^4 $<br>
+$ S = \int -i {1\over 2} {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{MN} {F_{ab}}^{MN} - 2 \alpha {\tilde{E}^a}_I n^b n_J {F_{ab}}^{IJ} dx^4 $<br>
+...next they replace ${\epsilon^{IJ}}_{MN} {F_{ab}}^{MN}$ with ${\epsilon^{IJ}}_{M0} {F_{ab}}^{M0} + {\epsilon^{IJ}}_{0M} {F_{ab}}^{0M}$...i.e. the values for which $N=0$ plus the values for which $N \ne 0$<br>
+$ S = \int -i {1\over 2} {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_I {\tilde{E}^b}_J ({\epsilon^{IJ}}_{M0} {F_{ab}}^{M0} + {\epsilon^{IJ}}_{0M} {F_{ab}}^{0M}) - 2 \alpha {\tilde{E}^a}_I n^b n_J {F_{ab}}^{IJ} dx^4 $<br>
+...using ${\epsilon^{IJ}}_{M0} = -{\epsilon^{IJ}}_{0M}$ and ${F_{ab}}^{M0} = -{F_{ab}}^{0M}$...<br>
+$ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{M0} {F_{ab}}^{M0} - 2 \alpha {\tilde{E}^a}_I n^b n_J {F_{ab}}^{IJ} dx^4 $<br>
+...using $n_I = {e^\mu}_I n_\mu 
+	= {e^t}_I n_t + {e^j}_I n_j 
+	= {e^t}_I (-\alpha) + {e^j}_I \cdot 0
+	= -\alpha \overset{I(i)\downarrow}{\left[\matrix{ {e^t}_0 \\ {e^t}_i }\right]} 
+	= -\alpha \overset{I(i)\downarrow}{\left[\matrix{1/\alpha \\ 0 }\right]} 
+	= \overset{I(i)\downarrow}{\left[\matrix{-1 \\ 0 }\right]} 
+	= -\delta^0_I$<br>
+...therefore ${F_{ab}}^{IJ} n_J = -{F_{ab}}^{I0}$<br>
+$ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{M0} {F_{ab}}^{M0} + 2 \alpha {\tilde{E}^a}_I n^b {F_{ab}}^{I0} dx^4 $<br>
 <br>
-$ S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{KL} {F_{ab}}^{KL} - 2 N {\tilde{E}^a}_I {e^c}_J n^b n_c {F_{ab}}^{IJ} dx^4 $<br>
-$ S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{KL} {F_{ab}}^{KL} - 2 N {\tilde{E}^a}_I n^b n_J {F_{ab}}^{IJ} dx^4 $<br>
+Now we only need to consider the 3D hypersurface.<br>
+All other values for which $IJK=0$ are zero<br>
+$ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^{k0} + 2 \alpha {\tilde{E}^a}_i n^b {F_{ab}}^{i0} dx^3 $<br>
+Let $ {F_{ab}}^I = {F_{ab}}^{I0} $<br>
+$ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k + 2 \alpha {\tilde{E}^a}_i n^b {F_{ab}}^i dx^3 $<br>
 <br>
-Let $ n_I = (1, 0, 0, 0) $<br>
-Then $ n^I = \eta^{IJ} n_J = (-1, 0, 0, 0) $<br>
-Then $ {E^a}_\hat 0 = {\gamma_b}^a {e^b}_\hat 0 = (\delta^a_b + n^a n_b) {e^b}_\hat 0 = {e^a}_\hat 0 + n^a n_\hat 0 = {e^a}_\hat 0 + {e^a}_I n^I = {e^a}_\hat 0 - {e^a}_\hat 0 = 0 $<br>
+$\star {A_a}^{i0} = i {A_a}^{i0}$ by self-duality<br>
+$\star {A_a}^{i0} = {1\over 2} {\epsilon^{i0}}_{jk} {A_a}^{jk}$ by dual definition<br> 
+by combining the two definitions...<br>
+$ i {A_a}^{i0} = {1\over 2} {\epsilon^{i0}}_{jk} {A_a}^{jk}$ <br> 
+$ {A_a}^{i0} = -i {1\over 2} {\epsilon^{i0}}_{jk} {A_a}^{jk}$ by multiplying both sides by $-i$<br> 
+$ {A_a}^{i0} = i {1\over 2} {\epsilon^{0i}}_{jk} {A_a}^{jk}$ by permutation of $\epsilon^{0ijk}$<br> 
+$ {A_a}^{i0} = -i {1\over 2} {\epsilon^i}_{jk} {A_a}^{jk}$ by above $\epsilon^{0ijk} = -\epsilon^{ijk}$<br> 
 <br>
-$ e_{IJKL} $ is the permutations of $I,J,K,L$<br>
-$ e^{IJKL} = \eta^{IM} \eta^{JN} \eta^{KP} \eta^{LQ} \epsilon_{MNPQ} $<br>
-$ = tr||\eta_{uv}|| \eta_{IJKL} $<br>
-$ = -\eta_{IJKL} $<br>
-$ \epsilon^{IJKL} n_L = \epsilon^{IJK\hat 0} = -\epsilon^{\hat 0IJK} = \epsilon_{\hat 0IJK} = \epsilon_{IJK} = \epsilon^{IJK} $<br>
+Let $ {A_a}^i = {A_a}^{i0} $<br>
+$ {A_a}^i = -i {A_a}^i$<br>
 <br>
-$ S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{K} {F_{ab}}^{K\hat 0} - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^{I\hat 0} dx^4 $<br>
+${F_{ab}}^{i0} = \partial_a {A_b}^{i0} - \partial_b {A_a}^{i0} + {A_a}^{0k} {A_{bk}}^i - {A_b}^{0k} {A_{ak}}^i$<br>
+$ = \partial_a {A_b}^i - \partial_b {A_a}^i + {A_a}^k {A_{bk}}^i - {A_b}^k {A_{ak}}^i$<br>
 <br>
-Let $ {A_a}^{I} = {A_a}^{I\hat 0} $<br>
-$ = {1\over 2} ({\hat\omega_a}^{I\hat 0} - {i\over 2} {\epsilon^{I\hat 0}}_{KL} {\hat\omega_a}^{KL}) $<br>
-$ = {1\over 2} {\hat\omega_a}^{I\hat 0} - {i\over 4} \epsilon^{IJK} \hat\omega_{aJK} $<br>
-Let $ {F_{ab}}^I = {F_{ab}}^{I\hat 0} $<br>
-$ S = \int -i {1\over 2} {1\over\sqrt\gamma} N {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsilon^{IJ}}_{M} {F_{ab}}^M - 2 N {\tilde{E}^a}_I n^b {F_{ab}}^I dx^4 $<br>
-<br>
+TODO- straighten this out:<br>
+$\alpha n^b = t^b - n^b$<br>
+$\mathcal{L}_t {A_b}^i = t^a \partial_a {A_b}^i + {A_a}^i \partial_b t^a$<br>
+...and $\mathcal{D}_b (t^a {A_a}^i) = \partial_b (t^a {A_a}^i) + \epsilon_{ijk} {A_b}^j (t^a {A_a}^k)$<br>
+...gets $\mathcal{L}_t {A_b}^i - \mathcal{D}_b (t^a {A_a}^i) = t^a (\partial_a {A_b}^i - \partial_b {A_a}^i + \epsilon_{ijk} {A_a}^j {A_b}^k) = t^a {F_{ab}}^i$<br>
+...substitute to find...<br>
+$ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k + 2 \alpha {\tilde{E}^a}_i n^b {F_{ab}}^i dx^3 $<br>
 
+<br>
 </div>
 
