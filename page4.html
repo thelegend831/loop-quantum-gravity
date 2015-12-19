@@ -46,6 +46,11 @@ $R =R^\perp-K_{ab}K^{ab}+K^2-2n^a n^b R_{ab}$<br>
 $R=R^\perp-K_{ab}K^{ab}+K^2-2(K^2 - K_{ab} K^{ab} + \nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b))$<br>
 $R=R^\perp-K_{ab}K^{ab}+K^2-2K^2 + 2K_{ab} K^{ab} - 2\nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)$<br>
 $R=R^\perp+K_{ab}K^{ab}-K^2 - 2\nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)$<br>
+Looks like now we disregard the $2\nabla_c (n^b  \nabla_b n^c - n^c \nabla_b n^b)$<br>
+because it can be converted to a total integral via divergence theorem.<br>
+but this is only the case if we are integrating over a volume, i.e. true for $\int L dx^4$ and therefore $\int R dx^4$<br>
+So how can it still be true for $\mathcal{L} = \int \sqrt{-g} R dx^4$?  Does $\int \nabla_c \sqrt{-g} dx^4$ disappear as well?<br>
+$R=R^\perp+K_{ab}K^{ab}-K^2$<br>
 <br>
 
 Lagrangian is equal to scalar curvature:<br>
@@ -56,8 +61,7 @@ $\mathcal{L}=\sqrt{-g}L$<br>
 $=\sqrt{-g}R$<br>
 $=\alpha\sqrt{\gamma}R$<br>
 ...substitute Gauss-Codazzi equations...<br>
-$=\alpha\sqrt{\gamma}(R^\perp + K_{ab} K^{ab} - K^2 - 2 \nabla_c (n^b \nabla_b n^c - n^c \nabla_b n^b))$<br>
-...consider only spatial integral / disregard total integral (TODO explain this one better)...<br>
+$=\alpha\sqrt{\gamma}(R^\perp + K_{ab} K^{ab} - K^2$<br>
 $\mathcal{L}=\alpha\sqrt{\gamma}(R^\perp+K_{ij} K^{ij} - K^2)$<br>
 <br>
 Vacuum Action:<br>
