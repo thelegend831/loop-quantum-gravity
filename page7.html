@@ -198,7 +198,10 @@ $= \epsilon^{ijk}$ by raising by $\eta^{ij} = \delta^{ij}$<br>
 <br>
 
 dual of the spin connection in triad:<br>
+${\Gamma^i}_a = \star {\omega_a}^{0i} = -\star {\omega_a}^{i0} $<br>
+${\Gamma^i}_a = {1\over2} {\epsilon^{0i}}_{jk} {\omega_a}^{jk}$<br>
 ${\Gamma^i}_a = -{1\over2} {\epsilon^i}_{jk} {\omega_a}^{jk}$<br>
+Though some sources define this as ${\Gamma^i}_a = {\epsilon^i}_{jk} {\omega_a}^{jk}$<br>
 TODO more on this, i.e. from Kiefer<br>
 <br>
 timelike component of the self-dual spin connection:<br>
@@ -255,9 +258,9 @@ $ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_I {\tilde{E}^b}_J {\epsil
 <br>
 Now we only need to consider the 3D hypersurface.<br>
 All other values for which $IJK=0$ are zero<br>
-$ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^{k0} + 2 \alpha {\tilde{E}^a}_i n^b {F_{ab}}^{i0} dx^3 $<br>
+$ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^{k0} + 2 \alpha {\tilde{E}^a}_i n^b {F_{ab}}^{i0} dx^4 $<br>
 Let $ {F_{ab}}^I = {F_{ab}}^{I0} $<br>
-$ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k + 2 \alpha {\tilde{E}^a}_i n^b {F_{ab}}^i dx^3 $<br>
+$ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k + 2 \alpha {\tilde{E}^a}_i n^b {F_{ab}}^i dx^4 $<br>
 <br>
 $\star {A_a}^{i0} = i {A_a}^{i0}$ by self-duality<br>
 $\star {A_a}^{i0} = {1\over 2} {\epsilon^{i0}}_{jk} {A_a}^{jk}$ by dual definition<br> 
@@ -266,21 +269,48 @@ $ i {A_a}^{i0} = {1\over 2} {\epsilon^{i0}}_{jk} {A_a}^{jk}$ <br>
 $ {A_a}^{i0} = -i {1\over 2} {\epsilon^{i0}}_{jk} {A_a}^{jk}$ by multiplying both sides by $-i$<br> 
 $ {A_a}^{i0} = i {1\over 2} {\epsilon^{0i}}_{jk} {A_a}^{jk}$ by permutation of $\epsilon^{0ijk}$<br> 
 $ {A_a}^{i0} = -i {1\over 2} {\epsilon^i}_{jk} {A_a}^{jk}$ by above $\epsilon^{0ijk} = -\epsilon^{ijk}$<br> 
-<br>
 Let $ {A_a}^i = {A_a}^{i0} $<br>
-$ {A_a}^i = -i {A_a}^i$<br>
 <br>
 ${F_{ab}}^{i0} = \partial_a {A_b}^{i0} - \partial_b {A_a}^{i0} + {A_a}^{0k} {A_{bk}}^i - {A_b}^{0k} {A_{ak}}^i$<br>
 $ = \partial_a {A_b}^i - \partial_b {A_a}^i + {A_a}^k {A_{bk}}^i - {A_b}^k {A_{ak}}^i$<br>
 <br>
-TODO- straighten this out:<br>
-$\alpha n^b = t^b - n^b$<br>
-$\mathcal{L}_t {A_b}^i = t^a \partial_a {A_b}^i + {A_a}^i \partial_b t^a$<br>
+recap:<br>
+$ S = \int -i {\alpha\over\sqrt\gamma} {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k + 2 \alpha {\tilde{E}^a}_i n^b {F_{ab}}^i dx^4 $<br>
+TODO- straighten out everything below this:<br>
+...using $\alpha n^b = t^b - \beta^b$<br>
+$ S = \int -i {\alpha\over\sqrt\gamma} {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k + 2 (t^b - \beta^b) {\tilde{E}^a}_i {F_{ab}}^i dx^4 $<br>
+...switch $a$s and $b$s in rightmost term...<br>
+$ S = \int -i {\alpha\over\sqrt\gamma} {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k + 2 (t^a - \beta^a) {\tilde{E}^b}_i {F_{ba}}^i dx^4 $<br>
+...using ${F_{ab}}^{IJ} = -{F_{ba}}^{IJ}$...<br>
+$ S = \int -i {\alpha\over\sqrt\gamma} {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k - 2 (t^a - \beta^a) {\tilde{E}^b}_i {F_{ab}}^i dx^4 $<br>
+...distribute rightmost term...<br>
+$ S = \int -i {\alpha\over\sqrt\gamma} {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k - 2 t^a {\tilde{E}^b}_i {F_{ab}}^i + 2 \beta^a {\tilde{E}^b}_i {F_{ab}}^i dx^4 $<br>
+...move first term to last...<br>
+$ S = \int 
+	-2 {\tilde{E}^b}_i t^a {F_{ab}}^i
+	+ 2 \beta^a {\tilde{E}^b}_i {F_{ab}}^i 
+	- i {\alpha\over\sqrt\gamma} {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k dx^4 $<br>
+...using $\mathcal{L}_t {A_b}^i = t^a \partial_a {A_b}^i + {A_a}^i \partial_b t^a$<br>
 ...and $\mathcal{D}_b (t^a {A_a}^i) = \partial_b (t^a {A_a}^i) + \epsilon_{ijk} {A_b}^j (t^a {A_a}^k)$<br>
 ...gets $\mathcal{L}_t {A_b}^i - \mathcal{D}_b (t^a {A_a}^i) = t^a (\partial_a {A_b}^i - \partial_b {A_a}^i + \epsilon_{ijk} {A_a}^j {A_b}^k) = t^a {F_{ab}}^i$<br>
-...substitute to find...<br>
-$ S = \int -i {1\over\sqrt\gamma} \alpha {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k + 2 \alpha {\tilde{E}^a}_i n^b {F_{ab}}^i dx^3 $<br>
-
+...gets $t^a {F_{ab}}^i = \mathcal{L}_t {A_b}^i - \mathcal{D}_b (t^a {A_a}^i)$<br>
+...substitute...<br>
+$ S = \int 
+	-2 {\tilde{E}^b}_i (\mathcal{L}_t {A_b}^i - \mathcal{D}_b (t^a {A_a}^i)) 
+	+ 2 \beta^a {\tilde{E}^b}_i {F_{ab}}^i 
+	- i {\alpha\over\sqrt\gamma} {\tilde{E}^a}_i {\tilde{E}^b}_j {\epsilon^{ij}}_k {F_{ab}}^k dx^4 $<br>
+$ S = \int 
+	-2 {\tilde{E}^b}_i \mathcal{L}_t {A_b}^i
+	+ 2 {\tilde{E}^b}_i \mathcal{D}_b (t^a {A_a}^i) 
+	+ 2 \beta^a {\tilde{E}^b}_i {F_{ab}}^i 
+	- i {\alpha\over\sqrt\gamma} {\epsilon^{ij}}_k {\tilde{E}^a}_i {\tilde{E}^b}_j {F_{ab}}^k dx^4 $<br>
+...integrate by parts to find $\int {\tilde{E}^b}_i \mathcal{D}_b (t^a {A_a}^i) dx^4 = -\int t^a {A_a}^i \mathcal{D}_b {\tilde{E}^b}_i dx^4$<br>
+Pullin ditches this entirely<br>
+$ S = \int 
+	-2 {\tilde{E}^b}_i \mathcal{L}_t {A_b}^i
+	- 2 t^a {A_a}^i \mathcal{D}_b {\tilde{E}^b}_i 
+	+ 2 \beta^a {\tilde{E}^b}_i {F_{ab}}^i 
+	- i {\alpha\over\sqrt\gamma} {\epsilon^{ij}}_k {\tilde{E}^a}_i {\tilde{E}^b}_j {F_{ab}}^k dx^4 $<br>
 <br>
 </div>
 
