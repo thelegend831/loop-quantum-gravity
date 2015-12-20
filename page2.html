@@ -9,41 +9,6 @@ $A-Z$ = spacetime Minkowski metric<br>
 $i-n$ = spatial components of spacetime Minkowski metric<br>
 <br>
 
-Levi-Civita connection:<br>
-$\epsilon_{IJKL} = 1$ for even permutations of $IJKL$, -1 for odd permutations, and 0 otherwise.<br>
-<br>
-contravariant Levi-Civita connection:<br>
-$\epsilon^{I_1 ... I_n} = (\eta^{I_1 J_1}) \cdot ... \cdot (\eta^{I_n J_n}) \epsilon_{J_1 ... J_n}$<br>
-$= \sigma \epsilon_{I_1 ... I_n}$<br>
-for $\sigma$ the signature of the metric<br>
-<br>
-
-specific instance for 4D Minkowski space:<br>
-The signature of the space is $\sigma = -1$<br>
-$\epsilon^{IJKL} = -\epsilon_{IJKL}$<br>
-<br>
-
-Kronecher delta extension:<br>
-$\delta^{I_1 ... I_n}_{J_1 ... J_n} = n! \delta^{I_1}_{[J_1} \cdot ... \cdot \delta^{I_n}_{J_n]} = \sigma \epsilon^{I_1 ... I_n} \epsilon_{J_1 ... J_n}$<br>
-specific instances for 4D Minkowski space:<br>
-$\delta^{IJKL}_{MNPQ} = -\epsilon^{IJKL} \epsilon_{MNPQ}$<br>
-$\delta^{IJK}_{MNP} = \delta^{IJKL}_{MNPL} = -\epsilon^{IJKL} \epsilon_{MNPL}$<br>
-$2! \delta^{IJ}_{MN} = \delta^{IJK}_{MNK} = \delta^{IJKL}_{MNKL} = -\epsilon^{IJKL} \epsilon_{MNKL}$<br>
-$3! \delta^I_J = 2! \delta^{IJ}_{MJ} = \delta^{IJK}_{MJK} = \delta^{IJKL}_{MJKL} = -\epsilon^{IJKL} \epsilon_{MJKL}$<br>
-$4! = 3! \delta^I_I = 2! \delta^{IJ}_{IJ} = \delta^{IJK}_{IJK} = \delta^{IJKL}_{IJKL} = -\epsilon^{IJKL} \epsilon_{IJKL}$<br>
-<br>
-
-Dual tensors:<br>
-For $k$-degree tensors in $n$-dimension space<br>
-$\ast T_{\alpha_{k+1} ... \alpha_n} = {1\over k!} T^{\alpha_1 ... \alpha_k} \epsilon_{\alpha_1 ... \alpha_n}$<br>
-specific instances for 4D Minkowski space:<br>
-$\ast T_{\alpha\beta\gamma\delta} = T \epsilon_{\alpha\beta\gamma\delta}$<br>
-$\ast T_{\beta\gamma\delta} = T^\alpha \epsilon_{\alpha\beta\gamma\delta}$<br>
-$\ast T_{\gamma\delta} = {1\over2} T^{\alpha\beta} \epsilon_{\alpha\beta\gamma\delta}$<br>
-$\ast T_\delta = {1\over3!}T^{\alpha\beta\gamma} \epsilon_{\alpha\beta\gamma\delta}$<br>
-$\ast T = {1\over4!} T^{\alpha\beta\gamma\delta} \epsilon_{\alpha\beta\gamma\delta}$<br>
-<br>
-
 Einstein: $ {G^{\alpha\beta}}_{\gamma\delta} = {(\ast R\ast)^{\alpha\beta}}_{\gamma\delta} = {\epsilon^{\alpha\beta}}_{\mu\nu} {R^{\mu\nu}}_{\rho\sigma} {\epsilon^{\rho\sigma}}_{\gamma\delta} $<br>
 Einstein: $ G_{\alpha\beta} = R_{\alpha\beta} - {1\over 2} R g_{\alpha\beta} = {G^{\mu\alpha}}_{\mu\beta} $<br>
 <br>

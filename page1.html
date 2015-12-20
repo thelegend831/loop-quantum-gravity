@@ -37,7 +37,6 @@ $ \langle \boldsymbol{\omega}^\alpha, \textbf{v} \rangle
 	= v^\beta \delta^\alpha_\beta
 	= v^\alpha
 $<br>
-
 elements of one-forms:
 $ \langle \textbf{w}, \textbf{e}_\alpha \rangle
 	= \langle w_\beta \boldsymbol{\omega}^\beta, \textbf{e}_\alpha \rangle
@@ -47,6 +46,19 @@ $ \langle \textbf{w}, \textbf{e}_\alpha \rangle
 $<br>
 <br>
 
+metric: $ g_{\alpha\beta} = {\textbf e}_\alpha \cdot {\textbf e}_\beta $<br>
+metric inverse: $ ||g^{\alpha\beta}|| = ||g_{\alpha\beta}||^{-1} $ such that $ g^{\alpha\gamma} g_{\gamma\beta} = \delta^\alpha_\beta $<br>
+<br>
+Minkowski (flat spacetime) metric: $\eta_{IJ} = diag(-1, 1, 1, 1)$<br>
+Minkowski metric inverse: $\eta^{IJ} = ||\eta_{IJ}||^{-1} = diag(-1, 1, 1, 1)$<br>
+<br>
+
+Raising curved indexes: $v^\alpha = g^{\alpha\beta} v_\beta$<br>
+Lowering curved indexes: $v_\alpha = g_{\alpha\beta} v^\beta$<br>
+Raising flat indexes: $v^I = \eta^{IJ} v_J$<br>
+Lowering flat indexes: $v_I = \eta_{IJ} v^J$<br>
+<br>
+
 inner product of vector and one-form: 
 $ \langle \textbf{w}, \textbf{v} \rangle
 	= \langle w_\alpha \boldsymbol{\omega}^\alpha, v^\beta \textbf{e}_\beta \rangle
@@ -54,6 +66,7 @@ $ \langle \textbf{w}, \textbf{v} \rangle
 	= w_\alpha v^\beta \delta^\alpha_\beta
 	= w_\alpha v^\alpha
 $<br>
+
 inner product symmetry: $ \langle \textbf{a}, \textbf{b} \rangle = \langle \textbf{b}, \textbf{a} \rangle $<br>
 dot product of vectors: $ \textbf{a} \cdot \textbf{b} = a^\alpha \textbf{e}_\alpha \cdot b^\beta \textbf{e}_\beta = a^\alpha b^\beta \textbf{e}_\alpha \cdot \textbf{e}_\beta = a^\alpha b^\beta g_{\alpha\beta} = a^\alpha b_\alpha = a_\alpha b^\alpha $<br>
 dot product symmetry: $ \textbf{a} \cdot \textbf{b} = \textbf{b} \cdot \textbf{a} $<br>
@@ -81,20 +94,7 @@ $ = (-1)^{pq} a_{\alpha_1 ... \alpha_p} b_{\beta_1 ... \beta_q} (\textbf{dx}^{\b
 $ = (-1)^{pq} (b_{\beta_1 ... \beta_q} \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}) \wedge (a_{\alpha_1 ... \alpha_p} \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p}) $<br>
 $ = (-1)^{pq} \textbf{b} \wedge \textbf{a} $<br>
 <br>
-commutation coefficients: 
-$ [\textbf{e}_\alpha, \textbf{e}_\beta]
-	= \boldsymbol{\nabla}_{\textbf{e}_\alpha} \textbf{e}_\beta - \boldsymbol{\nabla}_{\textbf{e}_\beta} \textbf{e}_\alpha
-	= \nabla_\alpha \textbf{e}_\beta - \nabla_\beta \textbf{e}_\alpha
-	= {c_{\alpha\beta}}^\gamma \textbf{e}_\gamma
-$<br>
-commutation coefficient antisymmetry: $ [ \textbf{e}_\alpha, \textbf{e}_\beta ] = -[ \textbf{e}_\beta, \textbf{e}_\alpha ] $ implies $ {c_{\alpha\beta}}^\gamma = -{c_{\beta\alpha}}^\gamma $<br>
-<br>
-A basis is <i>holonomic</i> when all $ {c_{\alpha\beta}}^\gamma = 0 $.<br>
-This coincides with when $ \textbf{e}_\alpha = {\partial \over {\partial x^\alpha}} $ such that $ [\textbf{e}_\alpha, \textbf{e}_\beta] = \left [ {\partial \over {\partial x^\alpha}}, {\partial \over {\partial x^\beta}} \right ] = 0 $.  Subsequently $ \boldsymbol{\omega}^\alpha = \textbf{dx}^\alpha $.<br>
-A basis that does not meet this condition is considered <i>anholonomic</i>.<br> 
-<br>	
-metric: $ g_{\alpha\beta} = {\textbf e}_\alpha \cdot {\textbf e}_\beta $<br>
-metric inverse: $ ||g^{\alpha\beta}|| = $ inverse of $ ||g_{\alpha\beta}|| $ such that $ g^{\alpha\gamma} g_{\gamma\beta} = \delta^\alpha_\beta $<br>
+
 metric symmetry: $ g_{\alpha\beta} = \textbf{e}_\alpha \cdot \textbf{e}_\beta = \textbf{e}_\beta \cdot \textbf{e}_\alpha = g_{\beta\alpha} $<br>
 metric inverse symmetry implied from metric symmetry.<br>
 identity derivative: $ 0 = \partial_\gamma \delta^\alpha_\beta = \partial_\gamma (g^{\alpha\delta} g_{\delta\beta}) = \partial_\gamma g^{\alpha\delta} g_{\delta\beta} + g^{\alpha\delta} \partial_\gamma g_{\delta\beta} $<br>
@@ -122,22 +122,41 @@ $= {1\over2}(T_{\alpha\beta} + T_{\alpha\beta})$<br>
 $= T_{\alpha\beta}$<br>
 <br>
 
-Minkowski (flat spacetime) metric: $\eta_{IJ} = diag(-1, 1, 1, 1)$<br>
+Levi-Civita connection:<br>
+$\epsilon_{IJKL} = 1$ for even permutations of $IJKL$, -1 for odd permutations, and 0 otherwise.<br>
 <br>
-Raising curved indexes: $v^\alpha = g^{\alpha\beta} v_\beta$<br>
-Lowering curved indexes: $v_\alpha = g_{\alpha\beta} v^\beta$<br>
-Raising flat indexes: $v^I = \eta^{IJ} v_J$<br>
-Lowering flat indexes: $v_I = \eta_{IJ} v^J$<br>
+contravariant Levi-Civita connection:<br>
+$\epsilon^{I_1 ... I_n} = (\eta^{I_1 J_1}) \cdot ... \cdot (\eta^{I_n J_n}) \epsilon_{J_1 ... J_n}$<br>
+$= \sigma \epsilon_{I_1 ... I_n}$<br>
+for $\sigma$ the signature of the metric<br>
 <br>
-Christoffel of the 1st kind: $ \Gamma_{\alpha\beta\gamma} $ <br>
-in a holonmic basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma}) $<br>
-in an anholonomic basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}) $<br>
-1st kind symmetry: $ \Gamma_{\alpha[\beta\gamma]} = {1 \over 2} (\Gamma_{\alpha\beta\gamma} - \Gamma_{\alpha\gamma\beta}) = {1 \over 4} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha} - \partial_\beta g_{\alpha\gamma} - \partial_\gamma g_{\alpha\beta} + \partial_\alpha g_{\gamma\beta} - c_{\alpha\gamma\beta} - c_{\alpha\beta\gamma} + c_{\gamma\beta\alpha}) = {1 \over 4} ( c_{\beta\gamma\alpha} - c_{\gamma\beta\alpha} ) = {1 \over 2} c_{\gamma\beta\alpha} $<br>
-which reduces to 0 in a holonomic basis<br>
-1st kind antisymmetry: $ \Gamma_{(\alpha\beta)\gamma} = {1 \over 2} (\Gamma_{\alpha\beta\gamma} + \Gamma_{\beta\alpha\gamma}) = {1 \over 4} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha} + \partial_\gamma g_{\beta\alpha} + \partial_\alpha g_{\beta\gamma} - \partial_\beta g_{\alpha\gamma} + c_{\beta\alpha\gamma} + c_{\beta\gamma\alpha} - c_{\alpha\gamma\beta}) = {1 \over 4} (2 \partial_\gamma g_{\alpha\beta} + c_{\alpha\beta\gamma} + c_{\beta\alpha\gamma}) = {1 \over 2} \partial_\gamma g_{\alpha\beta} $<br>
+
+specific instance for 4D Minkowski space:<br>
+The signature of the space is $\sigma = -1$<br>
+$\epsilon^{IJKL} = -\epsilon_{IJKL}$<br>
 <br>
-Christoffel of the 2nd kind / affine connection: $ {\Gamma^\alpha}_{\beta\gamma} = g^{\alpha\delta} \Gamma_{\delta\beta\gamma} $<br>
+
+Kronecher delta extension:<br>
+$\delta^{I_1 ... I_n}_{J_1 ... J_n} = n! \delta^{I_1}_{[J_1} \cdot ... \cdot \delta^{I_n}_{J_n]} = \sigma \epsilon^{I_1 ... I_n} \epsilon_{J_1 ... J_n}$<br>
+specific instances for 4D Minkowski space:<br>
+$\delta^{IJKL}_{MNPQ} = -\epsilon^{IJKL} \epsilon_{MNPQ}$<br>
+$\delta^{IJK}_{MNP} = \delta^{IJKL}_{MNPL} = -\epsilon^{IJKL} \epsilon_{MNPL}$<br>
+$2! \delta^{IJ}_{MN} = \delta^{IJK}_{MNK} = \delta^{IJKL}_{MNKL} = -\epsilon^{IJKL} \epsilon_{MNKL}$<br>
+$3! \delta^I_J = 2! \delta^{IJ}_{MJ} = \delta^{IJK}_{MJK} = \delta^{IJKL}_{MJKL} = -\epsilon^{IJKL} \epsilon_{MJKL}$<br>
+$4! = 3! \delta^I_I = 2! \delta^{IJ}_{IJ} = \delta^{IJK}_{IJK} = \delta^{IJKL}_{IJKL} = -\epsilon^{IJKL} \epsilon_{IJKL}$<br>
 <br>
+
+Dual tensors:<br>
+For $k$-degree tensors in $n$-dimension space<br>
+$\ast T_{\alpha_{k+1} ... \alpha_n} = {1\over k!} T^{\alpha_1 ... \alpha_k} \epsilon_{\alpha_1 ... \alpha_n}$<br>
+specific instances for 4D Minkowski space:<br>
+$\ast T_{\alpha\beta\gamma\delta} = T \epsilon_{\alpha\beta\gamma\delta}$<br>
+$\ast T_{\beta\gamma\delta} = T^\alpha \epsilon_{\alpha\beta\gamma\delta}$<br>
+$\ast T_{\gamma\delta} = {1\over2} T^{\alpha\beta} \epsilon_{\alpha\beta\gamma\delta}$<br>
+$\ast T_\delta = {1\over3!}T^{\alpha\beta\gamma} \epsilon_{\alpha\beta\gamma\delta}$<br>
+$\ast T = {1\over4!} T^{\alpha\beta\gamma\delta} \epsilon_{\alpha\beta\gamma\delta}$<br>
+<br>
+
 covariant derivative: $ \boldsymbol{\nabla} $<br>
 covariant derivative per component: $ \boldsymbol{\nabla} = \nabla_\alpha \boldsymbol{\omega}^\alpha $<br>
 covariant derivative of scalar: 
@@ -169,6 +188,39 @@ $<br>
 let $ \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma {\textbf e}_\beta \rangle = {\Gamma^\alpha}_{\beta\gamma} $<br>
 so $ \langle \nabla_\gamma \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle = -{\Gamma^\alpha}_{\beta\gamma} $<br>
 <br>
+
+TODO provide a better relation of the definition of ${\Gamma^\alpha}_{\beta\gamma}$ with $\nabla$ and $g_{\mu\nu}$<br>
+<br>
+
+commutation coefficients: 
+$ [\textbf{e}_\alpha, \textbf{e}_\beta]
+	= \boldsymbol{\nabla}_{\textbf{e}_\alpha} \textbf{e}_\beta - \boldsymbol{\nabla}_{\textbf{e}_\beta} \textbf{e}_\alpha
+	= \nabla_\alpha \textbf{e}_\beta - \nabla_\beta \textbf{e}_\alpha
+	= {c_{\alpha\beta}}^\gamma \textbf{e}_\gamma
+$<br>
+commutation coefficient antisymmetry: $ [ \textbf{e}_\alpha, \textbf{e}_\beta ] = -[ \textbf{e}_\beta, \textbf{e}_\alpha ] $ implies $ {c_{\alpha\beta}}^\gamma = -{c_{\beta\alpha}}^\gamma $<br>
+<br>
+A basis is <i>holonomic</i> when all $ {c_{\alpha\beta}}^\gamma = 0 $.<br>
+This coincides with when $ \textbf{e}_\alpha = {\partial \over {\partial x^\alpha}} $ such that $ [\textbf{e}_\alpha, \textbf{e}_\beta] = \left [ {\partial \over {\partial x^\alpha}}, {\partial \over {\partial x^\beta}} \right ] = 0 $.  Subsequently $ \boldsymbol{\omega}^\alpha = \textbf{dx}^\alpha $.<br>
+A basis that does not meet this condition is considered <i>anholonomic</i>.<br> 
+<br>	
+
+Christoffel of the 1st kind: $ \Gamma_{\alpha\beta\gamma} $ <br>
+in a holonmic basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma}) $<br>
+in an anholonomic basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}) $<br>
+1st kind symmetry: $ \Gamma_{\alpha[\beta\gamma]} = {1 \over 2} (\Gamma_{\alpha\beta\gamma} - \Gamma_{\alpha\gamma\beta}) = {1 \over 4} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha} - \partial_\beta g_{\alpha\gamma} - \partial_\gamma g_{\alpha\beta} + \partial_\alpha g_{\gamma\beta} - c_{\alpha\gamma\beta} - c_{\alpha\beta\gamma} + c_{\gamma\beta\alpha}) = {1 \over 4} ( c_{\beta\gamma\alpha} - c_{\gamma\beta\alpha} ) = {1 \over 2} c_{\gamma\beta\alpha} $<br>
+which reduces to 0 in a holonomic basis<br>
+1st kind antisymmetry: $ \Gamma_{(\alpha\beta)\gamma} = {1 \over 2} (\Gamma_{\alpha\beta\gamma} + \Gamma_{\beta\alpha\gamma}) = {1 \over 4} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha} + \partial_\gamma g_{\beta\alpha} + \partial_\alpha g_{\beta\gamma} - \partial_\beta g_{\alpha\gamma} + c_{\beta\alpha\gamma} + c_{\beta\gamma\alpha} - c_{\alpha\gamma\beta}) = {1 \over 4} (2 \partial_\gamma g_{\alpha\beta} + c_{\alpha\beta\gamma} + c_{\beta\alpha\gamma}) = {1 \over 2} \partial_\gamma g_{\alpha\beta} $<br>
+<br>
+
+Christoffel of the 2nd kind / affine connection: $ {\Gamma^\alpha}_{\beta\gamma} = g^{\alpha\delta} \Gamma_{\delta\beta\gamma} $<br>
+<br>
+
+torsion: ${T^\alpha}_{\beta\gamma} = {\Gamma^\alpha}_{\beta\gamma} - {\Gamma^\alpha}_{\gamma\beta} - {c_{\gamma\beta}}^\alpha$<br>
+...in holonomic basis: ${T^\alpha}_{\beta\gamma} = 2 {\Gamma^\alpha}_{[\beta\gamma]}$<br>
+TODO: incorporate its definition into the other definitions.<br> 
+<br>
+
 covariant derivative of vector basis: $ \langle \nabla_\gamma {\textbf e}_\beta, \boldsymbol{\omega}^\alpha \rangle = {\Gamma^\alpha}_{\beta\gamma} $, so $ \nabla_\gamma {\textbf e}_\beta = {\Gamma^\alpha}_{\beta\gamma} {\textbf e}_\alpha $<br>
 covariant derivative of one-form basis: $ -\langle \nabla_\gamma \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle = {\Gamma^\alpha}_{\beta\gamma} $, so $ \nabla_\gamma \boldsymbol{\omega}^\alpha = -{\Gamma^\alpha}_{\beta\gamma} \boldsymbol{\omega}^\beta $<br>
 <br>
