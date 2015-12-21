@@ -58,19 +58,20 @@ $ = {1\over 2} {\omega_\alpha}^{IJ} - {i\over 4} {\epsilon^{IJ}}_{KL} {\omega_\a
 <br>
 
 self-dual covariant derivative on Lorentz indexes:<br>
-$ {^+}D_\alpha {T_\beta}^I = \partial_\alpha {T_\beta}^I + {{A_\alpha}^I}_J {T_\beta}^J $<br>
+$ \mathcal{D}_\alpha {T_\beta}^I = \partial_\alpha {T_\beta}^I + {{A_\alpha}^I}_J {T_\beta}^J $<br>
+(I know I was using $\mathcal{D}$ in the Palatini variation part of the last page.  Just forget about that.  I'm not sure what to do with it just yet.)<br>
 <br>
 
 Make the self-dual covariant derivative on Lorentz indexes compatible with Lorentz metric:<br>
 follows the same process as the similar proof for $ D_a $<br>
-$ 0 = {^+}D_\alpha \eta_{IJ} = \partial_\alpha \eta_{IJ} - {{A_\alpha}^K}_I \eta_{KJ} - {{A_\alpha}^K}_J \eta_{IK} $<br>
+$ 0 = \mathcal{D}_\alpha \eta_{IJ} = \partial_\alpha \eta_{IJ} - {{A_\alpha}^K}_I \eta_{KJ} - {{A_\alpha}^K}_J \eta_{IK} $<br>
 $ 0 = 0 - A_{\alpha JI} - A_{\alpha IJ} $<br>
 $ A_{aIJ} = -A_{\alpha JI} $<br>
 <br>
 curvature of self-dual spin connection on Lorentz indexes:<br>
-$ {{F_{\alpha\beta}}^I}_J V^J = {^+}D_\alpha {^+}D_\beta V^I - {^+}D_\beta {^+}D_\alpha V^I $<br>
+$ {{F_{\alpha\beta}}^I}_J V^J = \mathcal{D}_\alpha \mathcal{D}_\beta V^I - \mathcal{D}_\beta \mathcal{D}_\alpha V^I $<br>
 
-$ = {^+}D_\alpha (\partial_\beta V^I + {{A_\beta}^I}_J V^J) - {^+}D_\beta (\partial_\alpha V^I + {{A_\alpha}^I}_J V^J) $<br>
+$ = \mathcal{D}_\alpha (\partial_\beta V^I + {{A_\beta}^I}_J V^J) - \mathcal{D}_\beta (\partial_\alpha V^I + {{A_\alpha}^I}_J V^J) $<br>
 $ = \partial_\alpha (\partial_\beta V^I + {{A_\beta}^I}_J V^J) + {{A_\alpha}^I}_K (\partial_\beta V^K + {{A_\beta}^K}_J V^J) 
 	- \partial_\beta (\partial_\alpha V^I + {{A_\alpha}^I}_J V^J) - {{A_\beta}^I}_K (\partial_\alpha V^K + {{A_\alpha}^K}_J V^J) $<br>
 $ = \partial_\alpha \partial_\beta V^I + \partial_\alpha ({{A_\beta}^I}_J V^J) + {{A_\alpha}^I}_K \partial_\beta V^K + {{A_\alpha}^I}_K {{A_\beta}^K}_J V^J
