@@ -27,8 +27,8 @@ I might be converging to what other sources seem to use of $0123$ for flat.<br>
 <br>
 
 coordinate system $x_\alpha$<br>
-vector basis: $ \textbf{e}_\alpha = {e_\alpha}^I$<br>
-one-form basis: $ \boldsymbol{\omega}^\alpha = {\omega^\alpha}_I $<br>
+vector basis: $ \textbf{e}_\alpha = {e_\alpha}^I$.  This is also known as the <i>vielbein</i>.<br>
+one-form basis: $ \boldsymbol{\omega}^\alpha = {\omega^\alpha}_I$.  This is also represented as the <i>inverse vielbein</i>, as ${e^\alpha}_I $<br>
 contravariant representation $ {\textbf v} = v^\alpha {\textbf e}_\alpha $<br>
 covariant representation $ \textbf{w} = w_\alpha \boldsymbol{\omega}^\alpha $<br>
 <br>
@@ -53,6 +53,29 @@ $ \langle \textbf{w}, \textbf{e}_\alpha \rangle
 	= w_\beta \delta^\beta_\alpha
 	= w_\alpha
 $<br>
+<br>
+
+Tensor notation:<br>
+$v_{(\alpha_1 ... \alpha_n)} = {1\over n!} \cdot $ sum of even permutations of $\alpha_1 ... \alpha_n$ plus sum of odd permutations<br>
+$v_{[\alpha_1 ... \alpha_n]} = {1\over n!} \cdot $ sum of even permutations of $\alpha_1 ... \alpha_n$ minus sum of odd permutations<br>
+$v_{|\alpha_1 ... \alpha_n|} = $ sum of even minus sum of odd permutations, only summing indexes in increasing order<br>
+$v_{(\alpha_1 ... | \alpha_k | .. \alpha_n)}$, $v_{[\alpha_1 ... | \alpha_k | .. \alpha_n]} = $ a sum of permutations on variables $\alpha_1 ... \alpha_n$ excluding the variable $\alpha_k$<br>
+<br>
+
+antisymmetric tensors are tensors such that $T_{\alpha\beta} = -T_{\beta\alpha}$:<br>
+$T_{[\alpha\beta]} = {1\over2} (T_{\alpha\beta} - T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} + T_{\alpha\beta}) = T_{\alpha\beta}$<br>
+$T_{(\alpha\beta)} = {1\over2} (T_{\alpha\beta} + T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} - T_{\alpha\beta}) = 0$<br>
+<br>
+
+symmetric tensors are tensors such that $T_{\alpha\beta} = T_{\beta\alpha}$:<br>
+$T_{[\alpha\beta]} = {1\over2} (T_{\alpha\beta} - T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} - T_{\alpha\beta}) = 0$<br>
+$T_{(\alpha\beta)} = {1\over2} (T_{\alpha\beta} + T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} + T_{\alpha\beta}) = T_{\alpha\beta}$<br>
+<br>
+
+any degree-2 tensor can be represented as its symmetric and antisymmetric components:<br>
+$T_{(\alpha\beta)} + T_{[\alpha\beta]} = {1\over2} (T_{\alpha\beta} + T_{\beta\alpha}) + {1\over2} (T_{\alpha\beta} - T_{\beta\alpha})$<br>
+$= {1\over2}(T_{\alpha\beta} + T_{\alpha\beta})$<br>
+$= T_{\alpha\beta}$<br>
 <br>
 
 metric: $ g_{\alpha\beta} = {\textbf e}_\alpha \cdot {\textbf e}_\beta $<br>
@@ -81,6 +104,8 @@ dot product of vectors: $ \textbf{a} \cdot \textbf{b} = a^\alpha \textbf{e}_\alp
 dot product symmetry: $ \textbf{a} \cdot \textbf{b} = \textbf{b} \cdot \textbf{a} $<br>
 outer product of vectors: $ \textbf{a} \otimes \textbf{b} = a^\alpha \textbf{e}_\alpha \otimes b^\beta \textbf{e}_\beta = a^\alpha b^\beta \textbf{e}_\alpha \otimes \textbf{e}_\beta $<br>
 outer product of one-forms: $ \textbf{a} \otimes \textbf{b} = a_\alpha \boldsymbol{\omega}^\alpha \otimes b_\beta \boldsymbol{\omega}^\beta = a_\alpha b_\beta \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta $<br>
+wedge product of p-form basis: $ \boldsymbol{\omega}^{\alpha_1} \wedge ... \wedge \boldsymbol{\omega}^{\alpha_p} 
+	= p! \cdot \boldsymbol{\omega}^{[\alpha_1} \otimes ... \otimes \boldsymbol{\omega}^{\alpha_p]}$<br>
 wedge product of one-form basis: $ \boldsymbol{\omega}^\alpha \wedge \boldsymbol{\omega}^\beta = \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta - \boldsymbol{\omega}^\beta \otimes \boldsymbol{\omega}^\alpha $<br>
 wedge product of one-forms: $ \textbf{a} \wedge \textbf{b} 
 	= a_\alpha \boldsymbol{\omega}^\alpha \wedge b_\beta \boldsymbol{\omega}^\beta
@@ -89,8 +114,8 @@ wedge product of one-forms: $ \textbf{a} \wedge \textbf{b}
 	= (a_\alpha b_\beta - b_\alpha a_\beta) \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta
 	= \textbf{a} \otimes \textbf{b} - \textbf{b} \otimes \textbf{a}
 $<br>
-wedge product basis antisymmetry: $ \textbf{dx}^\alpha \wedge \textbf{dx}^\beta = -\textbf{dx}^\beta \wedge \textbf{dx}^\alpha $<br>
 <br>
+wedge product basis antisymmetry: $ \textbf{dx}^\alpha \wedge \textbf{dx}^\beta = -\textbf{dx}^\beta \wedge \textbf{dx}^\alpha $<br>
 wedge product antisymmetry for p-form $\textbf{a}$ and q-form $\textbf{b}$:<br>
 $ \textbf{a} \wedge \textbf{b} $<br>
 $ = (a_{\alpha_1 ... \alpha_p} \textbf{dx}^{\alpha_1} \wedge ... \wedge \textbf{dx}^{\alpha_p}) \wedge (b_{\beta_1 ... \beta_q} \textbf{dx}^{\beta_1} \wedge ... \wedge \textbf{dx}^{\beta_q}) $<br>
@@ -107,28 +132,6 @@ $ = (-1)^{pq} \textbf{b} \wedge \textbf{a} $<br>
 metric symmetry: $ g_{\alpha\beta} = \textbf{e}_\alpha \cdot \textbf{e}_\beta = \textbf{e}_\beta \cdot \textbf{e}_\alpha = g_{\beta\alpha} $<br>
 metric inverse symmetry implied from metric symmetry.<br>
 identity derivative: $ 0 = \partial_\gamma \delta^\alpha_\beta = \partial_\gamma (g^{\alpha\delta} g_{\delta\beta}) = \partial_\gamma g^{\alpha\delta} g_{\delta\beta} + g^{\alpha\delta} \partial_\gamma g_{\delta\beta} $<br>
-<br>
-
-Tensor notation:<br>
-$v_{(\alpha_1 ... \alpha_n)} = {1\over n!} \cdot $ sum of even permutations of $\alpha_1 ... \alpha_n$ plus sum of odd permutations<br>
-$v_{[\alpha_1 ... \alpha_n]} = {1\over n!} \cdot $ sum of even permutations of $\alpha_1 ... \alpha_n$ minus sum of odd permutations<br>
-$v_{|\alpha_1 ... \alpha_n|} = $ sum of even minus sum of odd permutations, only summing indexes in increasing order<br>
-<br>
-
-antisymmetric tensors are tensors such that $T_{\alpha\beta} = -T_{\beta\alpha}$:<br>
-$T_{[\alpha\beta]} = {1\over2} (T_{\alpha\beta} - T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} + T_{\alpha\beta}) = T_{\alpha\beta}$<br>
-$T_{(\alpha\beta)} = {1\over2} (T_{\alpha\beta} + T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} - T_{\alpha\beta}) = 0$<br>
-<br>
-
-symmetric tensors are tensors such that $T_{\alpha\beta} = T_{\beta\alpha}$:<br>
-$T_{[\alpha\beta]} = {1\over2} (T_{\alpha\beta} - T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} - T_{\alpha\beta}) = 0$<br>
-$T_{(\alpha\beta)} = {1\over2} (T_{\alpha\beta} + T_{\beta\alpha}) = {1\over2}(T_{\alpha\beta} + T_{\alpha\beta}) = T_{\alpha\beta}$<br>
-<br>
-
-any degree-2 tensor can be represented as its symmetric and antisymmetric components:<br>
-$T_{(\alpha\beta)} + T_{[\alpha\beta]} = {1\over2} (T_{\alpha\beta} + T_{\beta\alpha}) + {1\over2} (T_{\alpha\beta} - T_{\beta\alpha})$<br>
-$= {1\over2}(T_{\alpha\beta} + T_{\alpha\beta})$<br>
-$= T_{\alpha\beta}$<br>
 <br>
 
 permutation tensor:<br>
