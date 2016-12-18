@@ -1,5 +1,13 @@
-<script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+		<title>Page 1</title>
+	</head>
+	<body>
+
 <div class='entry'>
 <a href='index.lua'>Back</a><br>
 <br>
@@ -211,58 +219,71 @@ let $ \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma {\textbf e}_\beta \rangl
 so $ \langle \nabla_\gamma \boldsymbol{\omega}^\alpha, {\textbf e}_\beta \rangle = -{\Gamma^\alpha}_{\beta\gamma} $<br>
 <br>
 
-TODO provide a better relation of the definition of ${\Gamma^\alpha}_{\beta\gamma}$ with $\nabla$ and $g_{\mu\nu}$<br>
-<br>
-
 commutation coefficients: 
 $ [\textbf{e}_\alpha, \textbf{e}_\beta]
 	= \boldsymbol{\nabla}_{\textbf{e}_\alpha} \textbf{e}_\beta - \boldsymbol{\nabla}_{\textbf{e}_\beta} \textbf{e}_\alpha
 	= \nabla_\alpha \textbf{e}_\beta - \nabla_\beta \textbf{e}_\alpha
 	= {c_{\alpha\beta}}^\gamma \textbf{e}_\gamma
 $<br>
-commutation coefficient antisymmetry: $ [ \textbf{e}_\alpha, \textbf{e}_\beta ] = -[ \textbf{e}_\beta, \textbf{e}_\alpha ] $ implies $ {c_{\alpha\beta}}^\gamma = -{c_{\beta\alpha}}^\gamma $<br>
+commutation coefficient antisymmetry: $ [ \textbf{e}_\alpha, \textbf{e}_\beta ] = -[ \textbf{e}_\beta, \textbf{e}_\alpha ] $ 
+implies $ {c_{\alpha\beta}}^\gamma = -{c_{\beta\alpha}}^\gamma $, i.e. ${c_{\alpha\beta}}^\gamma = {c_{[\alpha\beta]}}^\gamma$.<br>
 <br>
 A basis is <i>holonomic</i> when all $ {c_{\alpha\beta}}^\gamma = 0 $.<br>
 This coincides with when $ \textbf{e}_\alpha = {\partial \over {\partial x^\alpha}} $ such that $ [\textbf{e}_\alpha, \textbf{e}_\beta] = \left [ {\partial \over {\partial x^\alpha}}, {\partial \over {\partial x^\beta}} \right ] = 0 $.  Subsequently $ \boldsymbol{\omega}^\alpha = \textbf{dx}^\alpha $.<br>
 A basis that does not meet this condition is considered <i>anholonomic</i>.<br> 
 <br>	
 
-Torsion: ${T^\alpha}_{\beta\gamma} = 2 {\Gamma^\alpha}_{[\beta\gamma]} - {c_{\gamma\beta}}^\alpha$<br>
+
+Torsion in a holonomic basis: ${T^\alpha}_{\beta\gamma} = 2 {\Gamma^\alpha}_{[\beta\gamma]}$<br>
+Torsion in an anholonomic basis: ${T^\alpha}_{\beta\gamma} = 2 {\Gamma^\alpha}_{[\beta\gamma]} - {c_{\gamma\beta}}^\alpha$<br>
+<br>
+Does the definition of torsion include the commutation or not?<br>
+If it does then the torsion is not antisymmetric on its last two indexes, but instead is equal to the commutation.<br> 
+If it does not then we have to add the commutations in addition to the torsions to the geodesic connection coefficients.<br> 
+<br>
 Torsion antisymmetry: ${T^\alpha}_{[\beta\gamma]}
-	= 2 {\Gamma^\alpha}_{[\beta\gamma]} - {c_{[\gamma\beta]}}^\alpha
+	= 2 {\Gamma^\alpha}_{[[\beta\gamma]]} - {c_{[\gamma\beta]}}^\alpha
 	= 2 {\Gamma^\alpha}_{[\beta\gamma]} - {c_{\gamma\beta}}^\alpha
 	= {T^\alpha}_{\beta\gamma}$<br>
 <br>
 
 Christoffel of the 1st kind: $ \Gamma_{\alpha\beta\gamma} $ <br>
 in a holonomic basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma}) $<br>
-in an anholonomic, torsion-free basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}) $<br>
-in an anholonomic basis with torsion: $\Gamma_{\alpha\beta\gamma} = \frac{1}{2} (\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} + c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}) + T_{\alpha\beta\gamma} $<br>
+in an anholonomic, torsion-free basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (
+	\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} 
+	+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}) $<br>
+in a holonomic basis with torsion: $\Gamma_{\alpha\beta\gamma} = \frac{1}{2} (
+	\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma}
+	+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}
+	+ T_{\gamma\beta\alpha} + T_{\beta\gamma\alpha} - T_{\alpha\gamma\beta}) $<br>
 <br>
-1st kind symmetry:<br> 
+
+1st kind antisymmetry on 2nd and 3rd indexes (anholonomic, with torsion):<br> 
 $ \Gamma_{\alpha[\beta\gamma]}$<br>
-$	= {1 \over 2} (\Gamma_{\alpha\beta\gamma} - \Gamma_{\alpha\gamma\beta})$<br>
-$	= {1 \over 4} (
-		\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} 
-			+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha} 
-			+ 2 T_{\alpha\beta\gamma}
-		- \partial_\beta g_{\alpha\gamma} - \partial_\gamma g_{\alpha\beta} + \partial_\alpha g_{\gamma\beta} 
-			- c_{\alpha\gamma\beta} - c_{\alpha\beta\gamma} + c_{\gamma\beta\alpha}
-			- 2 T_{\alpha\gamma\beta})$<br>
-$	= {1 \over 4} ( c_{\beta\gamma\alpha} + 2 T_{\alpha\beta\gamma} - c_{\gamma\beta\alpha} - 2 T_{\alpha\gamma\beta})$<br>
-$	= {1 \over 2} c_{\gamma\beta\alpha} + T_{\alpha\beta\gamma}$<br>
-which reduces to 0 in a holonomic, torsion-free basis<br>
+$= {1 \over 2} (\Gamma_{\alpha\beta\gamma} - \Gamma_{\alpha\gamma\beta})$<br>
+$= {1 \over 4} (
+	\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} 
+		+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}
+		+ T_{\gamma\beta\alpha} + T_{\beta\gamma\alpha} - T_{\alpha\gamma\beta}	
+	- \partial_\beta g_{\alpha\gamma} - \partial_\gamma g_{\alpha\beta} + \partial_\alpha g_{\gamma\beta} 
+		- c_{\alpha\gamma\beta} - c_{\alpha\beta\gamma} + c_{\gamma\beta\alpha}
+		- T_{\beta\gamma\alpha} - T_{\gamma\beta\alpha} + T_{\alpha\beta\gamma}
+)$<br>
+$= {1 \over 2} (T_{\alpha\beta\gamma} + c_{\gamma\beta\alpha})$<br>
 <br>
-1st kind antisymmetry:<br>
+
+1st kind symmetry on 1st and 2nd indexes (anholonomic, with torsion):<br>
 $ \Gamma_{(\alpha\beta)\gamma}$<br>
-$	= {1 \over 2} (\Gamma_{\alpha\beta\gamma} + \Gamma_{\beta\alpha\gamma})$<br>
-$	= {1 \over 4} (
+$= {1 \over 2} (\Gamma_{\alpha\beta\gamma} + \Gamma_{\beta\alpha\gamma})$<br>
+$= {1 \over 4} (
 		\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} 
-			+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha} + 2 T_{\alpha\beta\gamma} 
+			+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}
+			+ T_{\gamma\beta\alpha} + T_{\beta\gamma\alpha} - T_{\alpha\gamma\beta}	
 		+ \partial_\gamma g_{\beta\alpha} + \partial_\alpha g_{\beta\gamma} - \partial_\beta g_{\alpha\gamma} 
-			+ c_{\beta\alpha\gamma} + c_{\beta\gamma\alpha} - c_{\alpha\gamma\beta} + 2 T_{\beta\alpha\gamma})$<br>
-$	= {1 \over 4} (2 \partial_\gamma g_{\alpha\beta} + c_{\alpha\beta\gamma} + c_{\beta\alpha\gamma} + 2 T_{\alpha\beta\gamma} + 2 T_{\beta\alpha\gamma})$<br>
-$	= {1 \over 2} \partial_\gamma g_{\alpha\beta} + T_{(\alpha\beta)\gamma}$<br>
+			+ c_{\beta\alpha\gamma} + c_{\beta\gamma\alpha} - c_{\alpha\gamma\beta}
+			+ T_{\gamma\alpha\beta} + T_{\alpha\gamma\beta} - T_{\beta\gamma\alpha}	
+		)$<br>
+$= {1 \over 2} \partial_\gamma g_{\alpha\beta}$<br>
 <br>
 
 Christoffel of the 2nd kind / affine connection: $ {\Gamma^\alpha}_{\beta\gamma} = g^{\alpha\delta} \Gamma_{\delta\beta\gamma} $<br>
@@ -302,14 +323,17 @@ $<br>
 covariant vector derivative: 
 $ \nabla_{\textbf{u}} \textbf{v} 
 	= \textbf{u} \cdot \boldsymbol{\nabla} \textbf{v}
-	= u^\alpha \textbf{e}_\alpha \cdot \nabla_\beta v^\gamma \textbf{e}_\gamma \otimes \boldsymbol{\omega}^\beta
-	= u^\alpha \textbf{e}_\alpha \cdot (\partial_\beta v^\gamma + v^\delta {\Gamma^\gamma}_{\beta\delta}) \textbf{e}_\gamma \otimes \boldsymbol{\omega}^\beta
-	= u^\alpha (\partial_\beta v^\gamma + v^\delta {\Gamma^\gamma}_{\beta\delta}) \textbf{e}_\alpha \cdot \textbf{e}_\gamma \otimes \boldsymbol{\omega}^\beta
-	= u^\alpha (\partial_\beta v^\gamma + v^\delta {\Gamma^\gamma}_{\beta\delta}) g_{\alpha\gamma} \boldsymbol{\omega}^\beta
-	= u_\gamma (\partial_\beta v^\gamma + v^\alpha {\Gamma^\gamma}_{\beta\alpha}) \boldsymbol{\omega}^\beta
+	= u^\alpha \textbf{e}_\alpha \cdot \nabla_\beta (v^\gamma \textbf{e}_\gamma) \otimes \boldsymbol{\omega}^\beta
+	= u^\alpha \textbf{e}_\alpha \cdot (\partial_\beta v^\gamma + v^\delta {\Gamma^\gamma}_{\delta\beta}) \textbf{e}_\gamma \otimes \boldsymbol{\omega}^\beta
+	= u^\alpha (\partial_\beta v^\gamma + v^\delta {\Gamma^\gamma}_{\delta\beta}) \textbf{e}_\alpha \cdot \textbf{e}_\gamma \otimes \boldsymbol{\omega}^\beta
+	= u^\alpha (\partial_\beta v^\gamma + v^\delta {\Gamma^\gamma}_{\delta\beta}) g_{\alpha\gamma} \boldsymbol{\omega}^\beta
+	= u_\gamma (\partial_\beta v^\gamma + v^\alpha {\Gamma^\gamma}_{\alpha\beta}) \boldsymbol{\omega}^\beta
 $<br>
-<br>	
-Riemann curvature in terms of covariant derivative:<br>
+<br>
+
+<!-- TODO add torsion from here on down --> 
+
+Riemann curvature in terms of covariant derivative, in object notation:<br>
 $ {R^\alpha}_{\beta\gamma\delta} = \langle \boldsymbol{\omega}^\alpha, (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]}) \textbf{e}_\beta \rangle $<br>
 $ = \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma \nabla_\delta \textbf{e}_\beta - \nabla_\delta \nabla_\gamma \textbf{e}_\beta - \nabla_{[\gamma,\delta]} \textbf{e}_\beta \rangle $<br>
 $ = \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma ({\Gamma^\mu}_{\beta\delta} \textbf{e}_\mu) - \nabla_\delta ({\Gamma^\mu}_{\beta\gamma} \textbf{e}_\mu) - {c_{\gamma\delta}}^\mu \nabla_\mu \textbf{e}_\beta \rangle $<br>
@@ -319,6 +343,7 @@ $ = \partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alp
 <br>
 Riemann curvature in terms of covariant derivative, in index notation:<br>
 <!-- TODO account for the disappearance of c_\gamma\delta^\mu \partial_\mu v^\alpha -->
+<!-- TODO torsion too? -->
 <!-- TODO show nabla_\gamma Gamma^\alpha_\beta\delta - nabla_\delta Gamma^\alpha_\beta\gamma = partial_\gamma Gamma^\alpha_\beta\delta - partial_\delta Gamma^\alpha_\beta\gamma -->
 $ (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]} ) v^i $<br>
 $= \nabla_\gamma \nabla_\delta v^\alpha
@@ -368,7 +393,20 @@ $ =
 	- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu v^\beta
 	- {c_{\gamma\delta}}^\mu \partial_\mu v^\alpha
 $<br>
-$ 	= (\nabla_\gamma {\Gamma^\alpha}_{\beta\delta} - \nabla_\delta {\Gamma^\alpha}_{\beta\gamma}
+
+$ = 
+	(
+		\nabla_\gamma {\Gamma^\alpha}_{\beta\delta}
+		- \nabla_\delta {\Gamma^\alpha}_{\beta\gamma}
+		+ {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma}
+		- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta}
+		- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu
+	) v^\beta
+	+ 2 {T^\mu}_{\gamma\delta} \partial_\mu v^\alpha
+	- {c_{\gamma\delta}}^\mu \partial_\mu v^\alpha
+$<br>
+
+$ = (\nabla_\gamma {\Gamma^\alpha}_{\beta\delta} - \nabla_\delta {\Gamma^\alpha}_{\beta\gamma}
 		+ {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma}
 		- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta}
 		- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu ) v^\beta
@@ -495,3 +533,6 @@ This coincides with, in a holonomic basis, when $ \boldsymbol{\omega}^\alpha = \
 <br>
 <a href='index.lua'>Back</a><br>
 </div>
+
+	</body>
+</html>
