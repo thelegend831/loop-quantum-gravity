@@ -252,7 +252,7 @@ in a holonomic basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (\partial_\gamm
 in an anholonomic, torsion-free basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2} (
 	\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} 
 	+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}) $<br>
-in a holonomic basis with torsion: $\Gamma_{\alpha\beta\gamma} = \frac{1}{2} (
+in an anholonomic basis with torsion: $\Gamma_{\alpha\beta\gamma} = \frac{1}{2} (
 	\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma}
 	+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}
 	+ T_{\gamma\beta\alpha} + T_{\beta\gamma\alpha} - T_{\alpha\gamma\beta}) $<br>
@@ -331,8 +331,6 @@ $ \nabla_{\textbf{u}} \textbf{v}
 $<br>
 <br>
 
-<!-- TODO add torsion from here on down --> 
-
 Riemann curvature in terms of covariant derivative, in object notation:<br>
 $ {R^\alpha}_{\beta\gamma\delta} = \langle \boldsymbol{\omega}^\alpha, (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]}) \textbf{e}_\beta \rangle $<br>
 $ = \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma \nabla_\delta \textbf{e}_\beta - \nabla_\delta \nabla_\gamma \textbf{e}_\beta - \nabla_{[\gamma,\delta]} \textbf{e}_\beta \rangle $<br>
@@ -343,7 +341,6 @@ $ = \partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alp
 <br>
 Riemann curvature in terms of covariant derivative, in index notation:<br>
 <!-- TODO account for the disappearance of c_\gamma\delta^\mu \partial_\mu v^\alpha -->
-<!-- TODO torsion too? -->
 <!-- TODO show nabla_\gamma Gamma^\alpha_\beta\delta - nabla_\delta Gamma^\alpha_\beta\gamma = partial_\gamma Gamma^\alpha_\beta\delta - partial_\delta Gamma^\alpha_\beta\gamma -->
 $ (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]} ) v^i $<br>
 $= \nabla_\gamma \nabla_\delta v^\alpha
@@ -402,7 +399,6 @@ $ =
 		- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta}
 		- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu
 	) v^\beta
-	+ 2 {T^\mu}_{\gamma\delta} \partial_\mu v^\alpha
 	- {c_{\gamma\delta}}^\mu \partial_\mu v^\alpha
 $<br>
 
