@@ -223,24 +223,21 @@ commutation coefficients:
 $ [\textbf{e}_\alpha, \textbf{e}_\beta]
 	= \boldsymbol{\nabla}_{\textbf{e}_\alpha} \textbf{e}_\beta - \boldsymbol{\nabla}_{\textbf{e}_\beta} \textbf{e}_\alpha
 	= \nabla_\alpha \textbf{e}_\beta - \nabla_\beta \textbf{e}_\alpha
-	= {c_{\alpha\beta}}^\gamma \textbf{e}_\gamma
+	= ({\Gamma^\gamma}_{\beta\alpha} - {\Gamma^\gamma}_{\alpha\beta}) \textbf{e}_\gamma
+	= ({c_{\alpha\beta}}^\gamma + {T^\gamma}_{\beta\alpha}) \textbf{e}_\gamma
 $<br>
 commutation coefficient antisymmetry: $ [ \textbf{e}_\alpha, \textbf{e}_\beta ] = -[ \textbf{e}_\beta, \textbf{e}_\alpha ] $ 
+and $ {T^\gamma}_{\alpha\beta} = -{T^\gamma}_{\beta\alpha}$
 implies $ {c_{\alpha\beta}}^\gamma = -{c_{\beta\alpha}}^\gamma $, i.e. ${c_{\alpha\beta}}^\gamma = {c_{[\alpha\beta]}}^\gamma$.<br>
 <br>
-A basis is <i>holonomic</i> when all $ {c_{\alpha\beta}}^\gamma = 0 $.<br>
+A torsion-free basis is <i>holonomic</i> when all $ {c_{\alpha\beta}}^\gamma = 0 $.<br>
 This coincides with when $ \textbf{e}_\alpha = {\partial \over {\partial x^\alpha}} $ such that $ [\textbf{e}_\alpha, \textbf{e}_\beta] = \left [ {\partial \over {\partial x^\alpha}}, {\partial \over {\partial x^\beta}} \right ] = 0 $.  Subsequently $ \boldsymbol{\omega}^\alpha = \textbf{dx}^\alpha $.<br>
-A basis that does not meet this condition is considered <i>anholonomic</i>.<br> 
+A torsion-free basis that does not meet this condition is considered <i>anholonomic</i>.<br> 
 <br>	
 
-
-Torsion in a holonomic basis: ${T^\alpha}_{\beta\gamma} = 2 {\Gamma^\alpha}_{[\beta\gamma]}$<br>
 Torsion in an anholonomic basis: ${T^\alpha}_{\beta\gamma} = 2 {\Gamma^\alpha}_{[\beta\gamma]} - {c_{\gamma\beta}}^\alpha$<br>
 <br>
-Does the definition of torsion include the commutation or not?<br>
-If it does then the torsion is not antisymmetric on its last two indexes, but instead is equal to the commutation.<br> 
-If it does not then we have to add the commutations in addition to the torsions to the geodesic connection coefficients.<br> 
-<br>
+
 Torsion antisymmetry: ${T^\alpha}_{[\beta\gamma]}
 	= 2 {\Gamma^\alpha}_{[[\beta\gamma]]} - {c_{[\gamma\beta]}}^\alpha
 	= 2 {\Gamma^\alpha}_{[\beta\gamma]} - {c_{\gamma\beta}}^\alpha
@@ -255,7 +252,8 @@ in an anholonomic, torsion-free basis: $ \Gamma_{\alpha\beta\gamma} = {1 \over 2
 in an anholonomic basis with torsion: $\Gamma_{\alpha\beta\gamma} = \frac{1}{2} (
 	\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma}
 	+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}
-	+ T_{\gamma\beta\alpha} + T_{\beta\gamma\alpha} - T_{\alpha\gamma\beta}) $<br>
+	+ T_{\gamma\beta\alpha} + T_{\beta\gamma\alpha} - T_{\alpha\gamma\beta}
+) $<br>
 <br>
 
 1st kind antisymmetry on 2nd and 3rd indexes (anholonomic, with torsion):<br> 
@@ -264,25 +262,25 @@ $= {1 \over 2} (\Gamma_{\alpha\beta\gamma} - \Gamma_{\alpha\gamma\beta})$<br>
 $= {1 \over 4} (
 	\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} 
 		+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}
-		+ T_{\gamma\beta\alpha} + T_{\beta\gamma\alpha} - T_{\alpha\gamma\beta}	
+		+ T_{\gamma\beta\alpha} + T_{\beta\gamma\alpha} - T_{\alpha\gamma\beta}
 	- \partial_\beta g_{\alpha\gamma} - \partial_\gamma g_{\alpha\beta} + \partial_\alpha g_{\gamma\beta} 
 		- c_{\alpha\gamma\beta} - c_{\alpha\beta\gamma} + c_{\gamma\beta\alpha}
 		- T_{\beta\gamma\alpha} - T_{\gamma\beta\alpha} + T_{\alpha\beta\gamma}
 )$<br>
-$= {1 \over 2} (T_{\alpha\beta\gamma} + c_{\gamma\beta\alpha})$<br>
+$= \frac{1}{2} (T_{\alpha\beta\gamma} + c_{\gamma\beta\alpha})$<br>
 <br>
 
 1st kind symmetry on 1st and 2nd indexes (anholonomic, with torsion):<br>
 $ \Gamma_{(\alpha\beta)\gamma}$<br>
 $= {1 \over 2} (\Gamma_{\alpha\beta\gamma} + \Gamma_{\beta\alpha\gamma})$<br>
 $= {1 \over 4} (
-		\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} 
-			+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}
-			+ T_{\gamma\beta\alpha} + T_{\beta\gamma\alpha} - T_{\alpha\gamma\beta}	
-		+ \partial_\gamma g_{\beta\alpha} + \partial_\alpha g_{\beta\gamma} - \partial_\beta g_{\alpha\gamma} 
-			+ c_{\beta\alpha\gamma} + c_{\beta\gamma\alpha} - c_{\alpha\gamma\beta}
-			+ T_{\gamma\alpha\beta} + T_{\alpha\gamma\beta} - T_{\beta\gamma\alpha}	
-		)$<br>
+	\partial_\gamma g_{\alpha\beta} + \partial_\beta g_{\alpha\gamma} - \partial_\alpha g_{\beta\gamma} 
+		+ c_{\alpha\beta\gamma} + c_{\alpha\gamma\beta} - c_{\beta\gamma\alpha}
+		+ T_{\gamma\beta\alpha} + T_{\beta\gamma\alpha} - T_{\alpha\gamma\beta}
+	+ \partial_\gamma g_{\beta\alpha} + \partial_\alpha g_{\beta\gamma} - \partial_\beta g_{\alpha\gamma} 
+		+ c_{\beta\alpha\gamma} + c_{\beta\gamma\alpha} - c_{\alpha\gamma\beta}
+		+ T_{\gamma\alpha\beta} + T_{\alpha\gamma\beta} - T_{\beta\gamma\alpha}
+)$<br>
 $= {1 \over 2} \partial_\gamma g_{\alpha\beta}$<br>
 <br>
 
@@ -332,88 +330,193 @@ $<br>
 <br>
 
 Riemann curvature in terms of covariant derivative, in object notation:<br>
-$ {R^\alpha}_{\beta\gamma\delta} = \langle \boldsymbol{\omega}^\alpha, (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]}) \textbf{e}_\beta \rangle $<br>
-$ = \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma \nabla_\delta \textbf{e}_\beta - \nabla_\delta \nabla_\gamma \textbf{e}_\beta - \nabla_{[\gamma,\delta]} \textbf{e}_\beta \rangle $<br>
-$ = \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma ({\Gamma^\mu}_{\beta\delta} \textbf{e}_\mu) - \nabla_\delta ({\Gamma^\mu}_{\beta\gamma} \textbf{e}_\mu) - {c_{\gamma\delta}}^\mu \nabla_\mu \textbf{e}_\beta \rangle $<br>
-$ = \langle \boldsymbol{\omega}^\alpha, \nabla_\gamma {\Gamma^\nu}_{\beta\delta} \textbf{e}_\nu + {\Gamma^\nu}_{\beta\delta} \nabla_\gamma \textbf{e}_\nu - \nabla_\delta {\Gamma^\nu}_{\beta\gamma} \textbf{e}_\nu - {\Gamma^\nu}_{\beta\gamma} \nabla_\delta \textbf{e}_\nu - {c_{\gamma\delta}}^\mu {\Gamma^\nu}_{\beta\mu} \textbf{e}_\nu \rangle $<br>
-$ = \langle \boldsymbol{\omega}^\alpha, \textbf{e}_\nu \rangle ( \partial_\gamma {\Gamma^\nu}_{\beta\delta} + {\Gamma^\mu}_{\beta\delta} {\Gamma^\nu}_{\mu\gamma} - \partial_\delta {\Gamma^\nu}_{\beta\gamma} - {\Gamma^\mu}_{\beta\gamma} {\Gamma^\nu}_{\mu\delta} - {\Gamma^\nu}_{\beta\mu} {c_{\gamma\delta}}^\mu ) $<br>
-$ = \partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alpha}_{\beta\gamma} + {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} - {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} - {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu $<br>
+<!--
+Shouldn't T^a_bc be added in there somewhere?
+Is it a term inside of Delta_[a,b] e_c?  not just c_ab^c, but also T^c_ab?
+Where else would it come from?
+-->
+$ {R^\alpha}_{\beta\gamma\delta} 
+= \langle \boldsymbol{\omega}^\alpha, 
+	(\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]}) 
+	\textbf{e}_\beta \rangle $<br>
+$ = \langle \boldsymbol{\omega}^\alpha, 
+	\nabla_\gamma \nabla_\delta \textbf{e}_\beta 
+	- \nabla_\delta \nabla_\gamma \textbf{e}_\beta 
+	- \nabla_{[\gamma,\delta]} \textbf{e}_\beta \rangle $<br>
+$ = \langle \boldsymbol{\omega}^\alpha, 
+	\nabla_\gamma ({\Gamma^\mu}_{\beta\delta} \textbf{e}_\mu) 
+	- \nabla_\delta ({\Gamma^\mu}_{\beta\gamma} \textbf{e}_\mu) 
+	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) \nabla_\mu \textbf{e}_\beta \rangle $<br>
+$ = \langle \boldsymbol{\omega}^\alpha, 
+	\nabla_\gamma {\Gamma^\nu}_{\beta\delta} \textbf{e}_\nu 
+	+ {\Gamma^\nu}_{\beta\delta} \nabla_\gamma \textbf{e}_\nu 
+	- \nabla_\delta {\Gamma^\nu}_{\beta\gamma} \textbf{e}_\nu 
+	- {\Gamma^\nu}_{\beta\gamma} \nabla_\delta \textbf{e}_\nu 
+	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) {\Gamma^\nu}_{\beta\mu} \textbf{e}_\nu \rangle $<br>
+$ = \langle \boldsymbol{\omega}^\alpha, 
+	\textbf{e}_\nu \rangle 
+		( \partial_\gamma {\Gamma^\nu}_{\beta\delta} 
+		+ {\Gamma^\mu}_{\beta\delta} {\Gamma^\nu}_{\mu\gamma} 
+		- \partial_\delta {\Gamma^\nu}_{\beta\gamma} 
+		- {\Gamma^\mu}_{\beta\gamma} {\Gamma^\nu}_{\mu\delta} 
+		- {\Gamma^\nu}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu )) $<br>
+$ = \partial_\gamma {\Gamma^\alpha}_{\beta\delta} 
+	- \partial_\delta {\Gamma^\alpha}_{\beta\gamma} 
+	+ {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} 
+	- {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} - {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) $<br>
 <br>
 Riemann curvature in terms of covariant derivative, in index notation:<br>
-<!-- TODO account for the disappearance of c_\gamma\delta^\mu \partial_\mu v^\alpha -->
-<!-- TODO show nabla_\gamma Gamma^\alpha_\beta\delta - nabla_\delta Gamma^\alpha_\beta\gamma = partial_\gamma Gamma^\alpha_\beta\delta - partial_\delta Gamma^\alpha_\beta\gamma -->
-$ (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]} ) v^i $<br>
+$ (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]} ) v^\alpha $<br>
 $= \nabla_\gamma \nabla_\delta v^\alpha
 	- \nabla_\delta \nabla_\gamma v^\alpha
 	- \nabla_{[\gamma,\delta]} v^\alpha
 $<br>
+expand inner $\nabla$'s:<br>
 $= \nabla_\gamma (\partial_\delta v^\alpha
 	+ {\Gamma^\alpha}_{\beta\delta} v^\beta) 
 	- \nabla_\delta (\partial_\gamma v^\alpha
 	+ {\Gamma^\alpha}_{\beta\gamma} v^\beta)
-	- {c_{\gamma\delta}}^\mu \nabla_\mu v^\alpha
+	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) \nabla_\mu v^\alpha
 $<br>
+distribute and apply chain rule to outer $\nabla$'s:<br>
 $= \nabla_\gamma \partial_\delta v^\alpha
 	+ \nabla_\gamma {\Gamma^\alpha}_{\beta\delta} v^\beta
 	+ {\Gamma^\alpha}_{\beta\delta} \nabla_\gamma v^\beta
 	- \nabla_\delta \partial_\gamma v^\alpha
 	- \nabla_\delta {\Gamma^\alpha}_{\beta\gamma} v^\beta
 	- {\Gamma^\alpha}_{\beta\gamma} \nabla_\delta v^\beta
-	- {c_{\gamma\delta}}^\mu (\partial_\mu v^\alpha + {\Gamma^\alpha}_{\beta\mu} v^\beta)
+	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) (\partial_\mu v^\alpha + {\Gamma^\alpha}_{\beta\mu} v^\beta)
 $<br>
-$= \partial_\gamma \partial_\delta v^\alpha
+expand $\nabla \partial v$ and $\nabla v$ in terms of $\partial + \Gamma$:<br>
+$= 	\partial_\gamma \partial_\delta v^\alpha
 	- {\Gamma^\mu}_{\delta\gamma} \partial_\mu v^\alpha
 	+ {\Gamma^\alpha}_{\mu\gamma} \partial_\delta v^\mu
+	
 	+ \nabla_\gamma {\Gamma^\alpha}_{\beta\delta} v^\beta
+	
 	+ {\Gamma^\alpha}_{\beta\delta} \partial_\gamma v^\beta
 	+ {\Gamma^\alpha}_{\beta\delta} {\Gamma^\beta}_{\mu\gamma} v^\mu
+
 	- \partial_\delta \partial_\gamma v^\alpha
 	+ {\Gamma^\mu}_{\gamma\delta} \partial_\mu v^\alpha
 	- {\Gamma^\alpha}_{\mu\delta} \partial_\gamma v^\mu
+	
 	- \nabla_\delta {\Gamma^\alpha}_{\beta\gamma} v^\beta
+	
 	- {\Gamma^\alpha}_{\beta\gamma} \partial_\delta v^\beta
 	- {\Gamma^\alpha}_{\beta\gamma} {\Gamma^\beta}_{\mu\delta} v^\mu
-	- {c_{\gamma\delta}}^\mu \partial_\mu v^\alpha
-	- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu v^\beta
+	
+	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) \partial_\mu v^\alpha
+	- {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) v^\beta
 $<br>
-$ = 
-	\partial_\gamma \partial_\delta v^\alpha - \partial_\delta \partial_\gamma v^\alpha
-	- {\Gamma^\mu}_{\delta\gamma} \partial_\mu v^\alpha
-	+ {\Gamma^\mu}_{\gamma\delta} \partial_\mu v^\alpha
-	+ {\Gamma^\alpha}_{\mu\gamma} \partial_\delta v^\mu
-	- {\Gamma^\alpha}_{\beta\gamma} \partial_\delta v^\beta
-	+ {\Gamma^\alpha}_{\beta\delta} \partial_\gamma v^\beta
-	- {\Gamma^\alpha}_{\mu\delta} \partial_\gamma v^\mu
-	+ \nabla_\gamma {\Gamma^\alpha}_{\beta\delta} v^\beta - \nabla_\delta {\Gamma^\alpha}_{\beta\gamma} v^\beta
+group like terms:<br>
+$= 	(\partial_\gamma \partial_\delta v^\alpha
+	- \partial_\delta \partial_\gamma v^\alpha)
+		
+	+ ({\Gamma^\alpha}_{\mu\gamma} \partial_\delta v^\mu
+	- {\Gamma^\alpha}_{\beta\gamma} \partial_\delta v^\beta)
+	
+	+ ({\Gamma^\alpha}_{\beta\delta} \partial_\gamma v^\beta
+	- {\Gamma^\alpha}_{\mu\delta} \partial_\gamma v^\mu)
+	
+	+ \nabla_\gamma {\Gamma^\alpha}_{\beta\delta} v^\beta
+	- \nabla_\delta {\Gamma^\alpha}_{\beta\gamma} v^\beta
+	
 	+ {\Gamma^\alpha}_{\beta\delta} {\Gamma^\beta}_{\mu\gamma} v^\mu
 	- {\Gamma^\alpha}_{\beta\gamma} {\Gamma^\beta}_{\mu\delta} v^\mu
-	- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu v^\beta
-	- {c_{\gamma\delta}}^\mu \partial_\mu v^\alpha
+	
+	+ ({\Gamma^\mu}_{\gamma\delta} \partial_\mu v^\alpha
+	- {\Gamma^\mu}_{\delta\gamma} \partial_\mu v^\alpha)
+	
+	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) \partial_\mu v^\alpha
+	- {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) v^\beta
 $<br>
-
-$ = 
-	(
-		\nabla_\gamma {\Gamma^\alpha}_{\beta\delta}
-		- \nabla_\delta {\Gamma^\alpha}_{\beta\gamma}
-		+ {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma}
-		- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta}
-		- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu
+<!--
+T^a_bc = Gamma^a_bc - Gamma^a_cb - c_cb^a
+Gamma^a_bc - Gamma^a_cb = T^a_bc + c_cb^a
+-->
+cancel terms, replace $\Gamma$ antisymmetric term with $T$:<br>
+$= 	\nabla_\gamma {\Gamma^\alpha}_{\beta\delta} v^\beta
+	- \nabla_\delta {\Gamma^\alpha}_{\beta\gamma} v^\beta
+	
+	+ {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} v^\beta
+	- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} v^\beta
+	
+	+ ({T^\mu}_{\gamma\delta} + {c_{\delta\gamma}}^\mu) \partial_\mu v^\alpha
+	
+	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) \partial_\mu v^\alpha
+	- {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) v^\beta
+$<br>
+by here it looks like the $(T + c) \partial v$'s should've cancelled, but their signs are backwards.<br>
+Either the $c$ in the definition of $T$ is backwards, or the $c$ in the definition of $[\nabla,\nabla]$ is backwards, or I should be adding $[\nabla,\nabla]$ here.<br>
+expand $\nabla \Gamma$'s:<br>
+$= 	
+	(\partial_\gamma {\Gamma^\alpha}_{\beta\delta} 
+		+ {\Gamma^\mu}_{\beta\delta} {\Gamma^\alpha}_{\mu\gamma}
+		- {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma}
+		- {\Gamma^\alpha}_{\beta\mu} {\Gamma^\mu}_{\delta\gamma}
 	) v^\beta
-	- {c_{\gamma\delta}}^\mu \partial_\mu v^\alpha
-$<br>
-
-$ = (\nabla_\gamma {\Gamma^\alpha}_{\beta\delta} - \nabla_\delta {\Gamma^\alpha}_{\beta\gamma}
-		+ {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma}
+	
+	- (\partial_\delta {\Gamma^\alpha}_{\beta\gamma} 
+		+ {\Gamma^\mu}_{\beta\gamma} {\Gamma^\alpha}_{\mu\delta}
 		- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta}
-		- {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu ) v^\beta
+		- {\Gamma^\alpha}_{\beta\mu} {\Gamma^\mu}_{\gamma\delta}
+	) v^\beta
+	
+	+ {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} v^\beta
+	- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} v^\beta
+	
+	+ ({T^\mu}_{\gamma\delta} + {c_{\delta\gamma}}^\mu) \partial_\mu v^\alpha
+
+	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu \partial_\mu) v^\alpha
+	- {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) v^\beta
 $<br>
+group like terms:<br>
+$= 	({\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} v^\beta
+	- {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} v^\beta)
+	
+	+ ({\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} v^\beta
+	- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} v^\beta)
+	
+	+ \partial_\gamma {\Gamma^\alpha}_{\beta\delta} v^\beta
+	- \partial_\delta {\Gamma^\alpha}_{\beta\gamma} v^\beta
+	
+	+ {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} v^\beta
+	- {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} v^\beta
+	
+	+ ({\Gamma^\alpha}_{\beta\mu} {\Gamma^\mu}_{\gamma\delta} v^\beta
+	- {\Gamma^\alpha}_{\beta\mu} {\Gamma^\mu}_{\delta\gamma} v^\beta)
+	
+	+ ({T^\mu}_{\gamma\delta} + {c_{\delta\gamma}}^\mu) \partial_\mu v^\alpha
+
+	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) \partial_\mu v^\alpha
+	- {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) v^\beta
+$<br>
+<!-- shouldn't the c_dc^u v^a_,u's cancel? instead of combining? -->
+cancel terms, replace $\Gamma$ antisymmetric term with $T$:<br>
+$= 	
+	\partial_\gamma {\Gamma^\alpha}_{\beta\delta} v^\beta
+	- \partial_\delta {\Gamma^\alpha}_{\beta\gamma} v^\beta
+	
+	+ {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} v^\beta
+	- {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} v^\beta
+	
+	+ {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\gamma\delta} + {c_{\delta\gamma}}^\mu) v^\beta
+	
+	+ ({T^\mu}_{\gamma\delta} + {c_{\delta\gamma}}^\mu) \partial_\mu v^\alpha
+
+	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) \partial_\mu v^\alpha
+	- {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) v^\beta
+$<br>
+Even if the $(T+c)\partial v$ terms did cancel, you'd be left with no extra terms - commutation or torsion - for the Riemann curvature definition.<br>
+TODO FIXME<br>
 $ 	= (\partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alpha}_{\beta\gamma}
 		+ {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma}
 		- {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta}
-		 - {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu
+		 - {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu)
 		) v^\beta
 $<br>
-let $ {R^\alpha}_{\beta\gamma\delta} = \partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alpha}_{\beta\gamma} + {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} - {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} - {\Gamma^\alpha}_{\beta\mu} {c_{\gamma\delta}}^\mu $<br>
+let $ {R^\alpha}_{\beta\gamma\delta} = \partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alpha}_{\beta\gamma} + {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} - {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} - {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) $<br>
 so $ (\left [ \nabla_\gamma \nabla_\delta \right ] - \nabla_{[\gamma,\delta]}) v^\alpha = {R^\alpha}_{\beta\gamma\delta} v^\beta $<br>
 <br>
 Ricci curvature: $ R_{\alpha\beta} = {R^\gamma}_{\alpha\gamma\beta} $<br>
@@ -509,6 +612,7 @@ $ = ( \partial_\gamma {\Gamma^\alpha}_{\beta\delta} + {\Gamma^\alpha}_{\mu\gamma
 $ = ( \partial_\gamma {\Gamma^\alpha}_{\beta\delta} - \partial_\delta {\Gamma^\alpha}_{\beta\gamma} + {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} - {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} ) \boldsymbol{\omega}^{|\gamma} \wedge \boldsymbol{\omega}^{\delta|} $<br>
 $ = {R^\alpha}_{\beta\gamma\delta}\boldsymbol{\omega}^{|\gamma} \wedge \boldsymbol{\omega}^{\delta|} $<br>
 $ = {R^\alpha}_{\beta|\gamma\delta|}\boldsymbol{\omega}^\gamma \wedge \boldsymbol{\omega}^\delta $<br>
+TODO add commutation and torsion<br>
 <br>
 $ 0 = \textbf{d} P 
 	= \textbf{d} (\textbf{e}_\gamma \otimes \boldsymbol{\omega}^\gamma)
@@ -522,7 +626,7 @@ so $ \textbf{d} \boldsymbol{\omega}^\gamma
 	= -{\Gamma^\gamma}_{\beta\alpha} \boldsymbol{\omega}^\beta \wedge \boldsymbol{\omega}^\alpha
 	= {\Gamma^\gamma}_{\beta\alpha} \boldsymbol{\omega}^\alpha \wedge \boldsymbol{\omega}^\beta
 	= ({\Gamma^\gamma}_{\beta\alpha} - {\Gamma^\gamma}_{\alpha\beta}) \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta
-	= {c_{\alpha\beta}}^\gamma \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta
+	= ({T^\gamma}_{\beta\alpha} + {c_{\alpha\beta}}^\gamma) \boldsymbol{\omega}^\alpha \otimes \boldsymbol{\omega}^\beta
 $<br> 
 This coincides with, in a holonomic basis, when $ \boldsymbol{\omega}^\alpha = \textbf{d}x^\alpha, \textbf{d} \boldsymbol{\omega}^\alpha = \textbf{d}^2\textbf{x}^\alpha = 0 $<br>
 
