@@ -142,18 +142,22 @@ metric inverse symmetry implied from metric symmetry.<br>
 identity derivative: $ 0 = \partial_\gamma \delta^\alpha_\beta = \partial_\gamma (g^{\alpha\delta} g_{\delta\beta}) = \partial_\gamma g^{\alpha\delta} g_{\delta\beta} + g^{\alpha\delta} \partial_\gamma g_{\delta\beta} $<br>
 <br>
 
-permutation tensor:<br>
-$ [I_1 ... I_n] = 1$ for even permutations of $I_1 ... I_n$, -1 for odd permutations, and 0 otherwise.<br>
-$ [\mu_1 ... \mu_n] = 1$ for even permutations of $\mu_1 ... \mu_n$, -1 for odd permutations, and 0 otherwise.<br>
-...regardless of basis.<br>
+Determinant:<br>
+$e = det({e_\mu}^I)$<br>
+$\sigma = det(\eta_{IJ})$ is the signature of the metric.<br>
+$g = det(g_{\mu\nu}) = det({e_\mu}^I)^2 \cdot det(\eta_{IJ})$<br>
+Therefore $e = \sqrt{|g|}$.<br>
 <br>
 
-Levi-Civita symbol for arbitrary metric:<br>
-$\epsilon_{i_1 ... i_n} = \sqrt{\left|det||g_{ij}||\right|} [i_1 ... i_n] = [i_1 ... i_n]$<br>
-contravariant Levi-Civita connection:<br>
-$\epsilon^{i_1 ... i_n} = \sigma (g^{i_1 j_1}) \cdot ... \cdot (g^{i_n j_n}) \epsilon_{j_1 ... j_n}$<br>
-$= \sigma {1\over\sqrt{-g}} \epsilon_{i_1 ... i_n}$<br>
-for $\sigma$ the signature of the metric<br>
+Levi-Civita:<br>
+$\epsilon_{I_1 ... I_n} = 1$ for even permutations of $I_1 ... I_n$, -1 for odd permutations, and 0 otherwise.<br>
+$\epsilon^{I_1 ... I_n} = \eta^{I_1 J_1} ... \eta^{I_n J_n} \epsilon_{J_1 ... J_n} = \sigma \epsilon_{I_1 ... I_n}$ for $\sigma$ the signature of the metric.<br>
+$\epsilon_{x_1 ... x_n} = {e_{x_1}}^1 ... {e_{x_n}}^n \epsilon_{1 ... n}$, which is the definition of $det({e_\mu}^I)$.<br>
+Therefore $ \epsilon_{\mu_1 ... \mu_n} = \sqrt{|g|}$ for even permutations, $-\sqrt{|g|}$ for odd permutations, and 0 otherwise.<br>
+<br>
+
+$\epsilon^{\mu_1 ... \mu_n} = \sigma (g^{\mu_1 \nu_1}) \cdot ... \cdot (g^{\mu_n \nu_n}) \epsilon_{\nu_1 ... \nu_n}$<br>
+$= \frac{1}{\sqrt{|g|}} \epsilon_{\mu_1 ... \mu_n}$<br>
 <br>
 
 Levi-Civita for 4D Minkowski space:<br>
