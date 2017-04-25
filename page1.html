@@ -334,47 +334,17 @@ $<br>
 <br>
 
 Riemann curvature in terms of covariant derivative, in object notation:<br>
-<!--
-Shouldn't T^a_bc be added in there somewhere?
-Is it a term inside of Delta_[a,b] e_c?  not just c_ab^c, but also T^c_ab?
-Where else would it come from?
--->
-$ {R^\alpha}_{\beta\gamma\delta} 
-= \langle \boldsymbol{\omega}^\alpha, 
-	(\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]}) 
-	\textbf{e}_\beta \rangle $<br>
-$ = \langle \boldsymbol{\omega}^\alpha, 
-	\nabla_\gamma \nabla_\delta \textbf{e}_\beta 
-	- \nabla_\delta \nabla_\gamma \textbf{e}_\beta 
-	- \nabla_{[\gamma,\delta]} \textbf{e}_\beta \rangle $<br>
-$ = \langle \boldsymbol{\omega}^\alpha, 
-	\nabla_\gamma ({\Gamma^\mu}_{\beta\delta} \textbf{e}_\mu) 
-	- \nabla_\delta ({\Gamma^\mu}_{\beta\gamma} \textbf{e}_\mu) 
-	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) \nabla_\mu \textbf{e}_\beta \rangle $<br>
-$ = \langle \boldsymbol{\omega}^\alpha, 
-	\nabla_\gamma {\Gamma^\nu}_{\beta\delta} \textbf{e}_\nu 
-	+ {\Gamma^\nu}_{\beta\delta} \nabla_\gamma \textbf{e}_\nu 
-	- \nabla_\delta {\Gamma^\nu}_{\beta\gamma} \textbf{e}_\nu 
-	- {\Gamma^\nu}_{\beta\gamma} \nabla_\delta \textbf{e}_\nu 
-	- ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) {\Gamma^\nu}_{\beta\mu} \textbf{e}_\nu \rangle $<br>
-$ = \langle \boldsymbol{\omega}^\alpha, 
-	\textbf{e}_\nu \rangle 
-		( \partial_\gamma {\Gamma^\nu}_{\beta\delta} 
-		+ {\Gamma^\mu}_{\beta\delta} {\Gamma^\nu}_{\mu\gamma} 
-		- \partial_\delta {\Gamma^\nu}_{\beta\gamma} 
-		- {\Gamma^\mu}_{\beta\gamma} {\Gamma^\nu}_{\mu\delta} 
-		- {\Gamma^\nu}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu )) $<br>
-$ = \partial_\gamma {\Gamma^\alpha}_{\beta\delta} 
-	- \partial_\delta {\Gamma^\alpha}_{\beta\gamma} 
-	+ {\Gamma^\alpha}_{\mu\gamma} {\Gamma^\mu}_{\beta\delta} 
-	- {\Gamma^\alpha}_{\mu\delta} {\Gamma^\mu}_{\beta\gamma} - {\Gamma^\alpha}_{\beta\mu} ({T^\mu}_{\delta\gamma} + {c_{\gamma\delta}}^\mu) $<br>
+${R^\alpha}_{\beta\gamma\delta} = \langle \boldsymbol{\omega}^\alpha, (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]}) \textbf{e}_\beta \rangle $<br>
+$=\langle \boldsymbol{\omega}^\alpha, 2 \nabla_{[\gamma} \nabla_{\delta]} \textbf{e}_\beta - \nabla_{[\gamma,\delta]} \textbf{e}_\beta \rangle $<br>
+$=\langle \boldsymbol{\omega}^\alpha, 2 \nabla_{[\gamma} ({\Gamma^\mu}_{\beta|\delta]} \textbf{e}_\mu) - \nabla_{[\gamma,\delta]} \textbf{e}_\beta \rangle $<br>
+$=\langle \boldsymbol{\omega}^\alpha, 2 \nabla_{[\gamma} {\Gamma^\nu}_{\beta|\delta]} \textbf{e}_\nu + 2 {\Gamma^\nu}_{\beta[\delta} \nabla_{\gamma]} \textbf{e}_\nu - {\Gamma^\nu}_{\beta\mu} {\Gamma^\mu}_{[\delta\gamma]} \textbf{e}_\nu \rangle $<br>
+$=2 \langle \boldsymbol{\omega}^\alpha, \textbf{e}_\nu \rangle (\partial_{[\gamma} {\Gamma^\nu}_{\beta|\delta]} + {\Gamma^\mu}_{\beta[\delta} {\Gamma^\nu}_{\mu|\gamma]} - {\Gamma^\nu}_{\beta\mu} {\Gamma^\mu}_{[\delta\gamma]}) $<br>
+$=2(\partial_{[\gamma} {\Gamma^\alpha}_{\beta|\delta]} + {\Gamma^\alpha}_{\mu[\gamma} {\Gamma^\mu}_{\beta|\delta]} - {\Gamma^\alpha}_{\beta\mu} {\Gamma^\mu}_{[\delta\gamma]}) $<br>
 <br>
 
 Riemann curvature in terms of covariant derivative, in index notation:<br>
-$ (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]} ) v^\alpha $<br>
-$= 2 \nabla_{[\gamma} \nabla_{\delta]} v^\alpha
-	- \nabla_{[\gamma,\delta]} v^\alpha
-$<br>
+$ (\left [ \nabla_\gamma, \nabla_\delta \right ] - \nabla_{[\gamma,\delta]} ) v^\alpha$<br>
+$= 2 \nabla_{[\gamma} \nabla_{\delta]} v^\alpha - \nabla_{[\gamma,\delta]} v^\alpha$<br>
 expand inner $\nabla$<br>
 $= 2 \nabla_{[\gamma} (\partial_{\delta]} v^\alpha + {\Gamma^\alpha}_{\beta|\delta]} v^\beta) - \nabla_{[\gamma, \delta]} v^\alpha$<br>
 distribute outer $\nabla$<br>
